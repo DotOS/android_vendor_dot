@@ -188,3 +188,6 @@ $(call inherit-product, vendor/dot/config/telephony.mk)
 
 # dot_props
 $(call inherit-product, vendor/dot/config/dot_props.mk)
+
+# Enable ADB authentication
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.adb.secure=1
