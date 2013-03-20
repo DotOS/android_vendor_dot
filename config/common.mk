@@ -43,7 +43,6 @@ PRODUCT_COPY_FILES += \
     vendor/dot/prebuilt/common/bootanimation/bootanimation.zip:system/media/bootanimation.zip
 endif
 
-
 # Device Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     vendor/dot/overlay/common \
@@ -190,4 +189,6 @@ $(call inherit-product, vendor/dot/config/telephony.mk)
 $(call inherit-product, vendor/dot/config/dot_props.mk)
 
 # Enable ADB authentication
+ifneq ($(TARGET_BUILD_VARIANT),eng)
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.adb.secure=1
+endif
