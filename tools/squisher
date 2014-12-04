@@ -1,0 +1,34 @@
+#!/bin/bash
+#
+# Squish a Dot otapackage for distribution
+# dotOS
+
+. $ANDROID_BUILD_TOP/vendor/dot/tools/colors
+
+OUT_TARGET_HOST=`uname -s`
+if [ x"$OUT_TARGET_HOST" = x"Linux" ]
+then
+   OUT_TARGET_HOST=linux-x86
+   XARGS="xargs --max-args=1 --max-procs `grep 'processor' /proc/cpuinfo|wc -l`"
+elif [ x"$OUT_TARGET_HOST" = x"Darwin" ]
+then
+   OUT_TARGET_HOST=darwin-x86
+   XARGS="xargs -n 1 -P `sysctl hw.ncpu | awk '{print $2}'`"
+else
+   echo -e ${CL_RED}"ERROR: unknown/unsupported host OS!"${CL_RST}
+   exit 1
+fi
+
+if [ -z "$OUT" -o ! -d "$OUT" ]; then
+	echo -e ${CL_RED}"ERROR: $0 only works with a full build environment. $OUT should exist."${CL_RST}
+	exit 1
+fi
+
+CRUSHER=$ANDROID_BUILD_TOP/vendor/dot/tools/crusher
+QUIET=-q
+DELETE_BINS="applypatch applypatch_static check_prereq recovery updater"
+
+# Optimize PNG resources in APKs
+( cd $OUT/system; find framework/ app/ priv-app/ -name \*.apk -print | $XARGS $CRUSHER; )
+
+exit 0

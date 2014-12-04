@@ -259,6 +259,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
  ro.substratum.verified=true \
  ro.opa.eligible_device=true
 
+# Squisher Location
+SQUISHER_SCRIPT := vendor/dot/tools/squisher
+
 DOT_DISPLAY_VERSION := $(DOT_VERSION)
 
 PRODUCT_PROPERTY_OVERRIDES += \
