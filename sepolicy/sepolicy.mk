@@ -25,8 +25,6 @@ BOARD_SEPOLICY_UNION += \
     netd.te \
     property.te \
     shell.te \
-    su.te \
-    sysinit.te \
     system.te \
     system_app.te \
     system_server.te \
