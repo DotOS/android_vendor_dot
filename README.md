@@ -1,2 +1,5 @@
-# android_vendor_aosp
-Sepolicy needed for compiling AOSP for GT-I9505. Forked from CM Project, big big thanks to them.
+# AOSP vendor configuration
+
+by Alu Team
+
+Sepolicy by The CyanogenMod Project, big thanks to them.
