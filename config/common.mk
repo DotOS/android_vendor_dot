@@ -1,5 +1,9 @@
 PRODUCT_BRAND ?= alu-team
 
+# Bootanimation
+PRODUCT_COPY_FILES += \
+    vendor/AOSP/prebuilt/common/bootanimation/bootanimation.zip:system/media/bootanimation.zip
+
 PRODUCT_PROPERTY_OVERRIDES += \
     keyguard.no_require_sim=true \
     ro.setupwizard.enterprise_mode=1 \
