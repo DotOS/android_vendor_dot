@@ -1,4 +1,4 @@
-PRODUCT_BRAND ?= alu-team
+PRODUCT_BRAND ?= JDCTeam
 
 # Bootanimation
 PRODUCT_COPY_FILES += \
@@ -10,6 +10,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.android.dateformat=MM-dd-yyyy \
     ro.com.android.dataroaming=false
 
+PRODUCT_PACKAGE_OVERLAYS += vendor/AOSP/overlay/common
+    
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.selinux=1
 
