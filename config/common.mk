@@ -2,8 +2,7 @@ PRODUCT_BRAND ?= JDCTeam
 
 # Bootanimation
 PRODUCT_COPY_FILES += \
-    vendor/AOSP/prebuilt/common/bootanimation/bootanimation.zip:system/media/bootanimation.zip
-
+    vendor/aosp/prebuilt/common/bootanimation/bootanimation.zip:system/media/bootanimation.zip
 
 PRODUCT_PROPERTY_OVERRIDES += \
     keyguard.no_require_sim=true \
@@ -14,25 +13,24 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.android.dateformat=MM-dd-yyyy \
     ro.com.android.dataroaming=false
 
-PRODUCT_PACKAGE_OVERLAYS += vendor/AOSP/overlay/common
-    
+PRODUCT_PACKAGE_OVERLAYS += vendor/aosp/overlay/common
+
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.selinux=1
 
 # init.d support
 PRODUCT_COPY_FILES += \
-    vendor/AOSP/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner \
-    vendor/AOSP/prebuilt/common/bin/sysinit:system/bin/sysinit
+    vendor/aosp/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner \
+    vendor/aosp/prebuilt/common/bin/sysinit:system/bin/sysinit
 
 # JDC-specific init file
 PRODUCT_COPY_FILES += \
-    vendor/AOSP/prebuilt/common/etc/init.local.rc:root/init.jdc.rc
+    vendor/aosp/prebuilt/common/etc/init.local.rc:root/init.jdc.rc
 
-    
 # Bring in camera effects
 PRODUCT_COPY_FILES +=  \
-    vendor/AOSP/prebuilt/common/media/LMprec_508.emd:system/media/LMprec_508.emd \
-    vendor/AOSP/prebuilt/common/media/PFFprec_600.emd:system/media/PFFprec_600.emd
+    vendor/aosp/prebuilt/common/media/LMprec_508.emd:system/media/LMprec_508.emd \
+    vendor/aosp/prebuilt/common/media/PFFprec_600.emd:system/media/PFFprec_600.emd
 
 # Enable SIP+VoIP on all targets
 PRODUCT_COPY_FILES += \
@@ -41,7 +39,7 @@ PRODUCT_COPY_FILES += \
 # Enable wireless Xbox 360 controller support
 PRODUCT_COPY_FILES += \
     frameworks/base/data/keyboards/Vendor_045e_Product_028e.kl:system/usr/keylayout/Vendor_045e_Product_0719.kl
-    
+
 # Stagefright FFMPEG plugin
 PRODUCT_PACKAGES += \
     libstagefright_soft_ffmpegadec \
