@@ -18,6 +18,10 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/aosp/overlay/common
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.selinux=1
 
+# EXT4/F2FS format script
+PRODUCT_COPY_FILES += \
+    vendor/aosp/prebuilt/common/bin/format.sh:install/bin/format.sh
+
 # init.d support
 PRODUCT_COPY_FILES += \
     vendor/aosp/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner \
