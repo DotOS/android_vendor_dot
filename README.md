@@ -1,5 +1,5 @@
 # AOSP vendor configuration
 
-by Alu Team
+by AntaresOne & -+BB+-
 
-Sepolicy by The CyanogenMod Project, big thanks to them.
+SEPolicy by The CyanogenMod Project, copyright (c) 2015
