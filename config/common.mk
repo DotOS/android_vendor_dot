@@ -22,6 +22,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_COPY_FILES += \
     vendor/aosp/prebuilt/common/bin/format.sh:install/bin/format.sh
 
+# For keyboard gesture typing
+PRODUCT_COPY_FILES += \
+    vendor/aosp/prebuilt/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so
+
 # init.d support
 PRODUCT_COPY_FILES += \
     vendor/aosp/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner \
