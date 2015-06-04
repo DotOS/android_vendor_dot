@@ -47,6 +47,12 @@ PRODUCT_COPY_FILES += \
 # Enable wireless Xbox 360 controller support
 PRODUCT_COPY_FILES += \
     frameworks/base/data/keyboards/Vendor_045e_Product_028e.kl:system/usr/keylayout/Vendor_045e_Product_0719.kl
+    
+# OTA Updates
+PRODUCT_PROPERTY_OVERRIDES += \
+	ro.ota.romname=AOSP-JF-5.1 \
+	ro.ota.version=$(shell date -u +%Y%m%d) \
+	ro.ota.manifest=https://romhut.com/roms/AOSP-JF-51/ota.xml
 
 # Stagefright FFMPEG plugin
 PRODUCT_PACKAGES += \
