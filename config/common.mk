@@ -21,6 +21,15 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # EXT4/F2FS format script
 PRODUCT_COPY_FILES += \
     vendor/aosp/prebuilt/common/bin/format.sh:install/bin/format.sh
+    
+# Extra tools
+PRODUCT_PACKAGES += \
+    mount.exfat \
+    fsck.exfat \
+    mkfs.exfat \
+    mkfs.f2fs \
+    fsck.f2fs \
+    fibmap.f2fs
 
 # For keyboard gesture typing
 PRODUCT_COPY_FILES += \
