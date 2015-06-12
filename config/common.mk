@@ -24,12 +24,17 @@ PRODUCT_COPY_FILES += \
     
 # Extra tools
 PRODUCT_PACKAGES += \
+    e2fsck \
+    mke2fs \
+    tune2fs \
     mount.exfat \
     fsck.exfat \
     mkfs.exfat \
     mkfs.f2fs \
     fsck.f2fs \
-    fibmap.f2fs
+    fibmap.f2fs \
+    ntfsfix \
+    ntfs-3g
 
 # Custom JDCTeam packages
 PRODUCT_PACKAGES += \
