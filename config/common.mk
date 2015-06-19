@@ -5,6 +5,7 @@ PRODUCT_COPY_FILES += \
     vendor/aosp/prebuilt/common/bootanimation/bootanimation.zip:system/media/bootanimation.zip
 
 PRODUCT_PROPERTY_OVERRIDES += \
+    persist.radio.no_wait_for_card=0 \
     keyguard.no_require_sim=true \
     ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html \
     ro.url.legal.android_privacy=http://www.google.com/intl/%s/mobile/android/basic/privacy.html \
