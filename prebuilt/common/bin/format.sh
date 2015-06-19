@@ -15,7 +15,9 @@
 export BB=/sbin/busybox
 # Check ROM installation/upgrade:
 # if touching primary ROM run filesystem check and format on /system, else don't run it
-export MROM=$(cat /tmp/META-INF/com/google/android/updater-script | grep "MultiROM");
+busybox mount /system
+export MROM=ls /tmp/META-INF/com/google/android | grep "updater-script"
+busybox umount /system
 if [ "$MROM" == "" ]; then
     echo "Installing ROM on /system"
     # Mount /system
