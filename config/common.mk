@@ -85,3 +85,7 @@ PRODUCT_PACKAGES += \
     
 # by default, do not update the recovery with system updates
 PRODUCT_PROPERTY_OVERRIDES += persist.sys.recovery_update=false
+
+# Changelog
+PRODUCT_COPY_FILES += \
+    vendor/aosp/Changelog.md:system/etc/Changelog.md
