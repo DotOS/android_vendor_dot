@@ -41,6 +41,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     STweaks
     
+# ADB authentication
+ADDITIONAL_DEFAULT_PROPERTIES += ro.adb.secure=0
+    
 # For keyboard gesture typing
 PRODUCT_COPY_FILES += \
     vendor/aosp/prebuilt/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so
