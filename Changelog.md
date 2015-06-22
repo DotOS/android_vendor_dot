@@ -28,6 +28,9 @@
     * Added Changelog
     * Hopefully fixed audioflinger/mediaserver crash and audio stuttering when indexing media files
     * Enhanced camera, less crashes during usage, still not opening when flash is enabled
+    * Updated stagefright with latest cm changes and fixed ffmpeg 2.7 compiling
+    * Updated ffmpeg to 2.7
+    * Fixed some crash on MediaProvider
 
 #### 20150619 (Beta 1)
 * Kernel:
