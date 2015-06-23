@@ -12,7 +12,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.android.wifi-watchlist=GoogleGuest \
     ro.setupwizard.enterprise_mode=1 \
     ro.com.android.dateformat=MM-dd-yyyy \
-    ro.com.android.dataroaming=false
+    ro.com.android.dataroaming=false \
+    net.ppp0.dns1=8.8.8.8 \
+    net.ppp0.dns2=8.8.4.4 \
+    net.dns1=8.8.8.8 \
+    net.dns2=8.8.4.4
 
 PRODUCT_PACKAGE_OVERLAYS += vendor/aosp/overlay/common
 
