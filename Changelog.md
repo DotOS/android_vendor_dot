@@ -34,6 +34,7 @@
     * Fixed some crash on MediaProvider
     * Blacklisted some bt devices for better compatibility
     * Use Google dns
+    * Updated code to android-5.1.1_r5
 
 #### 20150619 (Beta 1)
 * Kernel:
