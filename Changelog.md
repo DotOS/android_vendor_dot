@@ -34,8 +34,13 @@
     * Fixed some crash on MediaProvider
     * Blacklisted some bt devices for better compatibility
     * Use Google dns
-    * Updated code to android-5.1.1_r5
+    * Updated code to android-5.1.1_r6
     * Camera: stop using gps when camera app is in background
+    * Reverted Archidroid optimizations for better compatibility with all devices
+    * Use Dialer InCallUI and Contacs repos from AOSP, this fix RRO
+    * Added Launcher3 to build
+    * Added 60fps BootAnimation, big thanks to guerreromanuel XDA
+    * Various fixes on frameworks/base
 
 #### 20150619 (Beta 1)
 * Kernel:

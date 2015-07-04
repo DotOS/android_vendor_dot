@@ -43,7 +43,8 @@ PRODUCT_PACKAGES += \
 
 # Custom JDCTeam packages
 PRODUCT_PACKAGES += \
-    STweaks
+    STweaks \
+    Launcher3
     
 # ADB authentication
 ADDITIONAL_DEFAULT_PROPERTIES += ro.adb.secure=0
