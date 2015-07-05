@@ -43,6 +43,7 @@ PRODUCT_PACKAGES += \
 
 # Custom JDCTeam packages
 PRODUCT_PACKAGES += \
+    OTAUpdates \
     STweaks \
     Launcher3 \
     SuperSU
