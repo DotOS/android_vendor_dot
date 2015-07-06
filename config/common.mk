@@ -45,19 +45,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     OTAUpdates \
     STweaks \
-    Launcher3 \
-    SuperSU
-    
-# SuperSU
-PRODUCT_COPY_FILES += \
-    vendor/aosp/prebuilt/common/etc/init.d/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon \
-    vendor/aosp/prebuilt/common/etc/install-recovery.sh:system/etc/install-recovery.sh \
-    vendor/aosp/prebuilt/common/lib/libsupol.so:system/lib/libsupol.so \
-    vendor/aosp/prebuilt/common/xbin/daemonsu:system/xbin/daemonsu \
-    vendor/aosp/prebuilt/common/xbin/su:system/xbin/su \
-    vendor/aosp/prebuilt/common/xbin/supolicy:system/xbin/supolicy \
-    vendor/aosp/prebuilt/common/xbin/supolicy:system/xbin/sugote \
-    vendor/aosp/prebuilt/common/xbin/su:system/bin/.ext/.su 
+    Launcher3
     
 # ADB authentication
 ADDITIONAL_DEFAULT_PROPERTIES += ro.adb.secure=0
