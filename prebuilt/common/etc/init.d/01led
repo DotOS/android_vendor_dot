@@ -1,0 +1,78 @@
+#!/system/bin/sh
+#
+# Copyright (c) 2015, Mattia "AntaresOne" D'Alleva
+# Copyright (c) 2015, JDCTeam
+#
+# Dancing Notification LED - Rainbow
+#
+
+# Brightness
+BRG=echo #value
+# Blue LED
+LED_B=/sys/class/leds/led_b/brightness
+# Green LED
+LED_G=/sys/class/leds/led_g/brightness
+# Red LED
+LED_R=/sys/class/leds/led_r/brightness
+# Value for color transition speed
+SPD="sleep 0.10"
+
+EXIT() {
+    # Reset
+    $BRG 0 > $LED_B
+    $BRG 0 > $LED_G
+    $BRG 0 > $LED_R
+    rm /cache/led_off
+    # Exit
+    exit 0
+}
+
+while :; do
+    ls /cache/led_off 1>/dev/null 2>/dev/null
+    if [ $? -eq 0 ]; then
+        EXIT
+    else
+        # Red
+        $BRG 150 > $LED_R
+        $SPD
+        # Orange
+        $BRG 40 > $LED_G
+        $SPD
+        # Yellow
+        $BRG 150 > $LED_G
+        $SPD
+        # Green
+        $BRG 0 > $LED_R
+        $SPD
+        # Blue
+        $BRG 0 > $LED_G
+        $BRG 150 > $LED_B
+        $SPD
+        # Indigo
+        $BRG 10 > $LED_R
+        $SPD
+        # Violet
+        $BRG 150 > $LED_R
+        $SPD
+        ### Reverse ###
+        # Indigo
+        $BRG 10 > $LED_R
+        $SPD
+        # Blue
+        $BRG 0 > $LED_G
+        $BRG 0 > $LED_R
+        $SPD
+        # Green
+        $BRG 0 > $LED_B
+        $BRG 150 > $LED_G
+        $SPD
+        # Yellow
+        $BRG 150 > $LED_R
+        $SPD
+        # Orange
+        $BRG 40 > $LED_G
+        $SPD
+        # Red
+        $BRG 0 > $LED_G
+    fi
+done
