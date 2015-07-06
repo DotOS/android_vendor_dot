@@ -37,10 +37,15 @@
     * Updated code to android-5.1.1_r6
     * Camera: stop using gps when camera app is in background
     * Reverted Archidroid optimizations for better compatibility with all devices
-    * Use Dialer InCallUI and Contacs repos from AOSP, this fix RRO
+    * Use Dialer InCallUI and Contacs repos from AOSP
     * Added Launcher3 to build
     * Added 60fps BootAnimation, big thanks to guerreromanuel XDA
-    * Various fixes on frameworks/base
+    * Tons of fixes on frameworks/base
+    * RRO Fully fixed
+    * Small fixes on Telephony
+    * Added dancing led at boot
+    * Added Advanced Reboot Menu
+    * A lot of fixes to build enviroment
 
 #### 20150619 (Beta 1)
 * Kernel:
