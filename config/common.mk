@@ -23,6 +23,10 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/aosp/overlay/common
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.selinux=1
 
+# Dancing LED
+PRODUCT_COPY_FILES += \
+    vendor/aosp/prebuilt/common/etc/init.d/01led:system/etc/init.d/01led
+
 # EXT4/F2FS format script
 PRODUCT_COPY_FILES += \
     vendor/aosp/prebuilt/common/bin/format.sh:install/bin/format.sh
