@@ -12,6 +12,8 @@
 
 [smeroni68](https://github.com/smeroni68) - tester
 
+[Jimsilver73](https://github.com/Jimsilver73) - tester
+
 
 
 ### Changelog (full)
@@ -36,7 +38,7 @@
     * Use Google dns
     * Updated code to android-5.1.1_r6
     * Camera: stop using gps when camera app is in background
-    * Reverted Archidroid optimizations for better compatibility with all devices
+    * Fixed Archidroid optimizations for all devices
     * Use Dialer InCallUI and Contacs repos from AOSP
     * Added Launcher3 to build
     * Added 60fps BootAnimation, big thanks to guerreromanuel XDA
@@ -46,6 +48,8 @@
     * Added dancing led at boot
     * Added Advanced Reboot Menu
     * A lot of fixes to build enviroment
+    * Fixed support for all variants
+    * Fixed init.d not working properly
 
 #### 20150619 (Beta 1)
 * Kernel:
