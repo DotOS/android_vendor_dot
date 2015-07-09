@@ -50,6 +50,7 @@
     * A lot of fixes to build enviroment
     * Fixed support for all variants
     * Fixed init.d not working properly
+    * Added text/circle battery on statusbar and custom settings
 
 #### 20150619 (Beta 1)
 * Kernel:
