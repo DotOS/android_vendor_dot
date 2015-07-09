@@ -14,6 +14,8 @@
 
 [Jimsilver73](https://github.com/Jimsilver73) - tester
 
+[hawkerpaul](https://github.com/hawkerpaul) - tester, scripting
+
 
 
 ### Changelog (full)
