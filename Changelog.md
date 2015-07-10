@@ -23,7 +23,7 @@
 
 ### Changelog (short)
 
-#### (Beta 2)
+#### Ongoing changes... (Beta 2)
 * Kernel
     * Various code updates
 * ROM
