@@ -53,6 +53,8 @@
     * Fixed support for all variants
     * Fixed init.d not working properly
     * Added text/circle battery on statusbar and custom settings
+    * Added SuperSU by ChainFire
+    * Added Layers Manager by BitSyko
 
 #### 20150619 (Beta 1)
 * Kernel:

@@ -5,9 +5,6 @@ on init
 on post-fs-data
     mkdir /data/.ssh 0750 root shell
 
-    # Run sysinit
-    start sysinit
-
 on boot
     # interactive governor
     chown system system /sys/devices/system/cpu/cpufreq/interactive/timer_rate
@@ -99,9 +96,3 @@ on boot
     setprop net.tcp.usercfg.default    0
     setprop net.tcp.usercfg.wifi       1
     setprop net.tcp.usercfg.lte        1
-
-# sysinit (/system/etc/init.d)
-service sysinit /system/bin/sysinit
-    user root
-    oneshot
-    disabled

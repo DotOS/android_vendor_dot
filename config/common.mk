@@ -3,6 +3,10 @@ PRODUCT_BRAND ?= JDCTeam
 # Bootanimation
 PRODUCT_COPY_FILES += \
     vendor/aosp/prebuilt/common/bootanimation/bootanimation.zip:system/media/bootanimation.zip
+    
+# SuperSU
+PRODUCT_COPY_FILES += \
+    vendor/aosp/prebuilt/common/supersu/supersu.zip:system/supersu/supersu.zip
 
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.no_wait_for_card=0 \
@@ -16,13 +20,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
     net.ppp0.dns1=8.8.8.8 \
     net.ppp0.dns2=8.8.4.4 \
     net.dns1=8.8.8.8 \
-    net.dns2=8.8.4.4
+    net.dns2=8.8.4.4 \
+    ro.layers.noIcon=noIcon
 
 PRODUCT_PACKAGE_OVERLAYS += vendor/aosp/overlay/common
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.selinux=1
-
+    
 # Dancing LED
 PRODUCT_COPY_FILES += \
     vendor/aosp/prebuilt/common/etc/init.d/01led:system/etc/init.d/01led
@@ -49,7 +54,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     OTAUpdates \
     STweaks \
-    Launcher3
+    Launcher3 \
+    LayersManager4.0
     
 # ADB authentication
 ADDITIONAL_DEFAULT_PROPERTIES += ro.adb.secure=0
