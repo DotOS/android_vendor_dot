@@ -38,7 +38,7 @@
     * Fixed some crash on MediaProvider
     * Blacklisted some bt devices for better compatibility
     * Use Google dns
-    * Updated code to android-5.1.1_r6
+    * Updated code to android-5.1.1_r8
     * Camera: stop using gps when camera app is in background
     * Fixed Archidroid optimizations for all devices
     * Use Dialer InCallUI and Contacs repos from AOSP
