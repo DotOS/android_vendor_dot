@@ -55,6 +55,11 @@
     * Added text/circle battery on statusbar and custom settings
     * Added SuperSU by ChainFire
     * Added Layers Manager by BitSyko
+    * Added Reverse Lookup
+    * Build dummy InCallUI with persistent attribute, this allow us to keep the process in memory and helps a lot when receiving a call
+      and the device is busy
+    * Other small style changes on Dialer/InCallUI (Materialize)
+    * More Materialize on framework
 
 #### 20150619 (Beta 1)
 * Kernel:
