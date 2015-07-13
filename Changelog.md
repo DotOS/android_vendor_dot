@@ -60,6 +60,7 @@
       and the device is busy
     * Other small style changes on Dialer/InCallUI (Materialize)
     * More Materialize on framework
+    * Fixed QCOM Time Daemon support
 
 #### 20150619 (Beta 1)
 * Kernel:
