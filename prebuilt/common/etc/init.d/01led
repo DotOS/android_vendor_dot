@@ -6,6 +6,8 @@
 # Dancing Notification LED - Rainbow
 #
 
+rm /cache/led_off
+
 # Brightness
 BRG=echo #value
 # Blue LED
