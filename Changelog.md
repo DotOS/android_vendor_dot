@@ -23,7 +23,14 @@
 
 ### Changelog (short)
 
-#### Ongoing changes... (Beta 2)
+#### Ongoing changes... (Beta 3)
+* ROM 
+    * Fixed tethering
+    * Added ipv6 tethering
+    * Launcher3: Optimisation and some Materialize
+    * Fixed back/menu keys wake up the device
+
+#### 2015/07/15 (Beta 2)
 * Kernel
     * Various code updates
 * ROM
