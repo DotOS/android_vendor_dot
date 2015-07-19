@@ -70,6 +70,7 @@
     * Other small style changes on Dialer/InCallUI (Materialize)
     * More Materialize on framework
     * Fixed QCOM Time Daemon support
+    * Updated stagefright/av with latest cm changes
 
 #### 20150619 (Beta 1)
 * Kernel:
