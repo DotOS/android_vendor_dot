@@ -29,6 +29,8 @@
     * Added ipv6 tethering
     * Launcher3: Optimisation and some Materialize
     * Fixed back/menu keys wake up the device
+    * A lot of optimisation to build enviroment
+    * Updated translation for AOSP Settings and Power menu
 
 #### 2015/07/15 (Beta 2)
 * Kernel
