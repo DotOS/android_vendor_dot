@@ -71,6 +71,7 @@
     * More Materialize on framework
     * Fixed QCOM Time Daemon support
     * Updated stagefright/av with latest cm changes
+    * Fixed OTA Updates
 
 #### 20150619 (Beta 1)
 * Kernel:

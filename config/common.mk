@@ -90,7 +90,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.ota.romname=AOSP-JF-5.1 \
 	ro.ota.version=$(shell date -u +%Y%m%d) \
-	ro.ota.manifest=https://romhut.com/roms/AOSP-JF-51/ota.xml
+	ro.ota.manifest=https://romhut.com/roms/aosp-jf/ota.xml
 
 # Stagefright FFMPEG plugin
 PRODUCT_PACKAGES += \
