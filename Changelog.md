@@ -31,6 +31,11 @@
     * Fixed back/menu keys wake up the device
     * A lot of optimisation to build enviroment
     * Updated translation for AOSP Settings and Power menu
+    * Updated stagefright/av with latest cm changes
+    * Fixed OTA Updates
+    * Added clear recents app button
+    * Make "SD Card removed" notification dismissible
+    * Various frameworks improvements
 
 #### 2015/07/15 (Beta 2)
 * Kernel
@@ -70,8 +75,6 @@
     * Other small style changes on Dialer/InCallUI (Materialize)
     * More Materialize on framework
     * Fixed QCOM Time Daemon support
-    * Updated stagefright/av with latest cm changes
-    * Fixed OTA Updates
 
 #### 20150619 (Beta 1)
 * Kernel:
