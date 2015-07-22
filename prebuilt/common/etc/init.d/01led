@@ -6,8 +6,6 @@
 # Dancing Notification LED - Rainbow
 #
 
-rm /cache/led_off
-
 # Brightness
 BRG=echo #value
 # Blue LED
@@ -19,19 +17,15 @@ LED_R=/sys/class/leds/led_r/brightness
 # Value for color transition speed
 SPD="sleep 0.10"
 
-EXIT() {
-    # Reset
-    $BRG 0 > $LED_B
-    $BRG 0 > $LED_G
-    $BRG 0 > $LED_R
-    # Exit
-    exit 0
-}
-
 while :; do
-    ls /cache/led_off 1>/dev/null 2>/dev/null
-    if [ $? -eq 0 ]; then
-        EXIT
+    # Getprop
+    VAR=$(getprop sys.boot_completed | grep "1")
+    if [ "$VAR" == "1"]; then
+        # Reset and exit
+        $BRG 0 > $LED_B
+        $BRG 0 > $LED_G
+        $BRG 0 > $LED_R
+        exit 0
     else
         # Red
         $BRG 150 > $LED_R
