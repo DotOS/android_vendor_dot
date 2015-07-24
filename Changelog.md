@@ -23,7 +23,9 @@
 
 ### Changelog (short)
 
-#### Ongoing changes... (Beta 3)
+#### Ongoing changes...
+
+#### 2015/07/23 (Beta 3)
 * ROM 
     * Fixed tethering
     * Added ipv6 tethering
