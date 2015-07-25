@@ -1,4 +1,4 @@
-#!/system/bin/sh
+#!/sbin/sh
 #
 # Copyright (c) 2015, Mattia "AntaresOne" D'Alleva
 # Copyright (c) 2015, JDCTeam
@@ -18,9 +18,9 @@ LED_R=/sys/class/leds/led_r/brightness
 SPD="sleep 0.10"
 
 while :; do
-    # Getprop
+    # To check when boot is complete
     VAR=$(getprop sys.boot_completed | grep "1")
-    if [ "$VAR" == "1"]; then
+    if [ "$VAR" == "1" ]; then
         # Reset and exit
         $BRG 0 > $LED_B
         $BRG 0 > $LED_G

@@ -30,7 +30,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     
 # Dancing LED
 PRODUCT_COPY_FILES += \
-    vendor/aosp/prebuilt/common/etc/init.d/01led:system/etc/init.d/01led
+    vendor/aosp/prebuilt/common/bin/dancing_led:system/bin/dancing_led
 
 # EXT4/F2FS format script
 PRODUCT_COPY_FILES += \
