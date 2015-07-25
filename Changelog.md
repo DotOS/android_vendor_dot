@@ -23,7 +23,14 @@
 
 ### Changelog (short)
 
-#### Ongoing changes...
+#### Ongoing changes... (beta 4)
+* ROM
+    * Added long pression actions to tiles
+    * Added long press actions to notification bar objects (clock, date, avatar, battery and settings)
+      Long pression on settings icon open AOSP Settings
+    * Added customisation for quick settings
+    * Frameworks: various fixes
+    * Bootanimation: various improvements
 
 #### 2015/07/23 (Beta 3)
 * ROM 
@@ -78,7 +85,7 @@
     * More Materialize on framework
     * Fixed QCOM Time Daemon support
 
-#### 20150619 (Beta 1)
+#### 2015/06/19 (Beta 1)
 * Kernel:
     * Unified platform: fixed sensors for all jflte variants
     * F2FS driver updates
@@ -98,5 +105,5 @@
     * Various updates on audio/camera code
     * Various updates on BT/WiFi code
 
-#### 20150606
+#### 2015/06/06
 Initial Release
