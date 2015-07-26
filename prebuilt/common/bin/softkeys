@@ -1,0 +1,59 @@
+#!/system/bin/sh
+# Copyright (c) 2014-2015, AntaresOne
+# Copyright (c) 2015, JDCTeam
+#
+# http://forum.xda-developers.com/member.php?u=5464206
+#
+
+# Export init.d path
+BOOT=/system/etc/init.d
+# Export leds path
+LEDS=/sys/class/leds/button-backlight/max_brightness
+# Export leds value
+VALUE=`cat $LEDS`
+
+# Remount rootfs & system as read-write, needed to write data in init.d
+mount -o remount,rw /
+mount -o remount,rw /system
+
+if [ "$VALUE" == "255" ]; then
+    STATUS=enabled
+elif [ "$VALUE" == "0" ]; then
+    STATUS=disabled
+else
+    STATUS=cannot retrieve backlight data!
+fi
+
+echo "*********************************"
+echo "* AntaresOne's softkeys manager *"
+echo "*********************************"
+echo ""
+echo "Current status: $STATUS"
+echo ""
+echo "Type 1 and press enter to toggle status"
+echo ""
+read OPT
+if [ "$OPT" == "1" ]; then
+    if [ "$VALUE" == "255" ]; then
+        echo "Disabling..."
+        echo 0 > $LEDS
+        echo ""
+        echo "Adding boot script..."
+        echo $'#!/system/bin/sh\n# Script to disable softkeys leds on boot\n# Made by AntaresOne softkeys manager\n#\necho 0 > /sys/class/leds/button-backlight/max_brightness' > $BOOT/15leds
+        chmod 0755 $BOOT/15leds
+        echo ""
+        echo "Lights disabled!"
+    else
+        echo "Enabling..."
+        echo 255 > $LEDS
+        rm -f $BOOT/15leds
+        echo ""
+        echo "Lights enabled!"
+    fi
+else
+    echo "Please input a valid number (1)"
+fi
+
+# We finished, so mount back to read-only
+mount -o remount,ro /system
+mount -o remount,ro /
