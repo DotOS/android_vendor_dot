@@ -34,6 +34,11 @@
     * Statusbar Icon: Show LTE icon instead of 4g icon
     * Statusbar Icon: Distinguish between UMTS and HSPA icons
     * Keyguard: Disable menu key unlock device
+    * WiFi: revert aggressive blacklist + other fixes
+    * Fixed Screenshots
+    * Added missing softkey manager
+    * Echange Services: Small fixes
+    * Updated translations for all languages
 
 #### 2015/07/23 (Beta 3)
 * ROM 
