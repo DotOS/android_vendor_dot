@@ -31,6 +31,9 @@
     * Added customisation for quick settings
     * Frameworks: various fixes
     * Bootanimation: various improvements
+    * Statusbar Icon: Show LTE icon instead of 4g icon
+    * Statusbar Icon: Distinguish between UMTS and HSPA icons
+    * Keyguard: Disable menu key unlock device
 
 #### 2015/07/23 (Beta 3)
 * ROM 
