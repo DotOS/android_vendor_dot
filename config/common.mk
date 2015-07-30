@@ -3,11 +3,7 @@ PRODUCT_BRAND ?= JDCTeam
 # Bootanimation
 PRODUCT_COPY_FILES += \
     vendor/aosp/prebuilt/common/bootanimation/bootanimation.zip:system/media/bootanimation.zip
-
-# Softkeys manager
-PRODUCT_COPY_FILES += \
-    vendor/aosp/prebuilt/common/bin/softkeys:system/bin/softkeys
-
+    
 # SuperSU
 PRODUCT_COPY_FILES += \
     vendor/aosp/prebuilt/common/supersu/supersu.zip:system/supersu/supersu.zip
