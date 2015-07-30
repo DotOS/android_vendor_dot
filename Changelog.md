@@ -24,6 +24,9 @@
 ### Changelog (short)
 
 #### Ongoing changes... (Beta 5)
+* ROM
+    * Added softkey backlight control under AOSP settings
+    * Bluetooth: added accept all files option
 
 #### 2015/07/27 (Beta 4)
 * ROM
