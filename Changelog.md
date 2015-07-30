@@ -23,7 +23,9 @@
 
 ### Changelog (short)
 
-#### Ongoing changes... (beta 4)
+#### Ongoing changes... (Beta 5)
+
+#### 2015/07/27 (Beta 4)
 * ROM
     * Added long pression actions to tiles
     * Added long press actions to notification bar objects (clock, date, avatar, battery and settings)
