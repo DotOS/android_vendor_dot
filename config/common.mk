@@ -26,6 +26,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGE_OVERLAYS += \
     vendor/aosp/overlay/common \
     vendor/aosp/overlay/dictionaries
+
+# Set Selinux as permissive    
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.build.selinux=0
     
 # Dancing LED
 PRODUCT_COPY_FILES += \
@@ -58,7 +62,8 @@ PRODUCT_PACKAGES += \
     STweaks 
     
 # ADB authentication
-ADDITIONAL_DEFAULT_PROPERTIES += ro.adb.secure=0
+ADDITIONAL_DEFAULT_PROPERTIES += \
+    ro.adb.secure=0
     
 # For keyboard gesture typing
 PRODUCT_COPY_FILES += \
