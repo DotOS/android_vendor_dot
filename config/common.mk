@@ -23,10 +23,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     net.dns2=8.8.4.4 \
     ro.layers.noIcon=noIcon
 
-PRODUCT_PACKAGE_OVERLAYS += vendor/aosp/overlay/common
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.build.selinux=1
+PRODUCT_PACKAGE_OVERLAYS += \
+    vendor/aosp/overlay/common \
+    vendor/aosp/overlay/dictionaries
     
 # Dancing LED
 PRODUCT_COPY_FILES += \
@@ -52,10 +51,11 @@ PRODUCT_PACKAGES += \
 
 # Custom JDCTeam packages
 PRODUCT_PACKAGES += \
-    OTAUpdates \
-    STweaks \
+    LatinIME \
     Launcher3 \
-    LayersManager4.0
+    LayersManager4.0 \
+    OTAUpdates \
+    STweaks 
     
 # ADB authentication
 ADDITIONAL_DEFAULT_PROPERTIES += ro.adb.secure=0
@@ -88,9 +88,9 @@ PRODUCT_COPY_FILES += \
     
 # OTA Updates
 PRODUCT_PROPERTY_OVERRIDES += \
-	ro.ota.romname=AOSP-JF-5.1 \
-	ro.ota.version=$(shell date -u +%Y%m%d) \
-	ro.ota.manifest=https://romhut.com/roms/aosp-jf/ota.xml
+    ro.ota.romname=AOSP-JF-5.1 \
+    ro.ota.version=$(shell date -u +%Y%m%d) \
+    ro.ota.manifest=https://romhut.com/roms/aosp-jf/ota.xml
 
 # Stagefright FFMPEG plugin
 PRODUCT_PACKAGES += \
@@ -103,7 +103,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     media.sf.extractor-plugin=libffmpeg_extractor.so
 
 # by default, do not update the recovery with system updates
-PRODUCT_PROPERTY_OVERRIDES += persist.sys.recovery_update=false
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.recovery_update=false
 
 # Changelog
 PRODUCT_COPY_FILES += \
