@@ -27,6 +27,13 @@
 * ROM
     * Added softkey backlight control under AOSP settings
     * Bluetooth: added accept all files option
+    * Fixed stagefright, now all audio files works. Twitch fixed too
+    * Added option for force notification expansion by default
+    * Improved boot time
+    * Other small fixes on audio
+    * Fixes on base repo
+    * Small fix on RRO
+    * Updated apn list
 
 #### 2015/07/27 (Beta 4)
 * ROM
