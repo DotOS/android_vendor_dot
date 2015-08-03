@@ -27,6 +27,11 @@ PRODUCT_PACKAGE_OVERLAYS += \
     vendor/aosp/overlay/common \
     vendor/aosp/overlay/dictionaries
 
+
+# Thank you, please drive thru!
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.dun.override=0 
+    
 # Set Selinux as permissive    
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.selinux=0
