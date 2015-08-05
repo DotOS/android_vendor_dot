@@ -34,6 +34,9 @@
     * Fixes on base repo
     * Small fix on RRO
     * Updated apn list
+    * Removed logspam from proprietary libraries
+    * Switched to latest glib 2.15 from m-preview for compiling
+    * More updates and fixes for legacy hardware repo
 
 #### 2015/07/27 (Beta 4)
 * ROM
