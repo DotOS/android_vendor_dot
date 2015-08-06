@@ -37,6 +37,9 @@
     * Removed logspam from proprietary libraries
     * Switched to latest glib 2.15 from m-preview for compiling
     * More updates and fixes for legacy hardware repo
+    * Sources updated to android-5.1.1_r9
+    * Updated LatinIME, more languages added and other fixes
+    * Added Samsung doze specific settings under AOSP Settings
 
 #### 2015/07/27 (Beta 4)
 * ROM
