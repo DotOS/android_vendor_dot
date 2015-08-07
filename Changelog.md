@@ -42,6 +42,10 @@
     * Added Samsung doze specific settings under AOSP Settings
 
 #### 2015/07/27 (Beta 4)
+* Kernel
+    * Added support for I9507
+    * Update Workqueue and Idr from 3.10 kernel
+    * More enhancements on MMC (Performance Mode)
 * ROM
     * Added long pression actions to tiles
     * Added long press actions to notification bar objects (clock, date, avatar, battery and settings)
