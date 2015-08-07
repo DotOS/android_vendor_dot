@@ -23,7 +23,16 @@
 
 ### Changelog (short)
 
-#### Ongoing changes... (Beta 5)
+#### Ongoing changes... (Beta 6)
+* ROM
+    * Partially fixed carrier text on Keyguard
+
+#### 2015/08/07 (Beta 5)
+* Kernel
+    * Added support for I9507
+    * Update Workqueue and Idr from 3.10 kernel
+    * More enhancements on MMC (Performance Mode)
+    * A lot of code updates
 * ROM
     * Added softkey backlight control under AOSP settings
     * Bluetooth: added accept all files option
@@ -40,12 +49,9 @@
     * Sources updated to android-5.1.1_r9
     * Updated LatinIME, more languages added and other fixes
     * Added Samsung doze specific settings under AOSP Settings
+    * Massive update on telephony repos, merged and adapted all cm fixes
 
 #### 2015/07/27 (Beta 4)
-* Kernel
-    * Added support for I9507
-    * Update Workqueue and Idr from 3.10 kernel
-    * More enhancements on MMC (Performance Mode)
 * ROM
     * Added long pression actions to tiles
     * Added long press actions to notification bar objects (clock, date, avatar, battery and settings)
