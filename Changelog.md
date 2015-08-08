@@ -25,7 +25,9 @@
 
 #### Ongoing changes... (Beta 6)
 * ROM
-    * Partially fixed carrier text on Keyguard
+    * Fixed carrier text on Keyguard
+    * More fixes on av and base repo
+    * DreamManager/DozeMode: do not turn on the screen if s-view cover is closed
 
 #### 2015/08/07 (Beta 5)
 * Kernel
