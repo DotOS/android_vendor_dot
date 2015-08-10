@@ -28,6 +28,10 @@
     * Fixed carrier text on Keyguard
     * More fixes on av and base repo
     * DreamManager/DozeMode: do not turn on the screen if s-view cover is closed
+    * Camera: added options for save photos/videos on external sd
+    * Use our bionic and art repos (forked from AOSP) tuned for cortex-A15/krait cpu
+    * Fixed apns for CDMA phones
+    * Merged code from r9 tag into av repo. 
 
 #### 2015/08/07 (Beta 5)
 * Kernel
