@@ -36,6 +36,7 @@
     * Use freetype 2.6.0 from m-preview, this solves some security issue in older version of freetype library.
     * Updated apns and stagefright. Regarding stagefright, at the moment the only real big issue is Twitch, some videos plays fine, others crash the app. As temporary workaround old version of Twitch works (3.2.3).
     * System Animations: Added a new step (0.75) and set as default.
+    * Stock Browser: Completely reworked, materialized and fixed a couple of FC. Settings now works as expected.
 
 #### 2015/08/07 (Beta 5)
 * Kernel
