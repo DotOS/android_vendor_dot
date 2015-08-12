@@ -31,7 +31,11 @@
     * Camera: added options for save photos/videos on external sd
     * Use our bionic and art repos (forked from AOSP) tuned for cortex-A15/krait cpu
     * Fixed apns for CDMA phones
-    * Merged code from r9 tag into av repo. 
+    * Merged code from r9 tag into av repo.
+    * Android 5.1.1 release 12
+    * Use freetype 2.6.0 from m-preview, this solves some security issue in older version of freetype library.
+    * Updated apns and stagefright. Regarding stagefright, at the moment the only real big issue is Twitch, some videos plays fine, others crash the app. As temporary workaround old version of Twitch works (3.2.3).
+    * System Animations: Added a new step (0.75) and set as default.
 
 #### 2015/08/07 (Beta 5)
 * Kernel
@@ -60,8 +64,7 @@
 #### 2015/07/27 (Beta 4)
 * ROM
     * Added long pression actions to tiles
-    * Added long press actions to notification bar objects (clock, date, avatar, battery and settings)
-      Long pression on settings icon open AOSP Settings
+    * Added long press actions to notification bar objects (clock, date, avatar, battery and settings). Long pression on settings icon open AOSP Settings
     * Added customisation for quick settings
     * Frameworks: various fixes
     * Bootanimation: various improvements
@@ -121,8 +124,7 @@
     * Added SuperSU by ChainFire
     * Added Layers Manager by BitSyko
     * Added Reverse Lookup
-    * Build dummy InCallUI with persistent attribute, this allow us to keep the process in memory and helps a lot when receiving a call
-      and the device is busy
+    * Build dummy InCallUI with persistent attribute, this allow us to keep the process in memory and helps a lot when receiving a call and the device is busy
     * Other small style changes on Dialer/InCallUI (Materialize)
     * More Materialize on framework
     * Fixed QCOM Time Daemon support
