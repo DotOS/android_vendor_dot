@@ -23,7 +23,12 @@
 
 ### Changelog (short)
 
-#### Ongoing changes... (Beta 6)
+#### Ongoing changes... (Beta 7)
+
+#### 2015/08/13 (Beta 6)
+* Kernel
+    * Updated mm from 3.10 kernel
+    * General code updates
 * ROM
     * Fixed carrier text on Keyguard
     * More fixes on av and base repo
@@ -38,6 +43,7 @@
     * Stock Browser: Completely reworked, materialized and fixed a couple of FC. Settings now works as expected.
     * Android 5.1.1 release 13
     * Other small fixes on base and telephony repos
+    * Materialized some icons
 
 #### 2015/08/07 (Beta 5)
 * Kernel
