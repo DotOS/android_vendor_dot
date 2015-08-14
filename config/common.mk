@@ -64,6 +64,7 @@ PRODUCT_PACKAGES += \
     Launcher3 \
     LayersManager4.0 \
     OTAUpdates \
+    Stk \
     STweaks 
     
 # ADB authentication
