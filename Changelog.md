@@ -24,6 +24,11 @@
 ### Changelog (short)
 
 #### Ongoing changes... (Beta 7)
+* ROM
+    * Added STK to build
+    * Ported all the code from AOSP for SIM handling
+    * Add ability to ignore interruptions while active media playback
+    * Reverted some fixes on base
 
 #### 2015/08/13 (Beta 6)
 * Kernel
