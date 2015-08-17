@@ -29,6 +29,9 @@
     * Ported all the code from AOSP for SIM handling
     * Add ability to ignore interruptions while active media playback
     * Reverted some fixes on base
+    * Fixed APN selection on CDMA phones (this time for real)
+    * Removed not used code from init (auditd)
+    * Fixed last Stagefright vulnerability (CVE-2015-3864)
 
 #### 2015/08/13 (Beta 6)
 * Kernel
