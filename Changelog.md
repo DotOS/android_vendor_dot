@@ -32,6 +32,12 @@
     * Fixed APN selection on CDMA phones (this time for real)
     * Removed not used code from init (auditd)
     * Fixed last Stagefright vulnerability (CVE-2015-3864)
+    * Launcher3: Added stock wallpapers
+    * Frameworks: add ability to choose a different wallpaper for lockscreen
+    * Settings: Updated icons and colours
+    * Fixes on base/av/build repos
+    * Added WallpaperPicker to build
+    * Base: added dismiss button to battery saver option
 
 #### 2015/08/13 (Beta 6)
 * Kernel

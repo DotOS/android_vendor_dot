@@ -65,7 +65,8 @@ PRODUCT_PACKAGES += \
     LayersManager4.0 \
     OTAUpdates \
     Stk \
-    STweaks 
+    STweaks \
+    WallpaperPicker
     
 # ADB authentication
 ADDITIONAL_DEFAULT_PROPERTIES += \
