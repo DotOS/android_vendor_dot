@@ -38,6 +38,10 @@
     * Fixes on base/av/build repos
     * Added WallpaperPicker to build
     * Base: added dismiss button to battery saver option
+    * Base: improved recents tasks list
+    * Device: fix MMS
+    * Use chromium/icu repos from AOSP
+    * Add SamsungServiceMode specific for our RIL
 
 #### 2015/08/13 (Beta 6)
 * Kernel
