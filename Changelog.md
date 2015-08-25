@@ -42,6 +42,11 @@
     * Device: fix MMS
     * Use chromium/icu repos from AOSP
     * Add SamsungServiceMode specific for our RIL
+    * More fixes from M to base/av repos
+    * libbt: support 1.5M baudrate
+    * Fixed encryption for f2fs
+    * Fixed ipv6 tethering
+    * Telecomm/Telephony: ported a part of code from AOSP
 
 #### 2015/08/13 (Beta 6)
 * Kernel
