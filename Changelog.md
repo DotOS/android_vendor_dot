@@ -47,6 +47,15 @@
     * Fixed encryption for f2fs
     * Fixed ipv6 tethering
     * Telecomm/Telephony: ported a part of code from AOSP
+    * libcore/art/core repos: tons of fixes and ported a part of code from M
+    * Init: allow SElinux permissive in user builds
+    * Build: switch to user build
+        * Rooted
+        * Debuggable
+        * SElinux: permissive
+    * Reduced log level for all the builds
+    * Toast: Show app icon with the message
+    * PackageInstaller: show current & new version
 
 #### 2015/08/13 (Beta 6)
 * Kernel
