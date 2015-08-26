@@ -23,7 +23,7 @@
 
 ### Changelog (short)
 
-#### Ongoing changes... (Beta 7)
+#### Ongoing changes... (Stable)
 * ROM
     * Added STK to build
     * Ported all the code from AOSP for SIM handling
