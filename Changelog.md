@@ -1,5 +1,5 @@
-# Jflte DevCon
-### Developers
+# Jflte DevCon Team
+### Developers & Testers
 [B--B](https://github.com/B--B) - Lead
 
 [AntaresOne](http://github.com/AntaresOne) - Developer, git mantainer, scripting, tester
@@ -16,6 +16,9 @@
 
 [hawkerpaul](https://github.com/hawkerpaul) - tester, scripting
 
+[franzyroy] - tester
+
+[smstiv] - tester
 
 
 ### Changelog (full)
