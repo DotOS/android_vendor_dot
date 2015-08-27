@@ -16,9 +16,9 @@
 
 [hawkerpaul](https://github.com/hawkerpaul) - tester, scripting
 
-[franzyroy] - tester
+[franzyroy](http://forum.xda-developers.com/member.php?u=2875350) - tester
 
-[smstiv] - tester
+[smstiv](http://forum.xda-developers.com/member.php?u=6180151) - tester
 
 
 ### Changelog (full)
