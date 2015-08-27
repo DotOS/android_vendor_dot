@@ -16,9 +16,9 @@
 
 [hawkerpaul](https://github.com/hawkerpaul) - tester, scripting
 
-[franzyroy](http://forum.xda-developers.com/member.php?u=2875350) - tester
+[franzyroy](https://github.com/franzyroy) - tester, cm themer
 
-[smstiv](http://forum.xda-developers.com/member.php?u=6180151) - tester
+[smstiv](https://github.com/smstiv) - tester
 
 
 ### Changelog (full)
