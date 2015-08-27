@@ -20,6 +20,8 @@
 
 [smstiv](https://github.com/smstiv) - tester
 
+[side](https://github.com/dkati) - tester, cm themer
+
 
 ### Changelog (full)
 [AOSP-JF](https://github.com/AOSP-JF) - Project GitHub
