@@ -61,6 +61,14 @@
     * Reduced log level for all the builds
     * Toast: Show app icon with the message
     * PackageInstaller: show current & new version
+    * frameworks/native: merged a lot of fixes from M
+    * stagefright: added new Softavc/Softmpeg2 decoders from M/master branch
+    * Build wit GCC 4.9.4 (Sabermod)
+    * Art: compiled with GCC 4.8.5 due to segfaults caused by new GCC
+    * Bluetooth: fixed compiling for latest GCC with -os flag
+    * Audioflinger: fixed compiling for latest GCC with -os flag on ID3
+    * Updated Archidroid optimizations to version 4.1
+    * Updated translations for AOSP Custom Settings
 
 #### 2015/08/13 (Beta 6)
 * Kernel
