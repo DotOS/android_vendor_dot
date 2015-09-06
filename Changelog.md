@@ -65,6 +65,13 @@
     * Audioflinger: fixed compiling for latest GCC with -os flag on ID3
     * Updated Archidroid optimizations to version 4.1
     * Updated translations for AOSP Custom Settings
+    * Updated Sepolicy
+    * Some updates on wifi code
+    * Bionic: more optimisations for krait/a15 cpu
+    * General code updates/fixes in base/core/av/native repos
+    * Some small changes on telephony repos
+    * Manifest: remove not used repos
+    * Device: update media codecs & power management
 
 #### 2015/08/13 (Beta 6)
 * Kernel
