@@ -72,6 +72,13 @@
     * Some small changes on telephony repos
     * Manifest: remove not used repos
     * Device: update media codecs & power management
+    * Improved InCallUI speed when receiving a call
+    * Updated sources to r18
+    * Bionic: a lot of improvements
+    * Native/Base/Core/Extras: more fixes from m and cm
+    * Updated APNs
+    * Updated and improved RIL
+    * Gallery2: materialized, updated code and fixed a lot of bugs
 
 #### 2015/08/13 (Beta 6)
 * Kernel
