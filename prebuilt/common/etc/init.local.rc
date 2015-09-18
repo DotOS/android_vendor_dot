@@ -22,7 +22,7 @@ on init
 
     # Realtime display class
     mkdir /sys/fs/cgroup/bfqio/rt-display 0755 root system
-    write /sys/fs/cgroup/bfqio/rt-display/bfqio.ioprio_class 1 
+    write /sys/fs/cgroup/bfqio/rt-display/bfqio.ioprio_class 1
     write /sys/fs/cgroup/bfqio/rt-display/bfqio.ioprio 7
     write /sys/fs/cgroup/bfqio/rt-display/bfqio.weight 1000
     chown system graphics /sys/fs/cgroup/bfqio/rt-display/tasks
@@ -39,7 +39,7 @@ on init
     # Hipri class
     mkdir /sys/fs/cgroup/bfqio/hipri 0755 root system
     write /sys/fs/cgroup/bfqio/hipri/bfqio.ioprio_class 2
-    write /sys/fs/cgroup/bfqio/hipri/bfqio.ioprio 2 
+    write /sys/fs/cgroup/bfqio/hipri/bfqio.ioprio 2
     write /sys/fs/cgroup/bfqio/hipri/bfqio.weight 1000
     chown root system /sys/fs/cgroup/bfqio/hipri/tasks
     chmod 0666 /sys/fs/cgroup/bfqio/hipri/tasks
@@ -154,3 +154,30 @@ on boot
     setprop net.tcp.usercfg.default    0
     setprop net.tcp.usercfg.wifi       1
     setprop net.tcp.usercfg.lte        1
+
+    # Persistent properties (only created if persist exists)
+    mkdir /persist/properties 0770 system system
+
+# Disable ril services if noril prop is set
+on property:ro.radio.noril=1
+    stop ril-daemon
+    stop qmuxd
+    stop netmgrd
+
+on property:persist.radio.noril=1
+    setprop ro.radio.noril 1
+
+# Configure IO scheduler
+on property:sys.io.scheduler=*
+    write /sys/block/mmcblk0/queue/scheduler ${sys.io.scheduler}
+
+on property:persist.sys.io.scheduler=*
+    setprop sys.io.scheduler ${persist.sys.io.scheduler}
+
+# Set slice_idle to 0 for CFQ
+on property:sys.io.scheduler=cfq
+    write /sys/block/mmcblk0/queue/iosched/slice_idle 0
+
+# Set slice_idle to 0 for BFQ
+on property:sys.io.scheduler=bfq
+    write /sys/block/mmcblk0/queue/iosched/slice_idle 0
