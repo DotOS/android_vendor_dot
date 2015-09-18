@@ -28,7 +28,17 @@
 
 ### Changelog (short)
 
-#### Ongoing changes... (Stable)
+#### Ongoing changes... (Stable2)
+
+#### 2015/09/17 (Stable1)
+* Kernel
+    * General code updates from 3.10
+    * Added KMS and UKMS from 3.10
+    * Added TCP VENO protocol
+    * Changes on OOM control, less battery usage
+    * IPC: ported code from 3.10 kernel
+    * Changed and optimized alucard, darkness, nightmare and ondemand cpu governors
+
 * ROM
     * Added STK to build
     * Ported all the code from AOSP for SIM handling
@@ -59,8 +69,8 @@
     * PackageInstaller: show current & new version
     * frameworks/native: merged a lot of fixes from M
     * stagefright: added new Softavc/Softmpeg2 decoders from M/master branch
-    * Build wit GCC 4.9.4 (Sabermod)
-    * Art: compiled with GCC 4.8.5 due to segfaults caused by new GCC
+    * Build with GCC 4.9.4 (UBER)
+    * Art: compiled with GCC 4.8.5 (UBER) due to segfaults caused by new GCC
     * Bluetooth: fixed compiling for latest GCC with -os flag
     * Audioflinger: fixed compiling for latest GCC with -os flag on ID3
     * Updated Archidroid optimizations to version 4.1
@@ -79,6 +89,11 @@
     * Updated APNs
     * Updated and improved RIL
     * Gallery2: materialized, updated code and fixed a lot of bugs
+    * Ported support for oma-drm / OmaDrmEngine from cm
+    * Ported all changes made by cm for BFQ IO scheduler
+    * Core: improved UI responsiveness and reduced wakelocks when phone is on deep sleep
+    * Small bugfixes and improvements for f2fs/ext4
+    * Build: improved build enviroment and removed some unused/outdated packages
 
 #### 2015/08/13 (Beta 6)
 * Kernel
