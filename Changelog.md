@@ -22,15 +22,22 @@
 
 [side](https://github.com/dkati) - tester, cm themer
 
+[javelinanddart](https://github.com/javelinanddart) - Kernel Developer
+
 
 ### Changelog (full)
 [AOSP-JF](https://github.com/AOSP-JF) - Project GitHub
 
 ### Changelog (short)
 
-#### Ongoing changes... (Stable2)
+#### Ongoing changes... (Stable v2)
 
-#### 2015/09/17 (Stable1)
+* ROM
+    * Gallery2: Added support for drm content + small fixes
+    * jemalloc: update to version 4.0.0 (big thanks to arter97)
+    * BFQ/CFQ: merged all cm enhancements
+
+#### 2015/09/17 (Stable v1)
 * Kernel
     * General code updates from 3.10
     * Added KMS and UKMS from 3.10
