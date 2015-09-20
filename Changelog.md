@@ -31,11 +31,16 @@
 ### Changelog (short)
 
 #### Ongoing changes... (Stable v2)
+* Kernel
+    * Governors tuning/code cleaning
 
 * ROM
     * Gallery2: Added support for drm content + small fixes
     * jemalloc: update to version 4.0.0 (big thanks to arter97)
-    * BFQ/CFQ: merged all cm enhancements
+    * BFQ/CFQ: merged all cm enhancements + fixes
+    * Art/libcore: reverted some things that could cause potential issues/instability
+    * IMS: merged all updates from codeaurora/cm
+    * ART: fixed segmentation fault when xposed is installed
 
 #### 2015/09/17 (Stable v1)
 * Kernel
