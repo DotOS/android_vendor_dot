@@ -9,6 +9,8 @@
 #
 # TODO: check again MultiROM recognition, it is not working.
 
+# Notification LED pattern through sysfs
+LED=/sys/class/sec/led/led_pattern
 # MultiROM recognition
 MROM=$(ls /tmp | grep "META-INF")
 
@@ -22,6 +24,8 @@ CLEAN() {
     mount /cache
     rm -rf /cache/*
     umount /cache
+    # Reset LED
+    echo 0 > $LED
     exit 0
 }
 
@@ -44,6 +48,8 @@ FORMAT() {
 # Primary ROM
 MAIN() {
     echo "Installing in /system"
+    # Debug: check if the script is alive, blink blue
+    echo 6 > $LED
     # Recognize FS type
     FS=$(eval $(blkid /dev/block/mmcblk0p16 | cut -c 68-); echo $TYPE > /tmp/type.txt)
     TYPE=`cat /tmp/type.txt`
@@ -56,5 +62,8 @@ if [ "$MROM" == "" ]; then
     MAIN
 else
     echo "Installing in MultiROM environment"
+    # Debug: check if we're installing in MultiROM, blink red for 3 seconds
+    echo 2 > $LED
+    sleep 3 && echo 0 > $LED
     exit 0
 fi
