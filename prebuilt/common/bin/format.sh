@@ -12,6 +12,19 @@
 # MultiROM recognition
 MROM=$(ls /tmp | grep "META-INF")
 
+# Clean ART & cachefs
+CLEAN() {
+    echo "Cleaning ART cache"
+    mount /data
+    rm -rf /data/dalvik-cache
+    umount /data
+    echo "Cleaning cachefs"
+    mount /cache
+    rm -rf /cache/*
+    umount /cache
+    exit 0
+}
+
 # Format
 FORMAT() {
     if [ "$TYPE" == "ext4" ]; then
@@ -25,7 +38,7 @@ FORMAT() {
         echo "No filesystem specified. Formatting as ext4..."
         mke2fs -T ext4 /dev/block/mmcblk0p16
     fi
-    exit 0
+    CLEAN
 }
 
 # Primary ROM
