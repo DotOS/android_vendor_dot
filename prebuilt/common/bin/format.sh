@@ -1,19 +1,13 @@
 #!/sbin/sh
-#    ____  ____  __   ____  ____
-#   (_  _)( ___)(  ) (_  _)( ___)
-#  .-_)(   )__)  )(__  )(   )__)
-#  \____) (__)  (____)(__) (____)
-#   ____  ____  _  _  ___  _____  _  _
-#  (  _ \( ___)( \/ )/ __)(  _  )( \( )
-#   )(_) ))__)  \  /( (__  )(_)(  )  (
-#  (____/(____)  \/  \___)(_____)(_)\_)
 #
 # Copyright (c) 2015 - Mattia "AntaresOne" D'Alleva
-# Copyright (c) 2015 - Jflte Dev Connection (JDCTeam)
+# Copyright (c) 2015 - JDCTeam
 #
 # EXT4/F2FS format script with MultiROM support
 # Check current /system FS and format accordingly to the FS found
-# Check installation/upgrade type. If primary ROM run format process, else don't run it (installing as secondary ROM)
+# Check installation/upgrade type. If primary ROM run format process, else don't run it (installing as secondary ROM
+#
+# TODO: check again MultiROM recognition, it is not working.
 
 # MultiROM recognition
 MROM=$(ls /tmp | grep "META-INF")
