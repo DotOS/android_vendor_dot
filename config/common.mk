@@ -105,6 +105,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.ota.version=$(shell date -u +%Y%m%d) \
     ro.ota.manifest=https://romhut.com/roms/aosp-jf/ota.xml
 
+
+# Prebuilt ConsumerIR
+PRODUCT_COPY_FILES += \
+    vendor/aosp/prebuilt/common/lib/hw/consumerir.msm8960.old:system/lib/hw/consumerir.msm8960.old
+    
 # Stagefright FFMPEG plugin
 PRODUCT_PACKAGES += \
     libffmpeg_extractor \
