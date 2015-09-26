@@ -41,6 +41,15 @@
     * Art/libcore: reverted some things that could cause potential issues/instability
     * IMS: merged all updates from codeaurora/cm
     * ART: fixed segmentation fault when xposed is installed
+    * libhardware: completely reworked, fixed some small bugs, added missing code and merged code for cpu boosting interface
+    * base: fixes, speed/stability enhancements and merged cpu boosting interface code
+    * Added LibSwitcher to build, an easy way to have an always working IR LED
+    * native: merged some missing code from cm
+    * Update apns
+    * Updated WebView
+    * libpng: small fixes from M
+    * Updates on sepolicy
+    * av: another integer overflow fix
 
 #### 2015/09/17 (Stable v1)
 * Kernel
