@@ -35,10 +35,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Set Selinux as permissive    
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.selinux=0
-    
-# Dancing LED
-PRODUCT_COPY_FILES += \
-    vendor/aosp/prebuilt/common/bin/dancing_led:system/bin/dancing_led
 
 # EXT4/F2FS format script
 PRODUCT_COPY_FILES += \
@@ -78,6 +74,10 @@ ADDITIONAL_DEFAULT_PROPERTIES += \
 PRODUCT_COPY_FILES += \
     vendor/aosp/prebuilt/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so
 
+# LEDify
+PRODUCT_COPY_FILES += \
+    vendor/aosp/prebuilt/common/bin/ledify:system/bin/ledify
+    
 # init.d support
 PRODUCT_COPY_FILES += \
     vendor/aosp/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner \
@@ -105,7 +105,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.ota.romname=AOSP-JF-5.1 \
     ro.ota.version=$(shell date -u +%Y%m%d) \
     ro.ota.manifest=https://romhut.com/roms/aosp-jf/ota.xml
-
 
 # Prebuilt ConsumerIR
 PRODUCT_COPY_FILES += \
