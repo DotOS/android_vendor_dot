@@ -50,6 +50,9 @@
     * libpng: small fixes from M
     * Updates on sepolicy
     * av: another integer overflow fix
+    * base: fix sporadic SystemUI crash when user long press home button
+    * Fixed vibration when receiving a call
+    * Updates/Fixes on init for various devices
 
 #### 2015/09/17 (Stable v1)
 * Kernel
