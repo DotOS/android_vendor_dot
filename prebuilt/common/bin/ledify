@@ -3,28 +3,62 @@
 # Copyright (c) 2015, Mattia "AntaresOne" D'Alleva
 # Copyright (c) 2015, JDCTeam
 #
-# Custom notification LED at boot
+# JDCTeam presents LEDify!
 #
+# Funny script to control the notification LED at device boot. 
+#
+# Introduction:
+# BOOT is the variable to check when boot is completed, retrieves sys.boot_completed from system properties (1=boot complete)
+# BRG is the brightness level for single channels; Range from 0 (minimum, off) to 255 (maximum)
+# LED_*letter* is the individual channel for primary colors through sysfs. Letter can be B for blue, G for green, R for red
+# SPD is color switch time in milliseconds (0.*value*) or seconds (*value*), sets a wait time before doing the next command. Our default value: 100ms
+#
+# Usage example:
+# while :; do is a loop where system property is continuously checked. If BOOT=1 stop LEDify, otherwise set choosen LED colors
+# SPD="sleep 1" 1 second wait time
+#
+# Blue->Cyan->White pattern
+# $BRG 255 > $LED_B applies 255 brightness value to the blue channel
+# $SPD sets the choosen wait time
+# $BRG 255 > $LED_G applies 255 brightness value to the green channel (at this point the LED is cyan)
+# $SPD same as above
+# $BRG 255 > $LED_R applies 255 brightness value to the red channel (at this point the LED is white)
+# $SPD
+# $BRG 0 | tee $LED_G $LED_R resets brightness for green and red channel (at this point the LED is blue again)
+# Then loop restarts
+#
+# Red->Green->Blue pattern
+# $BRG 255 > $LED_R && $SPD
+# $BRG 0 > $LED_R && $BRG 255 > $LED_G && $SPD
+# $BRG 0 > $LED_G && $BRG 255 > $LED_B && $SPD && $BRG 0 > $LED_B
+# Loop restart
+#
+# How to add it to my ROM?
+# 1- Add this binary to /system/bin or add PRODUCT_COPY_FILES to a makefile to automatically add it when building a ROM from source.
+# 2- By default, LEDify is started by kernel's init and stopped itself when boot is completed. Declare it as service in init and add a start rule.
+# 3- If SELinux is enforcing LEDify may not start. To fix just switch to permissive SELinux (androidboot.selinux=permissive for cmdline) until I don't add a denial for it.
+# 4- Do not forget to give credit to the owner :-)
+#
+# Further infos: https://goo.gl/AmzVqG || https://goo.gl/Yp8f1g
+#
+# Imagination is the only limit!
 
-# Brightness
-BRG=echo #value
-# Blue LED
+# Color channel sysfs
 LED_B=/sys/class/leds/led_b/brightness
-# Green LED
 LED_G=/sys/class/leds/led_g/brightness
-# Red LED
 LED_R=/sys/class/leds/led_r/brightness
-# Value for color transition speed
+# Values
+BRG=echo #value
 SPD="sleep 0.10"
 
 while :; do
-    # To check when boot is complete
-    VAR=$(getprop sys.boot_completed | grep "1")
-    if [ "$VAR" == "1" ]; then
-        # Reset and exit
+    BOOT=$(getprop sys.boot_completed | grep "1")
+    if [ "$BOOT" == "1" ]; then
+        # Reset
         $BRG 0 > $LED_B
         $BRG 0 > $LED_G
         $BRG 0 > $LED_R
+        # Stop service
         exit 0
     else
         # Red
