@@ -51,57 +51,47 @@ LED_R=/sys/class/leds/led_r/brightness
 BRG=echo #value
 SPD="sleep 0.10"
 
+EXIT() {
+    # Reset channels
+    echo 0 | tee $LED_B $LED_G $LED_R
+    exit 0
+}
+
+RUN() {
+    # Red
+    $BRG 150 > $LED_R | $SPD
+    # Orange
+    $BRG 40 > $LED_G | $SPD
+    # Yellow
+    $BRG 150 > $LED_G | $SPD
+    # Green
+    $BRG 0 > $LED_R | $SPD
+    # Blue
+    $BRG 0 > $LED_G && $BRG 150 > $LED_B | $SPD
+    # Indigo
+    $BRG 10 > $LED_R | $SPD
+    # Violet
+    $BRG 150 > $LED_R | $SPD
+    ### Reverse ###
+    # Indigo
+    $BRG 10 > $LED_R | $SPD
+    # Blue
+    $BRG 0 | tee $LED_G $LED_R | $SPD
+    # Green
+    $BRG 0 > $LED_B && $BRG 150 > $LED_G | $SPD
+    # Yellow
+    $BRG 150 > $LED_R | $SPD
+    # Orange
+    $BRG 40 > $LED_G | $SPD
+    # Red
+    $BRG 0 > $LED_G
+}
+
 while :; do
     BOOT=$(getprop sys.boot_completed | grep "1")
     if [ "$BOOT" == "1" ]; then
-        # Reset
-        $BRG 0 > $LED_B
-        $BRG 0 > $LED_G
-        $BRG 0 > $LED_R
-        # Stop service
-        exit 0
+	EXIT
     else
-        # Red
-        $BRG 150 > $LED_R
-        $SPD
-        # Orange
-        $BRG 40 > $LED_G
-        $SPD
-        # Yellow
-        $BRG 150 > $LED_G
-        $SPD
-        # Green
-        $BRG 0 > $LED_R
-        $SPD
-        # Blue
-        $BRG 0 > $LED_G
-        $BRG 150 > $LED_B
-        $SPD
-        # Indigo
-        $BRG 10 > $LED_R
-        $SPD
-        # Violet
-        $BRG 150 > $LED_R
-        $SPD
-        ### Reverse ###
-        # Indigo
-        $BRG 10 > $LED_R
-        $SPD
-        # Blue
-        $BRG 0 > $LED_G
-        $BRG 0 > $LED_R
-        $SPD
-        # Green
-        $BRG 0 > $LED_B
-        $BRG 150 > $LED_G
-        $SPD
-        # Yellow
-        $BRG 150 > $LED_R
-        $SPD
-        # Orange
-        $BRG 40 > $LED_G
-        $SPD
-        # Red
-        $BRG 0 > $LED_G
+	RUN
     fi
 done
