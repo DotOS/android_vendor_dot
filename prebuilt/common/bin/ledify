@@ -9,6 +9,7 @@
 #
 # <=== Introduction ===>
 # BRG is the brightness level for single channels; Range from 0 (minimum, off) to 255 (maximum)
+# HBCOLOR is the color channel for heartbeat pattern. Can be blue, green or red
 # LED_*letter* is the individual channel for primary colors through sysfs. Letter can be B for blue, G for green, R for red
 # TBX (Toolbox) will be our custom app to handle this script, if you are going to use this script in your ROM just ignore it
 # while :; do is a loop where sys.boot_completed from system properties is continuously checked. If BOOT=1 stop LEDify, otherwise set choosen LED colors
@@ -17,7 +18,7 @@
 # PATTERN is the LED pattern which you prefer:
 # - jdcdefault is our default one, rainbow colors (red->orange->yellow->green->blue->indigo->violet->reverse)
 # - disabled to disable LEDify
-# - heartbeat is a realistic heartbeat simulation! (power on/off red channel gradually for two times, wait 1 and half second, pulse again)
+# - heartbeat is a realistic heartbeat simulation! (power on/off choosen channel gradually for two times, wait 1 and half second, pulse again)
 # - nexus follows the Google Nexus logo in clockwise (red->green->yellow->blue)
 # - nexusreverse is same as above, but anticlockwise (blue->yellow->green->red)
 # - police is alternate blue/red flashing as Police cars
@@ -27,6 +28,7 @@
 # <=== Usage example ===>
 # Put PATTERN and SPD values of your choice under "# Default" which is at the end of file
 # BRG with your preferred values
+# In case of heartbeat pattern put HBCOLOR of your choice, default is red. This pattern has its own SPD values
 #
 # <=== How can I make my own patterns? ===>
 # Take a look at these examples:
@@ -73,53 +75,61 @@ EXIT() {
 }
 
 HEARTBEAT() {
+    # Set color channel
+    if [ "$HBCOLOR" == "blue" ]; then
+	LED=$LED_B
+    elif [ "$HBCOLOR" == "green" ]; then
+	LED=$LED_G
+    else
+        LED=$LED_R
+    fi
     # Between each brightness value
     SPD="sleep 0.01"
     # Between a beat and the other
     SPD2="sleep 0.02"
     # Between end of two beats and start of another two
     SPD3="sleep 1.5"
-    $BRG 30 > $LED_R | $SPD
-    $BRG 55 > $LED_R | $SPD
-    $BRG 80 > $LED_R | $SPD
-    $BRG 105 > $LED_R | $SPD
-    $BRG 130 > $LED_R | $SPD
-    $BRG 155 > $LED_R | $SPD
-    $BRG 180 > $LED_R | $SPD
-    $BRG 205 > $LED_R | $SPD
-    $BRG 230 > $LED_R | $SPD
-    $BRG 255 > $LED_R | $SPD
-    $BRG 230 > $LED_R | $SPD
-    $BRG 205 > $LED_R | $SPD
-    $BRG 180 > $LED_R | $SPD
-    $BRG 155 > $LED_R | $SPD
-    $BRG 130 > $LED_R | $SPD
-    $BRG 105 > $LED_R | $SPD
-    $BRG 80 > $LED_R | $SPD
-    $BRG 55 > $LED_R | $SPD
-    $BRG 30 > $LED_R | $SPD
-    $BRG 0 > $LED_R | $SPD
+    $BRG 30 > $LED | $SPD
+    $BRG 55 > $LED | $SPD
+    $BRG 80 > $LED | $SPD
+    $BRG 105 > $LED | $SPD
+    $BRG 130 > $LED | $SPD
+    $BRG 155 > $LED | $SPD
+    $BRG 180 > $LED | $SPD
+    $BRG 205 > $LED | $SPD
+    $BRG 230 > $LED | $SPD
+    $BRG 255 > $LED | $SPD
+    $BRG 230 > $LED | $SPD
+    $BRG 205 > $LED | $SPD
+    $BRG 180 > $LED | $SPD
+    $BRG 155 > $LED | $SPD
+    $BRG 130 > $LED | $SPD
+    $BRG 105 > $LED | $SPD
+    $BRG 80 > $LED | $SPD
+    $BRG 55 > $LED | $SPD
+    $BRG 30 > $LED | $SPD
+    $BRG 0 > $LED | $SPD
     $SPD2
-    $BRG 30 > $LED_R | $SPD
-    $BRG 55 > $LED_R | $SPD
-    $BRG 80 > $LED_R | $SPD
-    $BRG 105 > $LED_R | $SPD
-    $BRG 130 > $LED_R | $SPD
-    $BRG 155 > $LED_R | $SPD
-    $BRG 180 > $LED_R | $SPD
-    $BRG 205 > $LED_R | $SPD
-    $BRG 230 > $LED_R | $SPD
-    $BRG 255 > $LED_R | $SPD
-    $BRG 230 > $LED_R | $SPD
-    $BRG 205 > $LED_R | $SPD
-    $BRG 180 > $LED_R | $SPD
-    $BRG 155 > $LED_R | $SPD
-    $BRG 130 > $LED_R | $SPD
-    $BRG 105 > $LED_R | $SPD
-    $BRG 80 > $LED_R | $SPD
-    $BRG 55 > $LED_R | $SPD
-    $BRG 30 > $LED_R | $SPD
-    $BRG 0 > $LED_R | $SPD
+    $BRG 30 > $LED | $SPD
+    $BRG 55 > $LED | $SPD
+    $BRG 80 > $LED | $SPD
+    $BRG 105 > $LED | $SPD
+    $BRG 130 > $LED | $SPD
+    $BRG 155 > $LED | $SPD
+    $BRG 180 > $LED | $SPD
+    $BRG 205 > $LED | $SPD
+    $BRG 230 > $LED | $SPD
+    $BRG 255 > $LED | $SPD
+    $BRG 230 > $LED | $SPD
+    $BRG 205 > $LED | $SPD
+    $BRG 180 > $LED | $SPD
+    $BRG 155 > $LED | $SPD
+    $BRG 130 > $LED | $SPD
+    $BRG 105 > $LED | $SPD
+    $BRG 80 > $LED | $SPD
+    $BRG 55 > $LED | $SPD
+    $BRG 30 > $LED | $SPD
+    $BRG 0 > $LED | $SPD
     $SPD3
 }
 
@@ -219,9 +229,13 @@ if [ "$TBX" == "toolbox_ledify" ]; then
     # Set user-choosen values, Toolbox-only
     PATTERN=$(eval $(cat /data/toolbox_ledify | grep -o "PATTERN[^/].*"); echo $PATTERN);
     SPD=$(eval $(cat /data/toolbox_ledify | grep -o "SPEED[^/].*"); echo $SPEED);
+    if [ "$PATTERN" == "heartbeat" ]; then
+	HBCOLOR=$(eval $(cat /data/toolbox_ledify | grep -o "HBCOLOR[^/].*"); echo $HBCOLOR);
+    fi
 else
     # Default
     PATTERN=jdcdefault
     SPD=null # null applies default pattern-based speed values decided by us
+    HBCOLOR=red
 fi
 LOOP
