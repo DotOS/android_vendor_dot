@@ -17,6 +17,7 @@
 # PATTERN is the LED pattern which you prefer:
 # - jdcdefault is our default one, rainbow colors (red->orange->yellow->green->blue->indigo->violet->reverse)
 # - disabled to disable LEDify
+# - secdefault is Samsung stock blue pattern
 # SPD is color switch time in milliseconds (0.*value*) or seconds (*value*), sets a wait time before executing the next command. Our default value: 100ms ("sleep 0.10")
 #
 # <=== Usage example ===>
@@ -58,10 +59,12 @@ BRG=echo #value
 LED_B=/sys/class/leds/led_b/brightness
 LED_G=/sys/class/leds/led_g/brightness
 LED_R=/sys/class/leds/led_r/brightness
+# Samsung stock LED pattern
+LED_SEC=/sys/devices/virtual/sec/led/led_pattern
 
 EXIT() {
     # Reset channels
-    echo 0 | tee $LED_B $LED_G $LED_R
+    echo 0 | tee $LED_B $LED_G $LED_R $SEC_LED
     exit 0
 }
 
@@ -98,10 +101,17 @@ JDCDEF() {
     $BRG 0 > $LED_G
 }
 
+SECDEF() {
+    $BRG 6 > $LED_SEC
+    # Update each 5 seconds
+    sleep 5
+}
+
 RUN() {
     case $PATTERN in
     disabled) EXIT;;
     jdcdefault) JDCDEF;;
+    secdefault) SECDEF;;
     esac
 }
 
