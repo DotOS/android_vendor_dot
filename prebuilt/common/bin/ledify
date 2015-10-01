@@ -17,6 +17,7 @@
 # PATTERN is the LED pattern which you prefer:
 # - jdcdefault is our default one, rainbow colors (red->orange->yellow->green->blue->indigo->violet->reverse)
 # - disabled to disable LEDify
+# - police is alternate blue/red flashing as Police cars
 # - secdefault is Samsung stock blue pattern
 # SPD is color switch time in milliseconds (0.*value*) or seconds (*value*), sets a wait time before executing the next command. Our default value: 100ms ("sleep 0.10")
 #
@@ -101,6 +102,15 @@ JDCDEF() {
     $BRG 0 > $LED_G
 }
 
+POLICE() {
+    if [ "$SPD" == "null" ]; then
+	SPD="sleep 0.30"
+    fi
+    $BRG 255 > $LED_B | $SPD
+    $BRG 0 > $LED_B && $BRG 255 > $LED_R | $SPD
+    $BRG 0 > $LED_R
+}
+
 SECDEF() {
     $BRG 6 > $LED_SEC
     # Update each 5 seconds
@@ -111,6 +121,7 @@ RUN() {
     case $PATTERN in
     disabled) EXIT;;
     jdcdefault) JDCDEF;;
+    police) POLICE;;
     secdefault) SECDEF;;
     esac
 }
