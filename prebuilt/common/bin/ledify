@@ -17,6 +17,7 @@
 # PATTERN is the LED pattern which you prefer:
 # - jdcdefault is our default one, rainbow colors (red->orange->yellow->green->blue->indigo->violet->reverse)
 # - disabled to disable LEDify
+# - heartbeat is a realistic heartbeat simulation! (power on/off red channel gradually for two times, wait 1 and half second, pulse again)
 # - nexus follows the Google Nexus logo in clockwise (red->green->yellow->blue)
 # - nexusreverse is same as above, but anticlockwise (blue->yellow->green->red)
 # - police is alternate blue/red flashing as Police cars
@@ -69,6 +70,57 @@ EXIT() {
     # Reset channels
     echo 0 | tee $LED_B $LED_G $LED_R $SEC_LED
     exit 0
+}
+
+HEARTBEAT() {
+    # Between each brightness value
+    SPD="sleep 0.01"
+    # Between a beat and the other
+    SPD2="sleep 0.02"
+    # Between end of two beats and start of another two
+    SPD3="sleep 1.5"
+    $BRG 30 > $LED_R | $SPD
+    $BRG 55 > $LED_R | $SPD
+    $BRG 80 > $LED_R | $SPD
+    $BRG 105 > $LED_R | $SPD
+    $BRG 130 > $LED_R | $SPD
+    $BRG 155 > $LED_R | $SPD
+    $BRG 180 > $LED_R | $SPD
+    $BRG 205 > $LED_R | $SPD
+    $BRG 230 > $LED_R | $SPD
+    $BRG 255 > $LED_R | $SPD
+    $BRG 230 > $LED_R | $SPD
+    $BRG 205 > $LED_R | $SPD
+    $BRG 180 > $LED_R | $SPD
+    $BRG 155 > $LED_R | $SPD
+    $BRG 130 > $LED_R | $SPD
+    $BRG 105 > $LED_R | $SPD
+    $BRG 80 > $LED_R | $SPD
+    $BRG 55 > $LED_R | $SPD
+    $BRG 30 > $LED_R | $SPD
+    $BRG 0 > $LED_R | $SPD
+    $SPD2
+    $BRG 30 > $LED_R | $SPD
+    $BRG 55 > $LED_R | $SPD
+    $BRG 80 > $LED_R | $SPD
+    $BRG 105 > $LED_R | $SPD
+    $BRG 130 > $LED_R | $SPD
+    $BRG 155 > $LED_R | $SPD
+    $BRG 180 > $LED_R | $SPD
+    $BRG 205 > $LED_R | $SPD
+    $BRG 230 > $LED_R | $SPD
+    $BRG 255 > $LED_R | $SPD
+    $BRG 230 > $LED_R | $SPD
+    $BRG 205 > $LED_R | $SPD
+    $BRG 180 > $LED_R | $SPD
+    $BRG 155 > $LED_R | $SPD
+    $BRG 130 > $LED_R | $SPD
+    $BRG 105 > $LED_R | $SPD
+    $BRG 80 > $LED_R | $SPD
+    $BRG 55 > $LED_R | $SPD
+    $BRG 30 > $LED_R | $SPD
+    $BRG 0 > $LED_R | $SPD
+    $SPD3
 }
 
 JDCDEF() {
@@ -140,6 +192,7 @@ SECDEF() {
 RUN() {
     case $PATTERN in
     disabled) EXIT;;
+    heartbeat) HEARTBEAT;;
     jdcdefault) JDCDEF;;
     nexus) NEXUS;;
     nexusreverse) REVERSE=true; NEXUS;;
