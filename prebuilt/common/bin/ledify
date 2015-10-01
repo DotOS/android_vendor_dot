@@ -12,13 +12,13 @@
 # HBCOLOR is the color channel for heartbeat pattern. Can be blue, green or red
 # LED_*letter* is the individual channel for primary colors through sysfs. Letter can be B for blue, G for green, R for red
 # TBX (Toolbox) will be our custom app to handle this script, if you are going to use this script in your ROM just ignore it
-# while :; do is a loop where sys.boot_completed from system properties is continuously checked. If BOOT=1 stop LEDify, otherwise set choosen LED colors
+# while :; do is a loop where sys.boot_completed from system properties is continuously checked. If BOOT=1 stop LEDify, otherwise set chosen LED colors
 #
 # <=== Settings ===>
 # PATTERN is the LED pattern which you prefer:
 # - jdcdefault is our default one, rainbow colors (red->orange->yellow->green->blue->indigo->violet->reverse)
 # - disabled to disable LEDify
-# - heartbeat is a realistic heartbeat simulation! (power on/off choosen channel gradually for two times, wait 1 and half second, pulse again)
+# - heartbeat is a realistic heartbeat simulation! (power on/off chosen channel gradually for two times, wait 1 and half second, pulse again)
 # - nexus follows the Google Nexus logo in clockwise (red->green->yellow->blue)
 # - nexusreverse is same as above, but anticlockwise (blue->yellow->green->red)
 # - police is alternate blue/red flashing as Police cars
@@ -34,7 +34,7 @@
 # Take a look at these examples:
 # <= Blue->Cyan->White pattern =>
 # $BRG 255 > $LED_B applies 255 brightness value to the blue channel
-# $SPD sets the choosen wait time
+# $SPD sets the chosen wait time
 # $BRG 255 > $LED_G applies 255 brightness value to the green channel (at this point the LED is cyan)
 # $SPD same as above
 # $BRG 255 > $LED_R applies 255 brightness value to the red channel (at this point the LED is white)
@@ -226,7 +226,7 @@ LOOP() {
 # Check if Toolbox-handled settings are available
 TBX=$(ls /data | grep "toolbox_ledify");
 if [ "$TBX" == "toolbox_ledify" ]; then
-    # Set user-choosen values, Toolbox-only
+    # Set user-chosen values, Toolbox-only
     PATTERN=$(eval $(cat /data/toolbox_ledify | grep -o "PATTERN[^/].*"); echo $PATTERN);
     SPD=$(eval $(cat /data/toolbox_ledify | grep -o "SPEED[^/].*"); echo $SPEED);
     if [ "$PATTERN" == "heartbeat" ]; then
