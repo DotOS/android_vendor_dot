@@ -7,49 +7,57 @@
 #
 # Funny script to control the notification LED at device boot. 
 #
-# Introduction:
-# BOOT is the variable to check when boot is completed, retrieves sys.boot_completed from system properties (1=boot complete)
+# <=== Introduction ===>
 # BRG is the brightness level for single channels; Range from 0 (minimum, off) to 255 (maximum)
 # LED_*letter* is the individual channel for primary colors through sysfs. Letter can be B for blue, G for green, R for red
-# SPD is color switch time in milliseconds (0.*value*) or seconds (*value*), sets a wait time before doing the next command. Our default value: 100ms
+# TBX (Toolbox) will be our custom app to handle this script, if you are going to use this script in your ROM just ignore it
+# while :; do is a loop where sys.boot_completed from system properties is continuously checked. If BOOT=1 stop LEDify, otherwise set choosen LED colors
 #
-# Usage example:
-# while :; do is a loop where system property is continuously checked. If BOOT=1 stop LEDify, otherwise set choosen LED colors
-# SPD="sleep 1" 1 second wait time
+# <=== Settings ===>
+# PATTERN is the LED pattern which you prefer:
+# - jdcdefault is our default one, rainbow colors (red->orange->yellow->green->blue->indigo->violet->reverse)
+# - disabled to disable LEDify
+# SPD is color switch time in milliseconds (0.*value*) or seconds (*value*), sets a wait time before executing the next command. Our default value: 100ms ("sleep 0.10")
 #
-# Blue->Cyan->White pattern
+# <=== Usage example ===>
+# Put PATTERN and SPD values of your choice under "# Default" which is at the end of file
+# BRG with your preferred values
+#
+# <=== How can I make my own patterns? ===>
+# Take a look at these examples:
+# <= Blue->Cyan->White pattern =>
 # $BRG 255 > $LED_B applies 255 brightness value to the blue channel
 # $SPD sets the choosen wait time
 # $BRG 255 > $LED_G applies 255 brightness value to the green channel (at this point the LED is cyan)
 # $SPD same as above
 # $BRG 255 > $LED_R applies 255 brightness value to the red channel (at this point the LED is white)
 # $SPD
-# $BRG 0 | tee $LED_G $LED_R resets brightness for green and red channel (at this point the LED is blue again)
+# $BRG 0 | tee $LED_G $LED_R resets brightness for green and red channels (at this point the LED is blue again)
 # Then loop restarts
+# <==>
+# <= Red->Green->Blue pattern =>
+# $BRG 255 > $LED_R && $SPD applies 255 brightness value to the red channel and waits
+# $BRG 0 > $LED_R && $BRG 255 > $LED_G && $SPD resets brightness for the red channel, applies 255 brightness value to the green channel and waits
+# $BRG 0 > $LED_G && $BRG 255 > $LED_B && $SPD && $BRG 0 > $LED_B resets brightness for the green channel, applies 255 brightness value to the blue channel, waits and resets the blue channel
+# Then loop restarts
+# <==>
 #
-# Red->Green->Blue pattern
-# $BRG 255 > $LED_R && $SPD
-# $BRG 0 > $LED_R && $BRG 255 > $LED_G && $SPD
-# $BRG 0 > $LED_G && $BRG 255 > $LED_B && $SPD && $BRG 0 > $LED_B
-# Loop restart
-#
-# How to add it to my ROM?
-# 1- Add this binary to /system/bin or add PRODUCT_COPY_FILES to a makefile to automatically add it when building a ROM from source.
-# 2- By default, LEDify is started by kernel's init and stopped itself when boot is completed. Declare it as service in init and add a start rule.
+# <=== Can I add it in my ROM? ===>
+# Sure, follow these steps and don't forget to give credit to the owner :-)
+# 1- Add this binary in /system/bin or add PRODUCT_COPY_FILES in a makefile to automatically add it when building a ROM from source.
+# 2- By default, LEDify is started by kernel's init and stopped itself when boot is completed. Declare it as service in init and add a start command ("start /system/bin/ledify" is good)
 # 3- If SELinux is enforcing LEDify may not start. To fix just switch to permissive SELinux (androidboot.selinux=permissive for cmdline) until I don't add a denial for it.
-# 4- Do not forget to give credit to the owner :-)
 #
 # Further infos: https://goo.gl/AmzVqG || https://goo.gl/Yp8f1g
 #
 # Imagination is the only limit!
 
+# Brightness
+BRG=echo #value
 # Color channel sysfs
 LED_B=/sys/class/leds/led_b/brightness
 LED_G=/sys/class/leds/led_g/brightness
 LED_R=/sys/class/leds/led_r/brightness
-# Values
-BRG=echo #value
-SPD="sleep 0.10"
 
 EXIT() {
     # Reset channels
@@ -57,7 +65,10 @@ EXIT() {
     exit 0
 }
 
-RUN() {
+JDCDEF() {
+    if [ "$SPD" == "null" ]; then
+	SPD="sleep 0.10"
+    fi
     # Red
     $BRG 150 > $LED_R | $SPD
     # Orange
@@ -87,11 +98,34 @@ RUN() {
     $BRG 0 > $LED_G
 }
 
-while :; do
-    BOOT=$(getprop sys.boot_completed | grep "1")
-    if [ "$BOOT" == "1" ]; then
-	EXIT
-    else
+RUN() {
+    case $PATTERN in
+    disabled) EXIT;;
+    jdcdefault) JDCDEF;;
+    esac
+}
+
+LOOP() {
+    # Start a loop
+    while :; do
+        BOOT=$(getprop sys.boot_completed | grep "1")
+	if [ "$BOOT" == "1" ]; then
+	    PATTERN=disabled
+	fi
 	RUN
-    fi
-done
+    done
+}
+
+# <=== Start ===>
+# Check if Toolbox-handled settings are available
+TBX=$(ls /data | grep "toolbox_ledify");
+if [ "$TBX" == "toolbox_ledify" ]; then
+    # Set user-choosen values, Toolbox-only
+    PATTERN=$(eval $(cat /data/toolbox_ledify | grep -o "PATTERN[^/].*"); echo $PATTERN);
+    SPD=$(eval $(cat /data/toolbox_ledify | grep -o "SPEED[^/].*"); echo $SPEED);
+else
+    # Default
+    PATTERN=jdcdefault
+    SPD=null # null applies default pattern-based speed values decided by us
+fi
+LOOP
