@@ -17,6 +17,7 @@
 # PATTERN is the LED pattern which you prefer:
 # - jdcdefault is our default one, rainbow colors (red->orange->yellow->green->blue->indigo->violet->reverse)
 # - disabled to disable LEDify
+# - nexus follows the Google Nexus logo in clockwise (red->green->yellow->blue)
 # - police is alternate blue/red flashing as Police cars
 # - secdefault is Samsung stock blue pattern
 # SPD is color switch time in milliseconds (0.*value*) or seconds (*value*), sets a wait time before executing the next command. Our default value: 100ms ("sleep 0.10")
@@ -102,6 +103,17 @@ JDCDEF() {
     $BRG 0 > $LED_G
 }
 
+NEXUS() {
+    if [ "$SPD" == "null" ]; then
+	SPD="sleep 0.20"
+    fi
+    $BRG 255 > $LED_R | $SPD
+    $BRG 0 > $LED_R && $BRG 255 > $LED_G | $SPD
+    $BRG 255 > $LED_R | $SPD
+    $BRG 0 | tee $LED_G $LED_R && $BRG 255 > $LED_B | $SPD
+    $BRG 0 > $LED_B
+}
+
 POLICE() {
     if [ "$SPD" == "null" ]; then
 	SPD="sleep 0.30"
@@ -121,6 +133,7 @@ RUN() {
     case $PATTERN in
     disabled) EXIT;;
     jdcdefault) JDCDEF;;
+    nexus) NEXUS;;
     police) POLICE;;
     secdefault) SECDEF;;
     esac
