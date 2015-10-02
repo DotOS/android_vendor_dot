@@ -59,11 +59,11 @@ PRODUCT_PACKAGES += \
     LatinIME \
     Launcher3 \
     LayersManager4.0 \
-    LibSwitcher \
     OTAUpdates \
     SamsungServiceMode \
     Stk \
     STweaks \
+    Toolbox \
     WallpaperPicker
     
 # ADB authentication
