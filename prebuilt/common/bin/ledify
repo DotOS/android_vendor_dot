@@ -70,7 +70,7 @@ LED_SEC=/sys/devices/virtual/sec/led/led_pattern
 
 EXIT() {
     # Reset channels
-    echo 0 | tee $LED_B $LED_G $LED_R $SEC_LED
+    echo 0 | tee $LED_B $LED_G $LED_R $LED_SEC
     exit 0
 }
 
@@ -195,14 +195,16 @@ POLICE() {
 
 SECDEF() {
     $BRG 6 > $LED_SEC
-    # Update each 5 seconds
-    sleep 5
+    # Update each 10 seconds
+    sleep 10
 }
 
 RUN() {
     case $PATTERN in
     disabled) EXIT;;
-    heartbeat) HEARTBEAT;;
+    heartbeatblue) HBCOLOR=blue; HEARTBEAT;;
+    heartbeatgreen) HBCOLOR=green; HEARTBEAT;;
+    heartbeatred) HEARTBEAT;;
     jdcdefault) JDCDEF;;
     nexus) NEXUS;;
     nexusreverse) REVERSE=true; NEXUS;;
@@ -223,19 +225,15 @@ LOOP() {
 }
 
 # <=== Start ===>
-# Check if Toolbox-handled settings are available
+# JDC Toolbox compatibility layer
 TBX=$(ls /data | grep "toolbox_ledify");
 if [ "$TBX" == "toolbox_ledify" ]; then
     # Set user-chosen values, Toolbox-only
     PATTERN=$(eval $(cat /data/toolbox_ledify | grep -o "PATTERN[^/].*"); echo $PATTERN);
     SPD=$(eval $(cat /data/toolbox_ledify | grep -o "SPEED[^/].*"); echo $SPEED);
-    if [ "$PATTERN" == "heartbeat" ]; then
-	HBCOLOR=$(eval $(cat /data/toolbox_ledify | grep -o "HBCOLOR[^/].*"); echo $HBCOLOR);
-    fi
 else
     # Default
     PATTERN=jdcdefault
     SPD=null # null applies default pattern-based speed values decided by us
-    HBCOLOR=red
 fi
 LOOP
