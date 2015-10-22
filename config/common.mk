@@ -20,7 +20,7 @@ PRODUCT_PACKAGE_OVERLAYS += \
 
 
 # Thank you, please drive thru!
-#PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.dun.override=0 
     
 # Set Selinux as permissive    
