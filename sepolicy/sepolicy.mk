@@ -3,5 +3,5 @@
 # inherit from CM
 #
 
-#BOARD_SEPOLICY_DIRS += \
+BOARD_SEPOLICY_DIRS += \
     vendor/aosp/sepolicy
