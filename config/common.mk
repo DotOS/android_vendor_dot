@@ -47,6 +47,7 @@ PRODUCT_PACKAGES += \
 
 # Custom JDCTeam packages
 PRODUCT_PACKAGES += \
+    BluetoothExt \
     LatinIME \
     Launcher3 \
     Stk \
