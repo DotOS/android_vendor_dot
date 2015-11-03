@@ -29,7 +29,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # EXT4/F2FS format script
 PRODUCT_COPY_FILES += \
-    vendor/aosp/prebuilt/common/bin/format.sh:system/bin/format.sh
+    vendor/aosp/prebuilt/common/bin/format.sh:install/bin/format.sh
     
 # Extra tools
 PRODUCT_PACKAGES += \
