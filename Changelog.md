@@ -31,3 +31,18 @@
 ### Changelog (short)
 
 #### Ongoing changes...
+
+* ROM
+    * Updated sources to r26 (MDB08M)
+    * Fixed audio cracking after upstream code merge in av repo
+    * Enhanced animation speed/smoothness
+    * Drop qcom TimeService and use TimeKeep service from SONY
+    * Small fixes on Camera and RIL
+    * Enhanced bt (a2dp still not working)
+    * Fixes and improvements for wifi
+    * Vold: ported HW FDE features + fixes
+    * Telephony: more fixes and updates from caf and cm
+
+#### 20151108
+
+Initial Release
