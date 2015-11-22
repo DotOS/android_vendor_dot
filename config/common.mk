@@ -52,6 +52,7 @@ PRODUCT_PACKAGES += \
     LatinIME \
     Launcher3 \
     Stk \
+    STweaks
     
 # ADB authentication
 ADDITIONAL_DEFAULT_PROPERTIES += \
