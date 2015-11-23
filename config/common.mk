@@ -51,6 +51,8 @@ PRODUCT_PACKAGES += \
     BluetoothExt \
     LatinIME \
     Launcher3 \
+    SamsungServiceMode \
+    LayersManager4.0 \
     Stk \
     STweaks
     
