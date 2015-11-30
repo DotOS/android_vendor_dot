@@ -42,6 +42,18 @@
     * Fixes and improvements for wifi
     * Vold: ported HW FDE features + fixes
     * Telephony: more fixes and updates from caf and cm
+    * Fixed mounting of non-FAT sd card. Still some issues here, EACCES when trying to create folder/files, as temporary workaround go to /mnt/media_rw and give write permission to others on ext sdcard
+    * Reverted some caf stuffs on Dialer and Keyguard
+    * jflte: updates and fixes
+    * Small fixes for bluetooth
+    * More enhancements on animation/recent app
+    * Added custom aosp Settings
+    * Added customisable clear recent app button
+    * Switch to clang
+    * BootMessage: Show each app name being optimized during boot
+    * Fixed SetupWizard
+    * Materialised Toasts and some icons
+    * Added OtaUpdates
 
 #### 20151108
 
