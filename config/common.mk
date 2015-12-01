@@ -4,6 +4,10 @@ PRODUCT_BRAND ?= JDCTeam
 PRODUCT_COPY_FILES += \
     vendor/aosp/prebuilt/common/bootanimation/bootanimation.zip:system/media/bootanimation.zip
 
+# SuperSU
+PRODUCT_COPY_FILES += \
+    vendor/aosp/prebuilt/common/supersu/supersu.zip:system/supersu/supersu.zip
+
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.no_wait_for_card=0 \
     keyguard.no_require_sim=true \
