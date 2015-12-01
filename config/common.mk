@@ -54,6 +54,7 @@ PRODUCT_PACKAGES += \
     Launcher3 \
     SamsungServiceMode \
     LayersManager4.0 \
+    OTAUpdates \
     Stk \
     STweaks
     
@@ -91,10 +92,10 @@ PRODUCT_COPY_FILES += \
     frameworks/base/data/keyboards/Vendor_045e_Product_028e.kl:system/usr/keylayout/Vendor_045e_Product_0719.kl
     
 # OTA Updates
-#PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_PROPERTY_OVERRIDES += \
     ro.ota.romname=AOSP-JF-6.0 \
     ro.ota.version=$(shell date -u +%Y%m%d) \
-    ro.ota.manifest=
+    ro.ota.manifest=http://romhut.com/roms/aosp-jf-6-0/ota.xml
 
 # Prebuilt ConsumerIR
 PRODUCT_COPY_FILES += \
