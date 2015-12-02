@@ -22,7 +22,6 @@ PRODUCT_PACKAGE_OVERLAYS += \
     vendor/aosp/overlay/common \
     vendor/aosp/overlay/dictionaries
 
-
 # Thank you, please drive thru!
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.dun.override=0 
@@ -55,11 +54,9 @@ PRODUCT_PACKAGES += \
     BluetoothExt \
     LatinIME \
     Launcher3 \
-    SamsungServiceMode \
     LayersManager \
     OTAUpdates \
     Stk \
-    STweaks
     
 # ADB authentication
 ADDITIONAL_DEFAULT_PROPERTIES += \
