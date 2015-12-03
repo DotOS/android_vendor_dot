@@ -54,6 +54,10 @@
     * Fixed SetupWizard
     * Materialised Toasts and some icons
     * Added OtaUpdates
+    * Completely reworked aosp settings
+    * Added expanded desktop settings
+    * Added button backlight settings
+    * av: more fixes
 
 #### 20151108
 
