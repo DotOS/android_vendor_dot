@@ -57,6 +57,7 @@ PRODUCT_PACKAGES += \
     LayersManager \
     OTAUpdates \
     Stk \
+    Toolbox
     
 # ADB authentication
 ADDITIONAL_DEFAULT_PROPERTIES += \
