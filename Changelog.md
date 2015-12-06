@@ -32,6 +32,13 @@
 
 #### Ongoing changes...
 
+
+#### 2015/12/06 (Beta 1)
+
+* Kernel
+    * Fix exfat formatted sdcard mount and rw access
+    * General code Update
+
 * ROM
     * Updated sources to r26 (MDB08M)
     * Fixed audio cracking after upstream code merge in av repo
@@ -42,7 +49,7 @@
     * Fixes and improvements for wifi
     * Vold: ported HW FDE features + fixes
     * Telephony: more fixes and updates from caf and cm
-    * Fixed mounting of non-FAT sd card. Still some issues here, EACCES when trying to create folder/files, as temporary workaround go to /mnt/media_rw and give write permission to others on ext sdcard
+    * Fixed mounting of non-FAT sd card. Still some issues here with some fs, EACCES when trying to create folder/files, as temporary workaround go to /mnt/media_rw and give write permission to others on ext sdcard if fs is not writable
     * Reverted some caf stuffs on Dialer and Keyguard
     * jflte: updates and fixes
     * Small fixes for bluetooth
@@ -58,6 +65,14 @@
     * Added expanded desktop settings
     * Added button backlight settings
     * av: more fixes
+    * Vold: fix exfat fs mounting using Alucard kernel driver, this fully fixes exfat mounting and rw permissions for user
+    * Fixed mic input not working during record/google voice search
+    * Recents app: added an option for fullscreen
+    * Small battery improvements
+    * Added power menu customisations
+    * Added "force expanded notifications" option
+    * Added advanced reboot menu
+    * Vold: fixed NTFS (read-only for the moment) on extsdcard using Alucard kernel driver.
 
 #### 20151108
 
