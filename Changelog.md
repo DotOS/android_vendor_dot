@@ -32,6 +32,10 @@
 
 #### Ongoing changes...
 
+* ROM
+    * Fixed GPS
+    * Fixed LTE not coming up at boot
+    * Vold: small fixes/enhancements
 
 #### 2015/12/06 (Beta 1)
 
