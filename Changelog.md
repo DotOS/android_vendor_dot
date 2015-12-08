@@ -37,6 +37,7 @@
     * Fixed LTE not coming up at boot
     * Vold: small fixes/enhancements
     * Sources updated to Android 6.0.1 release 3
+    * Fixed keyboard gesture typing
 
 #### 2015/12/06 (Beta 1)
 
