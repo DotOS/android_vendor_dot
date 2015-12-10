@@ -32,12 +32,19 @@
 
 #### Ongoing changes...
 
+* Kernel
+    * Updated bt drivers
+    * More code update
+
 * ROM
     * Fixed GPS
     * Fixed LTE not coming up at boot
     * Vold: small fixes/enhancements
     * Sources updated to Android 6.0.1 release 3
     * Fixed keyboard gesture typing
+    * Updated SuperSU to v2.62 + fixed Sepolicy
+    * Fixed bt after 6.0.1 r3 code merge
+    * Ril/av/vold: small fixes
 
 #### 2015/12/06 (Beta 1)
 
