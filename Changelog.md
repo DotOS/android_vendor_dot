@@ -42,9 +42,11 @@
     * Vold: small fixes/enhancements
     * Sources updated to Android 6.0.1 release 3
     * Fixed keyboard gesture typing
-    * Updated SuperSU to v2.62 + fixed Sepolicy
+    * Fixed SuperSU sepolicy
     * Fixed bt after 6.0.1 r3 code merge
     * Ril/av/vold: small fixes
+    * Fixed network switch
+    * Fixed write access on NTFS
 
 #### 2015/12/06 (Beta 1)
 
