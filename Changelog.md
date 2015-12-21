@@ -47,6 +47,11 @@
     * Ril/av/vold: small fixes
     * Fixed network switch
     * Fixed write access on NTFS
+    * Fixed emergency call
+    * BT: reverted cm/caf changes. We lose bt obex and other advanced functions, but no more bt share FC
+    * RIL: fixed apns for verizon. More small updates for other providers
+    * Telephony: small changes/fixes
+    * Enhanced opening apps speed
 
 #### 2015/12/06 (Beta 1)
 
