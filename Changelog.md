@@ -52,6 +52,8 @@
     * RIL: fixed apns for verizon. More small updates for other providers
     * Telephony: small changes/fixes
     * Enhanced opening apps speed
+    * Bluetooth: fixed a2dp
+    * More general fixes
 
 #### 2015/12/06 (Beta 1)
 
