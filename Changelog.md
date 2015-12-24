@@ -54,6 +54,8 @@
     * Enhanced opening apps speed
     * Bluetooth: fixed a2dp
     * More general fixes
+    * Fixed sysinit
+    * Sepolicy: more fixes for persistent properties/vold/kernel
 
 #### 2015/12/06 (Beta 1)
 
