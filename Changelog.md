@@ -32,6 +32,8 @@
 
 #### Ongoing changes...
 
+#### 2015/12/24 (Beta 2)
+
 * Kernel
     * Updated bt drivers
     * More code update
@@ -56,6 +58,7 @@
     * More general fixes
     * Fixed sysinit
     * Sepolicy: more fixes for persistent properties/vold/kernel
+    * Added Screencast
 
 #### 2015/12/06 (Beta 1)
 
