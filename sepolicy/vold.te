@@ -11,3 +11,6 @@ allow vold fuse_device:chr_file rw_file_perms;
 allow vold self:capability { setgid setuid };
 
 allow vold persist_file:dir { getattr read open ioctl };
+
+# Allow vold to execute mkfs
+allow vold mkfs_exec:file { execute read open execute_no_trans };
