@@ -32,6 +32,13 @@
 
 #### Ongoing changes...
 
+* ROM
+    * Media: added function to skip tracks with volume buttons when the screen is off
+    * Vold: fixed mkfs execution (sepolicy)
+    * Browser/Gallery: Materialized + Code update + Fixed tons of bugs
+    * Camera: Fixes, enhancements and code updates
+    * Camera: fix photos size
+
 #### 2015/12/24 (Beta 2)
 
 * Kernel
