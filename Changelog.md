@@ -30,7 +30,9 @@
 
 ### Changelog (short)
 
-#### Ongoing changes...
+#### Ongoing changes... (Beta 3)
+* Kernel
+    * Fixed button vibration when screeen is off
 
 * ROM
     * Media: added function to skip tracks with volume buttons when the screen is off
