@@ -33,6 +33,7 @@
 #### Ongoing changes... (Beta 3)
 * Kernel
     * Fixed button vibration when screeen is off
+    * Fixed music sometimes stuttering when user turns off the screen
 
 * ROM
     * Media: added function to skip tracks with volume buttons when the screen is off
@@ -40,6 +41,8 @@
     * Browser/Gallery: Materialized + Code update + Fixed tons of bugs
     * Camera: Fixes, enhancements and code updates
     * Camera: fix photos size
+    * jemalloc: update to v4.0.4
+    * webview: drop aosp webview and use Google version v48.0.2564.48
 
 #### 2015/12/24 (Beta 2)
 
