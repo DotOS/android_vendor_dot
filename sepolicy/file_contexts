@@ -11,11 +11,13 @@
 
 /system/bin/sysinit       u:object_r:sysinit_exec:s0
 
-# For F2FS partitions marked "formattable"
+# For EXFAT/F2FS/NTFS partitions marked "formattable"
+/system/bin/mkfs\.exfat   u:object_r:mkfs_exec:s0
 /system/bin/mkfs\.f2fs    u:object_r:mkfs_exec:s0
+/system/bin/mkfs\.ntfs    u:object_r:mkfs_exec:s0
 
 #############################
-# performance-related sysfs files (CM)
+# performance-related sysfs files (AOSP)
 /sys/devices/system/cpu.*/cpufreq(/.*)? --  u:object_r:sysfs_devices_system_cpu:s0
 /sys/block/mmcblk.*/queue/scheduler  --    u:object_r:sysfs_devices_system_iosched:s0
 
