@@ -34,6 +34,7 @@
 * Kernel
     * Fixed button vibration when screeen is off
     * Fixed music sometimes stuttering when user turns off the screen
+    * Hopefulluy fixed bt not turning on for some users after a flash
 
 * ROM
     * Media: added function to skip tracks with volume buttons when the screen is off
@@ -43,6 +44,9 @@
     * Camera: fix photos size
     * jemalloc: update to v4.0.4
     * webview: drop aosp webview and use Google version v48.0.2564.48
+    * Fixed charging mode
+    * Merged cgroups/ioprio enhancements from cm
+    * Unified branch again!!
 
 #### 2015/12/24 (Beta 2)
 
