@@ -47,6 +47,9 @@
     * Fixed charging mode
     * Merged cgroups/ioprio enhancements from cm
     * Unified branch again!!
+    * Camera: Add storage preferences
+    * DeskClock: fixed crash when user press the world button + small fixes
+    * Fixed MMS receiving
 
 #### 2015/12/24 (Beta 2)
 
