@@ -50,6 +50,10 @@
     * Camera: Add storage preferences
     * DeskClock: fixed crash when user press the world button + small fixes
     * Fixed MMS receiving
+    * Finally switch to new proprietary blobs
+    * Sepolicy: tons of fixes
+    * Updater-script: fixed permissions/selinux context for ril blobs
+    * Updater-script: remove not used libraries for GSM
 
 #### 2015/12/24 (Beta 2)
 
