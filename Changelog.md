@@ -32,9 +32,10 @@
 
 #### Ongoing changes... (Beta 3)
 * Kernel
-    * Fixed button vibration when screeen is off
+    * Fixed button vibration/lights when screeen is off
     * Fixed music sometimes stuttering when user turns off the screen
     * Hopefulluy fixed bt not turning on for some users after a flash
+    * Fixed freeze when booting connected to an AC/USB cable
 
 * ROM
     * Media: added function to skip tracks with volume buttons when the screen is off
@@ -54,6 +55,10 @@
     * Sepolicy: tons of fixes
     * Updater-script: fixed permissions/selinux context for ril blobs
     * Updater-script: remove not used libraries for GSM
+    * RIL: fixed invalid number error
+    * Build: enhanced kernel task
+    * Vendor blobs: update some blobs from OK1
+    * Telecomm/Telephony: Allow multiple default dialers
 
 #### 2015/12/24 (Beta 2)
 
