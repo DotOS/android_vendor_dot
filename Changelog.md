@@ -59,6 +59,10 @@
     * Build: enhanced kernel task
     * Vendor blobs: update some blobs from OK1
     * Telecomm/Telephony: Allow multiple default dialers
+    * Browser: fixed runtime permissions
+    * Fixed adopted storage. TWRP is still not compatible, rom zip and gapps must be moved to /data/media/0 folder
+      then reboot in recovery and update zip will be available on internal storage. DO NOT TOUCH EXTERNAL STORAGE IN TWRP
+    * Update sources to Android 6.0.1 release 10
 
 #### 2015/12/24 (Beta 2)
 
@@ -104,7 +108,8 @@
     * Fixes and improvements for wifi
     * Vold: ported HW FDE features + fixes
     * Telephony: more fixes and updates from caf and cm
-    * Fixed mounting of non-FAT sd card. Still some issues here with some fs, EACCES when trying to create folder/files, as temporary workaround go to /mnt/media_rw and give write permission to others on ext sdcard if fs is not writable
+    * Fixed mounting of non-FAT sd card. Still some issues here with some fs, EACCES when trying to create folder/files, 
+      as temporary workaround go to /mnt/media_rw and give write permission to others on ext sdcard if fs is not writable
     * Reverted some caf stuffs on Dialer and Keyguard
     * jflte: updates and fixes
     * Small fixes for bluetooth
