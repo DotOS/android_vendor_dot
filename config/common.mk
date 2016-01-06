@@ -52,6 +52,7 @@ PRODUCT_PACKAGES += \
 # Custom JDCTeam packages
 PRODUCT_PACKAGES += \
     BluetoothExt \
+    GoogleDialer \
     LatinIME \
     Launcher3 \
     LayersManager \
