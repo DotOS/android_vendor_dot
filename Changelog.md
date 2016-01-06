@@ -68,6 +68,9 @@
     * Update sources to Android 6.0.1 release 10
     * Fixed Bluetooth sometimes not turning on after a flash
     * Fixed data not working after a reboot
+    * Added GoogleDialer as alternative dialer, can be disabled in Settings-->Apps
+    * Updated SuperSU to v2.66 (may not work on multirom, if someone experience issues during the flash of supersu simply flash the old version 2.52)
+    * Updated LayersManager to v4.4.1
 
 #### 2015/12/24 (Beta 2)
 
