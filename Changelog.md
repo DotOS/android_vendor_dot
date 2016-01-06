@@ -30,12 +30,15 @@
 
 ### Changelog (short)
 
-#### Ongoing changes... (Beta 3)
+#### Ongoing changes... (Beta 4)
+
+#### 2016/01/06 (Beta 3)
 * Kernel
     * Fixed button vibration/lights when screeen is off
     * Fixed music sometimes stuttering when user turns off the screen
-    * Hopefulluy fixed bt not turning on for some users after a flash
     * Fixed freeze when booting connected to an AC/USB cable
+    * General code update
+    * Updated Toolchains (5.3.0)
 
 * ROM
     * Media: added function to skip tracks with volume buttons when the screen is off
@@ -63,6 +66,8 @@
     * Fixed adopted storage. TWRP is still not compatible, rom zip and gapps must be moved to /data/media/0 folder
       then reboot in recovery and update zip will be available on internal storage. DO NOT TOUCH EXTERNAL STORAGE IN TWRP
     * Update sources to Android 6.0.1 release 10
+    * Fixed Bluetooth sometimes not turning on after a flash
+    * Fixed data not working after a reboot
 
 #### 2015/12/24 (Beta 2)
 
