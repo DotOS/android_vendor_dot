@@ -31,6 +31,10 @@
 ### Changelog (short)
 
 #### Ongoing changes... (Beta 4)
+* ROM
+    * Browser: fixed incognito mode
+    * Completely switch to clang for compiling
+    * Updated italian apns
 
 #### 2016/01/06 (Beta 3)
 * Kernel
