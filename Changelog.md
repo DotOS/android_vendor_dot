@@ -35,6 +35,9 @@
     * Browser: fixed incognito mode
     * Completely switch to clang for compiling
     * Updated italian apns
+    * Fixed BT connected to a media streaming source that can't receive calls
+    * Audio policy: other small fixes
+    * r970 variant: hopefully fixed RIL
 
 #### 2016/01/06 (Beta 3)
 * Kernel
