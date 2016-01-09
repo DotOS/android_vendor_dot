@@ -57,7 +57,6 @@ PRODUCT_PACKAGES += \
     Launcher3 \
     LayersManager \
     OTAUpdates \
-    Screencast \
     Stk \
     Toolbox
     
