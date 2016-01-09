@@ -31,13 +31,26 @@
 ### Changelog (short)
 
 #### Ongoing changes... (Beta 4)
+* Kernel
+    * General code update
 * ROM
     * Browser: fixed incognito mode
     * Completely switch to clang for compiling
     * Updated italian apns
-    * Fixed BT connected to a media streaming source that can't receive calls
+    * Fixed BT calls/a2dp when connected with a device that can handle calls and media streaming like carkits
     * Audio policy: other small fixes
     * r970 variant: hopefully fixed RIL
+    * Automatic brightness: increase brightness faster if ambient light is brightening quickly
+    * GPS: optimized property reloading
+    * Telephony: small fixes
+    * Bluedroid: disabled debugging
+    * Removed ScreenCast,now screen recoding function is embedded on power menu
+    * Fix volume expand arrow sometimes not working
+    * Sounds: use Nexus audio files
+    * GoogleDialer: fixed install folder/permissions
+    * Bluetooth: merged latest fixes from caf
+    * Small fixes for CDMA phones
+    * av: fixed some benign overflow, small changes for ARM 32 bit arch + other enhancements
 
 #### 2016/01/06 (Beta 3)
 * Kernel
