@@ -30,7 +30,9 @@
 
 ### Changelog (short)
 
-#### Ongoing changes... (Beta 4)
+#### Ongoing changes...
+
+#### 2016/01/10 (Beta 4)
 * Kernel
     * General code update
 * ROM
@@ -39,7 +41,7 @@
     * Updated italian apns
     * Fixed BT calls/a2dp when connected with a device that can handle calls and media streaming like carkits
     * Audio policy: other small fixes
-    * r970 variant: hopefully fixed RIL
+    * r970 variant: fixed RIL
     * Automatic brightness: increase brightness faster if ambient light is brightening quickly
     * GPS: optimized property reloading
     * Telephony: small fixes
@@ -51,6 +53,9 @@
     * Bluetooth: merged latest fixes from caf
     * Small fixes for CDMA phones
     * av: fixed some benign overflow, small changes for ARM 32 bit arch + other enhancements
+    * Fixed tethering (was broken in previous release)
+    * WiFi: small fixes
+    * SuperSU: back to 2.52 version, 2.66 does not work for some user
 
 #### 2016/01/06 (Beta 3)
 * Kernel
