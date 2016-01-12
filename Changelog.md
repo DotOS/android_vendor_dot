@@ -31,6 +31,10 @@
 ### Changelog (short)
 
 #### Ongoing changes...
+* ROM
+    * RIL: fixed emergency call
+    * RIL: fixed a couple of permission denials (QMUXD)
+    * Telephony: small improvements
 
 #### 2016/01/10 (Beta 4)
 * Kernel
