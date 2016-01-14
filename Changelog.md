@@ -35,6 +35,9 @@
     * RIL: fixed emergency call
     * RIL: fixed a couple of permission denials (QMUXD)
     * Telephony: small improvements
+    * RIL: more updates for lp ril
+    * RIL: fixed NO SIM when phone is in Airplane mode and the SIM is inserted
+    * AOSP Settings: Updated translations
 
 #### 2016/01/10 (Beta 4)
 * Kernel
