@@ -31,6 +31,9 @@
 ### Changelog (short)
 
 #### Ongoing changes...
+* Kernel
+    * General code update
+    * Netd/wifi: updaes and fixes
 * ROM
     * RIL: fixed emergency call
     * RIL: fixed a couple of permission denials (QMUXD)
@@ -38,6 +41,7 @@
     * RIL: more updates for lp ril
     * RIL: fixed NO SIM when phone is in Airplane mode and the SIM is inserted
     * AOSP Settings: Updated translations
+    * Bluetooth/Stagefright: other small fixes
 
 #### 2016/01/10 (Beta 4)
 * Kernel
