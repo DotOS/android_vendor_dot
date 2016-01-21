@@ -34,6 +34,7 @@
 * Kernel
     * General code update
     * Netd/wifi: updates and fixes
+    * Added support for SGH-S970G and SM-S975L
 * ROM
     * RIL: fixed emergency call
     * RIL: fixed a couple of permission denials (QMUXD)
@@ -43,6 +44,10 @@
     * AOSP Settings: Updated translations
     * Bluetooth/Stagefright: other small fixes
     * RIL: fixed network search
+    * Added support for SGH-S970G and SM-S975L
+    * Bluetooth: fixed reboot during second call
+    * Bluetooth: fixed call not working/bt share FC after the phone is reconnected to a bt device
+    * Audio policy: fixes for bt calls
 
 #### 2016/01/10 (Beta 4)
 * Kernel
