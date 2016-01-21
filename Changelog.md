@@ -33,7 +33,7 @@
 #### Ongoing changes...
 * Kernel
     * General code update
-    * Netd/wifi: updaes and fixes
+    * Netd/wifi: updates and fixes
 * ROM
     * RIL: fixed emergency call
     * RIL: fixed a couple of permission denials (QMUXD)
