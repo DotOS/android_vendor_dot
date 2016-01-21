@@ -42,6 +42,7 @@
     * RIL: fixed NO SIM when phone is in Airplane mode and the SIM is inserted
     * AOSP Settings: Updated translations
     * Bluetooth/Stagefright: other small fixes
+    * RIL: fixed network search
 
 #### 2016/01/10 (Beta 4)
 * Kernel
