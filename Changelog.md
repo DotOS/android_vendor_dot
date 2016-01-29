@@ -45,9 +45,14 @@
     * Bluetooth/Stagefright: other small fixes
     * RIL: fixed network search
     * Added support for SGH-S970G and SM-S975L
-    * Bluetooth: fixed reboot during second call
+    * Bluetooth: fixed reboot during second call --> NOT YET FIXED
     * Bluetooth: fixed call not working/bt share FC after the phone is reconnected to a bt device
     * Audio policy: fixes for bt calls
+    * Telephony: remove multiple default dialers support
+    * Updated APNs
+    * Settings: updated translations
+    * Audio/av: more fixes for qcom legacy devices
+    * wifi: small improvements
 
 #### 2016/01/10 (Beta 4)
 * Kernel
