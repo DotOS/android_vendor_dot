@@ -35,6 +35,7 @@
     * General code update
     * Netd/wifi: updates and fixes
     * Added support for SGH-S970G and SM-S975L
+    * IR: fixed phone hotboot, crash, reboot using IR-Blaster
 * ROM
     * RIL: fixed emergency call
     * RIL: fixed a couple of permission denials (QMUXD)
@@ -45,7 +46,7 @@
     * Bluetooth/Stagefright: other small fixes
     * RIL: fixed network search
     * Added support for SGH-S970G and SM-S975L
-    * Bluetooth: fixed reboot during second call --> NOT YET FIXED
+    * Bluetooth: fixed reboot when user starts a call from a bt device (like carkits) and the screen is off --> NOT YET FIXED
     * Bluetooth: fixed call not working/bt share FC after the phone is reconnected to a bt device
     * Audio policy: fixes for bt calls
     * Telephony: remove multiple default dialers support
@@ -53,6 +54,18 @@
     * Settings: updated translations
     * Audio/av: more fixes for qcom legacy devices
     * wifi: small improvements
+    * bt: merged updates/fixes from upstream
+    * bt: fix connection with BLE devices
+    * av: fixed some overflows (from upstream)
+    * Telephony/Dialer/InCallUI/base: upates and fixes for IMS
+    * base: small fixes from upstream
+    * Display-qcom: fixes for video playback and KW issues
+    * Improved APN selection
+    * Media-qcom: removed drm library + fixes for video playback
+    * wifi: set country code to ALL
+    * core: updates from upstream
+    * TEST: libhardware_legacy: ported some changes merged/pending on aosp upstream
+    * av: allow media server to disconnect the camera even if the camera is unlocked (should fix the camera bug "Camera Error, Camera is unable to initialize.")
 
 #### 2016/01/10 (Beta 4)
 * Kernel
