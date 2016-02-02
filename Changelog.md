@@ -30,7 +30,7 @@
 
 ### Changelog (short)
 
-#### Ongoing changes...
+#### Ongoing changes... (Beta 5)
 * Kernel
     * General code update
     * Netd/wifi: updates and fixes
@@ -51,7 +51,6 @@
     * Audio policy: fixes for bt calls
     * Telephony: remove multiple default dialers support
     * Updated APNs
-    * Settings: updated translations
     * Audio/av: more fixes for qcom legacy devices
     * wifi: small improvements
     * bt: merged updates/fixes from upstream
@@ -66,6 +65,9 @@
     * core: updates from upstream
     * TEST: libhardware_legacy: ported some changes merged/pending on aosp upstream
     * av: allow media server to disconnect the camera even if the camera is unlocked (should fix the camera bug "Camera Error, Camera is unable to initialize.")
+    * Update sources to Android 6.0.1 release 13
+    * Bluetooth: fixed 48k sample rate
+    * Telephony: fixes for some sims/carriers
 
 #### 2016/01/10 (Beta 4)
 * Kernel
