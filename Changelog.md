@@ -30,7 +30,9 @@
 
 ### Changelog (short)
 
-#### Ongoing changes... (Beta 5)
+#### Ongoing changes...
+
+#### 2016/02/06 (Beta 5)
 * Kernel
     * General code update
     * Netd/wifi: updates and fixes
