@@ -31,6 +31,12 @@
 ### Changelog (short)
 
 #### Ongoing changes...
+* ROM
+    * TEST: handle lid/smartview covers in a different way (ported from AOSP master)
+    * TEST/WIP: Enable MIDI support
+    * Bluetooth: stop bluedroid debugging + toned down more bt logspam
+    * Bluetooth: removed not used feature on jflte device tree
+    * Sepolicy: fixed a denial
 
 #### 2016/02/08 (Beta 5)
 * Kernel
@@ -71,6 +77,8 @@
     * Bluetooth: fixed 48k sample rate
     * Telephony: fixes for some sims/carriers
     * Base - apps/Bluetooth: other small improvements for bt
+    * Removed GoogleDialer (can be flashed with a flashable zip or installed from PlayStore)
+    * Updated WebView to v49.0.2623.34 (big thanks to @JoseGalRe )
 
 #### 2016/01/10 (Beta 4)
 * Kernel
