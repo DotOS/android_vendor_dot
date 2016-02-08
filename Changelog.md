@@ -32,7 +32,7 @@
 
 #### Ongoing changes...
 
-#### 2016/02/06 (Beta 5)
+#### 2016/02/08 (Beta 5)
 * Kernel
     * General code update
     * Netd/wifi: updates and fixes
@@ -48,7 +48,7 @@
     * Bluetooth/Stagefright: other small fixes
     * RIL: fixed network search
     * Added support for SGH-S970G and SM-S975L
-    * Bluetooth: fixed reboot when user starts a call from a bt device (like carkits) and the screen is off --> NOT YET FIXED
+    * Bluetooth: fixed reboot when user starts a call when the screen is off and the magnetic cover il closed
     * Bluetooth: fixed call not working/bt share FC after the phone is reconnected to a bt device
     * Audio policy: fixes for bt calls
     * Telephony: remove multiple default dialers support
@@ -70,6 +70,7 @@
     * Update sources to Android 6.0.1 release 13
     * Bluetooth: fixed 48k sample rate
     * Telephony: fixes for some sims/carriers
+    * Base - apps/Bluetooth: other small improvements for bt
 
 #### 2016/01/10 (Beta 4)
 * Kernel
