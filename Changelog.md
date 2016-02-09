@@ -31,12 +31,17 @@
 ### Changelog (short)
 
 #### Ongoing changes...
+* Kernel
+    * General code update
+    * Ramdisk: cleaning and some small opimisation
 * ROM
-    * TEST: handle lid/smartview covers in a different way (ported from AOSP master)
+    * TEST: handle lid/smartview covers in a different way (ported from AOSP master) --> Reverted because actually HallMonitor doesn't work properly on MM, but
+      this allow us to let all 3rd party apps handle the cover window like stock ROMS
     * TEST/WIP: Enable MIDI support
     * Bluetooth: stop bluedroid debugging + toned down more bt logspam
     * Bluetooth: removed not used feature on jflte device tree
     * Sepolicy: fixed a denial
+    * jflte: remove obsolete crda service
 
 #### 2016/02/08 (Beta 5)
 * Kernel
