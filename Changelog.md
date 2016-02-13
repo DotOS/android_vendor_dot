@@ -42,6 +42,10 @@
     * Bluetooth: removed not used feature on jflte device tree
     * Sepolicy: fixed a denial
     * jflte: remove obsolete crda service
+    * Bluetooth: updates/fixes from upstream
+    * RIL: fixed data after a reboot without the need of reboot the modem
+    * CameraWrapper: small fixes
+    * Added call recording feature
 
 #### 2016/02/08 (Beta 5)
 * Kernel
