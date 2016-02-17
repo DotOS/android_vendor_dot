@@ -46,6 +46,10 @@
     * RIL: fixed data after a reboot without the need of reboot the modem
     * CameraWrapper: small fixes
     * Added call recording feature
+    * BootAnimation: improvements, added support to play a music during boot/shutdown animation
+    * Vold: fixed exfat/ntfs support and handle things on ROM side
+    * f2fs-tools: update to v1.6.0
+    * Hopefully fixed random soft-reboot when formatting an sdcard as adopted storage
 
 #### 2016/02/08 (Beta 5)
 * Kernel
