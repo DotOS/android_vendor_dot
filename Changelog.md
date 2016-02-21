@@ -34,6 +34,7 @@
 * Kernel
     * General code update
     * Ramdisk: cleaning and some small opimisation
+    * FS / BLOCK / PROC / CPUFREQ / eCryptfs / FUSE / FS Drivers : Sync with 3.10 tree
 * ROM
     * TEST: handle lid/smartview covers in a different way (ported from AOSP master) --> Reverted because actually HallMonitor doesn't work properly on MM, but
       this allow us to let all 3rd party apps handle the cover window like stock ROMS
@@ -50,6 +51,13 @@
     * Vold: fixed exfat/ntfs support and handle things on ROM side
     * f2fs-tools: update to v1.6.0
     * Hopefully fixed random soft-reboot when formatting an sdcard as adopted storage
+    * Camera: switch to SnapdragonCamera from CAF + CM updates
+    * Bluetooth: general fixes from Master branch
+    * Small fixes on APNs
+    * Vibrator: drop legacy code and sync with upstream
+    * libhardware/libhardware_legacy: fixed some warns
+    * tinyalsa: fixes for call recording
+    * Camera: ported some fixes from caf and from upstream
 
 #### 2016/02/08 (Beta 5)
 * Kernel
