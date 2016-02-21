@@ -58,6 +58,7 @@
     * libhardware/libhardware_legacy: fixed some warns
     * tinyalsa: fixes for call recording
     * Camera: ported some fixes from caf and from upstream
+    * ffmpeg: update to v3.0
 
 #### 2016/02/08 (Beta 5)
 * Kernel
