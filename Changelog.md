@@ -59,6 +59,9 @@
     * tinyalsa: fixes for call recording
     * Camera: ported some fixes from caf and from upstream
     * ffmpeg: update to v3.0
+    * native/bluetooth: fixed a lot of clang warnings
+    * Bluetooth/core: fixes from AOSP master branch + reduced disable delay
+    * CameraWrapper: disable clang
 
 #### 2016/02/08 (Beta 5)
 * Kernel
