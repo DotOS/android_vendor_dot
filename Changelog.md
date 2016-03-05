@@ -62,6 +62,9 @@
     * native/bluetooth: fixed a lot of clang warnings
     * Bluetooth/core: fixes from AOSP master branch + reduced disable delay
     * CameraWrapper: disable clang
+    * Bluetooth: ported some fixes from CAF
+    * Bluetooth: Hopefully fixed "Cannot play song" error
+    * Fixed "Unknown Number" or "Private Number" in call log for some providers (option under Settings --> Other --> Cellular Networks)
 
 #### 2016/02/08 (Beta 5)
 * Kernel
