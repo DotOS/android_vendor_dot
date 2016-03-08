@@ -1,9 +1,8 @@
 PRODUCT_BRAND ?= JDCTeam
 
-# Bootanimation and shutdownanimation
+# Bootanimation
 PRODUCT_COPY_FILES += \
-    vendor/aosp/prebuilt/common/bootanimation/bootanimation.zip:system/media/bootanimation.zip \
-    vendor/aosp/prebuilt/common/bootanimation/bootanimation.zip:system/media/shutdownanimation.zip 
+    vendor/aosp/prebuilt/common/bootanimation/bootanimation.zip:system/media/bootanimation.zip
 
 # SuperSU
 PRODUCT_COPY_FILES += \
