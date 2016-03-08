@@ -65,6 +65,16 @@
     * Bluetooth: ported some fixes from CAF
     * Bluetooth: Hopefully fixed "Cannot play song" error
     * Fixed "Unknown Number" or "Private Number" in call log for some providers (option under Settings --> Other --> Cellular Networks)
+    * WiFi: fixed 5Ghz not working for some variants
+    * Bluetooth: ported more fixes from upstream and CAF
+    * system/extras: fixed a lot of clang warnings and a couple of potential memory leaks
+    * system/core: fixed some warnings + small updates from upstream
+    * Launcher3: Small updated/enhancements + speed up animations + added MM wallpapers
+    * Update sources to Android 6.0.1 release 17
+    * Accept underscore and tilde in web URLs
+    * Fixed calendar fields comparison (Month was compared with the day and vice versa)
+    * inputflinger/EGL: cleaned warnings
+    * Added Ad-Hoc WiFi support to framework
 
 #### 2016/02/08 (Beta 5)
 * Kernel
