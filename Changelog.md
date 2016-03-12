@@ -70,11 +70,17 @@
     * system/extras: fixed a lot of clang warnings and a couple of potential memory leaks
     * system/core: fixed some warnings + small updates from upstream
     * Launcher3: Small updated/enhancements + speed up animations + added MM wallpapers
-    * Update sources to Android 6.0.1 release 17
+    * Update sources to Android 6.0.1 release 22
     * Accept underscore and tilde in web URLs
     * Fixed calendar fields comparison (Month was compared with the day and vice versa)
     * inputflinger/EGL: cleaned warnings
     * Added Ad-Hoc WiFi support to framework
+    * WiFi: merged fixes from SonyMobile/Intel/Xiaomi devs (pending on upstream)
+    * libhardware/libhardware_legacy: reverted not needed changes
+    * Small fixes for DHCP
+    * Updated APNs
+    * Base: more updates from upstream
+    * Bluetooth: ported various fixes from CAF
 
 #### 2016/02/08 (Beta 5)
 * Kernel
