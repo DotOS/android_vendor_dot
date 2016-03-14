@@ -31,10 +31,13 @@
 ### Changelog (short)
 
 #### Ongoing changes...
+
+#### 2016/03/14 (Beta 6)
 * Kernel
     * General code update
     * Ramdisk: cleaning and some small opimisation
     * FS / BLOCK / PROC / CPUFREQ / eCryptfs / FUSE / FS Drivers : Sync with 3.10 tree
+    * Fixed kernel wakelocks list on Better Battery Stats
 * ROM
     * TEST: handle lid/smartview covers in a different way (ported from AOSP master) --> Reverted because actually HallMonitor doesn't work properly on MM, but
       this allow us to let all 3rd party apps handle the cover window like stock ROMS
@@ -81,6 +84,10 @@
     * Updated APNs
     * Base: more updates from upstream
     * Bluetooth: ported various fixes from CAF
+    * BootAnimation: New custom bootanimation!! BIG BIG THANKS TO @gadget! (xda)
+    * Small fixes after r22 merge
+    * SnapdragonCamera: small fixes
+    * art: improved speed when optimizing apps at first boot
 
 #### 2016/02/08 (Beta 5)
 * Kernel
