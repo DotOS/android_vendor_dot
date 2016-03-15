@@ -31,6 +31,9 @@
 ### Changelog (short)
 
 #### Ongoing changes...
+* ROM
+    * Remove "Various" from battery stats
+    * Bluetooth: small cleaning and updating
 
 #### 2016/03/14 (Beta 6)
 * Kernel
