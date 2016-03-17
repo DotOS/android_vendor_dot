@@ -34,6 +34,15 @@
 * ROM
     * Remove "Various" from battery stats
     * Bluetooth: small cleaning and updating
+    * Start to underp things after r22 merge
+    * audio-legacy: move all QCOM stuffs + small fixes/cleaning from our device tree to libhardware repos
+    * frameworks/opt/bluetooth: merged all AOSP changes + CAF code + removed no more needed fixes/changes
+    * SuperSU: update to v2.68
+    * frameworks/av: removed all QCOM legacy flags from AudioPolicyManager.cpp
+    * Bring back Exchange services
+    * WebView: update to v50.0.2661.35
+    * DeskClock: fixed crash when the Alarm starts (still crashing when trying to enter in Settings)
+    * Vold: fixed extsdcard ext4 mounting
 
 #### 2016/03/14 (Beta 6)
 * Kernel
