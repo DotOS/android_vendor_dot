@@ -58,7 +58,11 @@ PRODUCT_PACKAGES += \
     OTAUpdates \
     Stk \
     Toolbox
-    
+
+# Exchange support
+PRODUCT_PACKAGES += \
+    Exchange2
+
 # ADB authentication
 ADDITIONAL_DEFAULT_PROPERTIES += \
     ro.adb.secure=0
