@@ -95,12 +95,6 @@ PRODUCT_COPY_FILES += \
 # Enable wireless Xbox 360 controller support
 PRODUCT_COPY_FILES += \
     frameworks/base/data/keyboards/Vendor_045e_Product_028e.kl:system/usr/keylayout/Vendor_045e_Product_0719.kl
-    
-# OTA Updates
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.ota.romname=AOSP-JF-6.0 \
-    ro.ota.version=$(shell date -u +%Y%m%d) \
-    ro.ota.manifest=http://romhut.com/roms/aosp-jf-6-0/ota.xml
 
 # Prebuilt ConsumerIR
 PRODUCT_COPY_FILES += \
