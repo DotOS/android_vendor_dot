@@ -43,6 +43,8 @@
     * WebView: update to v50.0.2661.35
     * DeskClock: fixed crash when the Alarm starts (still crashing when trying to enter in Settings)
     * Vold: fixed extsdcard ext4 mounting
+    * Added hardware key rebindigs feature
+    * Update LayersManager to v4.4.2
 
 #### 2016/03/14 (Beta 6)
 * Kernel
