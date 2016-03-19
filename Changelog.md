@@ -45,6 +45,12 @@
     * Vold: fixed extsdcard ext4 mounting
     * Added hardware key rebindigs feature
     * Update LayersManager to v4.4.2
+    * Buttons: small fixes
+    * frameworks/base: merged a lot of fixes
+    * SoundRecorder: Updated, ported some fixes for MM and materialized. Now icon is available in the launcher
+    * Location: disable qualcomm location service and speed up GPS lock
+    * RRO Layers: allow more SystemUI customisations
+    * Disable mobile data while setting up the device for the first time
 
 #### 2016/03/14 (Beta 6)
 * Kernel
