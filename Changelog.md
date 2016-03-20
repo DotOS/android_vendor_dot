@@ -51,6 +51,8 @@
     * Location: disable qualcomm location service and speed up GPS lock
     * RRO Layers: allow more SystemUI customisations
     * Disable mobile data while setting up the device for the first time
+    * Fixed adb at boot (no more need to set the usb connection to file transfer)
+    * WIP: Added battery icon customisations
 
 #### 2016/03/14 (Beta 6)
 * Kernel
