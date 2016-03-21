@@ -114,6 +114,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.recovery_update=false
 
+# BSOD Killer
+PRODUCT_COPY_FILES += \
+    vendor/aosp/prebuilt/common/bin/bsod_killer:system/bin/bsod_killer
+
 # Changelog
 PRODUCT_COPY_FILES += \
     vendor/aosp/Changelog.md:system/etc/Changelog.md
