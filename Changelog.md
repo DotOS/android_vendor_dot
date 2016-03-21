@@ -52,7 +52,8 @@
     * RRO Layers: allow more SystemUI customisations
     * Disable mobile data while setting up the device for the first time
     * Fixed adb at boot (no more need to set the usb connection to file transfer)
-    * WIP: Added battery icon customisations
+    * Added battery icon customisations (option in SystemUI Tuner)
+    * Added BSOD killer from opt-cm-12.1 until the rom is stable for everyone
 
 #### 2016/03/14 (Beta 6)
 * Kernel
