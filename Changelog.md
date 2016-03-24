@@ -31,6 +31,10 @@
 ### Changelog (short)
 
 #### Ongoing changes...
+* Kernel
+    * General code update + fixes
+    * More code ported from 3.10
+    * Updated Toolchains (5.3.0) and Busybox (from official Master branch)
 * ROM
     * Remove "Various" from battery stats
     * Bluetooth: small cleaning and updating
@@ -41,7 +45,7 @@
     * frameworks/av: removed all QCOM legacy flags from AudioPolicyManager.cpp
     * Bring back Exchange services
     * WebView: update to v50.0.2661.35
-    * DeskClock: fixed crash when the Alarm starts (still crashing when trying to enter in Settings)
+    * DeskClock: fixed crash when the Alarm starts and another crash when trying to enter into Settings
     * Vold: fixed extsdcard ext4 mounting
     * Added hardware key rebindigs feature
     * Update LayersManager to v4.4.2
@@ -51,9 +55,12 @@
     * Location: disable qualcomm location service and speed up GPS lock
     * RRO Layers: allow more SystemUI customisations
     * Disable mobile data while setting up the device for the first time
-    * Fixed adb at boot (no more need to set the usb connection to file transfer)
+    * Fixed adb at boot (no more need to set the usb connection to file transfer) and device recognition (at least on Kubuntu)
     * Added battery icon customisations (option in SystemUI Tuner)
     * Added BSOD killer from opt-cm-12.1 until the rom is stable for everyone
+    * Native: reverted Parcel changes ported from upstream
+    * Telephony: Hopefully fixed NO SIM issue when the device is encrypted
+    * Fixed/suppressed some build warns on various repos
 
 #### 2016/03/14 (Beta 6)
 * Kernel
