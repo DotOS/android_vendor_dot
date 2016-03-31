@@ -61,6 +61,19 @@
     * Native: reverted Parcel changes ported from upstream
     * Telephony: Hopefully fixed NO SIM issue when the device is encrypted
     * Fixed/suppressed some build warns on various repos
+    * SoundRecorder: fixed pause/resume
+    * Restored missing GAPPS permissions removed with r22 merge
+    * Allow camera to use power key as shutter
+    * frameworks/base: fixes from upstream
+    * Settings: general fixes ported from master branch
+    * WiFi settings: display connect button in the wifi connection menu
+    * frameworks/av: ported some fixes pending on master branch
+    * jflte: small fixes on audio_policy.conf and removed unuseful ethernet configuration
+    * jflte-bt: enabled again previously disabled features
+    * libjpeg: enhancements for QCOM devices
+    * Removed/suppressed some spam during compiling
+    * Drop MusicFX and switch to AudioFX
+    * Bluetooth: fixes from upstream/CAF
 
 #### 2016/03/14 (Beta 6)
 * Kernel
