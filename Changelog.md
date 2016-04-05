@@ -8,22 +8,25 @@
 
 [MatthewBooth](http://github.com/MatthewBooth) - OTA Updates, git maintainer, scripting, tester
 
-[angelcalibur](https://github.com/angelcalibur) - tester
+[angelcalibur](https://github.com/angelcalibur) - Tester
 
-[smeroni68](https://github.com/smeroni68) - tester
+[smeroni68](https://github.com/smeroni68) - Tester
 
-[Jimsilver73](https://github.com/Jimsilver73) - tester
+[Jimsilver73](https://github.com/Jimsilver73) - Tester
 
-[hawkerpaul](https://github.com/hawkerpaul) - tester, scripting
+[hawkerpaul](https://github.com/hawkerpaul) - Tester, scripting
 
-[franzyroy](https://github.com/franzyroy) - tester, cm themer
+[franzyroy](https://github.com/franzyroy) - Tester, cm themer
 
-[smstiv](https://github.com/smstiv) - tester
+[smstiv](https://github.com/smstiv) - Tester
 
-[side](https://github.com/dkati) - tester, cm themer
+[side](https://github.com/dkati) - Tester, cm themer, rom maintainer
 
 [javelinanddart](https://github.com/javelinanddart) - Kernel Developer
 
+[srisurya95](https://github.com/srisurya95) - Rom-Kernel Developer
+
+[gadget!](https://github.com/javelinanddart) - Themer, tester, graphic designer
 
 ### Changelog (full)
 [AOSP-JF-MM](https://github.com/AOSP-JF-MM) - Project GitHub
