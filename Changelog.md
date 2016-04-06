@@ -24,9 +24,9 @@
 
 [javelinanddart](https://github.com/javelinanddart) - Kernel Developer
 
-[srisurya95] - Rom-Kernel Developer
+[srisurya95](https://github.com/srisurya95) - Rom-Kernel Developer
 
-[gadget!](https://github.com/javelinanddart) - Themer, tester, graphic designer
+gadget! - Themer, tester, graphic designer
 
 ### Changelog (full)
 [AOSP-JF-MM](https://github.com/AOSP-JF-MM) - Project GitHub
