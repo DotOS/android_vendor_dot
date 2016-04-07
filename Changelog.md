@@ -80,6 +80,7 @@
     * fixed apicheck and other small things for jdk8 compiling
     * init: fixed radio not working after a soft-reboot
     * Update sources to Android 6.0.1 release 24
+    * Update SuperSU to v2.71
 
 #### 2016/03/14 (Beta 6)
 * Kernel
