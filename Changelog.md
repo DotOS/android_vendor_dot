@@ -26,7 +26,7 @@
 
 [srisurya95](https://github.com/srisurya95) - Rom-Kernel Developer
 
-gadget! - Themer, tester, graphic designer
+[gadget!](http://forum.xda-developers.com/member.php?u=2026779) - Themer, tester, graphic designer
 
 ### Changelog (full)
 [AOSP-JF-MM](https://github.com/AOSP-JF-MM) - Project GitHub
@@ -57,7 +57,6 @@ gadget! - Themer, tester, graphic designer
     * SoundRecorder: Updated, ported some fixes for MM and materialized. Now icon is available in the launcher
     * Location: disable qualcomm location service and speed up GPS lock
     * RRO Layers: allow more SystemUI customisations
-    * Disable mobile data while setting up the device for the first time
     * Fixed adb at boot (no more need to set the usb connection to file transfer) and device recognition (at least on Kubuntu)
     * Added battery icon customisations (option in SystemUI Tuner)
     * Added BSOD killer from opt-cm-12.1 until the rom is stable for everyone
@@ -77,6 +76,10 @@ gadget! - Themer, tester, graphic designer
     * Removed/suppressed some spam during compiling
     * Drop MusicFX and switch to AudioFX
     * Bluetooth: fixes from upstream/CAF
+    * f2fs-tools: update to 1.6.1
+    * fixed apicheck and other small things for jdk8 compiling
+    * init: fixed radio not working after a soft-reboot
+    * Update sources to Android 6.0.1 release 24
 
 #### 2016/03/14 (Beta 6)
 * Kernel
