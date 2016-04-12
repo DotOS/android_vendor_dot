@@ -76,12 +76,15 @@
     * Removed/suppressed some spam during compiling
     * Drop MusicFX and switch to AudioFX
     * Bluetooth: fixes from upstream/CAF
-    * f2fs-tools: update to 1.6.1
     * fixed apicheck and other small things for jdk8 compiling
     * init: fixed radio not working after a soft-reboot
     * Update sources to Android 6.0.1 release 24
     * Update SuperSU to v2.71
-    * Update LayersManager to v4.4.4
+    * Update LayersManager to v4.4.5
+    * Ramdisk: Reduced boot time, configured power mode for recovery and removed some unuseful things
+    * JFLTE: improved TCP performance + small fixes on sepolicy
+    * Updated SMART APNs
+    * Enable dex-preoptimization. Increase the rom size, but decrease significantly the first boot time after an update.
 
 #### 2016/03/14 (Beta 6)
 * Kernel
