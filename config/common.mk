@@ -17,9 +17,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.android.dateformat=MM-dd-yyyy \
     ro.com.android.dataroaming=false 
 
-PRODUCT_PACKAGE_OVERLAYS += \
-    vendor/aosp/overlay/common \
-    vendor/aosp/overlay/dictionaries
+DEVICE_PACKAGE_OVERLAYS += \
+    vendor/aosp/overlay/common
 
 # Thank you, please drive thru!
 PRODUCT_PROPERTY_OVERRIDES += \
