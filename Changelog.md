@@ -34,6 +34,8 @@
 ### Changelog (short)
 
 #### Ongoing changes...
+
+#### 2016/04/16 (Stable 1)
 * Kernel
     * General code update + fixes
     * More code ported from 3.10
@@ -83,8 +85,11 @@
     * Update LayersManager to v4.4.5
     * Ramdisk: Reduced boot time, configured power mode for recovery and removed some unuseful things
     * JFLTE: improved TCP performance + small fixes on sepolicy
-    * Updated SMART APNs
+    * General APNs updates
     * Enable dex-preoptimization. Increase the rom size, but decrease significantly the first boot time after an update.
+    * f2fs-tools: update to 1.6.1
+    * vold: Mount ext4/f2fs portable storage with sdcard_posix context. This fixes r/w issues for ext sdcard
+    * av: more fixes from cm and upstream
 
 #### 2016/03/14 (Beta 6)
 * Kernel
