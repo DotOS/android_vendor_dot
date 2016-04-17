@@ -18,7 +18,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.android.dataroaming=false 
 
 DEVICE_PACKAGE_OVERLAYS += \
-    vendor/aosp/overlay/common
+    vendor/aosp/overlay/common \
+    vendor/aosp/overlay/dictionaries
 
 # Thank you, please drive thru!
 PRODUCT_PROPERTY_OVERRIDES += \
