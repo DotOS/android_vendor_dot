@@ -34,6 +34,13 @@
 ### Changelog (short)
 
 #### Ongoing changes...
+* ROM
+    * SEPolicy: fixed more denials/relax some neverallow for userdebug builds
+    * av: reverted some changes abandoned by AOSP and ported latest updates from upstream
+    * LatinIME: update and clean dictionaries
+    * Ramdisk: small fix for adb in charge mode only
+    * Native: ported again parcel changes from upstream
+    * jflte: update partitions size and added missing BOARD_CACHEIMAGE_PARTITION_SIZE
 
 #### 2016/04/16 (Stable 1)
 * Kernel
