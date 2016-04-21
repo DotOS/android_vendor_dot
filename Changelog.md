@@ -33,7 +33,7 @@
 
 ### Changelog (short)
 
-#### Ongoing changes...
+#### Ongoing changes... (Stable 2)
 * ROM
     * SEPolicy: fixed more denials/relax some neverallow for userdebug builds
     * av: reverted some changes abandoned by AOSP and ported latest updates from upstream
@@ -41,6 +41,8 @@
     * Ramdisk: small fix for adb in charge mode only
     * Native: ported again parcel changes from upstream
     * jflte: update partitions size and added missing BOARD_CACHEIMAGE_PARTITION_SIZE
+    * Update sources to Android 6.0.1 release 30
+    * SnapdragonCamera: fix focus + fixed button visibility in landscape mode
 
 #### 2016/04/16 (Stable 1)
 * Kernel
