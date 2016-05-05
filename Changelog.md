@@ -34,15 +34,25 @@
 ### Changelog (short)
 
 #### Ongoing changes... (Stable 2)
+* Kernel
+    * General code update + fixes
+    * Updated BusyBox
 * ROM
     * SEPolicy: fixed more denials/relax some neverallow for userdebug builds
     * av: reverted some changes abandoned by AOSP and ported latest updates from upstream
     * LatinIME: update and clean dictionaries
     * Ramdisk: small fix for adb in charge mode only
     * Native: ported again parcel changes from upstream
-    * jflte: update partitions size and added missing BOARD_CACHEIMAGE_PARTITION_SIZE
-    * Update sources to Android 6.0.1 release 30
+    * jflte: update partitions size and added missing BOARD_CACHEIMAGE_PARTITION_SIZE --> [REVERTED, not tested on all variants]
+    * Update sources to Android 6.0.1 release 43 (MOB30J)
     * SnapdragonCamera: fix focus + fixed button visibility in landscape mode
+    * Partially reverted some commits ported with the release 22 merge
+    * Sepolicy: small fixes
+    * APNs updates and fixes
+    * XML Pull Parser optimizations
+    * Reverted session callback API support
+    * Sounds: use enhanced system/notifications sounds and ringtones, big big thanks to @Locklear308
+    * jflte: do not retain classes.dex in APKs for non-user builds
 
 #### 2016/04/16 (Stable 1)
 * Kernel
