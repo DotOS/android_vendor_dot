@@ -53,6 +53,13 @@
     * Reverted session callback API support
     * Sounds: use enhanced system/notifications sounds and ringtones, big big thanks to @Locklear308
     * jflte: do not retain classes.dex in APKs for non-user builds
+    * build: added support for more qcom devices
+    * Bionic: added arm64 optimisations
+    * bt: sync wit cm/caf. Hopefully fixed all BLE  and other minor issues
+    * Added "pause download" feature
+    * More Selinux fixes
+    * Rootdir: small fixes
+    * Bootanimation: cleaning/fixes
 
 #### 2016/04/16 (Stable 1)
 * Kernel
