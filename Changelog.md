@@ -56,10 +56,11 @@
     * build: added support for more qcom devices
     * Bionic: added arm64 optimisations
     * bt: sync wit cm/caf. Hopefully fixed all BLE  and other minor issues
-    * Added "pause download" feature
     * More Selinux fixes
     * Rootdir: small fixes
     * Bootanimation: cleaning/fixes
+    * Build (Experimental): enabled Ninja builds
+    * Updated Toolchains
 
 #### 2016/04/16 (Stable 1)
 * Kernel
