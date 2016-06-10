@@ -33,10 +33,13 @@
 
 ### Changelog (short)
 
-#### Ongoing changes... (Stable 2)
+#### Ongoing changes... (Stable 3)
+
+#### 2016/06/12 (Stable 2)
 * Kernel
     * General code update + fixes
     * Updated BusyBox
+    * Update soources to latest Dorimanx updates
 * ROM
     * SEPolicy: fixed more denials/relax some neverallow for userdebug builds
     * av: reverted some changes abandoned by AOSP and ported latest updates from upstream
@@ -61,8 +64,12 @@
     * Bootanimation: cleaning/fixes
     * Build (Experimental): enabled Ninja builds
     * Updated Toolchains
-    * Updated adreno blobs
+    * Proprietary files: updated adreno blobs
     * Bt: sync code with cm after r46 merge
+    * Art: compile with clang
+    * Settings: Allow sorting Applications list by size
+    * jflte: set minimum value for auto-brightness
+    * Bt: some clock fixes
 
 #### 2016/04/16 (Stable 1)
 * Kernel
