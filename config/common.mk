@@ -57,7 +57,8 @@ PRODUCT_PACKAGES += \
     LayersManager \
     OTAUpdates \
     Stk \
-    Toolbox
+    Toolbox \
+    tinymix
 
 # Exchange support
 PRODUCT_PACKAGES += \
