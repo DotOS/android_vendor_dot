@@ -34,6 +34,12 @@
 ### Changelog (short)
 
 #### Ongoing changes... (Stable 3)
+* ROM
+    * WIP: Switch to new audio HAL (big big thanks to @arco)
+    * MediaProvider: updated translations and reverted r22 merge
+    * apps/Bluetooth: general fixes
+    * rootdir: disable USB when we switch between different states
+    * Update SuperSU to v2.74
 
 #### 2016/06/12 (Stable 2)
 * Kernel
