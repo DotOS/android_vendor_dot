@@ -35,11 +35,14 @@
 
 #### Ongoing changes... (Stable 3)
 * ROM
-    * WIP: Switch to new audio HAL (big big thanks to @arco)
+    * Switch to new audio HAL, big thanks to @arco @dookiedude @dkati
     * MediaProvider: updated translations and reverted r22 merge
     * apps/Bluetooth: general fixes
     * rootdir: disable USB when we switch between different states
     * Update SuperSU to v2.74
+    * audio-caf/msm8960: drop all legacy code
+    * Art: small updates/fixes + added support for other devices
+    * LayersManager: update to v4.4.5.1
 
 #### 2016/06/12 (Stable 2)
 * Kernel
