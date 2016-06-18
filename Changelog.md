@@ -33,7 +33,12 @@
 
 ### Changelog (short)
 
-#### Ongoing changes... (Stable 3)
+#### Ongoing changes... (Stable 4)
+
+#### 2016/06/19 (Stable 3)
+* Kernel
+    * General code updates
+    * ASoC: msm: Add flexible playback periods (fixes skip tracks sometimes not working with bt and other audio issue)
 * ROM
     * Switch to new audio HAL, big thanks to @arco @dookiedude @dkati
     * MediaProvider: updated translations and reverted r22 merge
@@ -43,6 +48,10 @@
     * audio-caf/msm8960: drop all legacy code
     * Art: small updates/fixes + added support for other devices
     * LayersManager: update to v4.4.5.1
+    * Updated translations
+    * DeskClock/LatinIME: updated translations, reverted r22 merge + other small fixes
+    * Base: fixed a NPE in DocumentsUI
+    * jflte: update partitions size and added missing BOARD_CACHEIMAGE_PARTITION_SIZE
 
 #### 2016/06/12 (Stable 2)
 * Kernel
