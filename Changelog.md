@@ -34,6 +34,9 @@
 ### Changelog (short)
 
 #### Ongoing changes... (Stable 4)
+* ROM
+    * Increase available volume levels for media (from 15 to 30)
+    * libbt-vendor (BRCM): Add ssr_cleanup
 
 #### 2016/06/19 (Stable 3)
 * Kernel
