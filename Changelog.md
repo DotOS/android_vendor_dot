@@ -34,9 +34,19 @@
 ### Changelog (short)
 
 #### Ongoing changes... (Stable 4)
+* Kernel
+    * General code updates
+    * f2fs: general updates from 3.18 kernel
+    * Ramdisk: relax RAM pressure and start LMK when free RAM goes under 294MB (previous value 278MB)
 * ROM
     * Increase available volume levels for media (from 15 to 30)
     * libbt-vendor (BRCM): Add ssr_cleanup
+    * Some translation updates
+    * jflte: enable MMS when mobile data is disabled
+    * jflte: Audio/Volume improvements
+    * wifi: small fixes + fixed a mismerge & enable WiFi IpReachabilityMonitor by default
+    * bt: don't use CLOCK_BOOTTIME where CLOCK_MONOTONIC was expected
+    * Settings: general fixes + expose some hardcoded colors in storage settings
 
 #### 2016/06/19 (Stable 3)
 * Kernel
