@@ -38,6 +38,7 @@
     * General code updates
     * f2fs: general updates from 3.18 kernel
     * Ramdisk: relax RAM pressure and start LMK when free RAM goes under 294MB (previous value 278MB)
+    * Ramdisk: update busybox to v1.26.0
 * ROM
     * Increase available volume levels for media (from 15 to 30)
     * libbt-vendor (BRCM): Add ssr_cleanup
@@ -47,6 +48,11 @@
     * wifi: small fixes + fixed a mismerge & enable WiFi IpReachabilityMonitor by default
     * bt: don't use CLOCK_BOOTTIME where CLOCK_MONOTONIC was expected
     * Settings: general fixes + expose some hardcoded colors in storage settings
+    * General wifi/bt fixes
+    * SoundRecorder: add Bluetooth sound recording
+    * Audio: reworked audio mixers
+    * jflte: rc files cleanup
+    * jflte: enable thread migration notifier & improve interactive timer values
 
 #### 2016/06/19 (Stable 3)
 * Kernel
