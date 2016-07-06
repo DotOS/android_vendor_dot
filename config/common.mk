@@ -64,6 +64,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Exchange2
 
+# Backup Services whitelist
+PRODUCT_COPY_FILES += \
+    vendor/aosp/config/permissions/backup.xml:system/etc/sysconfig/backup.xml
+
 # ADB authentication
 ADDITIONAL_DEFAULT_PROPERTIES += \
     ro.adb.secure=0
