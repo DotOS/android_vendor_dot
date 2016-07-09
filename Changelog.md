@@ -33,12 +33,14 @@
 
 ### Changelog (short)
 
-#### Ongoing changes... (Stable 4)
+#### Ongoing changes... (Stable 5)
+
+#### 2016/07/09 (Stable 4)
 * Kernel
     * General code updates
     * f2fs: general updates from 3.18 kernel
-    * Ramdisk: relax RAM pressure and start LMK when free RAM goes under 294MB (previous value 278MB)
     * Ramdisk: update busybox to v1.26.0
+    * Update busybox to v1.26.0
 * ROM
     * Increase available volume levels for media (from 15 to 30)
     * libbt-vendor (BRCM): Add ssr_cleanup
@@ -53,6 +55,12 @@
     * Audio: reworked audio mixers
     * jflte: rc files cleanup
     * jflte: enable thread migration notifier & improve interactive timer values
+    * Update source to Android 6.0.1 Release 52 (MOB30R)
+    * core/vold/extras/build: move to stable branches
+    * jflte-audio: various fixes
+    * Update SuperSU to v2.76
+    * Proprietary libs: revert to old adreno libs (hopefully fixes random app crashes)
+    * Audio-msm8960: fix AudioEffect reply overflow
 
 #### 2016/06/19 (Stable 3)
 * Kernel
