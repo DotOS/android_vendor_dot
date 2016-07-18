@@ -34,6 +34,14 @@
 ### Changelog (short)
 
 #### Ongoing changes... (Stable 5)
+* ROM
+    * Audio: enable again fluence mode
+    * Updated translations
+    * RRO: move to Substratum --> Changes are temporary in separate branches in testing phase, waiting for Substratum beta release..!
+    * Updated translations
+    * LatinIME: fixed gesture input without gApps installed
+    * init: some small cleaning
+    * Add back Messenger app, fully themeable with Substratum
 
 #### 2016/07/09 (Stable 4)
 * Kernel
