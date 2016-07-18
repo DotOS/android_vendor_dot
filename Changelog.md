@@ -42,6 +42,11 @@
     * LatinIME: fixed gesture input without gApps installed
     * init: some small cleaning
     * Add back Messenger app, fully themeable with Substratum
+    * Substratum: build masquerade
+    * Contacts/ContactsCommon: expose more colors for themers
+    * Settings/Dialer: more changes needed for themes
+    * Settings: Add dashboard tile for Substratum (enable "remove icon" option into Substratum)
+    * More general fixes for Substratum/Themes
 
 #### 2016/07/09 (Stable 4)
 * Kernel
