@@ -54,6 +54,7 @@ PRODUCT_PACKAGES += \
     GoogleDialer \
     LatinIME \
     Launcher3 \
+    masquerade \
     OTAUpdates \
     Stk \
     Toolbox \
