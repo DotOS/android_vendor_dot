@@ -34,6 +34,9 @@
 ### Changelog (short)
 
 #### Ongoing changes... (Stable 5)
+* Kernel
+    * General code updates
+    * ASoC: msm: small fixes
 * ROM
     * Audio: enable again fluence mode
     * Updated translations
@@ -47,13 +50,25 @@
     * Settings/Dialer: more changes needed for themes
     * Settings: Add dashboard tile for Substratum (enable "remove icon" option into Substratum)
     * More general fixes for Substratum/Themes
+    * Settings - Apps: show/hide Substratum overlays
+    * OMS: disable Zygote preloaded drawables
+    * Adreno blobs: update to version flo-mob30p
+    * Proprietary blobs: remove unused DivX dependencies
+    * Proprietary blobs: remove unused rmt_storage blob
+    * Proprietary blobs: update Widevine from flo (razor-MMB30P)
+    * jflte: do not use legacy mmap
+    * jflte: webview: move to beta version v52.0.2743.62
+    * jflte: refactor system properties
+    * jflte: clean out camera vendor hacks
+    * Browser: completely reworked from cm, tons of fixes/enhancements
+    * bt: fixed stuttering audio for Broadcom bt chipsets
+    * GCC: move to generic 4.9 TC for ROM compiling (stock kernel now is compiled with arm-eabi-4.9 TC)
 
 #### 2016/07/09 (Stable 4)
 * Kernel
     * General code updates
     * f2fs: general updates from 3.18 kernel
     * Ramdisk: update busybox to v1.26.0
-    * Update busybox to v1.26.0
 * ROM
     * Increase available volume levels for media (from 15 to 30)
     * libbt-vendor (BRCM): Add ssr_cleanup
