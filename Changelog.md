@@ -62,7 +62,8 @@
     * jflte: clean out camera vendor hacks
     * Browser: completely reworked from cm, tons of fixes/enhancements
     * bt: fixed stuttering audio for Broadcom bt chipsets
-    * GCC: move to generic 4.9 TC for ROM compiling (stock kernel now is compiled with arm-eabi-4.9 TC)
+    * GCC: move to generic 4.9 Linaro TC for ROM compiling (stock kernel now is compiled with arm-eabi-4.9 TC)
+    * LiveWallpapers: add LiveWallpapers LiveWallpapersPicker to build
 
 #### 2016/07/09 (Stable 4)
 * Kernel
