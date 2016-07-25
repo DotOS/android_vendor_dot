@@ -53,9 +53,9 @@ PRODUCT_PACKAGES += \
     BluetoothExt \
     LatinIME \
     Launcher3 \
-    LayersManager \
     LiveWallpapers \
     LiveWallpapersPicker \
+    masquerade \
     OTAUpdates \
     Stk \
     Toolbox \
