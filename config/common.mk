@@ -58,6 +58,7 @@ PRODUCT_PACKAGES += \
     masquerade \
     OTAUpdates \
     Stk \
+    Substratum \
     Toolbox \
     tinymix
 
