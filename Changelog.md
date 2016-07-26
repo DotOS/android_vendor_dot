@@ -33,14 +33,17 @@
 
 ### Changelog (short)
 
-#### Ongoing changes... (Stable 5)
+#### Ongoing changes... (Stable 6)
+
+#### 2016/07/26 (Stable 5 - OMS compatible)
 * Kernel
     * General code updates
     * ASoC: msm: small fixes
+    * Ramdisk cleanout/optimisations
 * ROM
     * Audio: enable again fluence mode
     * Updated translations
-    * RRO: move to Substratum --> Changes are temporary in separate branches in testing phase, waiting for Substratum beta release..!
+    * RRO: move to Substratum
     * Updated translations
     * LatinIME: fixed gesture input without gApps installed
     * init: some small cleaning
@@ -64,6 +67,9 @@
     * bt: fixed stuttering audio for Broadcom bt chipsets
     * GCC: move to generic 4.9 Linaro TC for ROM compiling (stock kernel now is compiled with arm-eabi-4.9 TC)
     * LiveWallpapers: add LiveWallpapers LiveWallpapersPicker to build
+    * jflte: clean out init
+    * native: general fixes
+    * jf: thermal engine updates
 
 #### 2016/07/09 (Stable 4)
 * Kernel
