@@ -34,6 +34,17 @@
 ### Changelog (short)
 
 #### Ongoing changes... (Stable 6)
+* Kernel
+    * General code updates/fixes
+    * Updated and fixed sdcardfs
+    * Fixed SM-S975 sensors
+* ROM
+    * vold/core/sepolicy/base: general fixes for sdcardfs
+    * jf-audio: small changes/sync with cm
+    * Sepolicy: removed all old hacks added during the first developement stage
+    * init: small fixes
+    * Bluetooth: allow user to send epub files
+    * Update Substratum to v157
 
 #### 2016/07/26 (Stable 5 - OMS compatible)
 * Kernel
