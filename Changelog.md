@@ -44,7 +44,20 @@
     * Sepolicy: removed all old hacks added during the first developement stage
     * init: small fixes
     * Bluetooth: allow user to send epub files
-    * Update Substratum to v157
+    * Update Substratum to v171
+    * jflte: move to sdcardfs (works with Alucard kernel, stock kernel is still WIP)
+    * Themes: expose more colors and elevations
+    * Themes: make DocumentsUI fully themeable
+    * Themes: allow Permission Icons to be fully themed
+    * OMS: Themes should be dynamically theming the power menu
+    * Download: add to support pause/resume download by manual
+    * base: removed unused tests
+    * vold/base: various fixes for mount service
+    * base: general bug fixes
+    * base: smoother Upload and Download Animation
+    * SnapdragonCamera: general fixes from CAF/CM
+    * jflte: webview: update to v52.0.2743.91
+    * Allow unlocked USB data access
 
 #### 2016/07/26 (Stable 5 - OMS compatible)
 * Kernel
