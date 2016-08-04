@@ -36,8 +36,9 @@
 #### Ongoing changes... (Stable 6)
 * Kernel
     * General code updates/fixes
-    * Updated and fixed sdcardfs
+    * Updated and fixed sdcardfs for stacked fs support
     * Fixed SM-S975 sensors
+    * Improved power consumption
 * ROM
     * vold/core/sepolicy/base: general fixes for sdcardfs
     * jf-audio: small changes/sync with cm
@@ -58,6 +59,12 @@
     * SnapdragonCamera: general fixes from CAF/CM
     * jflte: webview: update to v52.0.2743.91
     * Allow unlocked USB data access
+    * Update source to Android 6.0.1 Release 61 (MOB30Z)
+    * skia: ported some upstream optimisations
+    * bionic: Sort and cache hosts file data for fast lookup
+    * libstlport: include in all variants as it's needed by adreno flo libs
+    * Updated some APNs
+    * RIL-native: small fixes
 
 #### 2016/07/26 (Stable 5 - OMS compatible)
 * Kernel
