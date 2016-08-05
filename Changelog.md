@@ -36,9 +36,10 @@
 #### Ongoing changes... (Stable 6)
 * Kernel
     * General code updates/fixes
-    * Updated and fixed sdcardfs for stacked fs support
+    * Updated and fixed sdcardfs for stacked fs support + small fixes from Google
     * Fixed SM-S975 sensors
     * Improved power consumption
+    * Updated and tuned TC for arm32 jflte devices
 * ROM
     * vold/core/sepolicy/base: general fixes for sdcardfs
     * jf-audio: small changes/sync with cm
@@ -46,7 +47,7 @@
     * init: small fixes
     * Bluetooth: allow user to send epub files
     * Update Substratum to v171
-    * jflte: move to sdcardfs (works with Alucard kernel, stock kernel is still WIP)
+    * jflte: move to sdcardfs
     * Themes: expose more colors and elevations
     * Themes: make DocumentsUI fully themeable
     * Themes: allow Permission Icons to be fully themed
@@ -64,7 +65,14 @@
     * bionic: Sort and cache hosts file data for fast lookup
     * libstlport: include in all variants as it's needed by adreno flo libs
     * Updated some APNs
-    * RIL-native: small fixes
+    * RIL/native: small fixes
+    * Updated TC
+    * calendar: updated, materialized, updated translation and fixed various bugs (thanks to cm)
+    * Proprietary blobs: updated blobs from GPE PF1 and added some missing blobs
+    * OMS: exposed more hard-coded colors
+    * Sepolicy: more denials fixes
+    * SystemUI: Display bluetooth battery status when available
+    * Turn off carrier provisioning by default to allow tethering
 
 #### 2016/07/26 (Stable 5 - OMS compatible)
 * Kernel
