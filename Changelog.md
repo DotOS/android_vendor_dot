@@ -40,6 +40,9 @@
     * Fixed SM-S975 sensors
     * Improved power consumption
     * Updated and tuned TC for arm32 jflte devices
+    * GPU msm: ported some fixes/optimisations from hammerhead
+    * Ramdisk: huge rework, moved Busybox to a custom folder, fixed and updated all scripts
+      (some of them were not working properly). This changes fixes all OMS issues with Alucard Kernel
 * ROM
     * vold/core/sepolicy/base: general fixes for sdcardfs
     * jf-audio: small changes/sync with cm
@@ -67,12 +70,13 @@
     * Updated some APNs
     * RIL/native: small fixes
     * Updated TC
-    * calendar: updated, materialized, updated translation and fixed various bugs (thanks to cm)
     * Proprietary blobs: updated blobs from GPE PF1 and added some missing blobs
     * OMS: exposed more hard-coded colors
     * Sepolicy: more denials fixes
     * SystemUI: Display bluetooth battery status when available
     * Turn off carrier provisioning by default to allow tethering
+    * Reverted Toybox upstream/cm changes (fixes OMS permission issue and all related bugs)
+    * base/native/core: general fixes
 
 #### 2016/07/26 (Stable 5 - OMS compatible)
 * Kernel
