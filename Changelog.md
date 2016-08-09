@@ -62,7 +62,7 @@
     * base: general bug fixes
     * base: smoother Upload and Download Animation
     * SnapdragonCamera: general fixes from CAF/CM
-    * jflte: webview: update to v52.0.2743.91
+    * jflte: webview: update to v53.0.2785.49
     * Allow unlocked USB data access
     * Update source to Android 6.0.1 Release 61 (MOB30Z)
     * skia: ported some upstream optimisations
@@ -71,7 +71,7 @@
     * Updated some APNs
     * RIL/native: small fixes
     * Updated TC
-    * Proprietary blobs: updated blobs from GPE PF1 and added some missing blobs
+    * Proprietary blobs: updated thermal engine blobs and added libuiblur
     * OMS: exposed more hard-coded colors
     * Sepolicy: more denials fixes
     * SystemUI: Display bluetooth battery status when available
@@ -81,6 +81,8 @@
     * ir: fixed ir for variuos apps (tested: Peel, ASmart Remote, AnyMote and Ir Universal Remote)
     * Hopefully fixed media crashes when phone is connected as mtp
     * OMS: ported latest changes from Substratum gerrit
+    * DocumentsUI: Add a standalone File Manager - Updated and fixed for MM
+    * Test: enable blur
 
 #### 2016/07/26 (Stable 5 - OMS compatible)
 * Kernel
