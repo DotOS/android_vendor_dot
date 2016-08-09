@@ -43,6 +43,7 @@
     * GPU msm: ported some fixes/optimisations from hammerhead
     * Ramdisk: huge rework, moved Busybox to a custom folder, fixed and updated all scripts
       (some of them were not working properly). This changes fixes all OMS issues with Alucard Kernel
+    * Fix ROM thermal engine execution
 * ROM
     * vold/core/sepolicy/base: general fixes for sdcardfs
     * jf-audio: small changes/sync with cm
@@ -77,6 +78,9 @@
     * Turn off carrier provisioning by default to allow tethering
     * Reverted Toybox upstream/cm changes (fixes OMS permission issue and all related bugs)
     * base/native/core: general fixes
+    * ir: fixed ir for variuos apps (tested: Peel, ASmart Remote, AnyMote and Ir Universal Remote)
+    * Hopefully fixed media crashes when phone is connected as mtp
+    * OMS: ported latest changes from Substratum gerrit
 
 #### 2016/07/26 (Stable 5 - OMS compatible)
 * Kernel
