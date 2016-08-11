@@ -33,7 +33,9 @@
 
 ### Changelog (short)
 
-#### Ongoing changes... (Stable 6)
+#### Ongoing changes... (Stable 7)
+
+#### 2016/08/12 (Stable 6)
 * Kernel
     * General code updates/fixes
     * Updated and fixed sdcardfs for stacked fs support + small fixes from Google
@@ -44,14 +46,16 @@
     * Ramdisk: huge rework, moved Busybox to a custom folder, fixed and updated all scripts
       (some of them were not working properly). This changes fixes all OMS issues with Alucard Kernel
     * Fix ROM thermal engine execution
+    * Added cron tasks
+    * General fixes on Ramdisk scripts
 * ROM
     * vold/core/sepolicy/base: general fixes for sdcardfs
     * jf-audio: small changes/sync with cm
     * Sepolicy: removed all old hacks added during the first developement stage
     * init: small fixes
     * Bluetooth: allow user to send epub files
-    * Update Substratum to v171
-    * jflte: move to sdcardfs
+    * Update Substratum to v202
+    * jflte: move to sdcardfs --> OPTIONAL, not enabled in public builds
     * Themes: expose more colors and elevations
     * Themes: make DocumentsUI fully themeable
     * Themes: allow Permission Icons to be fully themed
@@ -71,7 +75,7 @@
     * Updated some APNs
     * RIL/native: small fixes
     * Updated TC
-    * Proprietary blobs: updated thermal engine blobs and added libuiblur
+    * Proprietary blobs: updated thermal engine blobs
     * OMS: exposed more hard-coded colors
     * Sepolicy: more denials fixes
     * SystemUI: Display bluetooth battery status when available
@@ -82,7 +86,7 @@
     * Hopefully fixed media crashes when phone is connected as mtp
     * OMS: ported latest changes from Substratum gerrit
     * DocumentsUI: Add a standalone File Manager - Updated and fixed for MM
-    * Test: enable blur
+    * Updated translations
 
 #### 2016/07/26 (Stable 5 - OMS compatible)
 * Kernel
@@ -93,7 +97,6 @@
     * Audio: enable again fluence mode
     * Updated translations
     * RRO: move to Substratum
-    * Updated translations
     * LatinIME: fixed gesture input without gApps installed
     * init: some small cleaning
     * Add back Messenger app, fully themeable with Substratum
