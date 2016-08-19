@@ -34,6 +34,25 @@
 ### Changelog (short)
 
 #### Ongoing changes... (Stable 7)
+* Kernel
+    * General code updates
+    * Ramdisk: tune Thermal values
+    * Ramdisk: small fixes and cleaning on scripts
+    * Ramdisk: set sys.io.scheduler at boot
+* ROM
+    * Added BackupTools for gApps
+    * Immersive recents: updates, fixes and cleaning
+    * OMS: Allow system effect sounds to be themed (require a soft reboot)
+    * QS: Add Substratum Shortcut Tile
+    * General translations updates
+    * Settings: InstalledApp: show link to Google Play
+    * wifi: general fixes
+    * audio: Update audio_platform_info.xml
+    * MediaProvider: various bug fixes
+    * APN: small fixes for T-Mobile MK DATA access
+    * Substratum: update to v214
+    * Gallery2: completely reworked and updated
+    * Blur: add back libuiblur.so library and add an option in Settings-->Display for enabling/disabling blur effect (default: OFF)
 
 #### 2016/08/12 (Stable 6)
 * Kernel
@@ -48,6 +67,7 @@
     * Fix ROM thermal engine execution
     * Added cron tasks
     * General fixes on Ramdisk scripts
+    * Fixed QuadRoot vulnerabilities
 * ROM
     * vold/core/sepolicy/base: general fixes for sdcardfs
     * jf-audio: small changes/sync with cm
