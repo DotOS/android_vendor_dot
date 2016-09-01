@@ -33,4 +33,8 @@
 
 ### Changelog (short)
 
-#### Ongoing changes... (Initial public release)
+#### Ongoing changes...
+
+#### Alpha 1 (20160901)
+
+* Initial public release
