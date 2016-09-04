@@ -34,6 +34,21 @@
 ### Changelog (short)
 
 #### Ongoing changes...
+* ROM
+    * Added exfat and NTFS support
+    * Enable sdcardfs driver
+    * System Sounds: use Stereophonic & Remastered Nexus sounds
+    * Materialized some old icons/colours/toasts
+    * Fixed NFC
+    * Speed up animations
+    * Audio: enabled custom audio policy again
+    * Sepolicy: fixes + partial updates for N
+    * frameworks/native: ported CAF code (mostly on surfaceflinger)
+    * Add back changelog to Settings
+    * SystemUpdateService: enable service but lock its receivers
+    * Frameworks/base: general optimisations
+    * skia: ported CAF code
+    * Camera: various fixes
 
 #### Alpha 1 (20160901)
 
