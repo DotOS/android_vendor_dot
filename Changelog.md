@@ -49,6 +49,11 @@
     * Frameworks/base: general optimisations
     * skia: ported CAF code
     * Camera: various fixes
+    * Build: fixed backuptools and override props functions
+    * Build: completely reworked ROM versioning
+    * OMS: exposed almost all harcoded colours (WIP)
+    * native: ported cm fixes for QCOM devices
+    * Webview: use Google WebView version instead of stock AOSP
 
 #### Alpha 1 (20160901)
 
