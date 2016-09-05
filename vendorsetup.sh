@@ -1,0 +1,2 @@
+add_lunch_combo jdc_jflte-user
+add_lunch_combo jdc_jflte-userdebug
