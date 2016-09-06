@@ -34,6 +34,10 @@
 ### Changelog (short)
 
 #### Ongoing changes...
+* Kernel
+    * Fixed boot on N
+    * Ramdisk: updated and fixed scripts for N
+    * Ramdisk: updated and fixed scripts for systemless root
 * ROM
     * Added exfat and NTFS support
     * Enable sdcardfs driver
@@ -54,6 +58,7 @@
     * OMS: exposed almost all harcoded colours (WIP)
     * native: ported cm fixes for QCOM devices
     * Webview: use Google WebView version instead of stock AOSP
+    * Fixed LEDify
 
 #### Alpha 1 (20160901)
 
