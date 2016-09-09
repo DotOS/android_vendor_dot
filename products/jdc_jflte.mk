@@ -19,5 +19,5 @@ $(call inherit-product, device/samsung/jflte/aosp_jflte.mk)
 PRODUCT_NAME := jdc_jflte
 PRODUCT_DEVICE := jflte
 PRODUCT_BRAND := samsung
-PRODUCT_MANUFACTURER := samsung
-PRODUCT_MODEL := jflte
+PRODUCT_MANUFACTURER := Samsung
+PRODUCT_MODEL := Samsung Galaxy S4
