@@ -34,13 +34,17 @@
 ### Changelog (short)
 
 #### Ongoing changes...
+
+#### Alpha 2 (20160902)
 * Kernel
     * Fixed boot on N
     * Ramdisk: updated and fixed scripts for N
     * Ramdisk: updated and fixed scripts for systemless root
+    * Merged latest 3.18 fixes/updates for ext4
+    * General code updates/fixes
+    * Fixed CVE-2015-8839
 * ROM
     * Added exfat and NTFS support
-    * Enable sdcardfs driver
     * System Sounds: use Stereophonic & Remastered Nexus sounds
     * Materialized some old icons/colours/toasts
     * Fixed NFC
@@ -59,6 +63,12 @@
     * native: ported cm fixes for QCOM devices
     * Webview: use Google WebView version instead of stock AOSP
     * Fixed LEDify
+    * STweaks: fixed systemless root detection
+    * SuperSU: update to v2.78
+    * Settings: general fixes/enhancements and some icon materialization
+    * Base: partially ported CAF code/optimisations
+    * Update sources to Android 7.0.0 release 6
+    * RIL: removed old LP hack for NO SIM issue in Airplane Mode and fix things in a proper way
 
 #### Alpha 1 (20160901)
 
