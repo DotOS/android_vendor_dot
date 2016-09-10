@@ -1,2 +1,4 @@
 add_lunch_combo jdc_jflte-user
 add_lunch_combo jdc_jflte-userdebug
+add_lunch_combo jdc_gemini-user
+add_lunch_combo jdc_gemini-userdebug

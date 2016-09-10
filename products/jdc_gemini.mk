@@ -12,10 +12,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-ifeq (jdc_jflte,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/jdc_jflte.mk
-endif
+# Inherit AOSP device configuration for gemini
+$(call inherit-product, device/xiaomi/gemini/aosp_gemini.mk)
 
-ifeq (jdc_gemini,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/jdc_gemini.mk
-endif
+# Set those variables here to overwrite the inherited values.
+PRODUCT_NAME := jdc_gemini
+PRODUCT_DEVICE := gemini
+PRODUCT_BRAND := xiaomi
+PRODUCT_MANUFACTURER := Xiaomi
+PRODUCT_MODEL := Xiaomi Mi5
