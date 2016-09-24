@@ -147,3 +147,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_BOOT_JARS += \
     tcmiface
+
+# include definitions for SDCLANG
+include vendor/aosp/sdclang/sdclang.mk
