@@ -82,7 +82,6 @@ PRODUCT_PACKAGES += \
     OTAUpdates \
     Stk \
     Substratum \
-    Toolbox \
     tinymix
 
 # Exchange support
@@ -100,10 +99,6 @@ ADDITIONAL_DEFAULT_PROPERTIES += \
 # For keyboard gesture typing
 PRODUCT_COPY_FILES += \
     vendor/aosp/prebuilt/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so
-
-# LEDify
-PRODUCT_COPY_FILES += \
-    vendor/aosp/prebuilt/common/bin/ledify:system/bin/ledify
     
 # init.d support
 PRODUCT_COPY_FILES += \
