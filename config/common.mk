@@ -28,7 +28,7 @@ PRODUCT_COPY_FILES += \
 
 # SuperSU
 PRODUCT_COPY_FILES += \
-    vendor/aosp/prebuilt/common/supersu/supersu.zip:system/supersu/supersu.zip
+    vendor/aosp/prebuilt/common/supersu/supersu.zip:install/supersu/supersu.zip
 
 PRODUCT_PROPERTY_OVERRIDES += \
     keyguard.no_require_sim=true \
