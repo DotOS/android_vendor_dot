@@ -33,7 +33,27 @@
 
 ### Changelog (short)
 
-#### Ongoing changes...
+#### Ongoing changes (Alpha 3)...
+* Kernel (JFLTE)
+    * Compile with GCC 6.0.1 + fixed compiling warns
+    * Small code updates
+* ROM
+    * WIP: initial Xiaomi Gemini bringup
+    * Ported + fixed all CAF code on our repos
+    * Deskclock: temporary revert CAF additions until bootloop issues are fixed
+    * Bluetooth: fix JFLTE bluetooth after CAF code merge
+    * WIP: bring back browser from MM
+    * Gallery2: switch to SnapdragonGallery + cm fixes/enhancements
+    * jflte: Add support for Samsung extended AGPS
+    * STweaks: fixed profile check
+    * Fix SuperSU installation for block-based OTAs
+    * SuperSU: update to v2.78SR1
+    * Substratum: update to v231
+    * jflte: GPS: removed not used files/services
+    * msm8960: audio: fixes for voip and calls
+    * msm8960: display: fixes and improved portability
+    * jflte: remove some QC encoders from codecs list
+    * Update sources to Android 7.0.0 release 14
 
 #### Alpha 2 (20160902)
 * Kernel
