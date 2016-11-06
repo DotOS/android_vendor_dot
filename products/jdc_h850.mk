@@ -12,14 +12,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-ifeq (jdc_jflte,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/jdc_jflte.mk
-endif
+# Inherit AOSP device configuration for G5
+$(call inherit-product, device/lge/h850/aosp_h850.mk)
 
-ifeq (jdc_gemini,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/jdc_gemini.mk
-endif
-
-ifeq (jdc_h850,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/jdc_h850.mk
-endif
+# Set those variables here to overwrite the inherited values.
+PRODUCT_NAME := jdc_h850
+PRODUCT_DEVICE := h850
+PRODUCT_BRAND := lge
+PRODUCT_MANUFACTURER := LGE
+PRODUCT_MODEL := LG-H850
