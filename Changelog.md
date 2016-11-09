@@ -48,7 +48,7 @@
     * STweaks: fixed profile check
     * Fix SuperSU installation for block-based OTAs
     * SuperSU: update to v2.78SR1
-    * Substratum: update to v231
+    * Substratum: update to v424
     * jflte: GPS: removed not used files/services
     * msm8960: audio: fixes for voip and calls
     * msm8960: display: fixes and improved portability
