@@ -36,7 +36,11 @@
 #### Ongoing changes (Alpha 3)...
 * Kernel (JFLTE)
     * Compile with GCC 6.0.1 + fixed compiling warns
-    * Small code updates
+    * General code updates
+    * VoIP: more fixes + updates
+    * Fixed sdcardfs
+    * f2fs: full sync with 3.10.y stable branch
+    * Kernel Patch 3.4.112->113 (only missing/good parts)
 * ROM
     * WIP: initial Xiaomi Gemini bringup
     * Ported + fixed all CAF code on our repos
@@ -53,7 +57,12 @@
     * msm8960: audio: fixes for voip and calls
     * msm8960: display: fixes and improved portability
     * jflte: remove some QC encoders from codecs list
-    * Update sources to Android 7.0.0 release 14
+    * Update sources to Android 7.1.0 release 7
+    * Dialer: add back call recording feature
+    * WebWiev: update to latest stable and beta versions released by Google
+    * jflte: remove unused graphics libraries
+    * jflte: more fixes for VoIP mixers
+    * Jflte: enable sdcardfs
 
 #### Alpha 2 (20160902)
 * Kernel
