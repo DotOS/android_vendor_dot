@@ -55,21 +55,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # EXT4/F2FS format script
 PRODUCT_COPY_FILES += \
     vendor/aosp/prebuilt/common/bin/format.sh:install/bin/format.sh
-    
-# Extra tools
-PRODUCT_PACKAGES += \
-    e2fsck \
-    mke2fs \
-    tune2fs \
-    mount.exfat \
-    fsck.exfat \
-    mkfs.exfat \
-    mkfs.f2fs \
-    fsck.f2fs \
-    fibmap.f2fs \
-    mkfs.ntfs \
-    fsck.ntfs \
-    mount.ntfs
 
 # Custom JDCTeam packages
 PRODUCT_PACKAGES += \
@@ -83,6 +68,31 @@ PRODUCT_PACKAGES += \
     Stk \
     Substratum \
     tinymix
+
+# Extra tools
+PRODUCT_PACKAGES += \
+    e2fsck \
+    mke2fs \
+    tune2fs \
+    mount.exfat \
+    fsck.exfat \
+    mkfs.exfat \
+    mkfs.f2fs \
+    fsck.f2fs \
+    fibmap.f2fs \
+    mkfs.ntfs \
+    fsck.ntfs \
+    mount.ntfs \
+    7z \
+    bzip2 \
+    curl \
+    lib7z \
+    powertop \
+    pigz \
+    tinymix \
+    unrar \
+    unzip \
+    zip
 
 # Exchange support
 PRODUCT_PACKAGES += \
