@@ -156,3 +156,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Changelog
 PRODUCT_COPY_FILES += \
     vendor/aosp/Changelog.md:system/etc/Changelog.md
+
+# Set cache location
+ifeq ($(BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE),)
+ADDITIONAL_DEFAULT_PROPERTIES += \
+    ro.device.cache_dir=/data/cache
+else
+ADDITIONAL_DEFAULT_PROPERTIES += \
+    ro.device.cache_dir=/cache
+endif
