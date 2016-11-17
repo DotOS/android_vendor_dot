@@ -33,14 +33,14 @@
 
 ### Changelog (short)
 
-#### Ongoing changes (Alpha 3)...
+#### Ongoing changes (Beta 2)...
+
+#### Beta 1 (20161118)
 * Kernel (JFLTE)
     * Compile with GCC 6.0.1 + fixed compiling warns
     * General code updates
     * VoIP: more fixes + updates
     * Fixed sdcardfs
-    * f2fs: full sync with 3.10.y stable branch
-    * Kernel Patch 3.4.112->113 (only missing/good parts)
 * ROM
     * WIP: initial Xiaomi Gemini bringup
     * Ported + fixed all CAF code on our repos
@@ -62,7 +62,17 @@
     * WebWiev: update to latest stable and beta versions released by Google
     * jflte: remove unused graphics libraries
     * jflte: more fixes for VoIP mixers
-    * Jflte: enable sdcardfs
+    * Jflte: init: fixed boot and network for all variants
+    * OMS: Reverted all old patches and merge updated code from TeamSubstratum gerrit
+    * jflte: updated sepolicies
+    * APNs updates
+    * jflte: libwvm.so: fix library crash due to missing symbol
+    * Bootanimation: updated for 7.1. Big big thanks to @gadget! (xda)
+    * Create 0 compression ratio jar files
+    * telephony: Hack GSM and LTE signal strength
+    * jflte: QMUXD: fixed acquire/release wakelocks
+    * core: arm: remove deprecated -msoft-float in favour of -mfloat-abi=softfp
+    * Xposed: jni: consider /data/app to the fd whitelist if Xposed is detected
 
 #### Alpha 2 (20160902)
 * Kernel
