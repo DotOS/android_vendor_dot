@@ -34,6 +34,12 @@
 ### Changelog (short)
 
 #### Ongoing changes (Beta 2)...
+* ROM
+    * Added custom hw key rebindings feature
+    * Added long press volume button skip tracks feature
+    * Fixed device storage menu when using Adopted Storage
+    * Fixed an NPE when ejecting the portable storage
+    * Don't dex preopt prebuilt APKs
 
 #### Beta 1 (20161118)
 * Kernel (JFLTE)
