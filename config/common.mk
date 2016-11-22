@@ -145,6 +145,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     media.sf.omx-plugin=libffmpeg_omx.so \
     media.sf.extractor-plugin=libffmpeg_extractor.so
 
+# Substratum Verified
+PRODUCT_PROPERTY_OVERRIDES := \
+    ro.substratum.verified=true
+
 # by default, do not update the recovery with system updates
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.recovery_update=false
