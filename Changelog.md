@@ -33,13 +33,41 @@
 
 ### Changelog (short)
 
-#### Ongoing changes (Beta 2)...
+#### Ongoing changes (Beta 3)...
+
+#### Beta 2 (20161126)...
+* Kernel (Gemini)
+    * General code updates and fixed boot on N
+* Kernel (JFLTE)
+    * General code updates
+    * Kernel Patch 3.4.112->113 (only missing/good parts)
 * ROM
-    * Added custom hw key rebindings feature
-    * Added long press volume button skip tracks feature
+    * JDCSettings: added custom hw key rebindings feature
+    * JDCSettings: added long press volume button skip tracks feature
     * Fixed device storage menu when using Adopted Storage
     * Fixed an NPE when ejecting the portable storage
     * Don't dex preopt prebuilt APKs
+    * Gemini: update blobs from Oneplus 3 repo
+    * Gemini: more fixes/updates for N
+    * Gemini: move to QCOM shared graphics driver repository
+    * jflte: bluetooth: fixed  a crash caused by alarmtimer --> NOTE: this will break BT on stock kernel
+    * jflte: update Widevine libraries
+    * jflte: move to common graphics blobs repo
+    * Update APNs
+    * GCC: move to Linaro 4.9 Toolchains
+    * Updated translations
+    * Gemini: fixed perf issues when battery level is under 5%
+    * JDCSettings: Added power menu customisations
+    * Added ScreenRecord feature --> available in power menu
+    * jflte: enable sdcardfs
+    * jflte: VZW: fixed mobile data reconnection and IMSI issues, hopefully fixed for Sprint variant too
+    * SuperSU: update to v2.78 SR4
+    * Substratum: update to v490
+    * WIP: added Expanded Desktop feature
+    * Airplane mode toggle: small fixes/enhancements
+    * frameworks/base: removed unused videos/drawables/media tests
+    * Don't refresh ui when screen off
+    * jflte: init.qcom.rc: update ril-service daemon
 
 #### Beta 1 (20161118)
 * Kernel (JFLTE)
