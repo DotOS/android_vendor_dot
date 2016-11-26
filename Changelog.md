@@ -34,6 +34,11 @@
 ### Changelog (short)
 
 #### Ongoing changes (Beta 3)...
+* ROM
+    * Fixed a NPE in setup wizard
+    * Settings: Enable storage manager like Pixel devices
+    * base: tuner: enable navbar config + added more icons
+    * webview_packages: prefer the more powerful webview package installed
 
 #### Beta 2 (20161126)...
 * Kernel (Gemini)
