@@ -39,6 +39,10 @@
     * Settings: Enable storage manager like Pixel devices
     * base: tuner: enable navbar config + added more icons
     * webview_packages: prefer the more powerful webview package installed
+    * Gemini: build power HAL
+    * Gemini: fixed dt2w feature
+    * jflte: move to common consumer IR HAL
+    * Add lg G5 (h850) to buildable devices
 
 #### Beta 2 (20161126)...
 * Kernel (Gemini)
