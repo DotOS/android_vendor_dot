@@ -43,6 +43,19 @@
     * Gemini: fixed dt2w feature
     * jflte: move to common consumer IR HAL
     * Add lg G5 (h850) to buildable devices
+    * OMS: expose some hardcoded colors
+    * Updated translations
+    * OMS: allow user to enable/disable doze notification color inversion
+    * OMS: allow user to enable/disable dynamic notification title colors
+    * Settings: drop JDCSettings and move all our custom features into settings
+    * SystemUI: Enable three icon switching within QS DND tile
+    * Status bar: added HSPA+ icons
+    * Pixel Theme Framework Edits
+    * Fixed reboot in recovery dialog title
+    * Added screen record shortcut (Vol+ and power button)
+    * Settings: fingerpint: allow devices to configure sensor location
+    * Settings: expose PhoneInfo
+    * OTAUpdates: updates and fixes for N (needs more tests but basic functions works fine)
 
 #### Beta 2 (20161126)...
 * Kernel (Gemini)
