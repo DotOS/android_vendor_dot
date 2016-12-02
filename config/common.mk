@@ -165,3 +165,8 @@ else
 ADDITIONAL_DEFAULT_PROPERTIES += \
     ro.device.cache_dir=/cache
 endif
+
+# Needed by some RILs and for some gApps packages
+PRODUCT_PACKAGES += \
+    librsjni \
+    libprotobuf-cpp-full
