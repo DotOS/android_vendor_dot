@@ -21,7 +21,7 @@ CLEAN() {
     mount /data
     if [ "$ALUCLEAN" == "true" ]; then
 	echo "Cleaning kernel settings"
-	rm -rf /data/.alucard
+	rm -rf /data/.b--b
     fi
     echo "Cleaning ART cache"
     rm -rf /data/dalvik-cache
