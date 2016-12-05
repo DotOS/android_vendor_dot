@@ -34,6 +34,11 @@
 ### Changelog (short)
 
 #### Ongoing changes (Beta 3)...
+* JFLTE
+    * Back to v1.5 (Fixes freeze when screen is off experienced in some variants)
+* Gemini
+    * General code updates
+    * Disabled Cpusets
 * ROM
     * Fixed a NPE in setup wizard
     * Settings: Enable storage manager like Pixel devices
@@ -45,8 +50,6 @@
     * Add lg G5 (h850) to buildable devices
     * OMS: expose some hardcoded colors
     * Updated translations
-    * OMS: allow user to enable/disable doze notification color inversion
-    * OMS: allow user to enable/disable dynamic notification title colors
     * Settings: drop JDCSettings and move all our custom features into settings
     * SystemUI: Enable three icon switching within QS DND tile
     * Status bar: added HSPA+ icons
@@ -55,7 +58,17 @@
     * Added screen record shortcut (Vol+ and power button)
     * Settings: fingerpint: allow devices to configure sensor location
     * Settings: expose PhoneInfo
-    * OTAUpdates: updates and fixes for N (needs more tests but basic functions works fine)
+    * OTAUpdates: updated and fixed for N 
+    * Gemini: fixed video recording
+    * OMS: merged all latest changes from TeamSubstratum
+    * Gemini: fixed data/wifi switch issue
+    * Gemini: disable Cpusets
+    * Gemini: general blobs and conf updates from stock N
+    * frameworks/base: port some UPSTREAM fixes
+    * General APNs updates
+    * Sepolicy: general updates from CAF
+    * Gemini/jflte: remove no more needed Overlays
+    * Jflte: liblights/consumerir: drop device level HAL and move to common HAL
 
 #### Beta 2 (20161126)...
 * Kernel (Gemini)
