@@ -33,7 +33,9 @@
 
 ### Changelog (short)
 
-#### Ongoing changes (Beta 3)...
+#### Ongoing changes (Stable 2)...
+
+#### Stable 1 (20161212)
 * JFLTE
     * Back to v1.5 (Fixes freeze when screen is off experienced in some variants)
 * Gemini
@@ -69,8 +71,14 @@
     * Sepolicy: general updates from CAF
     * Gemini/jflte: remove no more needed Overlays
     * Jflte: liblights/consumerir: drop device level HAL and move to common HAL
+    * Update sources to Android 7.1.1 release 4
+    * Gemini: fix H+ icon (Workaround)
+    * Camera2: allow to use power button as shutter
+    * vendor/aosp: overlays: fixes + updates
+    * Settings: enable gesture manager
+    * frameworks/base: fixed GApps perms
 
-#### Beta 2 (20161126)...
+#### Beta 2 (20161126)
 * Kernel (Gemini)
     * General code updates and fixed boot on N
 * Kernel (JFLTE)
