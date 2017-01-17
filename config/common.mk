@@ -23,6 +23,13 @@ PRODUCT_COPY_FILES += \
     vendor/dot/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
     vendor/dot/prebuilt/common/bin/50-base.sh:system/addon.d/50-base.sh \
 
+ifeq ($(AB_OTA_UPDATER),true)
+PRODUCT_COPY_FILES += \
+    vendor/dot/prebuilt/common/bin/backuptool_ab.sh:system/bin/backuptool_ab.sh \
+    vendor/dot/prebuilt/common/bin/backuptool_ab.functions:system/bin/backuptool_ab.functions \
+    vendor/dot/prebuilt/common/bin/backuptool_postinstall.sh:system/bin/backuptool_postinstall.sh
+endif
+
 # Bootanimation
 TARGET_BOOTANIMATION_480P := $(shell \
   if [ $(TARGET_SCREEN_WIDTH) -le 720 ]; then \
