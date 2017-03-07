@@ -65,7 +65,7 @@ PRODUCT_PACKAGES += \
     Launcher3 \
     LiveWallpapers \
     LiveWallpapersPicker \
-    masquerade \
+    ThemeInterfacer \
     OTAUpdates \
     Stk \
     Substratum \
