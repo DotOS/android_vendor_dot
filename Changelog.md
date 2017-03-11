@@ -33,7 +33,51 @@
 
 ### Changelog (short)
 
-#### Ongoing changes (Stable 2)...
+#### Ongoing changes (Stable 3)...
+
+#### Stable 1 (20170312)
+* Kernel (JFLTE)
+    * General code updates
+    * f2fs: update driver to 3.18.y
+    * exFAT: update, fix and enable kernel driver
+    * sdcardfs: general bug fixes
+    * Ported binder changes from dorimanx kernel
+    * Fixed f2fs issues with SuperSU
+    * Disable CPUSET code and allow kernel to dist CPU PWR
+    * Update TC to Linaro GCC 6.3.0
+* Kernel (Gemini)
+    * Rebased from LA.UM.5.5.r1-02500-8x96.0 revision
+    * Fixed f2fs issues with SuperSU
+    * Fixed QC3
+* ROM
+    * Update sources to Android 7.1.1 release 26
+    * JFLTE: exfat: use kernel driver
+    * SuperSU: update to v2.79 SR3
+    * Substratum: update to v604
+    * JFLTE: update webview to v57.0.2987.54 Beta
+    * Updated ROM TC with latest Linaro patches
+    * APNs updates
+    * Rebased all repos with latest CAF N-MR1 branches
+    * Base: added One-Hand mode UI (compatible with HW buttons)
+    * Settings: add HW buttons light controls
+    * Fixed a weird random bug that sometimes keep HW buttons light on when the screen is off (and kill deep sleep)
+    * JFLTE: fixed camera
+    * JFLTE: fixed reboot
+    * Settings: fixed USB Tethering
+    * OMS/Substratum: move to rootless
+    * OMS: Expose more colors
+    * JFLTE: Bluetooth: disable absolute volume
+    * HW buttons customisations: added more functions (split screen and one hand UI)
+    * Settings: Developer Options: OMS: add an option for allow theme app from unknown sources
+    * Settings: Developer Options: added an option for kill app with long-press of back button
+    * Cleaned tons of unused/unwanted CAF changes
+    * Gemini: added "swap buttons" function
+    * Gemini: added "use fingerprint as home button" feature
+    * Gemini: update graphics blobs from revision LA.UM.5.5.r1-02500-8x96.0
+    * msm8996: audio/media/display: rebased from CAF revision LA.UM.5.5.r1-02500-8x96.0
+    * Gemini: Camera: enable HAL3 (fixes video recording issues and Google Camera)
+    * JFLTE: update graphics blobs from flo mob30x
+    * A lot of things that i don't remember
 
 #### Stable 1 (20161212)
 * JFLTE
