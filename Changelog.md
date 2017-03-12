@@ -77,6 +77,7 @@
     * msm8996: audio/media/display: rebased from CAF revision LA.UM.5.5.r1-02500-8x96.0
     * Gemini: Camera: enable HAL3 (fixes video recording issues and Google Camera)
     * JFLTE: update graphics blobs from flo mob30x
+    * Toolbox: fixed for systemless root
     * A lot of things that i don't remember
 
 #### Stable 1 (20161212)
