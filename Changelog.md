@@ -35,7 +35,7 @@
 
 #### Ongoing changes (Stable 3)...
 
-#### Stable 1 (20170312)
+#### Stable 2 (20170312)
 * Kernel (JFLTE)
     * General code updates
     * f2fs: update driver to 3.18.y
