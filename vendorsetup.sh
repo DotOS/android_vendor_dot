@@ -4,3 +4,5 @@ add_lunch_combo jdc_gemini-user
 add_lunch_combo jdc_gemini-userdebug
 add_lunch_combo jdc_h850-user
 add_lunch_combo jdc_h850-userdebug
+add_lunch_combo jdc_oneplus2-user
+add_lunch_combo jdc_oneplus2-userdebug
