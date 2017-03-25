@@ -34,6 +34,31 @@
 ### Changelog (short)
 
 #### Ongoing changes (Stable 3)...
+* Kernel (Gemini)
+    * Merged CAF tag LA.UM.5.5.r1-03800-8x96.0
+    * Updated sources to latest linux release (3.18.48)
+    * Fixed various memory leaks
+    * Fixed wifi disconnection issues
+    * Ported and enabled EAS and all related features (sched, walt, cgroups, cpusets, memcg and a lot of other things)
+      Big thanks to RenderBroken and Alucard24 for their huge work
+    * Ported Alucard24 alucard_sched governor and EAS energy model optimisations specific for QCOM 8996AB
+* ROM
+    * frameworks/base: various fixes from upstream
+    * system/core: small fixes on init.rc and libcutils
+    * Add night display feature for all devices
+    * Added missing charging images for charging when phone is powered off
+    * Updated translations
+    * Updated msm8996 HALs to CAF tag LA.UM.5.5.r1-03800-8x96.0
+    * SnapdragonCamera: merged CAF tag LA.UM.5.5.r1-03800-8x96.0
+    * Gemini: rootdir cleaning, removed tons of unuseful stuffs
+    * Gemini: updated device tree for EAS support
+    * Gemini: enabled CPUSETS and EAS enhancements
+    * Gemini: use Marlin power HAL and perfd blobs with full EAS support
+    * Gemini: fixed SnapdragonCamera with HAL3 enabled
+    * Gemini: updated audio conf
+    * Gemini: turn off carrier provisioning and allow tethering for everyone
+    * Added allow unlinking ringer with notification volume feature
+    * OMS: merged all latest official updates
 
 #### Stable 2 (20170312)
 * Kernel (JFLTE)
