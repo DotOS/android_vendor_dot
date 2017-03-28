@@ -43,6 +43,7 @@
       Big thanks to RenderBroken and Alucard24 for their huge work
     * Ported Alucard24 alucard_sched governor and EAS energy model optimisations specific for QCOM 8996AB
 * ROM
+    * oppo/common: OnePlus2: Fix OOS Gestures and Tri-State Key
     * frameworks/base: various fixes from upstream
     * system/core: small fixes on init.rc and libcutils
     * Add night display feature for all devices
