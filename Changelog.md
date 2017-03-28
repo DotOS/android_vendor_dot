@@ -28,12 +28,21 @@
 
 [gadget!](http://forum.xda-developers.com/member.php?u=2026779) - Themer, tester, graphic designer
 
+[MZO9400](https://github.com/MZO9400) - Developer, git mantainer, scripting, tester, OnePlus 2 Mantainer
+
 ### Changelog (full)
 [AOSP-JF-MM](https://github.com/AOSP-JF-MM) - Project GitHub
 
 ### Changelog (short)
 
-#### Ongoing changes (Stable 3)...
+#### Ongoing changes (Stable 4)...
+
+#### Stable 3 (20170328)
+* Kernel (JFLTE)
+    * General code updates
+    * net: general fixes/updates
+    * Fixed sporadic screen flickering issue
+    * Battery: fixed wrong battery calculation
 * Kernel (Gemini)
     * Merged CAF tag LA.UM.5.5.r1-03800-8x96.0
     * Updated sources to latest linux release (3.18.48)
@@ -41,7 +50,10 @@
     * Fixed wifi disconnection issues
     * Ported and enabled EAS and all related features (sched, walt, cgroups, cpusets, memcg and a lot of other things)
       Big thanks to RenderBroken and Alucard24 for their huge work
-    * Ported Alucard24 alucard_sched governor and EAS energy model optimisations specific for QCOM 8996AB
+    * Ported Alucard24 alucard_sched governor (WIP) and EAS energy model optimisations specific for QCOM 8996AB
+    * General code updates/fixes from LOS
+* Kernel (OnePlus2)
+    * Initial Release
 * ROM
     * oppo/common: OnePlus2: Fix OOS Gestures and Tri-State Key
     * frameworks/base: various fixes from upstream
@@ -60,6 +72,11 @@
     * Gemini: turn off carrier provisioning and allow tethering for everyone
     * Added allow unlinking ringer with notification volume feature
     * OMS: merged all latest official updates
+    * init.rc: removed CAF code that breaks EAS/schedtune --> back to AOSP
+    * Gemini: ramdisk/blobs: another big cleaning of unseful stuffs
+    * jflte: SnapdragonCamera: fixed panorama mode
+    * Added OnePlus 2 to buildable (and official supported) devices, big big thanks to MZO!
+    * system/bt: merged CAF tag LA.UM.5.5.r1-03800-8x96.0
 
 #### Stable 2 (20170312)
 * Kernel (JFLTE)
