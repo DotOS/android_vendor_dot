@@ -36,6 +36,14 @@
 ### Changelog (short)
 
 #### Ongoing changes (Stable 4)...
+* ROM
+    * Gemini: fixed D2TW feature (feature was missing in Marlin power HAL)
+    * Settings: fix settings crash when user opens Storage Manager
+    * Updated translations
+    * Gemini: Ramdisk: add init.power.sh to manage EAS and other PM
+    * Gemini: Ramdisk: clean power config and add EAS'd perfd
+    * Gemini: improved battery life 
+    * DeskClock: various fixes
 
 #### Stable 3 (20170328)
 * Kernel (JFLTE)
