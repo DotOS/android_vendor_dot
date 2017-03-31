@@ -47,6 +47,7 @@
     * Gemini: improved battery life 
     * DeskClock: various fixes
     * SuperUser: drop SuperSU in favour of Magisk and MagiskManager
+    * Settings: fixed expanded desktop menu
 
 #### Stable 3 (20170328)
 * Kernel (JFLTE)
