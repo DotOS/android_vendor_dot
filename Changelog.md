@@ -38,6 +38,9 @@
 #### Ongoing changes (Stable 4)...
 * Kernel (Gemini)
     * Bypass SafetyNet check
+* Kernel (JFLTE)
+    * Bypass SafetyNet check
+    * Updated ramdisk scripts for Magisk root
 * ROM
     * Gemini: fixed D2TW feature (feature was missing in Marlin power HAL)
     * Settings: fix settings crash when user opens Storage Manager
@@ -48,6 +51,8 @@
     * DeskClock: various fixes
     * SuperUser: drop SuperSU in favour of Magisk and MagiskManager
     * Settings: fixed expanded desktop menu
+    * Add back AOSP Exchange services
+    * Jflte: Provide a working version of Toolbox with Magisk
 
 #### Stable 3 (20170328)
 * Kernel (JFLTE)
