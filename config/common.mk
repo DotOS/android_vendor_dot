@@ -28,7 +28,7 @@ PRODUCT_COPY_FILES += \
 
 # SuperSU
 PRODUCT_COPY_FILES += \
-    vendor/aosp/prebuilt/common/supersu/supersu.zip:install/supersu/supersu.zip
+    vendor/aosp/prebuilt/common/magisk/Magisk.zip:install/magisk/Magisk.zip
 
 PRODUCT_PROPERTY_OVERRIDES += \
     keyguard.no_require_sim=true \
@@ -69,6 +69,7 @@ PRODUCT_PACKAGES += \
     OTAUpdates \
     Stk \
     Substratum \
+    MagiskManager \
     tinymix
 
 # Extra tools
