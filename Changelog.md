@@ -36,6 +36,8 @@
 ### Changelog (short)
 
 #### Ongoing changes (Stable 4)...
+* Kernel (Gemini)
+    * Bypass SafetyNet check
 * ROM
     * Gemini: fixed D2TW feature (feature was missing in Marlin power HAL)
     * Settings: fix settings crash when user opens Storage Manager
@@ -44,6 +46,7 @@
     * Gemini: Ramdisk: clean power config and add EAS'd perfd
     * Gemini: improved battery life 
     * DeskClock: various fixes
+    * SuperUser: drop SuperSU in favour of Magisk and MagiskManager
 
 #### Stable 3 (20170328)
 * Kernel (JFLTE)
