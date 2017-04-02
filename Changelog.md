@@ -38,6 +38,8 @@
 #### Ongoing changes (Stable 4)...
 * Kernel (Gemini)
     * Bypass SafetyNet check
+    * EAS: sync with Marlin code
+    * EAS: update to v1.2 from Google
 * Kernel (JFLTE)
     * Bypass SafetyNet check
     * Updated ramdisk scripts for Magisk root
@@ -53,6 +55,9 @@
     * Settings: fixed expanded desktop menu
     * Add back AOSP Exchange services
     * Jflte: Provide a working version of Toolbox with Magisk
+    * init.rc: add back CAF schedtune changes, EAS 1.2 supports 5 groups
+    * frameworks/base: added our battery customisations
+    * NavBar: ported Pixel NavBar + fixes
 
 #### Stable 3 (20170328)
 * Kernel (JFLTE)
