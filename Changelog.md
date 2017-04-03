@@ -40,6 +40,7 @@
     * Bypass SafetyNet check
     * EAS: sync with Marlin code
     * EAS: update to v1.2 from Google
+    * Update kernel sources and qcacld-2.0 to caf tag LA.UM.5.5.r1-04000-8x96.0
 * Kernel (JFLTE)
     * Bypass SafetyNet check
     * Updated ramdisk scripts for Magisk root
@@ -58,6 +59,12 @@
     * init.rc: add back CAF schedtune changes, EAS 1.2 supports 5 groups
     * frameworks/base: added our battery customisations
     * NavBar: ported Pixel NavBar + fixes
+    * Jflte: HAX: fix tethering (thanks to @rothmark (xda))
+    * OMS: sync with TeamSubstratum gerrit
+    * OMS: Hold "volume up" during boot to disable all overlays
+    * Bluetooth: Fix setting app stoped when unpair device
+    * LatinIME: various updates and fixes
+    * BackupTools: various updates
 
 #### Stable 3 (20170328)
 * Kernel (JFLTE)
