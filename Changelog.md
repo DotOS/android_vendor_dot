@@ -64,7 +64,9 @@
     * OMS: Hold "volume up" during boot to disable all overlays
     * Bluetooth: Fix setting app stoped when unpair device
     * LatinIME: various updates and fixes
+    * LatinIME: added more languages and dictionaries
     * BackupTools: various updates
+    * Rebased build repo, fixed some weird log errors in TWRP during ROM flashing
 
 #### Stable 3 (20170328)
 * Kernel (JFLTE)

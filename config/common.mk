@@ -110,8 +110,13 @@ ADDITIONAL_DEFAULT_PROPERTIES += \
     ro.adb.secure=0
     
 # For keyboard gesture typing
+ifneq ($(filter jflte,$(TARGET_PRODUCT)),)
 PRODUCT_COPY_FILES += \
-    vendor/aosp/prebuilt/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so
+    vendor/aosp/prebuilt/lib/libjni_latinime.so:system/lib/libjni_latinime.so
+else
+PRODUCT_COPY_FILES += \
+    vendor/aosp/prebuilt/lib64/libjni_latinime.so:system/lib64/libjni_latinime.so
+endif
     
 # init.d support
 PRODUCT_COPY_FILES += \
