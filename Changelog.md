@@ -41,9 +41,15 @@
     * EAS: sync with Marlin code
     * EAS: update to v1.2 from Google
     * Update kernel sources and qcacld-2.0 to caf tag LA.UM.5.5.r1-04000-8x96.0
+    * Fixed CVE-2017-0583
+    * Genelar code updates/fixes
+    * Merged CAF tag LA.UM.5.5.r1-0400-8x96.0
 * Kernel (JFLTE)
     * Bypass SafetyNet check
     * Updated ramdisk scripts for Magisk root
+    * Fixed CVE-2017-0583
+* Kernel (OnePlus2)
+    * Fixed CVE-2017-5967
 * ROM
     * Gemini: fixed D2TW feature (feature was missing in Marlin power HAL)
     * Settings: fix settings crash when user opens Storage Manager
@@ -58,7 +64,7 @@
     * Jflte: Provide a working version of Toolbox with Magisk
     * init.rc: add back CAF schedtune changes, EAS 1.2 supports 5 groups
     * frameworks/base: added our battery customisations
-    * NavBar: ported Pixel NavBar + fixes
+    * NavBar: ported Pixel NavBar + fixes (REVERTED, must be updated for 7.1.2)
     * Jflte: HAX: fix tethering (thanks to @rothmark (xda))
     * OMS: sync with TeamSubstratum gerrit
     * OMS: Hold "volume up" during boot to disable all overlays
@@ -67,6 +73,8 @@
     * LatinIME: added more languages and dictionaries
     * BackupTools: various updates
     * Rebased build repo, fixed some weird log errors in TWRP during ROM flashing
+    * Update sources to Android 7.1.2 Release 4 (N2G47H)
+    * Updated and fixed CAF code after AOSP changes
 
 #### Stable 3 (20170328)
 * Kernel (JFLTE)
