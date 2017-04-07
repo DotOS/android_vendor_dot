@@ -42,7 +42,7 @@
     * EAS: update to v1.2 from Google
     * Update kernel sources and qcacld-2.0 to caf tag LA.UM.5.5.r1-04000-8x96.0
     * Fixed CVE-2017-0583
-    * Genelar code updates/fixes
+    * General code updates/fixes
     * Merged CAF tag LA.UM.5.5.r1-0400-8x96.0
 * Kernel (JFLTE)
     * Bypass SafetyNet check
