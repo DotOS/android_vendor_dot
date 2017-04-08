@@ -35,7 +35,9 @@
 
 ### Changelog (short)
 
-#### Ongoing changes (Stable 4)...
+#### Ongoing changes (Stable 5)...
+
+#### Stable 4 (20170408)
 * Kernel (Gemini)
     * Bypass SafetyNet check
     * EAS: sync with Marlin code
@@ -43,7 +45,7 @@
     * Update kernel sources and qcacld-2.0 to caf tag LA.UM.5.5.r1-04000-8x96.0
     * Fixed CVE-2017-0583
     * General code updates/fixes
-    * Merged CAF tag LA.UM.5.5.r1-0400-8x96.0
+    * Merged CAF tag LA.UM.5.5.r1-04000-8x96.0
 * Kernel (JFLTE)
     * Bypass SafetyNet check
     * Updated ramdisk scripts for Magisk root
@@ -74,7 +76,9 @@
     * BackupTools: various updates
     * Rebased build repo, fixed some weird log errors in TWRP during ROM flashing
     * Update sources to Android 7.1.2 Release 4 (N2G47H)
-    * Updated and fixed CAF code after AOSP changes
+    * Updated and fixed CAF code after AOSP change
+    * JDC Custom settings: update italian translations
+    * Substratum: update to v631
 
 #### Stable 3 (20170328)
 * Kernel (JFLTE)
