@@ -41,7 +41,11 @@
     * Sdcardfs: general code updates/fixes
 * ROM
     * packages/apps/CellBroadcastReceiver: Merged 7.1.2 sources over CAF branch
-    * system/bt merged Android 7.1.2 Release 4 changes
+    * system/bt: merged Android 7.1.2 Release 4 changes
+    * services/Telephony: various fixes
+    * OTAUpdates: fixed ROM and addons download (again)
+    * SnapdragonCamera: general updates/fixes
+    * PowerManager: Bring back the compatibility with AOSP
 
 #### Stable 4 (20170408)
 * Kernel (Gemini)
