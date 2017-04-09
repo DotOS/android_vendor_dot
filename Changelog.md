@@ -36,6 +36,12 @@
 ### Changelog (short)
 
 #### Ongoing changes (Stable 5)...
+* Kernel (Gemini)
+    * Added and enabled KCAL support
+    * Sdcardfs: general code updates/fixes
+* ROM
+    * packages/apps/CellBroadcastReceiver: Merged 7.1.2 sources over CAF branch
+    * system/bt merged Android 7.1.2 Release 4 changes
 
 #### Stable 4 (20170408)
 * Kernel (Gemini)
