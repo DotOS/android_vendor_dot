@@ -39,6 +39,14 @@
 * Kernel (Gemini)
     * Added and enabled KCAL support
     * Sdcardfs: general code updates/fixes
+    * Updated sources to latest linux release (3.18.48)
+    * General updates/fixes for EAS
+    * General code update
+    * TEST: ported google binder changes from msm-3.18 kernel O preview
+    * SafetyNet check: pass CTS tests in a better way
+    * Removed unused LiveDisplay driver
+    * Set WALT as default
+    * Disable crc check
 * ROM
     * packages/apps/CellBroadcastReceiver: Merged 7.1.2 sources over CAF branch
     * system/bt: merged Android 7.1.2 Release 4 changes
@@ -46,6 +54,9 @@
     * OTAUpdates: fixed ROM and addons download (again)
     * SnapdragonCamera: general updates/fixes
     * PowerManager: Bring back the compatibility with AOSP
+    * Auto brightness: fix weird brightness jumps (especially in low light conditions)
+    * packages/apps/Nfc: port missing changes from Android 7.1.2 r4 release
+    * Fixed browser compiling and added back to build
 
 #### Stable 4 (20170408)
 * Kernel (Gemini)
