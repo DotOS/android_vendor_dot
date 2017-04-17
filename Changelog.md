@@ -42,11 +42,14 @@
     * Updated sources to latest linux release (3.18.48)
     * General updates/fixes for EAS
     * General code update
-    * TEST: ported google binder changes from msm-3.18 kernel O preview
+    * Ported google binder changes from msm-3.18 kernel O preview
     * SafetyNet check: pass CTS tests in a better way
     * Removed unused LiveDisplay driver
     * Set WALT as default
     * Disable crc check
+    * Fixed sdcardfs (was the cause of random shutdown)
+* Kernel (jflte)
+    * SafetyNet check: pass CTS tests in a better way
 * ROM
     * packages/apps/CellBroadcastReceiver: Merged 7.1.2 sources over CAF branch
     * system/bt: merged Android 7.1.2 Release 4 changes
@@ -57,6 +60,8 @@
     * Auto brightness: fix weird brightness jumps (especially in low light conditions)
     * packages/apps/Nfc: port missing changes from Android 7.1.2 r4 release
     * Fixed browser compiling and added back to build
+    * OMS: updates from latest gerrit chages
+    * Substratum: update to v670
 
 #### Stable 4 (20170408)
 * Kernel (Gemini)
