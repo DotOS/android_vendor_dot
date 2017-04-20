@@ -61,7 +61,8 @@
     * packages/apps/Nfc: port missing changes from Android 7.1.2 r4 release
     * Fixed browser compiling and added back to build
     * OMS: updates from latest gerrit chages
-    * Substratum: update to v670
+    * Substratum: update to v672
+    * Updated JDCTeam bootanimation vs Pixel style (Thanks to @gadget!)
 
 #### Stable 4 (20170408)
 * Kernel (Gemini)
