@@ -35,11 +35,20 @@
 
 ### Changelog (short)
 
-#### Ongoing changes (Stable 5)...
+#### Ongoing changes (Stable 6)...
+
+#### Stable 5.1 (20170424)
+* Kernel (Gemini)
+    * Fixed QC3
+* ROM
+    * Camera: fix audio recording when taking video
+    * Updated translations
+    * OMS: ThemeInterfacer: ported TeamSubstratum binder changes (pending on gerrit)
+
+#### Stable 5 (20170423)
 * Kernel (Gemini)
     * Added and enabled KCAL support
     * Sdcardfs: general code updates/fixes
-    * Updated sources to latest linux release (3.18.48)
     * General updates/fixes for EAS
     * General code update
     * Ported google binder changes from msm-3.18 kernel O preview
@@ -48,8 +57,10 @@
     * Set WALT as default
     * Disable crc check
     * Fixed sdcardfs (was the cause of random shutdown)
+    * Merged CAF tag LA.UM.5.5.r1-04300-8x96.0
 * Kernel (jflte)
     * SafetyNet check: pass CTS tests in a better way
+    * Ramdisk: fixed some scripts not working with Magisk
 * ROM
     * packages/apps/CellBroadcastReceiver: Merged 7.1.2 sources over CAF branch
     * system/bt: merged Android 7.1.2 Release 4 changes
@@ -63,6 +74,15 @@
     * OMS: updates from latest gerrit chages
     * Substratum: update to v672
     * Updated JDCTeam bootanimation vs Pixel style (Thanks to @gadget!)
+    * fb/base: general fixes from upstream
+    * Settings: import ES HR NL RU PL FR translations for our custom settings
+    * General translations updates
+    * system/bt - SnapdragonCamera: merged CAF tag LA.UM.5.5.r1-04300-8x96.0
+    * msm8996 HALs: merged CAF tag LA.UM.5.5.r1-04300-8x96.0
+    * media: implement radio_metadata wrapper for safer memory management
+    * fw/av: general fixes from upstream
+    * jf: update Time Service blobs
+    * jf: fix auto time zone not working for some variants
 
 #### Stable 4 (20170408)
 * Kernel (Gemini)
