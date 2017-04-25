@@ -318,7 +318,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.dot.version=$(DOT_VERSION) \
     ro.dot.releasetype=$(DOT_BUILDTYPE) \
     ro.modversion=$(DOT_VERSION) \
-    ro.cmlegal.url=https://lineageos.org/legal
+    ro.cmlegal.url=https://lineageos.org/legal \
+    ro.lineageoms.version=$(LINEAGE_VERSION)
 
 PRODUCT_EXTRA_RECOVERY_KEYS += \
     vendor/dot/build/target/product/security/lineage
