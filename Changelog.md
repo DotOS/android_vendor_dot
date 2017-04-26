@@ -40,6 +40,7 @@
 #### Stable 5.1 (20170424)
 * Kernel (OnePlus2)
     * Merge OOS 3.5.8 changes
+    * Merge latest SDCARDFS
 * Vendor (OnePlus2)
     * Merge in latest OOS blobs
 * Kernel (Gemini)
