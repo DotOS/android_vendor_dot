@@ -36,19 +36,31 @@
 ### Changelog (short)
 
 #### Ongoing changes (Stable 6)...
+* Kernel (Gemini)
+    * General code updates
+    * Small enhancements for EAS
+    * Ramdisk: move to schedutil governor
+    * Ramdisk: port fs tune settings from Marlin
+    * Ramdisk: relax top-app boost
+    * Ramdisk: configure cpuset at boot complete
+* ROM
+    * Gemini: fixed slomo recording with Google Camera
+    * Gemini: enable 32 bit specific optimisations for kryo
+    * system/core/rootdir: fix cpuset not set properly sometimes after the boot
+    * General translation updates
+    * vendor/aosp: fixed some props not set properly in build.prop
 
 #### Stable 5.1 (20170424)
 * Kernel (OnePlus2)
     * Merge OOS 3.5.8 changes
     * Merge latest SDCARDFS
-* Vendor (OnePlus2)
-    * Merge in latest OOS blobs
 * Kernel (Gemini)
     * Fixed QC3
 * ROM
     * Camera: fix audio recording when taking video
     * Updated translations
     * OMS: ThemeInterfacer: ported TeamSubstratum binder changes (pending on gerrit)
+    * Vendor/OnePlus2: merge in latest OOS blobs
 
 #### Stable 5 (20170423)
 * Kernel (Gemini)
