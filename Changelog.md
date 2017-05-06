@@ -46,6 +46,11 @@
     * Ramdisk: relax top-app boost
     * Ramdisk: configure cpuset at boot complete
 * ROM
+    * build/kati: Hide FindEmulator spam
+    * OnePlus2: Use HAL3 Camera6
+    * frameworks/av: Use HAL3 patches for OnePlus2
+    * system/sepolicy: Use HAL3 patches for OnePlus2
+    * device/qcom/sepolicy: Use HAL3 patches for OnePlus2
     * Gemini: fixed slomo recording with Google Camera
     * Gemini: enable 32 bit specific optimisations for kryo
     * system/core/rootdir: fix cpuset not set properly sometimes after the boot
