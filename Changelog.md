@@ -37,7 +37,7 @@
 
 #### Ongoing changes (Stable 6)...
 * Kernel (OnePlus2)
-    * Switch to Google Nexus 6P's optimized interactive governer
+    * Switch to Google Nexus 6P's optimized interactive governor
 * Kernel (Gemini)
     * General code updates
     * Small enhancements for EAS
