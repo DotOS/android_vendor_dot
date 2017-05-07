@@ -45,12 +45,12 @@ PRODUCT_PACKAGES += \
     Launcher3 \
     LiveWallpapers \
     LiveWallpapersPicker \
-    ThemeInterfacer \
+    MagiskManager \
     OTAUpdates \
     Stk \
     Substratum \
-    MagiskManager \
-    tinymix
+    ThemeInterfacer \
+    Turbo
 
 # Extra tools
 PRODUCT_PACKAGES += \
