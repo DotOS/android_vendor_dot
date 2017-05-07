@@ -37,6 +37,7 @@
 
 #### Ongoing changes (Stable 6)...
 * Kernel (OnePlus2)
+    * Disable SDCardFS for now
     * Switch to Google Nexus 6P's optimized interactive governor
 * Kernel (Gemini)
     * General code updates
@@ -46,8 +47,9 @@
     * Ramdisk: relax top-app boost
     * Ramdisk: configure cpuset at boot complete
 * ROM
-    * build/kati: Hide FindEmulator spam
-    * OnePlus2: Use HAL3 Camera6
+    * OnePlus2: Speed up Fingerprint sensor's response
+    * build/kati: Suppress FindEmulator spam
+    * OnePlus2: Use HAL3 Camera
     * frameworks/av: Use HAL3 patches for OnePlus2
     * system/sepolicy: Use HAL3 patches for OnePlus2
     * device/qcom/sepolicy: Use HAL3 patches for OnePlus2
