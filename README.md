@@ -1,5 +1,5 @@
-# AOSP vendor configuration
+# JDCTeam AOSP vendor configuration
 
-by AntaresOne & -+BB+-
+By AntaresOne and -+BB+-
 
-SEPolicy by The CyanogenMod Project, copyright (c) 2015
+Copyright (c) 2017, Jflte DevConnection Team
