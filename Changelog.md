@@ -37,6 +37,7 @@
 
 #### Ongoing changes (Stable 6)...
 * Kernel (OnePlus2)
+    * Linux 3.10.105
     * Disable SDCardFS for now
     * Switch to Google Nexus 6P's optimized interactive governor
 * Kernel (Gemini)
