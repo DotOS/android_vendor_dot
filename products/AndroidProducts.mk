@@ -23,3 +23,7 @@ endif
 ifeq (jdc_h850,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/jdc_h850.mk
 endif
+
+ifeq (jdc_onyx,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/jdc_onyx.mk
+endif
