@@ -21,3 +21,6 @@ PRODUCT_DEVICE := gemini
 PRODUCT_BRAND := xiaomi
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_MODEL := Xiaomi Mi5
+
+
+WITH_ROOT := true

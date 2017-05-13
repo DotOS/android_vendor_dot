@@ -21,3 +21,6 @@ PRODUCT_DEVICE := jflte
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := Samsung
 PRODUCT_MODEL := Samsung Galaxy S4
+
+
+WITH_ROOT := true
