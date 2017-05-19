@@ -35,7 +35,19 @@
 
 ### Changelog (short)
 
-#### Ongoing changes (Stable 6)...
+#### Ongoing changes (Stable 7)...
+* Kernel (Gemini)
+    * General code updates
+    * Update touchscreen firmware
+* ROM
+    * fw/base: general fixes from CAF/upstream
+    * system/core: speed up boot for device that use CPUSET
+    * build: fix verity generation
+    * Sepolicy: rebased both system/sepolicy and device/qcom/sepolicy repos
+    * Gemini: add script to load WLAN firmware dynamically
+    * Gemini: improve SELinux policies
+
+#### Stable 6 (20170516)
 * Kernel (OnePlus2)
     * Linux 3.10.105
     * Disable SDCardFS for now
@@ -47,6 +59,13 @@
     * Ramdisk: port fs tune settings from Marlin
     * Ramdisk: relax top-app boost
     * Ramdisk: configure cpuset at boot complete
+    * Only expose su when daemon is running
+    * Merged CAF tag LA.UM.5.5.r1-04600-8x96.0
+    * Ported and enabled CPU-BOOST
+    * Rebased over latest Xiaomi code drop
+* Kernel (jflte)
+    * General code updates
+    * Only expose su when daemon is running 
 * ROM
     * OnePlus2: Speed up Fingerprint sensor's response
     * build/kati: Suppress FindEmulator spam
@@ -54,11 +73,13 @@
     * frameworks/av: Use HAL3 patches for OnePlus2
     * system/sepolicy: Use HAL3 patches for OnePlus2
     * device/qcom/sepolicy: Use HAL3 patches for OnePlus2
-    * Gemini: fixed slomo recording with Google Camera
     * Gemini: enable 32 bit specific optimisations for kryo
     * system/core/rootdir: fix cpuset not set properly sometimes after the boot
     * General translation updates
     * vendor/aosp: fixed some props not set properly in build.prop
+    * bt: merged CAF tag LA.UM.5.5.r1-04300-8x96.0
+    * Update sources to Android 7.1.2 Release 8
+    * vendor/aosp: add Turbo apk from Marlin to build
 
 #### Stable 5.1 (20170424)
 * Kernel (OnePlus2)
