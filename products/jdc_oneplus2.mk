@@ -21,3 +21,6 @@ PRODUCT_DEVICE := oneplus2
 PRODUCT_BRAND := oneplus
 PRODUCT_MANUFACTURER := Oneplus
 PRODUCT_MODEL := Oneplus 2
+
+
+WITH_ROOT := true

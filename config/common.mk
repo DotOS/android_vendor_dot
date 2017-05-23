@@ -26,9 +26,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/aosp/prebuilt/common/bootanimation/bootanimation.zip:system/media/bootanimation.zip
 
-# SuperSU
-PRODUCT_COPY_FILES += \
-    vendor/aosp/prebuilt/common/magisk/Magisk.zip:install/magisk/Magisk.zip
 
 DEVICE_PACKAGE_OVERLAYS += \
     vendor/aosp/overlay/common \
@@ -45,7 +42,6 @@ PRODUCT_PACKAGES += \
     Launcher3 \
     LiveWallpapers \
     LiveWallpapersPicker \
-    MagiskManager \
     OTAUpdates \
     Stk \
     Substratum \
@@ -137,3 +133,14 @@ PRODUCT_PACKAGES += \
 # Charger images
 PRODUCT_PACKAGES += \
     charger_res_images
+
+# Magisk
+ifeq ($(WITH_ROOT),true)
+ PRODUCT_COPY_FILES += \
+    vendor/aosp/prebuilt/common/magisk/Magisk.zip:install/magisk/Magisk.zip
+
+ PRODUCT_PACKAGES += \
+    MagiskManager
+else
+$(warning Root method is undefined, please use 'WITH_ROOT := true' to define it)
+endif
