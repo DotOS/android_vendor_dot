@@ -39,6 +39,7 @@
 * Kernel (Gemini)
     * General code updates
     * Update touchscreen firmware
+    * Small fixes/updates for EAS
 * ROM
     * fw/base: general fixes from CAF/upstream
     * system/core: speed up boot for device that use CPUSET
@@ -46,6 +47,30 @@
     * Sepolicy: rebased both system/sepolicy and device/qcom/sepolicy repos
     * Gemini: add script to load WLAN firmware dynamically
     * Gemini: improve SELinux policies
+    * Build: fixed compiling flags for Kryo targets
+    * Art: ported varius optimisations from AOSPA
+    * Art: add support for Kryo 32 bit devices
+    * Bionic: merged a lot of optimisations (mostly for Kryo) from AOSPA/Upstream
+    * Build: added Roomservice
+    * libunwind_llvm: merged latest upstream changes
+    * sdcard: switch sdcardfs over to bind mounts
+    * CPUSETS/SCHEDBOOST: turns the build time variables into runtime decision
+    * system/core: fixes-cleaning for cgroups
+    * libpng: update to v1.6.25
+    * skia: general fixes/updates
+    * fw/base: various fixes from upstream
+    * aapt: set (and enforce) 0 compression ratio as default
+    * vendor/aosp: Pixel theme: various fixes/enhancements
+    * libjpeg-turbo: Upgrade to 1.5.1 + lot of fixes
+    * Gemini: remove unneeded sensor calibration blobs
+    * Overlays: enable Wi-Fi by default on first boot (fixes SetupWizard crash if Gapps are for 7.1.1 ROM)
+    * Overlays: enable full alarm info in quick settings drawer
+    * Telephony: make sensitive phone numbers not to be shown in call log history.
+    * Telephony: fixed minor inconsistency in the CDMA call settings
+    * contacts-common: add support for import contacts to local phone storage
+    * contacts-common: add support to export multi contacts to Vcard
+    * Gemini: Power HAL: EAS: set top-app scaling_min_freq to 900MHz
+    * Gemini: enable ZRAM and set lz4 as default compression method
 
 #### Stable 6 (20170516)
 * Kernel (OnePlus2)
