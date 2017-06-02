@@ -12,9 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# include definitions for SDCLANG
-# include vendor/dot/sdclang/sdclang.mk
-
 
 PRODUCT_BRAND ?= DotOS
 
@@ -207,4 +204,12 @@ $(call inherit-product, vendor/dot/config/dot_props.mk)
 # Enable ADB authentication
 ifneq ($(TARGET_BUILD_VARIANT),eng)
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.adb.secure=1
+endif
+
+	
+# Include SDCLANG definitions if it is requested and available
+ifeq ($(HOST_OS),linux)
+    ifneq ($(wildcard vendor/qcom/sdclang-3.8/),)
+        include vendor/dot/sdclang/sdclang.mk
+    endif
 endif
