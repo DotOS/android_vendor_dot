@@ -12,18 +12,4 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-ifeq (jdc_jflte,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/jdc_jflte.mk
-endif
-
-ifeq (jdc_gemini,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/jdc_gemini.mk
-endif
-
-ifeq (jdc_h850,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/jdc_h850.mk
-endif
-
-ifeq (jdc_onyx,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/jdc_onyx.mk
-endif
+PRODUCT_MAKEFILES := $(wildcard vendor/aosp/products/jdc_*.mk)
