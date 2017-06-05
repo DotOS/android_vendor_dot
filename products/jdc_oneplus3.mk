@@ -1,4 +1,4 @@
-# Copyright (C) 2016 The JDCTeam
+# Copyright (C) 2017 The JDC Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,4 +12,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-PRODUCT_MAKEFILES := $(wildcard vendor/aosp/products/jdc_*.mk)
+# Inherit AOSP device configuration for oneplus3/3t
+$(call inherit-product, device/oneplus/oneplus3/aosp_oneplus3.mk)
+
+PRODUCT_NAME := jdc_oneplus3
+PRODUCT_DEVICE := oneplus3
+PRODUCT_MANUFACTURER := OnePlus
+PRODUCT_BRAND := OnePlus
+
+WITH_ROOT := true
