@@ -96,7 +96,10 @@ endif
 PRODUCT_PACKAGES += \
     bootanimation.zip
 
-# Required CM packages
+# Android O emojis
+PRODUCT_COPY_FILES += \
+    vendor/dot/prebuilt/common/fonts/NotoColorEmoji.ttf:system/fonts/NotoColorEmoji.ttf
+
 PRODUCT_PACKAGES += \
     BluetoothExt \
     CMAudioService \
