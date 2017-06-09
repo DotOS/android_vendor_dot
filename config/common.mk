@@ -78,7 +78,7 @@ PRODUCT_PACKAGES += \
     Exchange2
 
 # SnapDragon Browser
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     SnapBrowser
 
 # Backup Services whitelist
