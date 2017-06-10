@@ -29,7 +29,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     media.sf.extractor-plugin=libffmpeg_extractor.so \
     ro.storage_manager.enabled=true \
     ro.substratum.verified=true \
-    persist.sys.recovery_update=false
+    persist.sys.recovery_update=false \
+    ro.com.google.ime.theme_id=5
 
 # Set cache location
 ifeq ($(BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE),)
