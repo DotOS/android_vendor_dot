@@ -32,7 +32,7 @@ LOCAL_MODULE_CLASS := APPS
 LOCAL_SRC_FILES    := SnapBrowser/SnapBrowser.apk
 LOCAL_CERTIFICATE  := PRESIGNED
 LOCAL_MODULE_PATH  := $(TARGET_OUT_APPS)
-LOCAL_OVERRIDES_PACKAGES := Browser Browser2
+LOCAL_OVERRIDES_PACKAGES := Browser Browser2 Jelly
 LOCAL_DEX_PREOPT := false
 LOCAL_PREBUILT_JNI_LIBS_arm := \
 	@lib/armeabi-v7a/libc++_shared.so \

@@ -38,6 +38,7 @@ PRODUCT_COPY_FILES += \
 # Custom JDCTeam packages
 PRODUCT_PACKAGES += \
     BluetoothExt \
+    Jelly \
     LatinIME \
     Launcher3 \
     LiveWallpapers \
@@ -76,10 +77,6 @@ PRODUCT_PACKAGES += \
 # Exchange support
 PRODUCT_PACKAGES += \
     Exchange2
-
-# SnapDragon Browser
-#PRODUCT_PACKAGES += \
-    SnapBrowser
 
 # Backup Services whitelist
 PRODUCT_COPY_FILES += \
