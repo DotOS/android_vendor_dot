@@ -135,6 +135,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     charger_res_images
 
+# Recommend using the non debug dexpreopter
+USE_DEX2OAT_DEBUG ?= false
+
 # Magisk
 ifeq ($(WITH_ROOT),true)
  PRODUCT_COPY_FILES += \
