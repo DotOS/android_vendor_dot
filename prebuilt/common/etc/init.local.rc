@@ -1,6 +1,5 @@
 on init
     export ANDROID_CACHE /cache
-    export TERMINFO /system/etc/terminfo
 
     # Set up the BFQIO hierarchy
     mkdir /dev/bfqio 0755 root system
@@ -20,9 +19,6 @@ on post-fs-data
     mkdir /data/ssh 0750 root shell
     mkdir /data/ssh/empty 0600 root shell
     mkdir /cache/recovery 0770 system cache
-
-    # Run sysinit
-    start sysinit
 
     # Change permissions on fsck log so it can be added to the dropbox
     chown root log /dev/fscklogs/log
@@ -128,12 +124,6 @@ on boot
 
     # Persistent properties (only created if persist exists)
     mkdir /persist/properties 0770 system system
-
-# sysinit (/system/etc/init.d)
-service sysinit /system/bin/sysinit
-    user root
-    oneshot
-    disabled
 
 # Configure IO scheduler
 on property:sys.io.scheduler=*

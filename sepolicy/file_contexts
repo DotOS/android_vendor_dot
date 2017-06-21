@@ -4,8 +4,6 @@
 /system/bin/auditd        u:object_r:logd_exec:s0
 /data/misc/audit(/.*)?    u:object_r:auditd_log:s0
 
-/system/bin/sysinit       u:object_r:sysinit_exec:s0
-
 # For EXFAT/F2FS/NTFS partitions marked "formattable"
 /system/bin/mkfs\.exfat   u:object_r:mkfs_exec:s0
 /system/bin/mkfs\.f2fs    u:object_r:mkfs_exec:s0

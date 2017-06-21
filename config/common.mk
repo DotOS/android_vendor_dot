@@ -93,8 +93,7 @@ endif
     
 # init.d support
 PRODUCT_COPY_FILES += \
-    vendor/aosp/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner \
-    vendor/aosp/prebuilt/common/bin/sysinit:system/bin/sysinit
+    vendor/aosp/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner
 
 # JDC-specific init file
 PRODUCT_COPY_FILES += \
