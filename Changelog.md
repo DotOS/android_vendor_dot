@@ -40,6 +40,10 @@
     * General code updates
     * Update touchscreen firmware
     * Small fixes/updates for EAS
+    * Update sdcardfs driver with latest upstream changes
+* Kernel (jflte)
+    * General code updates
+    * Update sdcardfs driver with latest upstream changes
 * ROM
     * fw/base: general fixes from CAF/upstream
     * system/core: speed up boot for device that use CPUSET
@@ -71,6 +75,22 @@
     * contacts-common: add support to export multi contacts to Vcard
     * Gemini: Power HAL: EAS: set top-app scaling_min_freq to 900MHz
     * Gemini: enable ZRAM and set lz4 as default compression method
+    * base/bionic/jemalloc: port upstream changes for decay time
+    * Jflte: removed decay time hack (needed for camera)
+    * base/av: merge various fixes from upstream
+    * Browser: drop AOSP Browser in favour of Jelly
+    * WevView: add Chromium WevView  (Available now: Google Stable/Beta and Chromium Stable)
+    * Jflte/Gemini: move to Chromium webview
+    * Build: fix user builds
+    * Jflte/Gemini: ship as user builds (SELinux PERMISSIVE)
+    * adb: fix adb issues with user builds
+    * Updated props for SetupWizard
+    * General translations updates
+    * Gemini: enable HAL3 for SnapdragonCamera
+    * init.rc: cleaned a bit our rc and removed SysInit
+    * LatinIME: fix gesture typing without GApps installed
+    * system/core: reverted sched policy changes made by CAF
+    * init: Run restorecon_recursive asynchronously
 
 #### Stable 6 (20170516)
 * Kernel (OnePlus2)
