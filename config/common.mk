@@ -134,7 +134,6 @@ PRODUCT_PACKAGES += \
     AudioFX \
     CMSettingsProvider \
     CMUpdater \
-    CustomTiles \
     DotWizard \
     Eleven \
     ExactCalculator \
