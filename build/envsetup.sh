@@ -40,10 +40,10 @@ function breakfast()
 {
     target=$1
     local variant=$2
-    CM_DEVICES_ONLY="true"
+    DOT_DEVICES_ONLY="true"
     unset LUNCH_MENU_CHOICES
     add_lunch_combo full-eng
-    for f in `/bin/ls vendor/cm/vendorsetup.sh 2> /dev/null`
+    for f in `/bin/ls vendor/dot/vendorsetup.sh 2> /dev/null`
         do
             echo "including $f"
             . $f
@@ -64,9 +64,9 @@ function breakfast()
                 variant="userdebug"
             fi
 
-            if ! check_product lineage_$target && check_product cm_$target; then
-                echo "** Warning: '$target' is using CM-based makefiles. This will be deprecated in the next major release."
-                lunch cm_$target-$variant
+            if ! check_product lineage_$target && check_product dot_$target; then
+                echo "** Warning: '$target' is using DOT-based makefiles. This will be deprecated in the next major release."
+                lunch dot_$target-$variant
             else
                 lunch lineage_$target-$variant
             fi
@@ -80,8 +80,8 @@ alias bib=breakfast
 function eat()
 {
     if [ "$OUT" ] ; then
-        MODVERSION=$(get_build_var LINEAGE_VERSION)
-        ZIPFILE=lineage-$MODVERSION.zip
+        MODVERSION=$(get_build_var DOT_VERSION)
+        ZIPFILE=DOT-$MODVERSION.zip
         ZIPPATH=$OUT/$ZIPFILE
         if [ ! -f $ZIPPATH ] ; then
             echo "Nothing to eat"
@@ -96,7 +96,7 @@ function eat()
             done
             echo "Device Found.."
         fi
-        if (adb shell getprop ro.cm.device | grep -q "$CM_BUILD"); then
+        if (adb shell getprop ro.dot.device | grep -q "$DOT_BUILD"); then
             # if adbd isn't root we can't write to /cache/recovery/
             adb root
             sleep 1
@@ -112,7 +112,7 @@ EOF
             fi
             rm /tmp/command
         else
-            echo "The connected device does not appear to be $CM_BUILD, run away!"
+            echo "The connected device does not appear to be $DOT_BUILD, run away!"
         fi
         return $?
     else
