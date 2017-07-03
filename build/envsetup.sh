@@ -64,12 +64,12 @@ function breakfast()
                 variant="userdebug"
             fi
 
-            if ! check_product lineage_$target && check_product dot_$target; then
-                echo "** Warning: '$target' is using DOT-based makefiles. This will be deprecated in the next major release."
-                lunch dot_$target-$variant
-            else
-                lunch lineage_$target-$variant
-            fi
+            lunch dot_$target-$variant
+             if [ $? -ne 0 ]; then
+                 # try Lineage
+                 echo "** Warning: '$target' is using Lineage-based makefiles. This will be deprecated in the next major release."
+                 lunch lineage_$target-$variant
+             fi
         fi
     fi
     return $?
@@ -81,7 +81,7 @@ function eat()
 {
     if [ "$OUT" ] ; then
         MODVERSION=$(get_build_var DOT_VERSION)
-        ZIPFILE=DOT-$MODVERSION.zip
+        ZIPFILE=dot-$MODVERSION.zip
         ZIPPATH=$OUT/$ZIPFILE
         if [ ! -f $ZIPPATH ] ; then
             echo "Nothing to eat"
