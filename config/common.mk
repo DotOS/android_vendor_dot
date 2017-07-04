@@ -134,6 +134,12 @@ PRODUCT_PACKAGES += \
     WallpaperPicker \
     WeatherProvider
 
+# dotOS Packages
+PRODUCT_PACKAGES += \
+    An \
+    Timber \
+    Launcher3 
+
 # Exchange support
 PRODUCT_PACKAGES += \
     Exchange2
