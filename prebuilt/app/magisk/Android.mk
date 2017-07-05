@@ -1,9 +1,9 @@
-# 2017
+# MagiskManager-v4.3.3
 
 LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE := Timber
+LOCAL_MODULE := MagiskManager
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := APPS
 LOCAL_BUILT_MODULE_STEM := package.apk
