@@ -263,3 +263,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
 -include vendor/cyngn/product.mk
 
 $(call prepend-product-if-exists, vendor/extra/product.mk)
+
+# MAGISK -Systemless Root
+ifeq ($(WITH_MAGISK),true)
+
+PRODUCT_PACKAGES += \
+    MagiskManage
+
+#Magisk.zip
+PRODUCT_COPY_FILES += \
+    vendor/dot/prebuilt/zips/magisk.zip:system/addon.d/magisk.zip
+endif
