@@ -240,122 +240,20 @@ endif
 
 DEVICE_PACKAGE_OVERLAYS += vendor/dot/overlay/common
 
-PRODUCT_VERSION_MAJOR = V1
-PRODUCT_VERSION_MINOR = 0
-PRODUCT_VERSION_MAINTENANCE := 0
-
-ifeq ($(TARGET_VENDOR_SHOW_MAINTENANCE_VERSION),true)
-    DOT_VERSION_MAINTENANCE := $(PRODUCT_VERSION_MAINTENANCE)
+PRODUCT_VERSION = 1.0
+ifneq ($(DOT_BUILDTYPE),)
+DOT_VERSION := DOT-N-v$(PRODUCT_VERSION)-$(shell date -u +%Y%m%d)-$(CM_BUILD)-$(DOT_BUILDTYPE)
 else
-    DOT_VERSION_MAINTENANCE := 0
-endif
-
-# Set DOT_BUILDTYPE from the env RELEASE_TYPE, for jenkins compat
-
-ifndef DOT_BUILDTYPE
-    ifdef RELEASE_TYPE
-        # Starting with "DOT_" is optional
-        RELEASE_TYPE := $(shell echo $(RELEASE_TYPE) | sed -e 's|^DOT_||g')
-        DOT_BUILDTYPE := $(RELEASE_TYPE)
-    endif
-endif
-
-# Filter out random types, so it'll reset to UNOFFICIAL
-ifeq ($(filter RELEASE NIGHTLY SNAPSHOT EXPERIMENTAL,$(DOT_BUILDTYPE)),)
-    DOT_BUILDTYPE :=
-endif
-
-ifdef DOT_BUILDTYPE
-    ifneq ($(DOT_BUILDTYPE), SNAPSHOT)
-        ifdef DOT_EXTRAVERSION
-            # Force build type to EXPERIMENTAL
-            DOT_BUILDTYPE := EXPERIMENTAL
-            # Remove leading dash from DOT_EXTRAVERSION
-            DOT_EXTRAVERSION := $(shell echo $(DOT_EXTRAVERSION) | sed 's/-//')
-            # Add leading dash to DOT_EXTRAVERSION
-            DOT_EXTRAVERSION := -$(DOT_EXTRAVERSION)
-        endif
-    else
-        ifndef DOT_EXTRAVERSION
-            # Force build type to EXPERIMENTAL, SNAPSHOT mandates a tag
-            DOT_BUILDTYPE := EXPERIMENTAL
-        else
-            # Remove leading dash from DOT_EXTRAVERSION
-            DOT_EXTRAVERSION := $(shell echo $(DOT_EXTRAVERSION) | sed 's/-//')
-            # Add leading dash to DOT_EXTRAVERSION
-            DOT_EXTRAVERSION := -$(DOT_EXTRAVERSION)
-        endif
-    endif
-else
-    # If DOT_BUILDTYPE is not defined, set to UNOFFICIAL
-    DOT_BUILDTYPE := UNOFFICIAL
-    DOT_EXTRAVERSION :=
-endif
-
-ifeq ($(DOT_BUILDTYPE), UNOFFICIAL)
-    ifneq ($(TARGET_UNOFFICIAL_BUILD_ID),)
-        DOT_EXTRAVERSION := -$(TARGET_UNOFFICIAL_BUILD_ID)
-    endif
-endif
-
-ifeq ($(DOT_BUILDTYPE), RELEASE)
-    ifndef TARGET_VENDOR_RELEASE_BUILD_ID
-        DOT_VERSION := $(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)$(PRODUCT_VERSION_DEVICE_SPECIFIC)-$(DOT_BUILD)
-    else
-        ifeq ($(TARGET_BUILD_VARIANT),user)
-            ifeq ($(DOT_VERSION_MAINTENANCE),0)
-                DOT_VERSION := $(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-$(TARGET_VENDOR_RELEASE_BUILD_ID)-$(DOT_BUILD)
-            else
-                DOT_VERSION := $(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(DOT_VERSION_MAINTENANCE)-$(TARGET_VENDOR_RELEASE_BUILD_ID)-$(DOT_BUILD)
-            endif
-        else
-            DOT_VERSION := $(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)$(PRODUCT_VERSION_DEVICE_SPECIFIC)-$(DOT_BUILD)
-        endif
-    endif
-else
-    ifeq ($(DOT_VERSION_MAINTENANCE),0)
-        DOT_VERSION := $(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-$(shell date -u +%Y%m%d)-$(DOT_BUILDTYPE)$(DOT_EXTRAVERSION)-$(DOT_BUILD)
-    else
-        DOT_VERSION := $(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(DOT_VERSION_MAINTENANCE)-$(shell date -u +%Y%m%d)-$(DOT_BUILDTYPE)$(DOT_EXTRAVERSION)-$(DOT_BUILD)
-    endif
+DOT_VERSION := DOT-N-v$(PRODUCT_VERSION)-$(shell date -u +%Y%m%d)-$(CM_BUILD)
 endif
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.dot.version=$(DOT_VERSION) \
-    ro.dot.releasetype=$(DOT_BUILDTYPE) \
-    ro.modversion=$(DOT_VERSION) \
-    ro.cmlegal.url=https://lineageos.org/legal \
-    ro.lineageoms.version=$(LINEAGE_VERSION)
-
-PRODUCT_EXTRA_RECOVERY_KEYS += \
-    vendor/dot/build/target/product/security/lineage
-
--include vendor/cm-priv/keys/keys.mk
+ ro.dot.version=$(DOT_VERSION) \
+ ro.modversion=$(DOT_VERSION) \
+ dot.build.type=$(DOT_BUILDTYPE) \
+ dot.ota.version= $(shell date +%Y%m%d)
 
 DOT_DISPLAY_VERSION := $(DOT_VERSION)
-
-ifneq ($(PRODUCT_DEFAULT_DEV_CERTIFICATE),)
-ifneq ($(PRODUCT_DEFAULT_DEV_CERTIFICATE),build/target/product/security/testkey)
-    ifneq ($(DOT_BUILDTYPE), UNOFFICIAL)
-        ifndef TARGET_VENDOR_RELEASE_BUILD_ID
-            ifneq ($(DOT_EXTRAVERSION),)
-                # Remove leading dash from DOT_EXTRAVERSION
-                DOT_EXTRAVERSION := $(shell echo $(DOT_EXTRAVERSION) | sed 's/-//')
-                TARGET_VENDOR_RELEASE_BUILD_ID := $(DOT_EXTRAVERSION)
-            else
-                TARGET_VENDOR_RELEASE_BUILD_ID := $(shell date -u +%Y%m%d)
-            endif
-        else
-            TARGET_VENDOR_RELEASE_BUILD_ID := $(TARGET_VENDOR_RELEASE_BUILD_ID)
-        endif
-        ifeq ($(DOT_VERSION_MAINTENANCE),0)
-            DOT_DISPLAY_VERSION := $(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-$(TARGET_VENDOR_RELEASE_BUILD_ID)-$(DOT_BUILD)
-        else
-            DOT_DISPLAY_VERSION := $(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(DOT_VERSION_MAINTENANCE)-$(TARGET_VENDOR_RELEASE_BUILD_ID)-$(DOT_BUILD)
-        endif
-    endif
-endif
-endif
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.dot.display.version=$(DOT_DISPLAY_VERSION)
