@@ -123,7 +123,7 @@ PRODUCT_PACKAGES += \
     CMSettingsProvider \
     CMUpdater \
     CustomTiles \
-    LineageSetupWizard \
+    DotWizard \
     Eleven \
     ExactCalculator \
     Jelly \
