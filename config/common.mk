@@ -138,7 +138,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     An \
     Timber \
-    Lawnchair 
+    Lawnchair \
+    DotWalls
 
 # Exchange support
 PRODUCT_PACKAGES += \
