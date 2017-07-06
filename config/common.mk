@@ -136,7 +136,6 @@ PRODUCT_PACKAGES += \
 
 # dotOS Packages
 PRODUCT_PACKAGES += \
-    An \
     Timber \
     Lawnchair \
     DotWalls
