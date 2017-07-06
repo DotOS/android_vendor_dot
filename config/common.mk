@@ -138,7 +138,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     An \
     Timber \
-    Launcher3 
+    Lawnchair 
 
 # Exchange support
 PRODUCT_PACKAGES += \
