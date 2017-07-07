@@ -252,7 +252,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
  ro.dot.version=$(DOT_VERSION) \
  ro.modversion=$(DOT_VERSION) \
  dot.build.type=$(DOT_BUILDTYPE) \
- dot.ota.version= $(shell date +%Y%m%d)
+ dot.ota.version= $(shell date +%Y%m%d) \
+ ro.substratum.verified=true
 
 DOT_DISPLAY_VERSION := $(DOT_VERSION)
 
