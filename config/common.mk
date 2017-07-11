@@ -142,7 +142,8 @@ PRODUCT_PACKAGES += \
     Timber \
     Lawnchair \
     DotWalls \
-	QKSMS
+    QKSMS \
+    ExtraDots
 
 # Exchange support
 PRODUCT_PACKAGES += \
