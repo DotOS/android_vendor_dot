@@ -8,6 +8,8 @@
 
 [MatthewBooth](http://github.com/MatthewBooth) - OTA Updates, git maintainer, scripting, tester
 
+[CheckYourScreen](https://github.com/CheckYourScreen) - Developer, git maintainer, scripting, tester
+
 [angelcalibur](https://github.com/angelcalibur) - Tester
 
 [smeroni68](https://github.com/smeroni68) - Tester
