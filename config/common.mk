@@ -142,7 +142,9 @@ PRODUCT_PACKAGES += \
     Timber \
     Lawnchair \
     DotWalls \
-	QKSMS
+    QKSMS
+
+DOT_CHANGELOG := true
 
 # Exchange support
 PRODUCT_PACKAGES += \
