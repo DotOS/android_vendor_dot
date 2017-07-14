@@ -138,7 +138,8 @@ PRODUCT_PACKAGES += \
     Timber \
     Lawnchair \
     DotWalls \
-    QKSMS
+    QKSMS \
+    Gallery2
 
 DOT_CHANGELOG := true
 
