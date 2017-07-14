@@ -37,7 +37,26 @@
 
 ### Changelog (short)
 
-#### Ongoing changes (Stable 7)...
+#### Ongoing changes (Stable 9)...
+
+#### Stable 8
+* Kernel (Gemini)
+    * General code updates
+    * Merged CAF tag LA.UM.5.5.r1-05300-8x96.0
+    * Fixed random reboots/black screens
+* Kernel (jflte)
+    * General code updates
+    * Update sdcardfs driver with latest upstream changes
+* ROM
+    * HALs/bt: Merged CAF tag LA.UM.5.5.r1-05300-8x96.0
+    * Added Ticker feature
+    * Doze: move function under Settings-->Display
+    * Gemini: update to MIUI 7.7.6 Global dev blobs
+    * Enable panic mode
+    * jf/Gemini: capacitive keys lights up only when pressed
+    * frameworks/base-native-av: updates and fixes from upstream
+
+#### Stable 7
 * Kernel (Gemini)
     * General code updates
     * Update touchscreen firmware
