@@ -140,3 +140,10 @@ ifeq ($(WITH_ROOT),true)
 else
 $(warning Root method is undefined, please use 'WITH_ROOT := true' to define it)
 endif
+
+# TCM (TCP Connection Management)
+PRODUCT_PACKAGES += \
+    tcmiface
+
+PRODUCT_BOOT_JARS += \
+    tcmiface
