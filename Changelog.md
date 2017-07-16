@@ -55,6 +55,14 @@
     * Enable panic mode
     * jf/Gemini: capacitive keys lights up only when pressed
     * frameworks/base-native-av: updates and fixes from upstream
+    * Add back tcmiface to build
+    * Gemini: enable aptX & aptXHD support
+    * Gemini: updated ConfigPanel
+    * Gemini: Fixed PocketMode
+    * Gemini: Allow user to enable/disable PocketMode
+    * Bionic: Updates and fixes for NEON and AArch64 devices
+    * Magisk: update to v13.2
+    * Substratum: update to v811
 
 #### Stable 7
 * Kernel (Gemini)
