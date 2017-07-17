@@ -89,8 +89,21 @@ include vendor/dot/config/cmsdk_common.mk
 endif
 
 # Bootanimation
-PRODUCT_PACKAGES += \
-    bootanimation.zip
+TARGET_BOOTANIMATION_480P := $(shell \
+  if [ $(TARGET_SCREEN_WIDTH) -le 720 ]; then \
+    echo 'true'; \
+  else \
+    echo ''; \
+  fi )
+
+# Bootanimation
+ifeq ($(TARGET_BOOTANIMATION_480P),true)
+PRODUCT_COPY_FILES += \
+    vendor/dot/bootanimation/bootanimation-480p.zip:system/media/bootanimation.zip
+else
+PRODUCT_COPY_FILES += \
+    vendor/dot/bootanimation/bootanimation.zip:system/media/bootanimation.zip
+endif
 
 # Android O emojis
 PRODUCT_COPY_FILES += \
