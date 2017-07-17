@@ -55,7 +55,7 @@
     * Enable panic mode
     * jf/Gemini: capacitive keys lights up only when pressed
     * frameworks/base-native-av: updates and fixes from upstream
-    * Add back tcmiface to build
+    * Add back tcmiface to build and remove all hacks
     * Gemini: enable aptX & aptXHD support
     * Gemini: updated ConfigPanel
     * Gemini: Fixed PocketMode
@@ -63,6 +63,10 @@
     * Bionic: Updates and fixes for NEON and AArch64 devices
     * Magisk: update to v13.2
     * Substratum: update to v811
+    * Update turbo APK
+    * Drop buggy AudioFX in favour of MusicFX from CAF
+    * Update sources to Android 7.1.2 Release 24
+    * Jf: temporary back to AOSP doze (until SamsungDoze is fixed)
 
 #### Stable 7
 * Kernel (Gemini)
