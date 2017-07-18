@@ -94,6 +94,11 @@ ifneq ($(TARGET_DISABLE_CMSDK), true)
 include vendor/dot/config/cmsdk_common.mk
 endif
 
+# TWRP
+ifeq ($(WITH_TWRP),true)
+include vendor/cm/config/twrp.mk
+endif
+
 # Bootanimation
 TARGET_BOOTANIMATION_480P := $(shell \
   if [ $(TARGET_SCREEN_WIDTH) -le 720 ]; then \
