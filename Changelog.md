@@ -40,6 +40,10 @@
 #### Ongoing changes (Stable 9)...
 
 #### Stable 8
+* Kernel (OnePlus 2)
+    * General code updates
+    * Linux 3.10.107
+    * More keycodes support for tri_state slider
 * Kernel (Gemini)
     * General code updates
     * Merged CAF tag LA.UM.5.5.r1-05300-8x96.0
