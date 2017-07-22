@@ -83,7 +83,7 @@ PRODUCT_COPY_FILES += \
     vendor/aosp/config/permissions/backup.xml:system/etc/sysconfig/backup.xml
 
 # For keyboard gesture typing
-ifneq ($(filter arm64,$(TARGET_ARCH)),)
+ifneq ($(filter jdc_jflte jdc_onyx,$(TARGET_PRODUCT)),)
 PRODUCT_COPY_FILES += \
     vendor/aosp/prebuilt/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinime.so
 else
