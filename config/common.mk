@@ -81,16 +81,16 @@ PRODUCT_PACKAGES += \
 # Backup Services whitelist
 PRODUCT_COPY_FILES += \
     vendor/aosp/config/permissions/backup.xml:system/etc/sysconfig/backup.xml
-    
+
 # For keyboard gesture typing
-ifneq ($(filter jdc_jflte,$(TARGET_PRODUCT)),)
+ifneq ($(filter arm64,$(TARGET_ARCH)),)
 PRODUCT_COPY_FILES += \
     vendor/aosp/prebuilt/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinime.so
 else
 PRODUCT_COPY_FILES += \
     vendor/aosp/prebuilt/common/lib64/libjni_latinimegoogle.so:system/lib64/libjni_latinime.so
 endif
-    
+
 # init.d support
 PRODUCT_COPY_FILES += \
     vendor/aosp/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner
