@@ -154,6 +154,7 @@ PRODUCT_PACKAGES += \
     Gallery2
 
 DOT_CHANGELOG := true
+NO_SQUISHER   := true
 
 # Exchange support
 PRODUCT_PACKAGES += \
