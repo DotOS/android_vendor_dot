@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:name="ic_volume_expand" android:height="24.0dip" android:width="24.0dip" android:viewportWidth="24.0" android:viewportHeight="24.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:name="chevron_01" android:rotation="90.0" android:translateX="12.0" android:translateY="15.0">
+        <group android:name="rectangle_3" android:rotation="45.0">
+            <group android:name="rectangle_2_pivot_0" android:translateY="4.0">
+                <group android:name="rectangle_path_3_position" android:translateY="-1.0">
+                    <path android:name="rectangle_path_3" android:fillColor="#424242" android:pathData="M -1.0,-4.0 l 2.0,0.0 c 0.0,0.0 0.0,0.0 0.0,0.0 l 0.0,8.0 c 0.0,0.0 0.0,0.0 0.0,0.0 l -2.0,0.0 c 0.0,0.0 0.0,0.0 0.0,0.0 l 0.0,-8.0 c 0.0,0.0 0.0,0.0 0.0,0.0 Z" />
+                </group>
+            </group>
+        </group>
+        <group android:name="rectangle_4" android:rotation="-45.0">
+            <group android:name="rectangle_1_pivot_0" android:translateY="-4.0">
+                <group android:name="rectangle_path_4_position" android:translateY="1.0">
+                    <path android:name="rectangle_path_4" android:fillColor="#424242" android:pathData="M -1.0,-4.0 l 2.0,0.0 c 0.0,0.0 0.0,0.0 0.0,0.0 l 0.0,8.0 c 0.0,0.0 0.0,0.0 0.0,0.0 l -2.0,0.0 c 0.0,0.0 0.0,0.0 0.0,0.0 l 0.0,-8.0 c 0.0,0.0 0.0,0.0 0.0,0.0 Z" />
+                </group>
+            </group>
+        </group>
+    </group>
+</vector>
