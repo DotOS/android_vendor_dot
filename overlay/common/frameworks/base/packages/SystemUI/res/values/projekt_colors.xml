@@ -1,0 +1,5 @@
+<resources>
+     <!-- Navbar icon Colors -->
+  <color name="qs_alarm_status_text_color">#212121</color>
+  <color name="qs_battery_graph_text_color">#212121</color>
+</resources>

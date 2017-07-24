@@ -1,0 +1,5 @@
+<resources>
+     <!-- Navbar icon Colors -->
+  <color name="material_blue_grey_800">#212121</color>
+  <color name="material_blue_grey_900">#212121</color>
+</resources>

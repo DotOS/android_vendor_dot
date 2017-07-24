@@ -5,4 +5,15 @@
     <color name="icon_color_split_screen">@android:color/white</color>
     <color name="icon_color_home">@android:color/white</color>
     <color name="icon_color_overview">@android:color/white</color>
+    <color name="notification_default_color">#212121</color>
+    <color name="notification_gear_color">#212121</color>
+    <color name="notification_guts_disabled_icon_tint">#212121</color>
+    <color name="notification_list_shadow_top">#21212100</color>
+    <color name="qs_tile_divider">#4d212121</color>
+    <color name="qs_detail_button">#212121</color>
+    <color name="qs_detail_button_white">#212121</color>
+    <color name="qs_subhead">#212121</color>
+    <color name="qs_text">#212121</color>
+    <color name="qs_tile_text">#212121</color>
+    <color name="segmented_button_unselected">#4d212121</color>
 </resources>
