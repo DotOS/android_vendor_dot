@@ -156,6 +156,12 @@ PRODUCT_PACKAGES += \
 DOT_CHANGELOG := true
 NO_SQUISHER   := true
 
+#Dex2oat
+PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.boot-dex2oat-threads=8 \
+    dalvik.vm.dex2oat-threads=6 \
+    dalvik.vm.image-dex2oat-threads=8
+
 # Exchange support
 PRODUCT_PACKAGES += \
     Exchange2
