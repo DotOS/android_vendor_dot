@@ -7,6 +7,7 @@ aosp_soong:
 	echo '    "Needs_text_relocations": $(if $(filter true,$(TARGET_NEEDS_PLATFORM_TEXT_RELOCATIONS)),true,false),'; \
 	echo '    "Uses_non_treble_camera": $(if $(filter true,$(TARGET_USES_NON_TREBLE_CAMERA)),true,false),'; \
 	echo '    "Has_legacy_camera_hal1": $(if $(filter true,$(TARGET_HAS_LEGACY_CAMERA_HAL1)),true,false),'; \
+	echo '    "Uses_media_extensions": $(if $(filter true,$(TARGET_USES_MEDIA_EXTENSIONS)),true,false),'; \
 	echo '    "BTVendorPath": "$(call project-path-for,bt-vendor)",'; \
 	echo '    "RILPath": "$(call project-path-for,ril)",'; \
 	echo '    "WLANPath": "$(call project-path-for,wlan)"'; \
