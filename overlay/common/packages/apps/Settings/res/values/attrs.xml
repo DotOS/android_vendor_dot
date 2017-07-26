@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="switchBarBackgroundColor" format="color" />
+    <attr name="switchBarTheme" format="reference" />
+
+    <attr name="listPreferredItemPaddingLeft" format="dimension" />
+    <attr name="listPreferredItemPaddingRight" format="dimension" />
+    <attr name="listPreferredItemHeightSmall" format="dimension" />
+    <attr name="textAppearanceListItemSmall" format="reference" />
+</resources>

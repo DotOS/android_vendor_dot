@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.SettingsBase" parent="@android:style/Theme.Material.Light.LightStatusBar">
+        <item name="android:colorPrimary">@android:color/background_light</item>
+        <item name="android:colorPrimaryDark">#ffffff</item>
+        <item name="android:statusBarColor">#ffffff</item>
+        <item name="android:navigationBarColor">@*android:color/material_grey_50</item>
+        <item name="android:colorAccent">@*com.android.settings:color/icon_accent</item>
+        <item name="android:textColorPrimaryInverse">#212121</item>
+        <item name="android:colorSecondary">#e0e0e0</item>
+        <item name="android:colorEdgeEffect">@*com.android.settings:color/icon_accent</item>
+    </style>
+    <style name="TextAppearance.CategoryTitle" parent="@*android:style/TextAppearance.Material.Small">
+        <item name="android:textColor">@*android:color/accent_device_default_light</item>
+    </style>
+    <style name="Theme.ActionBar" parent="@android:style/Widget.Material.ActionBar.Solid">
+        <item name="android:textColor">@*android:color/accent_material_dark</item>
+        <item name="android:background">@android:color/background_light</item>
+    </style>
+    <style name="Theme.DialogWhenLarge" parent="@android:style/Theme.Material.Light">
+        <item name="android:colorPrimary">@*android:color/accent_device_default_light</item>
+        <item name="android:colorPrimaryDark">@*android:color/accent_device_default_light</item>
+        <item name="android:statusBarColor">@*android:color/accent_device_default_light</item>
+        <item name="android:colorAccent">@*android:color/accent_device_default_light</item>
+        <item name="android:navigationBarColor">@*android:color/material_grey_50</item>
+    </style>
+
+    <style name="ThemeOverlay.SwitchBar.SubSettings" parent="@android:style/ThemeOverlay.Material.Dark.ActionBar">
+        <item name="@*com.android.settings:switchBarMarginStart">@*com.android.settings:dimen/switchbar_subsettings_margin_start</item>
+        <item name="@*com.android.settings:switchBarMarginEnd">@*com.android.settings:dimen/switchbar_subsettings_margin_end</item>
+        <item name="switchBarBackgroundColor">@null</item>
+        <item name="android:colorControlNormal">#ffffff</item>
+    </style>
+    <style name="ThemeOverlay.SwitchBar.Settings" parent="@android:style/ThemeOverlay.Material.Dark.ActionBar">
+        <item name="@*com.android.settings:switchBarMarginStart">@*com.android.settings:dimen/switchbar_subsettings_margin_start</item>
+        <item name="@*com.android.settings:switchBarMarginEnd">@*com.android.settings:dimen/switchbar_subsettings_margin_end</item>
+        <item name="switchBarBackgroundColor">@null</item>
+        <item name="android:colorControlNormal">#ffffff</item>
+    </style>
+</resources>
