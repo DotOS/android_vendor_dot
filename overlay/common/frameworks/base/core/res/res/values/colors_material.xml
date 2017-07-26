@@ -18,6 +18,6 @@
 <resources>
   <color name="background_material_dark">#212121</color>
   <color name="primary_text_default_material_light">#212121</color>
-  <color name="accent_material_light">#ff212121</color>
-  <color name="accent_material_dark">#ff212121</color>
+  <color name="accent_material_light">#596d77</color>
+  <color name="accent_material_dark">#596d77</color>
 </resources>

@@ -14,7 +14,6 @@
     <color name="qs_detail_button_white">#212121</color>
     <color name="qs_subhead">#212121</color>
     <color name="qs_text">#212121</color>
-    <color name="qs_tile_text">#212121</color>
     <color name="segmented_button_unselected">#4d212121</color>
     <color name="batterymeter_frame_color">#212121</color><!-- 30% white -->
     <color name="batterymeter_charge_color">#e02c2c</color>
