@@ -16,12 +16,12 @@
 
 <resources>
   <!-- Condition card colors -->
-      <color name="condition_card_background_color">#e3e1e3</color>
-      <color name="condition_card_icon_color">#727f88</color>
-      <color name="condition_card_title_text_color">#212121</color>
-      <color name="condition_card_expander_color">#212121</color>
-      <color name="condition_card_summary_text_color">#212121</color>
-      <color name="condition_card_divider_color">#212121</color>
-      <color name="condition_card_first_button_text_color">#212121</color>
-      <color name="condition_card_second_button_text_color">#212121</color>
+    <color name="condition_card_background_color">#e0e0e0</color>
+    <color name="condition_card_icon_color">@*com.android.settings:color/icon_accent</color>
+    <color name="condition_card_title_text_color">#212121</color>
+    <color name="condition_card_expander_color">#212121</color>
+    <color name="condition_card_summary_text_color">#212121</color>
+    <color name="condition_card_divider_color">#00000000</color>
+    <color name="condition_card_first_button_text_color">#212121</color>
+    <color name="condition_card_second_button_text_color">#212121</color>
 </resources>
