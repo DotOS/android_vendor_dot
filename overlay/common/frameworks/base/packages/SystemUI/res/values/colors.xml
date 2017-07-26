@@ -16,4 +16,10 @@
     <color name="qs_text">#212121</color>
     <color name="qs_tile_text">#212121</color>
     <color name="segmented_button_unselected">#4d212121</color>
+    <color name="batterymeter_frame_color">#212121</color><!-- 30% white -->
+    <color name="batterymeter_charge_color">#e02c2c</color>
+    <color name="batterymeter_bolt_color">#212121</color>
+    <color name="qs_batterymeter_frame_color">#212121</color>
+    <color name="data_usage_graph_track">#33535353</color>
+    <color name="data_usage_graph_warning">#ffd32f2f</color>
 </resources>
