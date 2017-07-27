@@ -16,7 +16,7 @@
 
 <resources>
     <color name="icon_accent">@*android:color/accent_device_default_light</color>
-	 <color name="material_empty_color_light">#e0e0e0</color>
+    <color name="material_empty_color_light">#e0e0e0</color>
     <color name="switchbar_background_color">#e0e0e0</color>
     <color name="switch_accent_color">#e0e0e0</color>
     <color name="running_processes_system_ram">#1e88e5</color>
