@@ -295,7 +295,7 @@ $(call prepend-product-if-exists, vendor/extra/product.mk)
 ifeq ($(WITH_MAGISK),true)
 
 PRODUCT_PACKAGES += \
-    MagiskManage
+    MagiskManager
 
 #Magisk.zip
 PRODUCT_COPY_FILES += \

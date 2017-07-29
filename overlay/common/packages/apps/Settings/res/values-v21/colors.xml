@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#ffffffff</color>
+    <color name="grey">#ffcccccc</color>
+    <color name="dark_grey">#ff333333</color>
+    <color name="black">@*android:color/background_material_dark</color>
+    <color name="separator_dark">@*android:color/background_material_dark</color>
+    <color name="separator_light">@*android:color/background_material_dark</color>
+
+    <!-- Palette colors for Material UI -->
+    <color name="material_primary">@*android:color/material_grey_800</color>
+    <color name="material_primary_dark">@*android:color/material_grey_800</color>
+    <color name="accent_material_light">@*android:color/accent_material_light</color>
+    <color name="accent_material_dark">@*android:color/accent_material_light</color>
+
+    <color name="material_cyan_500">@*android:color/accent_material_light</color>
+    <color name="material_deep_teal_500">@*android:color/accent_material_light</color>
+    <color name="material_deep_teal_200">@*android:color/accent_material_light</color>
+    <color name="material_red_500">#fff44336</color>
+    <color name="material_red_200">#ffef9a9a</color>
+    <color name="material_blue_grey_800">@*android:color/material_grey_800</color>
+
+    <color name="blue">@*android:color/accent_material_light</color>
+    <color name="dark_blue">@*android:color/accent_material_light</color>
+
+    <color name="material_light_green_500">@*android:color/accent_material_light</color>
+    <color name="material_light_green_200">@*android:color/accent_material_light</color>
+
+    <color name="material_dark_primary">@*android:color/material_grey_800</color>
+    <color name="material_dark_primary_dark">@*android:color/material_grey_800</color>
+    <color name="material_background_dark">@*android:color/background_material_dark</color>
+    <color name="card_background_material_dark">@*android:color/material_grey_800</color>
+
+    <color name="material_background_light">@android:color/white</color>
+    <color name="card_background_material_light">@android:color/white</color>
+    <color name="primary_text_material_light">#de000000</color>
+    <color name="secondary_text_material_light">#8a000000</color>
+    <color name="primary_text_material_dark">#ffffffff</color>
+    <color name="secondary_text_material_dark">#b3ffffff</color>
+    <color name="ripple_material_dark">@*android:color/accent_material_light</color>
+    <color name="ripple_material_light">@*android:color/accent_material_light</color>
+	
+    <color name="theme_accent">@*android:color/accent_material_light</color>
+
+    <!-- Color used by notification log view -->
+    <color name="theme_primary_dark">@*android:color/material_grey_800</color>
+
+    <!-- Bliss theme -->
+    <color name="background_bliss_blue_grey">@*android:color/material_grey_800</color>
+	
+    <!-- Colors for Blissify -->
+    <color name="bliss_accent">@*android:color/accent_material_light</color>
+    <color name="bliss_tab_text_color">#b3ffffff</color>
+    <color name="bliss_tab_color">@*android:color/material_grey_800</color>
+</resources>

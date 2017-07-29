@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Copyright (C) 2015 The Android Open Source Project
+ 
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+ 
+         http://www.apache.org/licenses/LICENSE-2.0
+ 
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+<resources>
+    <!-- DSLV colors -->
+    <color name="dslv_float_background_color">@*android:color/accent_material_light</color>
+    <color name="dslv_float_cackground_color">@*android:color/accent_material_light</color>
+    <color name="dslv_icon_dark">@*android:color/accent_material_light</color>
+	<color name="suw_list_item_icon_color_dark">@*android:color/accent_material_dark</color>
+    <color name="suw_list_item_icon_color_light">@*android:color/accent_material_dark</color>
+    <color name="color_picker_help_screen_background">@*android:color/holo_button_normal</color>
+    <color name="external_icon_tint">@*android:color/accent_material_dark</color>
+    <!-- Color picker -->
+    <color name="color_picker_color_view_drawable_border">@*android:color/holo_button_normal</color>
+    <color name="background_blue_grey">@*android:color/holo_button_normal</color>
+    <color name="colorpick_primary">@*android:color/holo_button_normal</color>
+	
+    <color name="material_empty_color_light">@*android:color/material_grey_800</color>
+    <color name="memory_max_use">@*android:color/accent_material_dark</color>
+    <color name="memory_normal">@*android:color/accent_material_dark</color>
+    <color name="memory_remaining">@*android:color/material_grey_800</color>
+    <color name="memory_used">@*android:color/accent_material_dark</color>
+    <color name="running_processes_apps_ram">#FFAB91</color>
+    <color name="running_processes_free_ram">#B9F6CA</color>
+    <color name="running_processes_system_ram">#FFCC80</color>
+    <color name="storage_summary_title_color">@*android:color/accent_material_dark</color>
+    <color name="material_grey_900">@*android:color/material_grey_800</color>
+    <color name="material_grey_850">@*android:color/material_grey_850</color>
+    <color name="material_grey_800">@*android:color/material_grey_800</color>
+    <color name="material_grey_300">@*android:color/material_grey_800</color>
+    <color name="material_grey_100">@*android:color/material_grey_800</color>
+    <color name="material_grey_50">@*android:color/material_grey_800</color>
+    <color name="summary_default_end">@*android:color/material_grey_800</color>
+    <color name="summary_default_start">@*android:color/accent_material_dark</color>
+    <!-- DSLV fab color -->
+    <color name="floating_action_button_touch_tint">#80ffffff</color>
+    <color name="navbar_edit_icon_color">#ffffffff</color>
+    <color name="divider">@*android:color/background_material_dark</color>
+    <color name="setup_wizard_wifi_color_dark">@*android:color/accent_material_light</color>
+
+    <color name="divider_color">@*android:color/background_material_dark</color>
+
+    <color name="switchbar_background_color">@*android:color/material_grey_800</color>
+    <color name="switchbar_text_color">#b3ffffff</color>
+    <color name="switch_accent_color">@*android:color/accent_material_light</color>
+    <color name="text_color_white">#ffffff</color>
+    <!-- RR Configuration tab settings colors -->
+    <color name="fab_label_background">@*android:color/material_grey_800</color>
+    <color name="secondary_text">#b3ffffff</color>
+    <color name="fab_button_icon_color">@*android:color/background_material_dark</color>
+    <color name="fab_rr_color_ripple">#1fffffff</color>
+    <color name="fab_rr_bg">@*android:color/accent_material_light</color>
+    <color name="fab_gradient_overlay_start">@*android:color/background_material_dark</color>
+    <color name="fab_gradient_overlay_center">@*android:color/background_material_dark</color>
+    <color name="fab_gradient_overlay_end">@*android:color/background_material_dark</color>
+
+    <!-- OMS Exposures -->
+    <!-- Dashboard category and tile background -->
+    <color name="dashboard_category_title_background">@*android:color/background_material_dark</color>
+    <color name="selectable_card_background">@*android:color/background_material_dark</color>
+
+    <!-- Storage icons -->
+    <color name="storage_public">#ff9e9e9e</color>
+    <color name="storage_warning">#fff4511e</color>
+    <color name="storage_private_1">@*android:color/accent_material_light</color>
+    <color name="storage_private_2">#ffab47bc</color>
+    <color name="storage_private_3">#fff2a600</color>
+    <color name="storage_private_4">#ffec407a</color>
+    <color name="storage_private_5">#ffc0ca33</color>
+
+    <!-- Linear color bar -->
+    <color name="linear_color_bar_left">@*android:color/accent_material_light</color>
+    <color name="linear_color_bar_middle">@*android:color/accent_material_light</color>
+    <color name="linear_color_bar_right">#ffced7db</color>
+
+    <color name="settings_main_dashboard_color">@*android:color/background_material_dark</color>
+
+    <color name="extrainfo_separator">#00000000</color>
+    <color name="extrainfo_cat_background">@*android:color/background_material_dark</color>
+    <color name="extrainfo_cat_text">@*android:color/accent_material_dark</color>
+    <color name="extrainfo_value_text">#b3ffffff</color>
+	
+    <color name="condition_card_background_color">@*android:color/material_grey_800</color>
+    <color name="condition_card_icon_color">@*android:color/accent_material_light</color>
+    <color name="condition_card_title_text_color">#ffffff</color>
+    <color name="condition_card_expander_color">#ffffff</color>
+    <color name="condition_card_summary_text_color">#b3ffffff</color>
+    <color name="condition_card_divider_color">@*android:color/background_material_dark</color>
+    <color name="condition_card_first_button_text_color">#ffffff</color>
+    <color name="condition_card_second_button_text_color">#b3ffffff</color>
+
+    <color name="card_background">@*android:color/background_material_dark</color>
+    <color name="lock_pattern_view_regular_color">#ffe0e0e0</color>
+    <color name="memory_apps_usage">#ffcddc39</color>
+    <color name="memory_downloads">#ff3f51b5</color>
+    <color name="memory_dcim">#ff9c27b0</color>
+    <color name="memory_music">#ff795548</color>
+    <color name="memory_cache">#ff009688</color>
+    <color name="memory_misc">#ffff9800</color>
+    <color name="memory_user_light">#ff00796b</color>
+    <color name="memory_user_dark">#ff004d40</color>
+    <color name="theme_primary">@*android:color/material_grey_800</color>
+    <color name="theme_primary_dark">@*android:color/material_grey_850</color>
+    <color name="theme_accent">@*android:color/accent_material_light</color>
+    <color name="exposed_expanded_item">@*android:color/accent_material_light</color>
+    <color name="ic_settings_icons_exposed">@*android:color/accent_material_light</color>
+    <color name="qs_tile_tint_color">@*android:color/accent_material_light</color>
+    <color name="exposed_barPrimaryColor">@*android:color/accent_material_light</color>
+    <color name="exposed_datachartfillcolor">@*android:color/accent_material_light</color>
+    <color name="dashboard_background_color">#00000000</color>
+    <color name="cardview_light_background">@*android:color/background_material_dark</color>
+    <color name="exposed_bg_light">@*android:color/background_material_dark</color>
+    <color name="cardview_dark_background">@*android:color/background_material_dark</color>
+    <color name="exposed_bg_dark">@*android:color/background_material_dark</color>
+
+    <color name="exposed_primary_text_light">#ffffffff</color>
+    <color name="exposed_secondary_text_light">#b3ffffff</color>
+    <color name="exposed_qs_tile_text">#ffffffff</color>
+    <color name="exposed_data_limit_chart_labelcolor">#b3ffffff</color>
+    <color name="exposed_primary_text_dark">#ffffffff</color>
+    <color name="exposed_secondary_text_dark">#b3ffffff</color>
+    <color name="exposed_data_warning_chart_labelcolor">#fff4511e</color>
+    <color name="exposed_barPredictionColor">#ffeeeeee</color>
+    <color name="setup_wizard_navbar_bg_dark">@*android:color/background_material_dark</color>
+    <color name="setup_wizard_navbar_bg_light">@*android:color/background_material_dark</color>
+    <color name="setup_wizard_navbar_text_dark">#b3ffffff</color>
+    <color name="setup_wizard_navbar_text_light">#b3ffffff</color>
+    <color name="title_color">#ffffffff</color>
+    <color name="setup_wizard_wifi_color_light">#89ffffff</color>
+
+    <color name="memory_avail">#4dffffff</color>
+    <color name="memory_total">#4dffffff</color>
+
+    <color name="crypt_keeper_clock_background">#ff9a9a9a</color>
+    <color name="crypt_keeper_clock_foreground">#ff666666</color>
+    <color name="crypt_keeper_clock_am_pm">#ff9a9a9a</color>
+    <color name="crypt_keeper_password_background">#70606060</color>
+
+    <color name="setup_divider_color_dark">#33ffffff</color>
+    <color name="setup_lock_pattern_view_regular_color_dark">#ffbdbdbd</color>
+    <color name="setup_lock_pattern_view_success_color_dark">#ff84ffff</color>
+    <color name="setup_lock_pattern_view_error_color_dark">#fff44336</color>
+
+    <color name="system_warning_color">#D32F2F</color><!-- deep orange 600 -->
+
+    <color name="lock_pattern_background">#00000000</color>
+
+    <color name="lock_pattern_view_regular_color_dark">#ffffff</color>
+    <!-- External Icon Tint -->
+    <color name="external_tile_icon_tint_color">?android:attr/colorAccent</color>
+	
+    <color name="fingerprint_title_area_bg">@*android:color/accent_material_light</color>
+    <color name="fingerprint_title_color">#ffffffff</color>
+    <color name="fingerprint_progress_ring">@*android:color/accent_material_light</color>
+    <color name="fingerprint_progress_ring_bg">#20000000</color>
+    <color name="fingerprint_indicator_background_resting">#12000000</color>
+    <color name="fingerprint_message_color">#ff999999</color>
+    <color name="icon_color">@*android:color/accent_material_light</color>
+    <color name="wifi_divider">#ffe0e0e0</color>
+
+    <color name="warning">#D32F2F</color>
+    <color name="confirm_device_credential_dark_background">@*android:color/background_material_dark</color>
+    <color name="fab_ripple">#1fffffff</color><!-- 12% white -->
+    <color name="fab_shape">@*android:color/accent_material_light</color>
+    <color name="voice_interaction_highlight">#33b5e5</color>
+
+    <drawable name="fp_enrollment_header_landscape">#009688</drawable>
+
+    <color name="memory_moderate">@*android:color/material_grey_800</color>
+    <color name="memory_low">#ffff9700</color>
+    <color name="memory_critical">#ffff5621</color>
+
+    <color name="memory_avg_use">@*android:color/material_grey_800</color>
+
+    <color name="message_text_incoming">#ffffffff</color>
+    <color name="message_text_outgoing">#ffffffff</color>
+    <color name="timestamp_text_outgoing">#ffffffff</color>
+    <color name="timestamp_text_incoming">#ffffffff</color>
+    <color name="message_bubble_incoming">@*android:color/material_grey_800</color>
+    <color name="message_bubble_outgoing">@*android:color/material_grey_800</color>
+    <color name="conversation_background">@*android:color/background_material_dark</color>
+    <color name="message_icon_background_incoming">@*android:color/material_grey_800</color>
+    <color name="message_icon_text_incoming">#ffffffff</color>
+    <color name="message_icon_background_outgoing">@*android:color/material_grey_800</color>
+    <color name="message_icon_text_outgoing">#ffffffff</color>
+
+    <color name="seek_bar_preference_preview_text">#fff</color>
+    <color name="expanded_app_title_color">#ffffff</color>
+    <color name="importance_disabled_slider_color">@*android:color/material_grey_800</color>
+    <color name="importance_secondary_slider_color">@*android:color/accent_material_light</color>
+
+    <color name="icon_accent">#afbdc4</color>
+
+    <color name="action_picker_fab_background">@*android:color/background_material_dark</color>
+    <color name="text_color_black">@android:color/white</color>
+
+    <color name="card_background_grey">@*android:color/background_material_dark</color>
+
+    <!-- Gestures settings -->
+    <color name="gestures_setting_background_color">@*android:color/background_material_dark</color>
+    <color name="gestures_switchbar_color">@*android:color/material_grey_800</color>
+
+    <!-- Expanded desktop -->
+    <color name="expanded_item_app_title">#ffffff</color>
+	
+    <!-- expanded_desktop_app_title_text -->
+    <color name="expanded_desktop_app_title_text">#ffffff</color>
+
+    <color name="power_usage_ab_icon_tint">#ffffff</color>
+
+    <!-- NFC hard colors -->
+    <color name="nfc_how_it_works_main_background">@*android:color/background_material_dark</color>
+    <color name="nfc_how_it_works_background">@*android:color/background_material_dark</color>
+    <color name="nfc_how_it_works_title_text_color">#ffffff</color>
+    <color name="nfc_how_it_works_content_text_color">#b3ffffff</color>
+    <color name="nfc_how_it_works_footer_background">@*android:color/material_grey_800</color>
+    <color name="nfc_how_it_works_got_it_text_color">@*android:color/accent_material_light</color>
+    <!-- Permission Settings Hard colors-->
+    <color name="security_settings_billing_desc_text_color">#b3ffffff</color>
+    <!-- Misc Hard colors-->
+    <color name="importance_secondary_slider_tickMarkTint_color">@*android:color/accent_material_light</color>
+    <color name="icon_tint_color">@*android:color/accent_material_light</color>
+    <color name="aicp_logo_bg">@*android:color/material_grey_800</color>
+    <color name="aicp_logo_fg">@*android:color/accent_material_light</color>
+     <!-- Bluetooth pairing pin confirm dialog -->
+    <color name="bluetooth_pairing_caption">#b3ffffff</color>
+    <color name="bluetooth_pairing_code_message">#b3ffffff</color>
+    <color name="bluetooth_phonebook_sharing_message_confirm_pin">#b3ffffff</color>
+     <!-- Misc Hard colors-->
+     <color name="emergency_call_button_text_color">#ffffff</color>
+     <color name="owner_info_text_color">#B3FFFFFF</color>
+     <color name="data_usage_chart_series_fill_Color_Secondary">#B3FFFFFF</color>
+     <color name="data_usage_sweep_limit_label_Color">#b3ffffff</color>
+</resources>
