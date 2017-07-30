@@ -17,9 +17,9 @@
        overlaying new theme colors. -->
 <resources>
     <color name="system_bar_background_semi_transparent">#22000000</color>
-    <color name="primary_material_dark">#cccccc</color>
+    <color name="primary_material_dark">#1d1d1d</color>
     <color name="primary_material_settings">@color/primary_material_dark</color>
-    <color name="primary_dark_material_dark">#cccccc</color>
+    <color name="primary_dark_material_dark">#1d1d1d</color>
     <color name="primary_dark_material_settings">@color/primary_dark_material_dark</color>
     <color name="secondary_material_settings">#ff3a3a3a</color>
     <color name="tertiary_material_settings">#ff616161</color>

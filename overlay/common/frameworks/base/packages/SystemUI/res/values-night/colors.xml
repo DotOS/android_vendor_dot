@@ -16,9 +16,9 @@
    <!-- Notification Header and Quick settings panel -->
         <!-- Quick Settings panel - Accent -->
 
-    <color name="system_accent_color">#ff2092e7</color>
+    <color name="system_accent_color">#fff44545</color>
     <color name="system_primary_color">#000000</color>
-    <color name="qs_detail_transition">#ff2092e7</color>
+    <color name="qs_detail_transition">#fff44545</color>
     <color name="system_secondary_color">#000000</color>
 
     <!-- The "inside" of a notification, reached via longpress -->
@@ -28,7 +28,7 @@
     <color name="notification_guts_btn_color">#FFFFFFFF</color>
     <!-- Shade color of notification guts background -->
     <color name="notification_shade_background_color">#000000</color>
-    <color name="notification_gear_color">#ff2092e7</color>
+    <color name="notification_gear_color">#fff44545</color>
 
    <!-- Backgrounds -->
     <!-- The color of the legacy notification background -->
@@ -46,26 +46,27 @@
 
     <!-- Quick Settings tiles -->
     <color name="qs_tile_divider">#212121</color>
-    <color name="switch_accent_color">#ff2092e7</color>
+    <color name="switch_accent_color">#fff44545</color>
 
     <!-- QS battery % text color -->
-    <color name="qs_battery_text_color">#ff2092e7</color>
+    <color name="qs_battery_text_color">#fff44545</color>
     <!-- QS battery graph text color -->
-    <color name="qs_battery_graph_text_color">#ff2092e7</color>
+    <color name="qs_battery_graph_text_color">#fff44545</color>
     <!-- QS battery accent color -->
-    <color name="qs_battery_accent">#ff2092e7</color>
+    <color name="qs_battery_accent">#fff44545</color>
     <!-- QS edit page background color -->
     <color name="qs_edit_item_decoration_bg">#212121</color>
     <!-- QS alarm status text color -->
-    <color name="qs_alarm_status_text_color">#ff2092e7</color>
+    <color name="qs_alarm_status_text_color">#fff44545</color>
     <!-- External QS tile tint color -->
-    <color name="external_qs_tile_tint_color">#ff2092e7</color>
+    <color name="external_qs_tile_tint_color">#fff44545</color>
  	
     <!-- Quick Settings tiles -->
+    <color name="qs_tile_text">#FFFFFFFF</color>
     <color name="qs_tile_divider">#4285f4</color>
 
     <!-- Pie Dark Accents -->	
-    <color name="pie_select">#ff2092e7</color>
-    <color name="chevron">#ff2092e7</color>
+    <color name="pie_select">#fff44545</color>
+    <color name="chevron">#fff44545</color>
 
 </resources>

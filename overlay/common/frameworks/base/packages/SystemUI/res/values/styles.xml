@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="TextAppearance.NotificationGuts" parent="@*android:style/TextAppearance">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:fontFamily">roboto-regular</item>
+    </style>
+    <style name="TextAppearance.NotificationGuts.Secondary" parent="@*com.android.systemui:style/TextAppearance.NotificationGuts">
+        <item name="android:textColor">#ffdddddd</item>
+    </style>
+    <style name="TextAppearance.NotificationGuts.Primary" parent="@*com.android.systemui:style/TextAppearance.NotificationGuts">
+        <item name="android:textSize">16.sp</item>
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+    <style name="TextAppearance.NotificationGuts.Radio" parent="@*com.android.systemui:style/TextAppearance.NotificationGuts">
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+  <style name="TextAppearance.Volume.Header">
+    <item name="android:textSize">12sp</item>
+    <item name="android:textColor">#FFFFFF</item>
+  </style>
+</resources>
