@@ -20,7 +20,7 @@
         <item name="android:statusBarColor">@*android:color/material_grey_850</item>
         <item name="android:colorPrimary">@*android:color/material_grey_800</item>
         <item name="android:colorPrimaryDark">@*android:color/material_grey_850</item>
-        <item name="android:colorAccent">#afbdc4</item>
+        <item name="android:colorAccent">@*android:color/accent_material_light</item>
 		<item name="android:colorEdgeEffect">@*android:color/accent_material_light</item>
 		<item name="android:navigationBarColor">@*android:color/background_material_dark</item>
 	</style>

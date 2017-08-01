@@ -19,18 +19,18 @@
     <!-- Primary & accent colors -->
     <eat-comment />
 
-    <color name="material_grey_900">#ff000000</color>
-    <color name="material_grey_850">#ff000000</color>
-    <color name="material_grey_800">#ff000000</color>
+    <color name="material_grey_900">#ff424242</color>
+    <color name="material_grey_850">#ff424242</color>
+    <color name="material_grey_800">#ff424242</color>
     <color name="material_grey_600">#ff424242</color>
     <color name="material_grey_300">#ff424242</color>
-    <color name="material_grey_100">#ffcfd8dc</color>
+    <color name="material_grey_100">#ff424242</color>
     <color name="material_grey_50">#ffeceff1</color>
 
     <color name="material_deep_teal_200">#607d8b</color>
     <color name="material_deep_teal_500">#607d8b</color>
 
-    <color name="material_blue_grey_800">#ff000000</color>
-    <color name="material_blue_grey_900">#ff000000</color>
-    <color name="material_blue_grey_950">#ff000000</color>
+    <color name="material_blue_grey_800">#1d1d1d</color>
+    <color name="material_blue_grey_900">#1d1d1d</color>
+    <color name="material_blue_grey_950">#1d1d1d</color>
 </resources>

@@ -202,7 +202,7 @@
     <color name="importance_disabled_slider_color">@*android:color/material_grey_800</color>
     <color name="importance_secondary_slider_color">@*android:color/accent_material_light</color>
 
-    <color name="icon_accent">#afbdc4</color>
+    <color name="icon_accent">@*android:color/accent_material_light</color>
 
     <color name="action_picker_fab_background">@*android:color/background_material_dark</color>
     <color name="text_color_black">@android:color/white</color>

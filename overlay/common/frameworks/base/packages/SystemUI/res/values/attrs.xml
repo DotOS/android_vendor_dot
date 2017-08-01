@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="textAppearance" format="reference" />
+    <attr name="backgroundColor" format="integer" />
+    <attr name="fillColor" format="integer" />
+    <attr name="singleToneColor" format="integer" />
+    <attr name="cardBackgroundColor" format="integer" />
+    <attr name="actionMenuTextColor" format="integer" />
+</resources>

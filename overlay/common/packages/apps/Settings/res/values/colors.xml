@@ -17,7 +17,7 @@
 <resources>
     <color name="icon_accent">#455a64</color>
     <color name="material_empty_color_light">#e0e0e0</color>
-    <color name="switchbar_background_color">#9e9e9e</color>
+    <color name="switchbar_background_color">#d6d6d6</color>
     <color name="switch_accent_color">#455a64</color>
     <color name="running_processes_system_ram">#1e88e5</color>
     <color name="running_processes_apps_ram">#43a047</color>
@@ -71,8 +71,6 @@
     <color name="external_icon_tint">@*com.android.settings:color/icon_accent</color>
 
     <color name="external_tile_icon_tint_color">@*com.android.settings:color/icon_accent</color>
-
-    <color name="rr_config_tab_text_color">#212121</color>
 
     <color name="dt_tab_color">#ffffff</color>
     <color name="dt_tab_text_color">#212121</color>

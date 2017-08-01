@@ -14,7 +14,6 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
   <color name="background_floating_material_dark">@color/material_grey_800</color>
-  <color name="material_grey_800">#ff000000</color>
 
   <!-- Notification action text/button -->
   <color name="secondary_text_material_light">#FFA2A2A2</color>
@@ -26,8 +25,8 @@
   <color name="secondary_text_default_material_dark">#FFFFFFFF</color>
 
   <!-- System - Accents -->
-  <color name="accent_material_light">#212121</color>
-  <color name="accent_material_dark">#85d101</color>
+  <color name="accent_material_light">#4285f4</color>
+  <color name="accent_material_dark">#4285f4</color>
   <color name="app_permission_icon_tint">#ffffffff</color>
 
   <!-- StatusBar Expanded - User Icons -->
@@ -42,21 +41,4 @@
   <color name="user_icon_default_gray">#4285f4</color>
   <color name="user_icon_default_white">#4285f4</color>
 
-  <!-- Notification action button -->
-  <color name="notification_action_list">#1d1e1e</color>
-  <color name="notification_mtrl_big_picture_bg">@color/material_grey_800</color>
-  <color name="system_notification_accent_color">#ffffffff</color>
-  <color name="notification_text_default_color">#ffffffff</color>
-  <color name="sender_text_color">#FFFFFFFF</color>
-  <color name="notification_action_list_dark">#ff2d2d2d</color>
-  <color name="notification_action_color_filter">#ffffffff</color>
-  <color name="notification_default_color">#ffffffff</color>
-  <color name="notification_icon_default_color">#ffffffff</color>
-  <color name="notification_material_background_color">@*android:color/black</color>
-  <color name="notification_media_primary_color">#ffffffff</color>
-  <color name="notification_mtrl_action_textcolor">#ffffffff</color>
-  <color name="notification_template_material_big_picture_background_color">#ff424242</color>
-  <color name="notification_icon_bg_color">@color/accent_material_dark</color>
-  <color name="notification_media_secondary_color">@color/accent_material_dark</color>
-  <color name="notification_progress_background_color">@color/accent_material_dark</color>
 </resources>
