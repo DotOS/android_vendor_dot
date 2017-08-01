@@ -137,7 +137,6 @@ PRODUCT_PACKAGES += \
     DotWizard \
     Eleven \
     ExactCalculator \
-    Jelly \
     LiveLockScreenService \
     LockClock \
     ThemeInterfacer \
@@ -151,7 +150,8 @@ PRODUCT_PACKAGES += \
     Lawnchair \
     DotWalls \
     QKSMS \
-    Gallery2
+    Gallery2 \
+		ViaBrowser
 
 DOT_CHANGELOG := true
 NO_SQUISHER   := true
