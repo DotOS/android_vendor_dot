@@ -151,7 +151,8 @@ PRODUCT_PACKAGES += \
     DotWalls \
     QKSMS \
     Gallery2 \
-		ViaBrowser
+    ViaBrowser \
+    MusicFX
 
 DOT_CHANGELOG := true
 NO_SQUISHER   := true
