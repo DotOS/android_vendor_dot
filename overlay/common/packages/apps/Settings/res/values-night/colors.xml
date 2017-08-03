@@ -168,7 +168,7 @@
     <color name="fingerprint_progress_ring_bg">#20000000</color>
     <color name="fingerprint_indicator_background_resting">#12000000</color>
     <color name="fingerprint_message_color">#ff999999</color>
-    <color name="icon_color">@*android:color/accent_material_light</color>
+    <color name="icon_color">#ededed</color>
     <color name="wifi_divider">#ffe0e0e0</color>
 
     <color name="warning">#D32F2F</color>
@@ -201,8 +201,7 @@
     <color name="expanded_app_title_color">#ffffff</color>
     <color name="importance_disabled_slider_color">@*android:color/material_grey_800</color>
     <color name="importance_secondary_slider_color">@*android:color/accent_material_light</color>
-
-    <color name="icon_accent">@*android:color/accent_material_light</color>
+    <color name="icon_accent">#ededed</color>
 
     <color name="action_picker_fab_background">@*android:color/background_material_dark</color>
     <color name="text_color_black">@android:color/white</color>

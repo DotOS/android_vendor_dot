@@ -80,6 +80,12 @@ PRODUCT_COPY_FILES += \
 # Include Dot audio files
 include vendor/dot/config/cm_audio.mk
 
+ifneq ($(TARGET_NO_DSPMANAGER), true)
+PRODUCT_PACKAGES += \
+    libcyanogen-dsp \
+    audio_effects.conf
+endif
+
 # Theme engine
 include vendor/dot/config/themes_common.mk
 
@@ -131,7 +137,6 @@ PRODUCT_PACKAGES += \
 
 # Custom CM packages
 PRODUCT_PACKAGES += \
-    AudioFX \
     CMSettingsProvider \
     CMUpdater \
     DotWizard \
@@ -151,7 +156,8 @@ PRODUCT_PACKAGES += \
     DotWalls \
     QKSMS \
     Gallery2 \
-		ViaBrowser
+    ViaBrowser \
+    MusicFX
 
 DOT_CHANGELOG := true
 NO_SQUISHER   := true

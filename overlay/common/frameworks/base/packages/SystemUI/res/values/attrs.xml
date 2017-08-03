@@ -5,5 +5,4 @@
     <attr name="fillColor" format="integer" />
     <attr name="singleToneColor" format="integer" />
     <attr name="cardBackgroundColor" format="integer" />
-    <attr name="actionMenuTextColor" format="integer" />
 </resources>
