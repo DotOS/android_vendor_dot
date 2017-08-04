@@ -22,5 +22,6 @@ PRODUCT_BRAND := xiaomi
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_MODEL := Xiaomi Mi5
 
+DEVICE_MAINTAINERS := Zanin Marco (B--B)
 
 WITH_ROOT := true

@@ -20,4 +20,6 @@ PRODUCT_DEVICE := oneplus3
 PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_BRAND := OnePlus
 
+DEVICE_MAINTAINERS := Josh Fox (xlxfoxxlx)
+
 WITH_ROOT := true

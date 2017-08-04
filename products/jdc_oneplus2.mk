@@ -22,5 +22,6 @@ PRODUCT_BRAND := oneplus
 PRODUCT_MANUFACTURER := Oneplus
 PRODUCT_MODEL := Oneplus 2
 
+DEVICE_MAINTAINERS := Muhammad Hamza (MZO9400)
 
 WITH_ROOT := true

@@ -12,6 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# include definitions for SDCLANG
+include vendor/aosp/sdclang/sdclang.mk
+
 include vendor/aosp/config/version.mk
 
 PRODUCT_BRAND ?= JDCTeam
@@ -147,6 +150,3 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_BOOT_JARS += \
     tcmiface
-
-# include definitions for SDCLANG
-include vendor/aosp/sdclang/sdclang.mk

@@ -22,5 +22,6 @@ PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := Samsung
 PRODUCT_MODEL := Samsung Galaxy S4
 
+DEVICE_MAINTAINERS := Zanin Marco (B--B)
 
 WITH_ROOT := true
