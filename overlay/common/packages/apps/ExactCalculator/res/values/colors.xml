@@ -8,11 +8,7 @@
     <color name="pad_numeric_background_color">@*android:color/material_grey_850</color>
     <color name="pad_operator_background_color">@*android:color/material_grey_800</color>
     <color name="pad_advanced_background_color">@*android:color/accent_material_light</color>
-    <color name="pad_advanced_text_color_normal">#FF1d1d1d</color>
-    <color name="pad_advanced_text_color_disabled">#a36b6b6b</color>
     <color name="pad_button_advanced_text_color">@android:color/white</color>
     <color name="pad_button_ripple_color">#a3b4b4b4</color>
     <color name="pad_button_advanced_ripple_color">#a3b4b4b4</color>
-    <color name="calculator_primary_color">@*android:color/material_grey_850</color>
-
 </resources>

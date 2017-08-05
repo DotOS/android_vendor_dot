@@ -60,8 +60,7 @@
     <color name="incall_action_bar_background_color">@*android:color/primary_material_dark</color>
     <color name="button_selected_color">@*android:color/primary_dark_material_dark</color>
     <color name="glowpad_end_call_widget_normal_tint">#ffca3e40</color>
-    <color name="popup_menu_color">@*android:color/primary_material_dark</color>
-
+    
 
     <color name="primtext">#FF1d1d1d</color>
     <color name="sectext">#ff767676</color>
