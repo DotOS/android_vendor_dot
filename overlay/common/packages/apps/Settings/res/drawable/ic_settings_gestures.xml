@@ -6,7 +6,7 @@
     android:viewportHeight="48">
 
     <path
-        android:fillColor="@*com.android.settings:color/icon_accent"
+        android:fillColor="?android:attr/colorAccent"
         android:pathData="M9.19 13.77c1.4-1.43 2.8-2.71 3.43-2.45 .99 .41-.02 2.08-.6 3.05-.5 .84 -5.72
 7.77-5.72 12.62 0 2.56 .95 4.68 2.69 5.96 1.5 1.11 3.47 1.45 5.28 .92 2.14-.63
 3.9-2.79 6.12-5.53 2.42-2.98 5.66-6.88 8.16-6.88 3.26 0 3.3 2.02 3.52 3.59-7.58

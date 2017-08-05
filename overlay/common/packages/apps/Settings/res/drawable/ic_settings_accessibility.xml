@@ -6,10 +6,10 @@
     android:viewportHeight="48">
 
     <path
-        android:fillColor="@*com.android.settings:color/icon_accent"
+        android:fillColor="?android:attr/colorAccent"
         android:pathData="M 24 4 C 26.2091389993 4 28 5.79086100068 28 8 C 28 10.2091389993 26.2091389993 12 24 12 C 21.7908610007 12 20 10.2091389993 20 8 C 20 5.79086100068 21.7908610007 4 24 4 Z" />
     <path
-        android:fillColor="@*com.android.settings:color/icon_accent"
+        android:fillColor="?android:attr/colorAccent"
         android:pathData="M38 26v-4c-3.07 .04
 -6.18-1.5-8.14-3.67l-2.59-2.86c-.35-.38-.77-.68-1.22-.91-.02-.01-.03-.02-.04-.03h-.02c-.69-.4-1.51-.6-2.38-.51-2.08
 .2 -3.61 2.07-3.61 4.16V30c0 2.21 1.79 4 4
