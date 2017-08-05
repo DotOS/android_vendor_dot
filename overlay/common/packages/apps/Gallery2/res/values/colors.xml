@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <color name="primary">@*android:color/primary_material_dark</color>
+    <color name="primary_dark">@*android:color/primary_dark_material_dark</color>
+    <color name="accent">@*android:color/accent_material_dark</color>
+    <color name="fab">@*android:color/accent_material_dark</color>
+
+    <color name="background_screen">@*android:color/material_grey_850</color>
+    <color name="floating_action_button_touch_tint">@*android:color/accent_material_dark</color>
+    <color name="filtershow_background">@*android:color/material_grey_850</color>
+    <color name="material_blue_grey_950">@*android:color/material_grey_850</color>
+
+    <color name="albumset_background">@*android:color/material_grey_850</color>
+    <color name="albumset_placeholder">#2f2f2f</color>
+    <color name="albumset_label_background">#a3000000</color>
+    <color name="albumset_label_title">@android:color/white</color>
+    <color name="albumset_label_count">#ffcacaca</color>
+    <color name="album_background">@*android:color/material_grey_850</color>
+    <color name="album_placeholder">#2f2f2f</color>
+    <color name="photo_background">@*android:color/material_grey_850</color>
+    <color name="photo_placeholder">#2f2f2f</color>
+    <color name="cache_background">@*android:color/material_grey_850</color>
+    <color name="cache_placeholder">#2f2f2f</color>
+    <color name="background_toolbar">@*android:color/material_grey_800</color>
+    <color name="background_main_toolbar">@*android:color/material_grey_800</color>
+    <color name="toolbar_separation_line">@android:color/transparent</color>
+
+    <color name="yellow">#FF113c72</color>
+    <color name="green">#FF1c8c74</color>
+    <color name="red">#FF4cad52</color>
+    <color name="blue">#ffda7c29</color>
+</resources>
