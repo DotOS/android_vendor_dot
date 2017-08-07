@@ -20,12 +20,12 @@
     <color name="system_error">#ffea4335</color> <!-- deep orange 600 -->
 
     <!-- Default user icon colors -->
-    <color name="user_icon_1">#ff5e97f6</color>
-    <color name="user_icon_2">#ff5c6bc0</color>
-    <color name="user_icon_3">#ff26a69a</color>
-    <color name="user_icon_4">#ffec407a</color>
-    <color name="user_icon_5">#ff33ac71</color>
-    <color name="user_icon_8">#ffff7043</color>
+    <color name="user_icon_1">?android:attr/colorAccent</color>
+    <color name="user_icon_2">?android:attr/colorAccent</color>
+    <color name="user_icon_3">?android:attr/colorAccent</color>
+    <color name="user_icon_4">?android:attr/colorAccent</color>
+    <color name="user_icon_5">?android:attr/colorAccent</color>
+    <color name="user_icon_8">?android:attr/colorAccent</color>
 
     <!-- Multi-sim sim colors -->
     <color name="Teal_700">#ff5a9af8</color>
