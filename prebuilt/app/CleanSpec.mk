@@ -14,7 +14,6 @@
 #
 
 $(call add-clean-step, rm -rf $(PRODUCT_OUT)/system/app/An)
-$(call add-clean-step, rm -rf $(PRODUCT_OUT)/system/app/Lawnchair)
 $(call add-clean-step, rm -rf $(PRODUCT_OUT)/system/app/MagiskManager)
 $(call add-clean-step, rm -rf $(PRODUCT_OUT)/system/app/Timber)
 $(call add-clean-step, rm -rf $(PRODUCT_OUT)/system/app/QKSMS)
