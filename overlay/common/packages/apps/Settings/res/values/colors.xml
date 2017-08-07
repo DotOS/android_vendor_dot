@@ -56,7 +56,6 @@
     <color name="theme_accent">@*com.android.settings:color/icon_accent</color>
     <color name="text_color_white">#ffffff</color>
 
-    <color name="dashboard_category_title_background">#ffffff</color>
     <color name="selectable_card_background">#ffffff</color>
     <color name="card_background_grey">#e0e0e0</color>
 
