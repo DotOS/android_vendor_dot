@@ -157,12 +157,13 @@ PRODUCT_PACKAGES += \
 # dotOS Packages
 PRODUCT_PACKAGES += \
     Timber \
-    Lawnchair \
     DotWalls \
     QKSMS \
     Gallery2 \
     ViaBrowser \
-    MusicFX
+    MusicFX \
+    Trebuchet \
+    Lawnchair
 
 DOT_CHANGELOG := true
 NO_SQUISHER   := true
