@@ -38,6 +38,30 @@
 ### Changelog (short)
 
 #### Ongoing changes (Stable 9)...
+* Kernel (Gemini)
+    * General code updates
+    * Reworked thermal setup
+    * Various fixes/enhancements from upstream
+    * Merged CAF tag LA.UM.5.5.r1-05400-8x96.0
+* Kernel (Jflte
+    * General code updates
+*ROM
+    * Update sources to Android 7.1.2 Release 29
+    * Added LED custom configuration settings
+    * Globally merged CAF tag LA.UM.5.5.r1-05400-8x96.0
+    * Frameworks/base - av: various fixes from upstream
+    * CLANG: Move to SDCLANG
+    * SDCLANG: enabled optimizations for various targets
+    * build/Settings/vendor: add DEVICE_MANTAINERS flag, and
+      show device mantainer name under Settings-->Phone Info
+    * Gemini: fixed low audio when recording videos with camera apps
+    * Gemini: update blobs to Miui9 7.8.5
+    * Jf - hw/Samsung: update lights code
+    * base/DeskClock/Bionic: Removed support for power off alarm
+    * vendor/aosp: Overlays: SystemUI: Display warning when temps are questionable
+    * vendor/aosp: Overlays: use round icons by default like Nexus/Pixel devices
+    * Onyx: fixed LatinIME swype feature on Onyx
+    * vendor/aosp: update APNs and sensitive_pn lists
 
 #### Stable 8
 * Kernel (OnePlus 2)
