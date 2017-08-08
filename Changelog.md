@@ -43,11 +43,12 @@
     * Reworked thermal setup
     * Various fixes/enhancements from upstream
     * Merged CAF tag LA.UM.5.5.r1-05400-8x96.0
-* Kernel (Jflte
+* Kernel (Jflte)
     * General code updates
 *ROM
     * Update sources to Android 7.1.2 Release 29
     * Added LED custom configuration settings
+    * Added Status bar Network Trafic monitor
     * Globally merged CAF tag LA.UM.5.5.r1-05400-8x96.0
     * Frameworks/base - av: various fixes from upstream
     * CLANG: Move to SDCLANG
