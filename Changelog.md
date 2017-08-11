@@ -45,7 +45,7 @@
     * Merged CAF tag LA.UM.5.5.r1-05400-8x96.0
 * Kernel (Jflte)
     * General code updates
-*ROM
+* ROM
     * Update sources to Android 7.1.2 Release 29
     * Added LED custom configuration settings
     * Added Status bar Network Traffic monitor
@@ -65,6 +65,7 @@
     * vendor/aosp: update APNs and sensitive_pn lists
     * base: Introduce Accidental Touch feature
     * Jflte: fixed custom Doze feature not appearing under Settings
+    * base: MicroG Project support
 
 #### Stable 8
 * Kernel (OnePlus 2)
