@@ -65,7 +65,6 @@
     * vendor/aosp: update APNs and sensitive_pn lists
     * base: Introduce Accidental Touch feature
     * Jflte: fixed custom Doze feature not appearing under Settings
-    * base: MicroG Project support
 
 #### Stable 8
 * Kernel (OnePlus 2)
