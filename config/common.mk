@@ -19,6 +19,11 @@ include vendor/aosp/config/version.mk
 
 PRODUCT_BRAND ?= JDCTeam
 
+# Use signing keys for user builds
+ifeq ($(TARGET_BUILD_VARIANT),user)
+    PRODUCT_DEFAULT_DEV_CERTIFICATE := vendor/aosp/.keys/release
+endif
+
 # Backup Tool
 PRODUCT_COPY_FILES += \
     vendor/aosp/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
