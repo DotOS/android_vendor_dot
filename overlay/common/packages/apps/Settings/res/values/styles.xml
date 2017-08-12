@@ -6,7 +6,7 @@
         <item name="android:statusBarColor">#ffffff</item>
         <item name="android:navigationBarColor">@*android:color/material_grey_50</item>
         <item name="android:colorAccent">@*com.android.settings:color/icon_accent</item>
-        <item name="android:textColorPrimaryInverse">#212121</item>
+        <item name="android:textColorPrimaryInverse">@*com.android.settings:color/icon_accent</item>
         <item name="android:colorSecondary">#e0e0e0</item>
         <item name="android:colorEdgeEffect">@*com.android.settings:color/icon_accent</item>
     </style>
