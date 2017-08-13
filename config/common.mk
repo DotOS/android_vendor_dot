@@ -148,9 +148,11 @@ PRODUCT_PACKAGES += \
     Eleven \
     ExactCalculator \
     LiveLockScreenService \
+    LockClock \
     ThemeInterfacer \
     Trebuchet \
-    
+    WallpaperPicker \
+    WeatherProvider
 
 # dotOS Packages
 PRODUCT_PACKAGES += \
@@ -162,7 +164,7 @@ PRODUCT_PACKAGES += \
     MusicFX \
     Trebuchet \
     Lawnchair \
-	
+		pixelpill
 
 DOT_CHANGELOG := true
 NO_SQUISHER   := true
