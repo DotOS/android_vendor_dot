@@ -310,5 +310,5 @@ PRODUCT_PACKAGES += \
 
 #Magisk.zip
 PRODUCT_COPY_FILES += \
-    vendor/dot/prebuilt/zips/magisk.zip:system/addon.d/magisk.zip
+    vendor/dot/prebuilt/zips/Magisk.zip:system/addon.d/Magisk.zip
 endif
