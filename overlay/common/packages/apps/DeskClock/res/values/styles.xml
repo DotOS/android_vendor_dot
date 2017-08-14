@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	
+	<style name="AppTheme" parent="@android:style/Theme.Material.Light">
+        <item name="android:windowBackground">@android:color/black</item>
+		<item name="android:colorPrimary">@*android:color/white</item>
+        <item name="android:colorPrimaryDark">#ffeeeeee</item>
+		<item name="android:statusBarColor">#ffeeeeee</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowDisablePreview">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowActionModeOverlay">true</item>
+		<item name="android:windowLightStatusBar">true</item>
+    </style>
+	
+	<style name="ToolbarTheme" parent="@android:style/Theme.Material.Light" />
+    <!-- <style name="ToolbarTitleStyle" parent="@android:style/TextAppearance.Material.Widget.Toolbar.Title">
+        <item name="android:textColor">#ff535353</item>
+    </style> -->
+
+</resources>
