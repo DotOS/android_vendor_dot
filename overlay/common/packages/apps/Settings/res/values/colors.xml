@@ -15,7 +15,7 @@
 -->
 
 <resources>
-    <color name="icon_accent">?android:attr/colorAccent</color>
+    <color name="icon_accent">#455a64</color>
     <color name="material_empty_color_light">#e0e0e0</color>
     <color name="switchbar_background_color">#d6d6d6</color>
     <color name="switch_accent_color">#455a64</color>
