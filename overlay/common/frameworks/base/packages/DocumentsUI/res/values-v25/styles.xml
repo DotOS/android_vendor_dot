@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Platform.V25.AppCompat.Light" parent="@*android:style/Theme.Material.Light">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+		<item name="android:windowLightStatusBar">true</item>
+		<item name="android:statusBarColor">#ffeeeeee</item>
+    </style>
+	
+</resources>

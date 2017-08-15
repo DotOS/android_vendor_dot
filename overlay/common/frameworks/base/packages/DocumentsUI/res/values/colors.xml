@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<color name="primary_dark">#ffeeeeee</color>
+	<color name="primary">@*android:color/white</color>
+	<color name="material_blue_grey_900">@*android:color/accent_material_dark</color> <!-- actionbar -->
+	<color name="status_bar_color">@*android:color/primary_dark_material_dark</color> <!-- statusbar -->
+	<color name="material_blue_grey_950">#ffeeeeee</color> 
+	<color name="item_doc_background">@*android:color/white</color> <!-- card bg -->
+    <color name="item_doc_background_selected">#ffeeeeee</color> <!-- card bg selected -->
+	
+	<color name="ripple_material_light">#20232323</color>
+	
+	<color name="material_deep_teal_500">@*android:color/accent_material_dark</color> <!-- pressed item bottom actionbar line -->
+
+</resources>

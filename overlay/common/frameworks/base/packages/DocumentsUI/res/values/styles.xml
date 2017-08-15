@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Platform.AppCompat.Light" parent="@*android:style/Theme.Material.Light">
+		<item name="android:statusBarColor">#ffeeeeee</item>
+		<item name="android:colorPrimary">@*android:color/white</item>
+		<item name="android:windowLightStatusBar">true</item>
+    </style>
+	
+    <style name="ActionBarTheme" parent="@*android:style/Theme.Material.Light">
+		<item name="android:windowLightStatusBar">true</item>
+    </style>
+	
+	<style name="DocumentsTheme" parent="@*com.android.documentsui:style/Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:windowBackground">@*com.android.documentsui:color/window_background</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:listDivider">@*android:drawable/list_divider_holo_dark</item>
+        <item name="android:windowSoftInputMode">adjustUnspecified|stateUnspecified</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="android:colorControlActivated">?android:colorAccent</item>
+        <item name="android:colorPrimary">@*com.android.documentsui:color/primary</item>
+        <item name="android:colorPrimaryDark">@*com.android.documentsui:color/primary_dark</item>
+        <item name="android:colorAccent">@*com.android.documentsui:color/accent</item>
+        <item name="android:navigationBarColor">@*android:color/black</item>
+        <item name="android:queryBackground">@*com.android.documentsui:color/menu_search_background</item>
+        <item name="*com.android.documentsui:actionBarPopupTheme">@*com.android.documentsui:style/ActionBarPopupTheme</item>
+        <item name="*com.android.documentsui:actionBarTheme">@*com.android.documentsui:style/ActionBarTheme</item>
+        <item name="*com.android.documentsui:actionBarWidgetTheme">@null</item>
+    </style>
+
+</resources>
