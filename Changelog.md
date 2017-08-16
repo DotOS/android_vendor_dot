@@ -65,6 +65,11 @@
     * vendor/aosp: update APNs and sensitive_pn lists
     * base: Introduce Accidental Touch feature
     * Jflte: fixed custom Doze feature not appearing under Settings
+    * Ported lockscreen blur feature
+    * Substratum: update to v819
+    * Update Turbo apk from August images
+    * base: ported bt and AudioService fixes from CAF
+    * Gemini: enable speaker protection and set speaker calibration time to 5 min
 
 #### Stable 8
 * Kernel (OnePlus 2)
