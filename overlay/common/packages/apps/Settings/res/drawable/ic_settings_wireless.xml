@@ -6,7 +6,7 @@
     android:viewportHeight="48">
 
     <path
-        android:fillColor="@*com.android.settings:color/icon_accent"
+        android:fillColor="?android:attr/colorAccent"
         android:pathData="M24.02 42.98L47.28 14c-.9-.68-9.85-8-23.28-8S1.62 13.32 .72 14l23.26 28.98 .02
 .02 .02 -.02z" />
 </vector>
