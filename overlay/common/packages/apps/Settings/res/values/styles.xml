@@ -3,4 +3,19 @@
     <style name="Theme.ActionBar" parent="@android:style/Widget.Material.ActionBar.Solid">
         <item name="android:textColor">#ffffff</item>
     </style>
+    <style name="TextAppearance.Widget.ActionBar.Title" parent="@android:style/TextAppearance.Medium">
+      <item name="android:fontFamily">sans-serif-condensed</item>
+    </style>
+    <style name="TextAppearance.Material.Title" parent="@android:style/TextAppearance.Material">
+          <item name="android:textSize">20.0sp</item>
+          <item name="android:textStyle">bold</item>
+          <item name="android:textAllCaps">true</item>
+          <item name="android:fontFamily">sans-serif-condensed</item>
+    </style>
+    <style name="TitleBarTextColor" parent="@android:style/TextAppearance">
+      <item name="android:textSize">20sp</item>
+      <item name="android:textAllCaps">true</item>
+      <item name="android:fontFamily">sans-serif-condensed</item>
+      <item name="android:textStyle">bold</item>
+    </style>
 </resources>
