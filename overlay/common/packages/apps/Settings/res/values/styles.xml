@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="Theme.ActionBar" parent="@android:style/Widget.Material.ActionBar.Solid">
-        <item name="android:textColor">#ffffff</item>
+        <item name="android:textColor">#828282</item>
     </style>
     <style name="TextAppearance.Widget.ActionBar.Title" parent="@android:style/TextAppearance.Medium">
       <item name="android:fontFamily">sans-serif-condensed</item>
