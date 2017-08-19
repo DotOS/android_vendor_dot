@@ -162,9 +162,8 @@ PRODUCT_PACKAGES += \
     Gallery2 \
     ViaBrowser \
     MusicFX \
-    Trebuchet \
     Lawnchair \
-		pixelpill
+		SoundRecorder
 
 DOT_CHANGELOG := true
 NO_SQUISHER   := true
