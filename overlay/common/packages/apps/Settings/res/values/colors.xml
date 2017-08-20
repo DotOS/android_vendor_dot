@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    color name="condition_card_summary_text_color">#212121</color>
+  <!-- Accent color that matches the settings launcher icon -->
+  <color name="icon_accent">#212121</color>
 </resources>
