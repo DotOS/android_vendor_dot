@@ -10,9 +10,6 @@
         <item name="android:colorSecondary">#e0e0e0</item>
         <item name="android:colorEdgeEffect">@*com.android.settings:color/icon_accent</item>
     </style>
-    <style name="TextAppearance.CategoryTitle" parent="@*android:style/TextAppearance.Material.Small">
-        <item name="android:textColor">@*com.android.settings:color/icon_accent</item>
-    </style>
     <style name="Theme.ActionBar" parent="@android:style/Widget.Material.ActionBar.Solid">
         <item name="android:textColor">@*com.android.settings:color/icon_accent</item>
         <item name="android:background">@android:color/background_light</item>
