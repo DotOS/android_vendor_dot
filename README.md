@@ -1,8 +1,54 @@
-# JDCTeam AOSP vendor configuration
+<p align="center">
+<img src="https://github.com/DotOS/manifest/blob/dot-n/dot%20devs.png" width="290px" height="320px" > 
 
-By AntaresOne and -+BB+-
+Getting Started with making tree for dotOS from LOS
+---------------------------------------------------
+To get started with the building process, you'll need to get familiar with [Git and Repo](http://source.android.com/source/using-repo.html).
 
-Copyright (c) 2015-2017, Jflte DevConnection Team
+To initialize your local repository, use a command like this:
 
-Copyrights (c) 2015, The CyanogenMod Project
+    repo init -u git://github.com/DotOS/manifest.git -b dot-n
 
+Then to sync up:
+
+    repo sync  -f --force-sync --no-clone-bundle
+
+Additionally, you can define the number of parallel download repo should do:
+
+    repo sync -f -jX --force-sync --no-clone-bundle    ( X is the number of parallel download repo should do choose depending on your cpu )
+
+To create tree:
+
+    get a los based tree and open vendorsetup.sh ,lineage.mk and AndroidProducts.mk (if there) and rename all "liniage" or "cm" with "dot"
+
+
+To compile the rom :
+
+	. build/envsetup.sh (choose your preference there )
+   
+    lunch dot_$codename
+   
+  	brunch $codename
+	
+	
+Getting Official Maintainership for dotOS
+-----------------------------------------
+To get Official Maintainership for dotOS you should have a stable device sources
+
+First make a unofficial build of dotOS and post in [**XDA**](xda-developers.com) 
+
+Fill this form up :- [**Maintainership Form**](https://goo.gl/forms/HBamYej6Ia9sdnhF2) 
+Note : You get addded or selected for a single device doesnt give you authority to skip the FORM, and get to maintain other device(s) also. You have to apply again for a new device.
+MAINTAINERSHIP HAS A PROPER CHAIN TO FOLLOW.
+
+After that We will contact you by judging your Un-Official build published on xda
+
+
+
+Join our [**Telegram Channel**](https://t.me/dotOSchannel) and our  [**Telegram group**](https://t.me/dotos)
+
+To publish builds use our Template : [**DotOS XDA Template**](https://github.com/DotOS/XDA_Template-changelogs)
+
+<p align="center">
+<img src="https://github.com/DotOS/manifest/blob/dot-n/dotlogo.png" > 
+</p>

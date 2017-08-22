@@ -34,9 +34,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Set cache location
 ifeq ($(BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE),)
-ADDITIONAL_DEFAULT_PROPERTIES += \
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.device.cache_dir=/data/cache
 else
-ADDITIONAL_DEFAULT_PROPERTIES += \
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.device.cache_dir=/cache
 endif

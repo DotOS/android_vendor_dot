@@ -37,6 +37,7 @@
 
 ### Changelog (short)
 
+<<<<<<< HEAD
 #### Ongoing changes (Stable 9)...
 * Kernel (Gemini)
     * General code updates
@@ -529,3 +530,6 @@
 #### Alpha 1 (20160901)
 
 * Initial public release
+=======
+#### Ongoing changes...
+>>>>>>> 1d4cd92d... Initial O bringup

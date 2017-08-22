@@ -15,7 +15,7 @@
 
 #JDCTeam versioning
 ifndef JDC_BUILD_TYPE
-    JDC_BUILD_TYPE := STABLE
+    JDC_BUILD_TYPE := ALPHA
 endif
 
 JDC_VERSION := $(PLATFORM_VERSION)-$(shell date +%Y%m%d)-$(JDC_BUILD_TYPE)
