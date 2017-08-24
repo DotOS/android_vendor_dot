@@ -13,7 +13,7 @@
 # limitations under the License.
 
 # include definitions for SDCLANG
-include vendor/aosp/sdclang/sdclang.mk
+# include vendor/aosp/sdclang/sdclang.mk
 
 include vendor/aosp/config/version.mk
 
