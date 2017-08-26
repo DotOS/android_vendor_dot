@@ -313,3 +313,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     vendor/dot/prebuilt/zips/Magisk.zip:system/addon.d/Magisk.zip
 endif
+
+# DotExtras
+PRODUCT_PACKAGES += \
+    DotExtras
