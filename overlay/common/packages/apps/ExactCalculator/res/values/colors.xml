@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="calculator_accent_color">#292929</color>
     <color name="calculator_error_color">@*android:color/primary_dark_material_dark</color>
     <color name="display_background_color">@android:color/white</color>
     <color name="display_formula_text_color">#ff767676</color>
