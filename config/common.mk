@@ -50,6 +50,11 @@ PRODUCT_PACKAGES += \
     Substratum \
     ThemeInterfacer
 
+# Themes
+PRODUCT_PACKAGES += \
+    PixelTheme \
+    Stock
+
 # Extra tools
 PRODUCT_PACKAGES += \
     e2fsck \
