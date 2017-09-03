@@ -29,6 +29,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     media.sf.extractor-plugin=libffmpeg_extractor.so \
     ro.storage_manager.enabled=true \
     ro.substratum.verified=true \
+    ro.boot.vendor.overlay.theme=com.google.android.theme.pixel \
     persist.sys.recovery_update=false \
     ro.com.google.ime.theme_id=5
 
