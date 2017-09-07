@@ -64,12 +64,12 @@ function breakfast()
                 variant="userdebug"
             fi
 
-            lunch dot_$target-$variant
-             if [ $? -ne 0 ]; then
-                 # try Lineage
-                 echo "** Warning: '$target' is using Lineage-based makefiles. This will be deprecated in the next major release."
-                 lunch lineage_$target-$variant
-             fi
+            if ! check_product dot_$target && check_product dot_$target; then
+                echo "** Warning: '$target' is using CM-based makefiles. This will be deprecated in the next major release."
+                lunch dot_$target-$variant
+            else
+                lunch dot_$target-$variant
+            fi
         fi
     fi
     return $?
