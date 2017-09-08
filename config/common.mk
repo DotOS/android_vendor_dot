@@ -144,7 +144,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     CMSettingsProvider \
     CMUpdater \
-    DotWizard \
     Eleven \
     ExactCalculator \
     LiveLockScreenService \
