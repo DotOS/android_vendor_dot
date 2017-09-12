@@ -131,7 +131,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     CMSettingsProvider \
     CMUpdater \
-    DotWizard \
     Eleven \
     ExactCalculator \
     LiveLockScreenService \
@@ -263,9 +262,9 @@ DEVICE_PACKAGE_OVERLAYS += vendor/dot/overlay/common
 
 PRODUCT_VERSION = 1.0
 ifneq ($(DOT_BUILDTYPE),)
-DOT_VERSION := DOT-N-v$(PRODUCT_VERSION)-$(shell date -u +%Y%m%d)-$(CM_BUILD)-$(DOT_BUILDTYPE)
+DOT_VERSION := DOT-N-v$(PRODUCT_VERSION)-$(shell date -u +%Y%m%d)-$(DOT_BUILD)-$(DOT_BUILDTYPE)
 else
-DOT_VERSION := DOT-N-v$(PRODUCT_VERSION)-$(shell date -u +%Y%m%d)-$(CM_BUILD)
+DOT_VERSION := DOT-N-v$(PRODUCT_VERSION)-$(shell date -u +%Y%m%d)-$(DOT_BUILD)
 endif
 
 PRODUCT_PROPERTY_OVERRIDES += \
