@@ -272,12 +272,15 @@ endif
 
 DEVICE_PACKAGE_OVERLAYS += vendor/dot/overlay/common
 
-PRODUCT_VERSION = 1.0
-ifneq ($(DOT_BUILDTYPE),)
-DOT_VERSION := DOT-N-v$(PRODUCT_VERSION)-$(shell date -u +%Y%m%d)-$(DOT_BUILD)-$(DOT_BUILDTYPE)
-else
-DOT_VERSION := DOT-N-v$(PRODUCT_VERSION)-$(shell date -u +%Y%m%d)-$(DOT_BUILD)
+PRODUCT_VERSION = v1.0
+ifndef DOT_BUILDTYPE
+    DOT_BUILDTYPE := UNOFFICIAL
+endif 
+
+ifeq ($(DOT_BUILDTYPE), OFFICIAL)
 endif
+
+DOT_VERSION := DOT-N-$(PRODUCT_VERSION)-$(shell date -u +%Y%m%d)-$(DOT_BUILD)-$(DOT_BUILDTYPE)
 
 PRODUCT_PROPERTY_OVERRIDES += \
  ro.dot.version=$(DOT_VERSION) \
