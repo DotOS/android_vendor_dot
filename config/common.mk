@@ -162,7 +162,7 @@ PRODUCT_PACKAGES += \
     ViaBrowser \
     MusicFX \
     Lawnchair \
-		SoundRecorder
+	SoundRecorder
 
 DOT_CHANGELOG := true
 NO_SQUISHER   := true
@@ -284,6 +284,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
  ro.dot.version=$(DOT_VERSION) \
  ro.modversion=$(DOT_VERSION) \
  dot.build.type=$(DOT_BUILDTYPE) \
+ ro.dot.build.version=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR) \
  dot.ota.version= $(shell date +%Y%m%d) \
  ro.substratum.verified=true \
  ro.opa.eligible_device=true
