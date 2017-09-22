@@ -143,7 +143,6 @@ PRODUCT_PACKAGES += \
 # Custom CM packages
 PRODUCT_PACKAGES += \
     CMSettingsProvider \
-    CMUpdater \
     Eleven \
     ExactCalculator \
     LiveLockScreenService \
