@@ -150,18 +150,18 @@ PRODUCT_PACKAGES += \
     ThemeInterfacer \
     Trebuchet \
     WallpaperPicker \
-    WeatherProvider
+    WeatherProvider \
+		Messaging
 
 # dotOS Packages
 PRODUCT_PACKAGES += \
     Eon \
     DotWalls \
-    QKSMS \
     Gallery2 \
     ViaBrowser \
     MusicFX \
     Lawnchair \
-	SoundRecorder
+	  SoundRecorder
 
 DOT_CHANGELOG := true
 NO_SQUISHER   := true
