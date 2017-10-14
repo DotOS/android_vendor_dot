@@ -154,7 +154,7 @@ PRODUCT_PACKAGES += \
 
 # dotOS Packages
 PRODUCT_PACKAGES += \
-    Timber \
+    Eon \
     DotWalls \
     QKSMS \
     Gallery2 \
@@ -275,7 +275,7 @@ DEVICE_PACKAGE_OVERLAYS += vendor/dot/overlay/common
 PRODUCT_VERSION = v1.0
 ifndef DOT_BUILDTYPE
     DOT_BUILDTYPE := UNOFFICIAL
-endif 
+endif
 
 ifeq ($(DOT_BUILDTYPE), OFFICIAL)
 endif

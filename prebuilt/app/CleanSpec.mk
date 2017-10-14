@@ -13,7 +13,6 @@
 # limitations under the License.
 #
 
-$(call add-clean-step, rm -rf $(PRODUCT_OUT)/system/app/An)
 $(call add-clean-step, rm -rf $(PRODUCT_OUT)/system/app/MagiskManager)
-$(call add-clean-step, rm -rf $(PRODUCT_OUT)/system/app/Timber)
+$(call add-clean-step, rm -rf $(PRODUCT_OUT)/system/app/Eon)
 $(call add-clean-step, rm -rf $(PRODUCT_OUT)/system/app/QKSMS)
