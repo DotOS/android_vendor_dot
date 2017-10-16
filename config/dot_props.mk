@@ -36,7 +36,8 @@ PRODUCT_GENERIC_PROPERTIES += \
 
 # Set custom volume steps
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.config.media_vol_steps=30
+    ro.config.media_vol_steps=30 \
+    ro.config.bt_sco_vol_steps=30
 
 # Set cache location
 ifeq ($(BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE),)
