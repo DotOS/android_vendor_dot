@@ -34,6 +34,10 @@ PRODUCT_GENERIC_PROPERTIES += \
     persist.sys.recovery_update=false \
     ro.com.google.ime.theme_id=5
 
+# Set custom volume steps
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.config.media_vol_steps=30
+
 # Set cache location
 ifeq ($(BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE),)
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
