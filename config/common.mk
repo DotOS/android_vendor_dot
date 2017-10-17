@@ -146,17 +146,15 @@ PRODUCT_PACKAGES += \
     Eleven \
     ExactCalculator \
     LiveLockScreenService \
-    LockClock \
     ThemeInterfacer \
-    Trebuchet \
     WallpaperPicker \
     WeatherProvider \
-		Messaging
+		Messaging \
+		Trebuchet
 
 # dotOS Packages
 PRODUCT_PACKAGES += \
     Eon \
-    DotWalls \
     Gallery2 \
     ViaBrowser \
     MusicFX \
