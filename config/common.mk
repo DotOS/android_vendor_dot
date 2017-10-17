@@ -174,6 +174,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     charger_res_images
 
+# Charging sounds
+PRODUCT_COPY_FILES += \
+    vendor/dot/prebuilt/common/media/audio/BatteryPlugged.ogg:system/media/audio/ui/BatteryPlugged.ogg \
+    vendor/dot/prebuilt/common/media/audio/BatteryPlugged_48k.ogg:system/media/audio/ui/BatteryPlugged_48k.ogg
+
 # Recommend using the non debug dexpreopter
 USE_DEX2OAT_DEBUG ?= false
 
