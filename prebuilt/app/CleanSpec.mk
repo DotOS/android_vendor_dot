@@ -15,3 +15,4 @@
 
 $(call add-clean-step, rm -rf $(PRODUCT_OUT)/system/app/MagiskManager)
 $(call add-clean-step, rm -rf $(PRODUCT_OUT)/system/app/Eon)
+$(call add-clean-step, rm -rf $(PRODUCT_OUT)/system/app/DotPapers)

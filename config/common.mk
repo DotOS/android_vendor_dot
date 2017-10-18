@@ -150,6 +150,7 @@ PRODUCT_PACKAGES += \
     WallpaperPicker \
     WeatherProvider \
 		Messaging \
+		DotPapers \
 		Trebuchet
 
 # dotOS Packages
