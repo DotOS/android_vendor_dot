@@ -281,6 +281,20 @@ ifndef DOT_BUILDTYPE
 endif
 
 ifeq ($(DOT_BUILDTYPE), OFFICIAL)
+   CURRENT_DEVICE=$(shell echo "$(TARGET_PRODUCT)" | cut -d'_' -f 2,3)
+   LIST = $(shell curl -s https://raw.githubusercontent.com/DotOS/android_vendor_dot/dot-n/dot.devices)
+   FOUND_DEVICE =  $(filter $(CURRENT_DEVICE), $(LIST))
+    ifeq ($(FOUND_DEVICE),$(CURRENT_DEVICE))
+      IS_OFFICIAL=true
+    endif
+    ifneq ($(IS_OFFICIAL), true)
+       DOT_BUILDTYPE := UNOFFICIAL
+       $(error Device is not official "$(FOUND)")
+    endif
+    PRODUCT_PROPERTY_OVERRIDES += \
+        persist.ota.romname=$(TARGET_PRODUCT) \
+        persist.ota.version=$(shell date +%Y%m%d) \
+        persist.ota.manifest=https://raw.githubusercontent.com/DotOS/services_apps_ota/dot-n/$(shell echo "$(TARGET_PRODUCT)" | cut -d'_' -f 2,3).xml
 endif
 
 DOT_VERSION := DOT-N-$(PRODUCT_VERSION)-$(shell date -u +%Y%m%d)-$(DOT_BUILD)-$(DOT_BUILDTYPE)
