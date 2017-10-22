@@ -149,9 +149,9 @@ PRODUCT_PACKAGES += \
     ThemeInterfacer \
     WallpaperPicker \
     WeatherProvider \
-		Messaging \
-		DotPapers \
-		Trebuchet
+    messaging \
+    DotPapers \
+    Trebuchet
 		
 # Required keyboard packages
 PRODUCT_PACKAGES += \
