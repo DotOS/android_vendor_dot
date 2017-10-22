@@ -152,6 +152,10 @@ PRODUCT_PACKAGES += \
 		Messaging \
 		DotPapers \
 		Trebuchet
+		
+# Required keyboard packages
+PRODUCT_PACKAGES += \
+    LatinIME
 
 # dotOS Packages
 PRODUCT_PACKAGES += \
