@@ -164,7 +164,8 @@ PRODUCT_PACKAGES += \
     ViaBrowser \
     MusicFX \
     Lawnchair \
-	  SoundRecorder
+    SoundRecorder \
+    OmniJaws
 
 DOT_CHANGELOG := true
 NO_SQUISHER   := true
