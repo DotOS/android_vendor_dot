@@ -36,6 +36,10 @@ type Product_variables struct {
 		Cflags []string
 		Cppflags []string
 	}
+
+	Cant_reallocate_omx_buffers struct {
+		Cflags []string
+	}
 }
 
 type ProductVariables struct {
@@ -47,4 +51,5 @@ type ProductVariables struct {
 	TargetUsesQCOMBsp  *bool `json:",omitempty"`
 	TargetUsesQCOMLegacyBsp  *bool `json:",omitempty"`
 	BoardUsesLegacyAlsa  *bool `json:",omitempty"`
+	Cant_reallocate_omx_buffers *bool `json:",omitempty"`
 }

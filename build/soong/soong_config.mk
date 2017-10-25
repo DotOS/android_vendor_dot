@@ -17,6 +17,7 @@ aosp_soong:
 	echo '    "TargetUsesQCOMBsp": $(if $(filter true,$(TARGET_USES_QCOM_BSP)),true,false),'; \
 	echo '    "TargetUsesQCOMLegacyBsp": $(if $(filter true,$(TARGET_USES_QCOM_LEGACY_BSP)),true,false),'; \
 	echo '    "BoardUsesLegacyAlsa": $(if $(filter true,$(BOARD_USES_LEGACY_ALSA_AUDIO)),true,false),'; \
+	echo '    "Cant_reallocate_omx_buffers":  $(if $(filter omap4,$(TARGET_BOARD_PLATFORM)),true,false),';  \
 	echo '    "QCOMAudioPath": "$(call project-path-for,qcom-audio)",'; \
 	echo '    "QCOMCameraPath": "$(call project-path-for,qcom-camera)",'; \
 	echo '    "QCOMDataservicesPath": "$(call project-path-for,qcom-dataservices)",';  \
