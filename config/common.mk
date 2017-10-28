@@ -144,7 +144,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     CMSettingsProvider \
     Eleven \
-    ExactCalculator \
     LiveLockScreenService \
     ThemeInterfacer \
     WallpaperPicker \
@@ -152,7 +151,7 @@ PRODUCT_PACKAGES += \
     messaging \
     DotPapers \
     Trebuchet
-		
+
 # Required keyboard packages
 PRODUCT_PACKAGES += \
     LatinIME
@@ -161,6 +160,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Eon \
     Gallery2 \
+		Clock \
+		Calculator \
     ViaBrowser \
     MusicFX \
     Lawnchair \
