@@ -148,6 +148,12 @@ PRODUCT_PACKAGES += \
     libffmpeg_omx \
     media_codecs_ffmpeg.xml
 
+# DU Utils Library
+PRODUCT_PACKAGES += \
+    org.dirtyunicorns.utils
+
+PRODUCT_BOOT_JARS += \
+    org.dirtyunicorns.utils
 
 # Needed by some RILs and for some Gapps packages
 PRODUCT_PACKAGES += \
