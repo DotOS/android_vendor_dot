@@ -52,7 +52,7 @@ except:
     device = product
 
 if not depsonly:
-    print("Device %s not found. Attempting to retrieve device repository from DotOS Github (http://github.com/DotOS)." % device)
+    print("Device %s not found. Attempting to retrieve device repository from dotOS-Devices Github (http://github.com/dotOS-Devices)." % device)
 
 repositories = []
 
@@ -72,7 +72,7 @@ def add_auth(githubreq):
         githubreq.add_header("Authorization","Basic %s" % githubauth)
 
 if not depsonly:
-    githubreq = urllib.request.Request("https://api.github.com/search/repositories?q=%s+user:DotOS+in:name+fork:true" % device)
+    githubreq = urllib.request.Request("https://api.github.com/search/repositories?q=%s+user:dotOS-Devices+in:name+fork:true" % device)
     add_auth(githubreq)
     try:
         result = json.loads(urllib.request.urlopen(githubreq).read().decode())
@@ -112,9 +112,11 @@ def indent(elem, level=0):
 
 def get_default_revision():
     m = ElementTree.parse(".repo/manifest.xml")
-    d = m.findall('default')[0]
-    r = d.get('revision')
-    return r.replace('refs/heads/', '').replace('refs/tags/', '')
+    for node in m.iter('remote'):
+      d = node.attrib.get('review')
+      if d is not None and "dot" in d:
+         r = node.attrib.get('revision')
+   return r.replace('refs/heads/', '').replace('refs/tags/', '')
 
 def get_from_manifest(devicename):
     try:
@@ -124,7 +126,7 @@ def get_from_manifest(devicename):
         lm = ElementTree.Element("manifest")
 
     for localpath in lm.findall("project"):
-        if re.search("android_device_.*_%s$" % device, localpath.get("name")):
+        if re.search("device_.*_%s$" % device, localpath.get("name")):
             return localpath.get("path")
 
     return None
@@ -151,9 +153,9 @@ def is_in_manifest(projectpath):
         if localpath.get("path") == projectpath:
             return True
 
-    # ... and don't forget the lineage snippet
+    # ... and don't forget the dotos snippet
     try:
-        lm = ElementTree.parse(".repo/manifests/snippets/cm.xml")
+        lm = ElementTree.parse(".repo/manifests/snippets/dot.xml")
         lm = lm.getroot()
     except:
         lm = ElementTree.Element("manifest")
@@ -176,12 +178,12 @@ def add_to_manifest(repositories, fallback_branch = None):
         repo_target = repository['target_path']
         print('Checking if %s is fetched from %s' % (repo_target, repo_name))
         if is_in_manifest(repo_target):
-            print('DotOS/%s already fetched to %s' % (repo_name, repo_target))
+            print('%s already fetched to %s' % (repo_name, repo_target))
             continue
 
-        print('Adding dependency: DotOS/%s -> %s' % (repo_name, repo_target))
+        print('Adding dependency: %s -> %s' % (repo_name, repo_target))
         project = ElementTree.Element("project", attrib = { "path": repo_target,
-            "remote": "github", "name": "LineageOS/%s" % repo_name })
+            "remote": "dot", "name": repo_name})
 
         if 'branch' in repository:
             project.set('revision',repository['branch'])
@@ -219,7 +221,7 @@ def fetch_dependencies(repo_path, fallback_branch = None):
                     fetch_list.append(dependency)
                     syncable_repos.append(dependency['target_path'])
                     verify_repos.append(dependency['target_path'])
-                elif re.search("android_device_.*_.*$", dependency['repository']):
+                elif re.search("device_.*_.*$", dependency['repository']):
                     verify_repos.append(dependency['target_path'])
 
             dependencies_file.close()
@@ -255,10 +257,10 @@ if depsonly:
 else:
     for repository in repositories:
         repo_name = repository['name']
-        if re.match(r"^android_device_[^_]*_" + device + "$", repo_name):
+        if re.match(r"^device_[^_]*_" + device + "$", repo_name):
             print("Found repository: %s" % repository['name'])
             
-            manufacturer = repo_name.replace("android_device_", "").replace("_" + device, "")
+            manufacturer = repo_name.replace("device_", "").replace("_" + device, "")
             
             default_revision = get_default_revision()
             print("Default revision: %s" % default_revision)
@@ -274,7 +276,7 @@ else:
                 result.extend (json.loads(urllib.request.urlopen(githubreq).read().decode()))
             
             repo_path = "device/%s/%s" % (manufacturer, device)
-            adding = {'repository':repo_name,'target_path':repo_path}
+            adding = {'repository': "dotOS-Devices/%s" % repo_name,'target_path':repo_path, 'branch': default_revision}
             
             fallback_branch = None
             if not has_branch(result, default_revision):
@@ -304,4 +306,4 @@ else:
             print("Done")
             sys.exit()
 
-print("Repository for %s not found in the DotOS Github repository list. If this is in error, you may need to manually add it to your local_manifests/roomservice.xml." % device)
+print("Repository for %s not found in the dotOS-Devices Github repository list. If this is in error, you may need to manually add it to your local_manifests/roomservice.xml." % device)
