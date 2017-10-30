@@ -162,7 +162,7 @@ PRODUCT_PACKAGES += \
     Gallery2 \
 		Clock \
 		Calculator \
-    ViaBrowser \
+    Browser \
     MusicFX \
     Lawnchair \
     SoundRecorder \
