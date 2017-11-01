@@ -43,12 +43,18 @@ type Product_variables struct {
 
 	Cant_reallocate_omx_buffers struct {
 		Cflags []string
+        }
+
+	Uses_generic_camera_parameter_library struct {
+		Srcs []string
 	}
 }
 
 type ProductVariables struct {
 	Needs_text_relocations  *bool `json:",omitempty"`
 	Uses_non_treble_camera  *bool `json:",omitempty"`
+	Uses_generic_camera_parameter_library  *bool `json:",omitempty"`
+	Specific_camera_parameter_library  *string `json:",omitempty"`
 	Has_legacy_camera_hal1  *bool `json:",omitempty"`
 	Uses_media_extensions   *bool `json:",omitempty"`
 	BoardUsesQTIHardware  *bool `json:",omitempty"`
