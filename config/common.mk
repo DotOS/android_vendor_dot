@@ -148,8 +148,6 @@ PRODUCT_PACKAGES += \
     ThemeInterfacer \
     WallpaperPicker \
     WeatherProvider \
-    messaging \
-    DotPapers \
     Trebuchet
 
 # Required keyboard packages
@@ -160,8 +158,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Eon \
     Gallery2 \
-		Clock \
-		Calculator \
+	Clock \
+	Calculator \
+	DotPapers \
     Browser \
     MusicFX \
     Lawnchair \
