@@ -298,7 +298,7 @@ ifeq ($(DOT_BUILDTYPE), OFFICIAL)
         persist.ota.manifest=https://raw.githubusercontent.com/DotOS/services_apps_ota/dot-n/$(shell echo "$(TARGET_PRODUCT)" | cut -d'_' -f 2,3).xml
 endif
 
-DOT_VERSION := DOT-N-$(PRODUCT_VERSION)-$(shell date -u +%Y%m%d_%H%M%S)-$(DOT_BUILD)-$(DOT_BUILDTYPE)
+DOT_VERSION := DOT-N-$(PRODUCT_VERSION)-$(shell date -u +%Y%m%d)-$(DOT_BUILD)-$(DOT_BUILDTYPE)
 
 PRODUCT_PROPERTY_OVERRIDES += \
  ro.dot.version=$(DOT_VERSION) \
