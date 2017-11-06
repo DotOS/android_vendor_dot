@@ -165,7 +165,8 @@ PRODUCT_PACKAGES += \
     MusicFX \
     Lawnchair \
     SoundRecorder \
-    OmniJaws
+    OmniJaws \
+    DotOTA
 
 DOT_CHANGELOG := true
 NO_SQUISHER   := true
