@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?><!-- Copyright 2017 Ethan Levy.  All rights reserved. -->
+<alpha android:interpolator="@*android:interpolator/accelerate_quad" android:duration="@*android:integer/config_shortAnimTime" android:fromAlpha="1.0" android:toAlpha="0.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" />
