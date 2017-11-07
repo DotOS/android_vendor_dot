@@ -277,7 +277,8 @@ endif
 
 DEVICE_PACKAGE_OVERLAYS += vendor/dot/overlay/common
 
-PRODUCT_VERSION = v1.0
+PRODUCT_VERSION_MAJOR = 1
+PRODUCT_VERSION_MINOR = 0
 ifndef DOT_BUILDTYPE
     DOT_BUILDTYPE := UNOFFICIAL
 endif
@@ -299,7 +300,7 @@ ifeq ($(DOT_BUILDTYPE), OFFICIAL)
         persist.ota.manifest=https://raw.githubusercontent.com/DotOS/services_apps_ota/dot-n/$(shell echo "$(TARGET_PRODUCT)" | cut -d'_' -f 2,3).xml
 endif
 
-DOT_VERSION := DOT-N-$(PRODUCT_VERSION)-$(shell date -u +%Y%m%d)-$(DOT_BUILD)-$(DOT_BUILDTYPE)
+DOT_VERSION := DOT-N-v$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-$(shell date -u +%Y%m%d)-$(DOT_BUILD)-$(DOT_BUILDTYPE)
 
 PRODUCT_PROPERTY_OVERRIDES += \
  ro.dot.version=$(DOT_VERSION) \
