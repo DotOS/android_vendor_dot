@@ -147,8 +147,12 @@ PRODUCT_PACKAGES += \
     LiveLockScreenService \
     ThemeInterfacer \
     WallpaperPicker \
-    WeatherProvider \
+    WeatherProvider 
+
+ifeq ($(WITH_DOTHOME), true)
+PRODUCT_PACKAGES += \
     Trebuchet
+endif
 
 # Required keyboard packages
 PRODUCT_PACKAGES += \
