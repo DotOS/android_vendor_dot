@@ -147,7 +147,7 @@ PRODUCT_PACKAGES += \
     LiveLockScreenService \
     ThemeInterfacer \
     WallpaperPicker \
-    WeatherProvider 
+    WeatherProvider
 
 ifeq ($(WITH_DOTHOME), true)
 PRODUCT_PACKAGES += \
@@ -162,13 +162,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Eon \
     Gallery2 \
-	Clock \
-	Calculator \
-	DotPapers \
+	  Clock \
+	  Calculator \
+	  DotPapers \
     Browser \
     MusicFX \
     Lawnchair \
-    SoundRecorder \
+    Recorder \
     OmniJaws \
     DotOTA
 
