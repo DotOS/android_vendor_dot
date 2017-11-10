@@ -283,11 +283,11 @@ DEVICE_PACKAGE_OVERLAYS += vendor/dot/overlay/common
 
 PRODUCT_VERSION_MAJOR = 1
 PRODUCT_VERSION_MINOR = 0
-ifndef DOT_BUILDTYPE
+ifndef DOT_OFFICIAL
     DOT_BUILDTYPE := UNOFFICIAL
 endif
 
-ifeq ($(DOT_BUILDTYPE), OFFICIAL)
+ifeq ($(DOT_OFFICIAL), true)
    CURRENT_DEVICE=$(shell echo "$(TARGET_PRODUCT)" | cut -d'_' -f 2,3)
    LIST = $(shell curl -s https://raw.githubusercontent.com/DotOS/android_vendor_dot/dot-n/dot.devices)
    FOUND_DEVICE =  $(filter $(CURRENT_DEVICE), $(LIST))
