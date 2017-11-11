@@ -293,6 +293,7 @@ ifeq ($(DOT_OFFICIAL), true)
    FOUND_DEVICE =  $(filter $(CURRENT_DEVICE), $(LIST))
     ifeq ($(FOUND_DEVICE),$(CURRENT_DEVICE))
       IS_OFFICIAL=true
+      DOT_BUILDTYPE := OFFICIAL
     endif
     ifneq ($(IS_OFFICIAL), true)
        DOT_BUILDTYPE := UNOFFICIAL
