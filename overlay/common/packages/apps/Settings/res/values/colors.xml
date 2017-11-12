@@ -3,11 +3,11 @@
   <!-- Accent color that matches the settings launcher icon -->
   <color name="switchbar_background_color">?android:attr/colorAccent</color>
   <color name="switch_accent_color">#e0e0e0</color>
-  <color name="icon_accent">#303030</color>
-  <color name="exposed_expanded_item">#303030</color>
-  <color name="ic_settings_icons_exposed">#303030</color>
-  <color name="condition_card_icon_color">#303030</color>
-  <color name="material_deep_teal_500">#303030</color>
-  <color name="external_icon_tint">#303030</color>
-  <color name="external_tile_icon_tint_color">#303030</color>
+  <color name="icon_accent">#596d77</color>
+  <color name="exposed_expanded_item">#596d77</color>
+  <color name="ic_settings_icons_exposed">#596d77</color>
+  <color name="condition_card_icon_color">#596d77</color>
+  <color name="material_deep_teal_500">#596d77</color>
+  <color name="external_icon_tint">#596d77</color>
+  <color name="external_tile_icon_tint_color">#596d77</color>
 </resources>
