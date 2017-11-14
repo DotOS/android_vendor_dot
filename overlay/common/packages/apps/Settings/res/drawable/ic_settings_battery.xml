@@ -1,3 +1,25 @@
-<?xml version="1.0" encoding="UTF-8"?><vector xmlns:android="http://schemas.android.com/apk/res/android" android:width="30dp" android:height="30dp" android:viewportWidth="24" android:viewportHeight="24">
-    <path android:strokeColor="?android:attr/colorAccent" android:strokeWidth="1.5" android:strokeLineJoin="round" android:strokeMiterLimit="10" android:strokeLineCap="round" android:pathData="M7,6.2H17c3.2,0,5.8,2.6,5.8,5.8v0c0,3.2-2.6,5.8-5.8,5.8H7c-3.2,0-5.8-2.6-5.8-5.8v0C1.2,8.8,3.8,6.2,7,6.2z M20.6,7.8l-9.9,9.9 M20.2,12l-3.4,3.4"/>
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="99.000000dp"
+    android:height="99.000000dp"
+    android:viewportWidth="99.000000"
+    android:viewportHeight="99.000000">
+
+    <group
+            android:translateY="99.000000"
+            android:scaleX="0.100000"
+            android:scaleY="-0.100000">
+        <path
+            android:fillColor="?android:attr/colorAccent"
+            android:strokeWidth="1"
+            android:pathData="M180 780 l0 -50 -75 0 -75 0 0 -40 0 -40 465 0 465 0 0 40 0 40 -75 0 -75 0 0 50 0
+50 -65 0 -65 0 0 -50 0 -50 -185 0 -185 0 0 50 0 50 -65 0 -65 0 0 -50z" />
+        <path
+            android:fillColor="?android:attr/colorAccent"
+            android:strokeWidth="1"
+            android:pathData="M70 365 l0 -245 425 0 425 0 0 245 0 245 -425 0 -425 0 0 -245z m270 80 l0 -45 40
+0 40 0 0 -55 0 -55 -40 0 -40 0 0 -40 0 -40 -55 0 -55 0 0 40 0 40 -45 0 -45 0 0
+55 0 55 45 0 45 0 0 45 0 45 55 0 55 0 0 -45z m490 -95 l0 -50 -140 0 -140 0 0 50
+0 50 140 0 140 0 0 -50z" />
+    </group>
 </vector>
