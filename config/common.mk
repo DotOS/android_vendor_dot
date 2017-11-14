@@ -168,9 +168,7 @@ PRODUCT_PACKAGES += \
     Browser \
     MusicFX \
     Lawnchair \
-    Recorder \
-    OmniJaws \
-    DotOTA
+    Recorder 
 
 DOT_CHANGELOG := true
 NO_SQUISHER   := true
@@ -294,6 +292,9 @@ ifeq ($(DOT_OFFICIAL), true)
     ifeq ($(FOUND_DEVICE),$(CURRENT_DEVICE))
       IS_OFFICIAL=true
       DOT_BUILDTYPE := OFFICIAL
+      
+      PRODUCT_PACKAGES += \
+      DotOTA
     endif
     ifneq ($(IS_OFFICIAL), true)
        DOT_BUILDTYPE := UNOFFICIAL
