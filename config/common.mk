@@ -160,11 +160,11 @@ PRODUCT_PACKAGES += \
 
 # dotOS Packages
 PRODUCT_PACKAGES += \
-    Eon \
+    Music \
     Gallery2 \
-	  Clock \
-	  Calculator \
-	  DotPapers \
+	Clock \
+	Calculator \
+	DotPapers \
     Browser \
     MusicFX \
     Lawnchair \
