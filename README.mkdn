@@ -29,7 +29,21 @@ To compile the rom :
     lunch dot_$codename
    
   	brunch $codename
-    
+	
+	
+Getting Official Maintainership for dotOS
+-----------------------------------------
+To get Official Maintainership for dotOS you should have a stable device sources
+
+First make a unofficial build of dotOS and post in [**XDA**](xda-developers.com) 
+
+Fill this form up :- [**Maintainership Form**](https://goo.gl/forms/HBamYej6Ia9sdnhF2) 
+
+After that We will contact you judging on your unofficial build published on xda
+
+
+
+
 Join our [**Telegram Channel**](https://t.me/dotOSchannel) and our  [**Telegram group**](https://t.me/dotos)
 
 <p align="center">
