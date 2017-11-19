@@ -38,13 +38,16 @@ To get Official Maintainership for dotOS you should have a stable device sources
 First make a unofficial build of dotOS and post in [**XDA**](xda-developers.com) 
 
 Fill this form up :- [**Maintainership Form**](https://goo.gl/forms/HBamYej6Ia9sdnhF2) 
+Note : You get addded or selected for a single device doesnt give you authority to skip the FORM, and get to maintain other device(s) also. You have to apply again for a new device.
+MAINTAINERSHIP HAS A PROPER CHAIN TO FOLLOW.
 
-After that We will contact you judging on your unofficial build published on xda
-
+After that We will contact you by judging your Un-Official build published on xda
 
 
 
 Join our [**Telegram Channel**](https://t.me/dotOSchannel) and our  [**Telegram group**](https://t.me/dotos)
+
+To publish builds use our Template : [**DotOS XDA Template**](https://github.com/DotOS/XDA_Template-changelogs)
 
 <p align="center">
 <img src="https://github.com/DotOS/manifest/blob/dot-n/dotlogo.png" > 
