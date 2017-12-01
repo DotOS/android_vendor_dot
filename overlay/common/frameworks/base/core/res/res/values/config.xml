@@ -87,9 +87,9 @@
         <item>com.google.android.gms</item>
     </string-array>
 
-    <!-- Control whether Night display is available. This should only be enabled on devices
-         with HWC 2.0 or higher. -->
-    <bool name="config_nightDisplayAvailable">true</bool>
+    <!-- Boolean indicating whether the HWC setColorTransform function can be performed efficiently
+         in hardware. -->
+    <bool name="config_setColorTransformAccelerated">true</bool>
 
     <!-- Control the behavior when the user panic presses the back button.
             0 - Nothing
