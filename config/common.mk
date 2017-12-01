@@ -99,6 +99,11 @@ ifeq ($(WITH_TWRP),true)
 include vendor/cm/config/twrp.mk
 endif
 
+# Build ParanoidCamera
+ ifneq ($(TARGET_USES_AOSP_CAMERA),true)
+ PRODUCT_PACKAGES += ParanoidCamera
+ endif
+
 # Bootanimation
 TARGET_BOOTANIMATION_480P := $(shell \
   if [ $(TARGET_SCREEN_WIDTH) -le 720 ]; then \
