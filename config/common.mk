@@ -293,6 +293,7 @@ endif
 ifeq ($(DOT_OFFICIAL), true)
    CURRENT_DEVICE=$(shell echo "$(TARGET_PRODUCT)" | cut -d'_' -f 2,3)
    LIST = $(shell curl -s https://raw.githubusercontent.com/DotOS/android_vendor_dot/dot-n/dot.devices)
+   DELTA_VER = $(shell curl -s https://raw.githubusercontent.com/DotOS/services_apps_ota/dot-n/delta/delta.xml | sed '5!d')
    FOUND_DEVICE =  $(filter $(CURRENT_DEVICE), $(LIST))
     ifeq ($(FOUND_DEVICE),$(CURRENT_DEVICE))
       IS_OFFICIAL=true
@@ -309,7 +310,8 @@ ifeq ($(DOT_OFFICIAL), true)
         persist.ota.romname=$(TARGET_PRODUCT) \
         persist.ota.version=$(shell date +%Y%m%d) \
         persist.ota.manifest=https://raw.githubusercontent.com/DotOS/services_apps_ota/dot-n/$(shell echo "$(TARGET_PRODUCT)" | cut -d'_' -f 2,3).xml \
-        persist.delta_ota.manifest=https://raw.githubusercontent.com/DotOS/services_apps_ota/dot-n/$(shell echo "$(TARGET_PRODUCT)" | cut -d'_' -f 2,3).xml/delta
+        persist.delta_ota.manifest=https://raw.githubusercontent.com/DotOS/services_apps_ota/dot-n/delta/delta.xml \
+ 	ro.delta.version = $(shell echo "$(DELTA_VER)" | sed 's/<\/\?[^>]\+>//g')
 endif
 
 DOT_VERSION := DOT-N-v$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-$(shell date -u +%Y%m%d)-$(DOT_BUILD)-$(DOT_BUILDTYPE)
