@@ -19,7 +19,7 @@ Additionally, you can define the number of parallel download repo should do:
 
 To create tree:
 
-    get a los based tree and open vendorsetup.sh ,lineage.mk and AndroidProducts.mk (if there) and rename all "liniage" or "cm" with "dot"
+    get a los based tree and open vendorsetup.sh, lineage.mk and AndroidProducts.mk (if there) and rename all "lineage" or "cm" with "dot"
 
 
 To compile the rom :
