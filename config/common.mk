@@ -167,11 +167,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Music \
     Gallery2 \
-	Clock \
-	Calculator \
-	DotPapers \
+    Clock \
+    Calculator \
+    DotPapers \
     Browser \
-    MusicFX \
+    AudioFX \
     Lawnchair \
     Recorder 
 
