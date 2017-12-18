@@ -100,7 +100,7 @@ include vendor/cm/config/twrp.mk
 endif
 
 # Build ParanoidCamera
- ifneq ($(TARGET_USES_AOSP_CAMERA),true)
+ ifeq ($(PA_CAM), true)
  PRODUCT_PACKAGES += ParanoidCamera
  endif
 
