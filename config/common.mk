@@ -154,8 +154,10 @@ PRODUCT_PACKAGES += \
     WallpaperPicker \
     WeatherProvider
 
+ifeq ($(WITH_DOTHOME), true)
 PRODUCT_PACKAGES += \
     Trebuchet
+endif
 
 # Required keyboard packages
 PRODUCT_PACKAGES += \
@@ -170,6 +172,7 @@ PRODUCT_PACKAGES += \
     DotPapers \
     Browser \
     AudioFX \
+    Lawnchair \
     Recorder 
 
 DOT_CHANGELOG := true
