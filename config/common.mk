@@ -100,9 +100,10 @@ include vendor/cm/config/twrp.mk
 endif
 
 # Build ParanoidCamera
- ifeq ($(PA_CAM), true)
- PRODUCT_PACKAGES += ParanoidCamera
- endif
+ifeq ($(PA_CAM),true)
+PRODUCT_PACKAGES += \
+    ParanoidCamera
+endif
 
 # Bootanimation
 TARGET_BOOTANIMATION_480P := $(shell \
