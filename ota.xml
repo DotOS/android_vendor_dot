@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROM>
+  <RomName>DOT_OTA_ROM</RomName>
+  <VersionName>DOT_OTA_VERSION</VersionName>
+  <VersionNumber type="integer">DOT_OTA_VERNUM</VersionNumber>
+  <DirectUrl>DOT_OTA_URL</DirectUrl>
+  <HttpUrl>DOT_HTTP_URL</HttpUrl>
+  <Android>7.1.2</Android>
+  <CheckMD5>DOT_OTA_MD5</CheckMD5>
+  <FileSize type="integer">DOT_OTA_FILESIZE</FileSize>
+  <Changelog>
+    *Check dotOS telegram channel for weekly changelogs.
+  </Changelog>
+</ROM>
