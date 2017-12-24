@@ -14,11 +14,11 @@ cp vendor/dot/ota.xml $start_dir/$device.xml
 
 touch $start_dir/$device.xml
 
-DOT_OTA_MD5=$(cat "$OUT/${DOT_TARGET_PACKAGE}.md5sum" | cut -d ' ' -f 1)
-DOT_OTA_FILESIZE=$(ls -la "$OUT/${DOT_TARGET_PACKAGE}" | cut -d ' ' -f 5)
+DOT_OTA_MD5=$(cat "$(PRODUCT_OUT)/$(DOT_VERSION).zip.md5sum" | cut -d ' ' -f 1)
+DOT_OTA_FILESIZE=$(ls -la "$(PRODUCT_OUT)/$(DOT_VERSION).zip" | cut -d ' ' -f 5)
 DOT_OTA_ROM=dot_"$device"
 DOT_OTA_VERNUM=$(date +%Y%m%d)
-DOT_OTA_URL=https://sourceforge.net/projects/dotos-ota/files/$device/${DOT_TARGET_PACKAGE}
+DOT_OTA_URL=https://sourceforge.net/projects/dotos-ota/files/$device/$(DOT_VERSION).zip
 DOT_HTTP_URL=https://sourceforge.net/projects/dotos-ota/files/$device
 
 sed -i "s/DOT_OTA_ROM/$DOT_OTA_ROM/g" $start_dir/$device.xml
