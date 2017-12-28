@@ -341,7 +341,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 $(call prepend-product-if-exists, vendor/extra/product.mk)
 
 ROOT_METHOD ?= rootless
-ifeq ($(ROOT_METHOD), magisk)
+ifeq ($(ROOT_METHOD),magisk)
 # MAGISK -Systemless Root
 
 PRODUCT_PACKAGES += \
