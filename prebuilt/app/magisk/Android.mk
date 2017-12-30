@@ -1,4 +1,4 @@
-# MagiskManager-v5.4.0
+# MagiskManager-v5.5.2
 
 LOCAL_PATH := $(call my-dir)
 
