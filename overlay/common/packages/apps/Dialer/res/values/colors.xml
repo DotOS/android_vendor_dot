@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary_color">#9b59b6</color>
+    <color name="primary_color_dark">#9b59b6</color>
+    <color name="floating_action_button_icon_color">@android:color/white</color>
+    <color name="dialer_theme_color">#9b59b6</color>
+    <color name="dialer_theme_color_dark">#9b59b6</color>
+    <color name="dialpad_primary_text_color">#474747</color>
+    <color name="dialpad_secondary_text_color">#ff767676</color>
+    <color name="dialpad_digits_text_color">#9b59b6</color>
+    <color name="dialtacts_primary_text_color">#474747</color>
+    <color name="call_log_extras_text_color">#474747</color>
+    <color name="text_highlight_color">#9b59b6</color>
+    <color name="dialer_activity_background">@android:color/white</color>
+    <color name="dialer_dialpad_touch_tint">#9b59b6</color>
+    <color name="background_dialpad">@android:color/white</color>
+    <color name="background_dialer_white">@android:color/white</color>
+    <color name="background_dialer_light">@android:color/white</color>
+    <color name="background_dialer_results">@android:color/white</color>
+    <color name="background_dialer_list_items">@android:color/white</color>
+    <color name="background_dialer_details_list_items">@android:color/white</color>
+    <color name="background_primary">@android:color/white</color>
+    <color name="dialtacts_theme_color">#9b59b6</color>
+    <color name="contact_list_name_text_color">#474747</color>
+    <color name="call_log_action_text">#474747</color>
+    <color name="dialtacts_secondary_text_color">#ff767676</color>
+    <color name="dialer_green_highlight_color">@android:color/holo_green_light</color>
+    <color name="frequently_contacted_title_color">#474747</color>
+    <color name="nofavorite_text_color">#474747</color>
+    <color name="primary_text_color">#474747</color>
+    <color name="undo_dialogue_text_color">#474747</color>
+    <color name="incall_call_banner_text_color">@android:color/white</color>
+    <color name="incall_action_bar_text_color">@android:color/white</color>
+    <color name="call_log_divider">#00ffffff</color>
+    <color name="contact_all_list_background_color">@android:color/white</color>
+    <color name="call_log_expanded_background_color">@android:color/white</color>
+    <color name="holo_list_background_color">@android:color/white</color>
+    <color name="setting_background_color">@android:color/white</color>
+    <color name="incall_background_color">@android:color/white</color>
+    <color name="theme_accent">#9b59b6</color>
+    <color name="incall_accent_color">@android:color/white</color>
+    <color name="dialpad_icon_tint">#474747</color>
+    <color name="incall_banner_secondary_background_color">@android:color/white</color>
+    <color name="incall_banner_secondary_text_color">@android:color/white</color>
+    <color name="incall_dialpad_background">@android:color/white</color>
+    <color name="searchbox_text_color">#474747</color>
+    <color name="searchbox_background_color">@android:color/white</color>
+    <color name="searchbox_hint_text_color">#474747</color>
+    <color name="searchbox_icon_tint">#474747</color>
+    <color name="search_shortcut_background_color">@android:color/white</color>
+    <color name="search_shortcut_icon_color">#9b59b6</color>
+    <color name="recent_call_log_item_phone_icon_tint">#474747</color>
+    <color name="dialer_red_highlight_color">@android:color/holo_red_light</color>
+    <color name="tab_selected_underline_color">@android:color/white</color>
+    <color name="actionbar_unselected_text_color">@android:color/white</color>
+    <color name="incall_dialpad_background_pressed">#a3b4b4b4</color>
+    <color name="tab_ripple_color">#a3b4b4b4</color>
+    <color name="incall_dialpad_touch_tint">#a3b4b4b4</color>
+    <color name="dialpad_separator_line_color">@android:color/transparent</color>
+    <color name="incall_action_bar_background_color">#9b59b6</color>
+    <color name="button_selected_color">#9b59b6</color>
+    <color name="glowpad_end_call_widget_normal_tint">#ffca3e40</color>
+
+
+    <color name="primtext">#474747</color>
+    <color name="sectext">#ff767676</color>
+
+
+    <color name="actionbar_background_color">#9b59b6</color>
+
+    <color name="recent_title_color">#9b59b6</color>
+    <color name="quickcontact_default_photo_tint_color">#9b59b6</color>
+    <color name="quickcontact_default_photo_tint_color_dark">#9b59b6</color>
+    <color name="letter_tile_default_color">#9b59b6</color>
+
+    <color name="screen_bg_color">@android:color/white</color>
+    <color name="actionbar_background_color_dark">#292929</color>
+
+    <color name="item_selected">#a3b4b4b4</color>
+
+    <color name="call_log_voicemail_status_action_text_color">#9b59b6</color>
+    <color name="call_log_header_color">#9b59b6</color>
+    <color name="voicemail_playback_seek_bar_already_played">#9b59b6</color>
+    <color name="quick_msg_footer_text_color">#9b59b6</color>
+    <color name="nav_tab_item_selected_color">#9b59b6</color>
+    <color name="header_background_color">@android:color/white</color>
+    <color name="header_border_color">@android:color/white</color>
+    <color name="header_text_color">@android:color/white</color>
+    <color name="call_log_voicemail_highlight_color">#9b59b6</color>
+    <color name="quick_msg_item_icon_color">#9b59b6</color>
+    <color name="secondary_call_info_divider_highlight_color">#00ffffff</color>
+    <color name="expanding_card_color">@android:color/white</color>
+    <color name="expanding_card_selected_color">@android:color/white</color>
+    <color name="expanding_card_start_gradient">#00ffffff</color>
+
+    <color name="call_log_icon_tint">#474747</color>
+    <color name="call_log_primary_color">#474747</color>
+    <color name="call_log_detail_color">#474747</color>
+    <color name="call_log_voicemail_transcript_color">#474747</color>
+    <color name="call_log_action_color">#474747</color>
+    <color name="call_log_day_group_heading_color">#474747</color>
+    <color name="call_log_unread_text_color">#474747</color>
+    <color name="recent_name_color">#474747</color>
+    <color name="glowpad_incoming_widget_background_tint">#ffffffff</color>
+    <color name="glowpad_incoming_widget_tint">#ffa3a3a3</color>
+    <color name="Teal_700">#9b59b6</color>
+    <color name="Teal_800">@*android:color/accent_material_light</color>
+    <color name="accent_material_dark">#9b59b6</color>
+    <color name="accent_material_light">@*android:color/accent_material_light</color>
+    <color name="Indigo_700">#9b59b6</color>
+    <color name="Indigo_800">@*android:color/accent_material_light</color>
+    <color name="Purple_700">#9b59b6</color>
+    <color name="Purple_800">@*android:color/accent_material_light</color>
+    <color name="Pink_700">#9b59b6</color>
+    <color name="Pink_800">@*android:color/accent_material_light</color>
+    <color name="holo_red_light">#9b59b6</color>
+    <color name="holo_red_dark">@*android:color/accent_material_light</color>
+
+    <color name="incoming_answer_icon">@*android:color/accent_material_light</color>
+    <color name="notification_action_accept">@*android:color/accent_material_light</color>
+    <color name="notification_action_dismiss">#9b9b9b</color>
+    <color name="call_accept_background">@*android:color/accent_material_light</color>
+    <color name="call_hangup_background">#9b9b9b</color>
+
+    <color name="incall_background_gradient_top">#e9626262</color>
+    <color name="incall_background_gradient_middle">#e9626262</color>
+    <color name="incall_background_gradient_bottom">#ccb4b4b4</color>
+
+    <color name="incall_background_multiwindow">#e9626262</color>
+</resources>

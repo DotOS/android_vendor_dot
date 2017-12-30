@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="cardview_default_radius">0.0dip</dimen>
+    <dimen name="cardview_default_elevation">0.0dip</dimen>
+    <dimen name="cardview_compat_inset_shadow">0.0dip</dimen>
+    <dimen name="search_box_elevation">0.0dip</dimen>
+    <dimen name="contact_list_card_elevation">0.0dip</dimen>
+    <dimen name="dialpad_elevation">0.0dip</dimen>
+    <dimen name="tile_divider_width">0.0dip</dimen>
+    <dimen name="contact_tile_divider_width">0.0dip</dimen>
+    <dimen name="in_call_button_dimension">48.0dip</dimen>
+        <dimen name="call_button_margin_vertical">8.0dip</dimen>
+        <dimen name="call_button_margin_horizontal">6.0dip</dimen>
+</resources>
