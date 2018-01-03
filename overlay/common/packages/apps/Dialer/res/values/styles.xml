@@ -2,7 +2,7 @@
 <resources>
     <style name="Platform.AppCompat.Light" parent="@android:style/Theme.Material.Light.LightStatusBar">
         <item name="android:windowNoTitle">true</item>
-        <item name="android:navigationBarColor">@color/actionbar_background_color</item>
+        <item name="android:navigationBarColor">@color/primary_color</item>
         <item name="android:windowActionBar">false</item>
     </style>
     <!--<style name="Theme.InCallScreen" parent="@android:style/Theme.Material.Light.LightStatusBar">
