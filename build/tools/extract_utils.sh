@@ -660,10 +660,15 @@ function oat2dex() {
     local SRC="$3"
     local TARGET=
     local OAT=
+    local HOST="$(uname)"
 
     if [ -z "$BAKSMALIJAR" ] || [ -z "$SMALIJAR" ]; then
         export BAKSMALIJAR="$DOT_ROOT"/vendor/dot/build/tools/smali/baksmali.jar
         export SMALIJAR="$DOT_ROOT"/vendor/dot/build/tools/smali/smali.jar
+    fi
+
+    if [ -z "$VDEXEXTRACTOR" ]; then
+        export VDEXEXTRACTOR="$DOT_ROOT"/vendor/dot/build/tools/"$HOST"/vdexExtractor
     fi
 
     # Extract existing boot.oats to the temp folder
@@ -697,15 +702,33 @@ function oat2dex() {
         local OAT="$(dirname "$OEM_TARGET")/oat/$ARCH/$(basename "$OEM_TARGET" ."${OEM_TARGET##*.}").odex"
 
         if get_file "$OAT" "$TMPDIR" "$SRC"; then
-            java -jar "$BAKSMALIJAR" deodex -o "$TMPDIR/dexout" -b "$BOOTOAT" -d "$TMPDIR" "$TMPDIR/$(basename "$OAT")"
-        elif [[ "$DOT_TARGET" =~ .jar$ ]]; then
-            # try to extract classes.dex from boot.oat for framework jars
-            java -jar "$BAKSMALIJAR" deodex -o "$TMPDIR/dexout" -b "$BOOTOAT" -d "$TMPDIR" -e "/$OEM_TARGET" "$BOOTOAT"
+            if get_file "$VDEX" "$TMPDIR" "$SRC"; then
+                "$VDEXEXTRACTOR" -o "$TMPDIR/" -i "$TMPDIR/$(basename "$VDEX")" > /dev/null
+                mv "$TMPDIR/$(basename "${OEM_TARGET%.*}").apk_classes.dex" "$TMPDIR/classes.dex"
+            else
+                java -jar "$BAKSMALIJAR" deodex -o "$TMPDIR/dexout" -b "$BOOTOAT" -d "$TMPDIR" "$TMPDIR/$(basename "$OAT")"
+                java -jar "$SMALIJAR" assemble "$TMPDIR/dexout" -o "$TMPDIR/classes.dex"
+            fi
+        elif [[ "$LINEAGE_TARGET" =~ .jar$ ]]; then
+            JAROAT="$TMPDIR/system/framework/$ARCH/boot-$(basename ${OEM_TARGET%.*}).oat"
+            JARVDEX="$TMPDIR/system/framework/$ARCH/boot-$(basename ${OEM_TARGET%.*}).vdex"
+            if [ ! -f "$JAROAT" ]; then
+                JAROAT=$BOOTOAT;
+            fi
+
+            # try to extract classes.dex from boot.vdex for frameworks jars
+            # fallback to boot.oat if vdex is not available
+            if [ -f "$JARVDEX" ]; then
+                "$VDEXEXTRACTOR" -o "$TMPDIR/" -i "$JARVDEX" > /dev/null
+                mv "$TMPDIR/boot-$(basename "${OEM_TARGET%.*}").apk_classes.dex" "$TMPDIR/classes.dex"
+            else
+                java -jar "$BAKSMALIJAR" deodex -o "$TMPDIR/dexout" -b "$BOOTOAT" -d "$TMPDIR" "$JAROAT/$OEM_TARGET"
+                java -jar "$SMALIJAR" assemble "$TMPDIR/dexout" -o "$TMPDIR/classes.dex"
+            fi
         else
             continue
         fi
 
-        java -jar "$SMALIJAR" assemble "$TMPDIR/dexout" -o "$TMPDIR/classes.dex" && break
     done
 
     rm -rf "$TMPDIR/dexout"
