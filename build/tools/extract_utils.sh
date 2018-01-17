@@ -45,7 +45,7 @@ trap cleanup EXIT INT TERM ERR
 #
 # $1: device name
 # $2: vendor name
-# $3: JDC root directory
+# $3: DOT root directory
 # $4: is common device - optional, default to false
 # $5: cleanup - optional, default to true
 # $6: custom vendor makefile name - optional, default to false
@@ -66,15 +66,15 @@ function setup_vendor() {
         exit 1
     fi
 
-    export JDC_ROOT="$3"
-    if [ ! -d "$JDC_ROOT" ]; then
-        echo "\$JDC_ROOT must be set and valid before including this script!"
+    export DOT_ROOT="$3"
+    if [ ! -d "$DOT_ROOT" ]; then
+        echo "\$DOT_ROOT must be set and valid before including this script!"
         exit 1
     fi
 
     export OUTDIR=vendor/"$VENDOR"/"$DEVICE"
-    if [ ! -d "$JDC_ROOT/$OUTDIR" ]; then
-        mkdir -p "$JDC_ROOT/$OUTDIR"
+    if [ ! -d "$DOT_ROOT/$OUTDIR" ]; then
+        mkdir -p "$DOT_ROOT/$OUTDIR"
     fi
 
     VNDNAME="$6"
@@ -82,9 +82,9 @@ function setup_vendor() {
         VNDNAME="$DEVICE"
     fi
 
-    export PRODUCTMK="$JDC_ROOT"/"$OUTDIR"/"$VNDNAME"-vendor.mk
-    export ANDROIDMK="$JDC_ROOT"/"$OUTDIR"/Android.mk
-    export BOARDMK="$JDC_ROOT"/"$OUTDIR"/BoardConfigVendor.mk
+    export PRODUCTMK="$DOT_ROOT"/"$OUTDIR"/"$VNDNAME"-vendor.mk
+    export ANDROIDMK="$DOT_ROOT"/"$OUTDIR"/Android.mk
+    export BOARDMK="$DOT_ROOT"/"$OUTDIR"/BoardConfigVendor.mk
 
     if [ "$4" == "true" ] || [ "$4" == "1" ]; then
         COMMON=1
@@ -655,15 +655,15 @@ function get_file() {
 # Convert apk|jar .odex in the corresposing classes.dex
 #
 function oat2dex() {
-    local JDC_TARGET="$1"
+    local DOT_TARGET="$1"
     local OEM_TARGET="$2"
     local SRC="$3"
     local TARGET=
     local OAT=
 
     if [ -z "$BAKSMALIJAR" ] || [ -z "$SMALIJAR" ]; then
-        export BAKSMALIJAR="$JDC_ROOT"/vendor/aosp/build/tools/smali/baksmali.jar
-        export SMALIJAR="$JDC_ROOT"/vendor/aosp/build/tools/smali/smali.jar
+        export BAKSMALIJAR="$DOT_ROOT"/vendor/dot/build/tools/smali/baksmali.jar
+        export SMALIJAR="$DOT_ROOT"/vendor/dot/build/tools/smali/smali.jar
     fi
 
     # Extract existing boot.oats to the temp folder
@@ -683,11 +683,11 @@ function oat2dex() {
         FULLY_DEODEXED=1 && return 0 # system is fully deodexed, return
     fi
 
-    if [ ! -f "$JDC_TARGET" ]; then
+    if [ ! -f "$DOT_TARGET" ]; then
         return;
     fi
 
-    if grep "classes.dex" "$JDC_TARGET" >/dev/null; then
+    if grep "classes.dex" "$DOT_TARGET" >/dev/null; then
         return 0 # target apk|jar is already odexed, return
     fi
 
@@ -698,7 +698,7 @@ function oat2dex() {
 
         if get_file "$OAT" "$TMPDIR" "$SRC"; then
             java -jar "$BAKSMALIJAR" deodex -o "$TMPDIR/dexout" -b "$BOOTOAT" -d "$TMPDIR" "$TMPDIR/$(basename "$OAT")"
-        elif [[ "$JDC_TARGET" =~ .jar$ ]]; then
+        elif [[ "$DOT_TARGET" =~ .jar$ ]]; then
             # try to extract classes.dex from boot.oat for framework jars
             java -jar "$BAKSMALIJAR" deodex -o "$TMPDIR/dexout" -b "$BOOTOAT" -d "$TMPDIR" -e "/$OEM_TARGET" "$BOOTOAT"
         else
@@ -782,7 +782,7 @@ function extract() {
     local HASHLIST=( ${PRODUCT_COPY_FILES_HASHES[@]} ${PRODUCT_PACKAGES_HASHES[@]} )
     local COUNT=${#FILELIST[@]}
     local SRC="$2"
-    local OUTPUT_ROOT="$JDC_ROOT"/"$OUTDIR"/proprietary
+    local OUTPUT_ROOT="$DOT_ROOT"/"$OUTDIR"/proprietary
     local OUTPUT_TMP="$TMPDIR"/"$OUTDIR"/proprietary
 
     if [ "$SRC" = "adb" ]; then
@@ -868,7 +868,7 @@ function extract() {
         local DEST="$OUTPUT_DIR/$FROM"
 
         if [ "$SRC" = "adb" ]; then
-            # Try JDC target first
+            # Try DOT target first
             adb pull "/$TARGET" "$DEST"
             # if file does not exist try OEM target
             if [ "$?" != "0" ]; then
@@ -878,7 +878,7 @@ function extract() {
             # Try OEM target first
             if [ -f "$SRC/$FILE" ]; then
                 cp "$SRC/$FILE" "$DEST"
-            # if file does not exist try JDC target
+            # if file does not exist try DOT target
             elif [ -f "$SRC/$TARGET" ]; then
                 cp "$SRC/$TARGET" "$DEST"
             else
@@ -959,7 +959,7 @@ function extract_firmware() {
     local FILELIST=( ${PRODUCT_COPY_FILES_LIST[@]} )
     local COUNT=${#FILELIST[@]}
     local SRC="$2"
-    local OUTPUT_DIR="$JDC_ROOT"/"$OUTDIR"/radio
+    local OUTPUT_DIR="$DOT_ROOT"/"$OUTDIR"/radio
 
     if [ "$VENDOR_RADIO_STATE" -eq "0" ]; then
         echo "Cleaning firmware output directory ($OUTPUT_DIR).."

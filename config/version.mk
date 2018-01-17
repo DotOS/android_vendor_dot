@@ -1,5 +1,4 @@
-# Copyright (C) 2016 The Pure Nexus Project
-# Copyright (C) 2016 The JDCTeam
+# Copyright (C) 2018 Project dotOS
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,12 +12,24 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-#JDCTeam versioning
-ifndef JDC_BUILD_TYPE
-    JDC_BUILD_TYPE := ALPHA
+#dotOS Versioning :
+DOT_VERSION = v2.0
+
+ifndef DOT_BUILD_TYPE
+    DOT_BUILD_TYPE := UNOFFICIAL
+    PLATFORM_VERSION_CODENAME := UNOFFICIAL
 endif
 
-JDC_VERSION := $(PLATFORM_VERSION)-$(shell date +%Y%m%d)-$(JDC_BUILD_TYPE)
+
+DOT_MOD_VERSION := DotOS-$(DOT_VERSION)-$(shell date -u +%Y%m%d-%H%M)-$(DOT_BUILD_TYPE)
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.jdc.version=$(JDC_VERSION)
+  ro.dot.version=$(DOT_VERSION) \
+  ro.dot.releasetype=$(DOT_BUILD_TYPE) \
+  ro.modversion=$(DOT_MOD_VERSION)
+
+# For Unofficial builds  
+DOT_DISPLAY_VERSION := DotOS-$(DOT_VERSION)-$(DOT_BUILD_TYPE)
+
+PRODUCT_PROPERTY_OVERRIDES += \
+  ro.dot.display.version=$(DOT_DISPLAY_VERSION)  

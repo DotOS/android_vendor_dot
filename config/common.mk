@@ -1,4 +1,4 @@
-# Copyright (C) 2016 The JDCTeam
+# Copyright (C) 2018 Project dotOS 
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,37 +13,32 @@
 # limitations under the License.
 
 # include definitions for SDCLANG
-# include vendor/aosp/sdclang/sdclang.mk
+# include vendor/dot/sdclang/sdclang.mk
 
-include vendor/aosp/config/version.mk
 
-PRODUCT_BRAND ?= JDCTeam
+PRODUCT_BRAND ?= DOT
 
-# Use signing keys for user builds
-ifeq ($(TARGET_BUILD_VARIANT),user)
-    PRODUCT_DEFAULT_DEV_CERTIFICATE := vendor/aosp/.keys/release
-endif
 
 # Backup Tool
 PRODUCT_COPY_FILES += \
-    vendor/aosp/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
-    vendor/aosp/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
-    vendor/aosp/prebuilt/common/bin/50-base.sh:system/addon.d/50-base.sh \
+    vendor/dot/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
+    vendor/dot/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
+    vendor/dot/prebuilt/common/bin/50-base.sh:system/addon.d/50-base.sh \
 
 # Bootanimation
 PRODUCT_COPY_FILES += \
-    vendor/aosp/prebuilt/common/bootanimation/bootanimation.zip:system/media/bootanimation.zip
+    vendor/dot/prebuilt/common/bootanimation/bootanimation.zip:system/media/bootanimation.zip
 
 
 DEVICE_PACKAGE_OVERLAYS += \
-    vendor/aosp/overlay/common \
-    vendor/aosp/overlay/dictionaries
+    vendor/dot/overlay/common \
+    vendor/dot/overlay/dictionaries
 
 # EXT4/F2FS format script
 PRODUCT_COPY_FILES += \
-    vendor/aosp/prebuilt/common/bin/format.sh:install/bin/format.sh
+    vendor/dot/prebuilt/common/bin/format.sh:install/bin/format.sh
 
-# Custom JDCTeam packages
+# Custom dotOS packages
 PRODUCT_PACKAGES += \
     BluetoothExt \
     Jelly \
@@ -51,11 +46,9 @@ PRODUCT_PACKAGES += \
     Launcher3 \
     LiveWallpapers \
     LiveWallpapersPicker \
-    OTAUpdates \
     Stk \
     Substratum \
-    ThemeInterfacer \
-    Turbo
+    ThemeInterfacer
 
 # Extra tools
 PRODUCT_PACKAGES += \
@@ -88,28 +81,20 @@ PRODUCT_PACKAGES += \
 
 # Backup Services whitelist
 PRODUCT_COPY_FILES += \
-    vendor/aosp/config/permissions/backup.xml:system/etc/sysconfig/backup.xml
+    vendor/dot/config/permissions/backup.xml:system/etc/sysconfig/backup.xml
 
-# For keyboard gesture typing
-ifneq ($(filter jdc_jflte jdc_onyx,$(TARGET_PRODUCT)),)
-PRODUCT_COPY_FILES += \
-    vendor/aosp/prebuilt/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinime.so
-else
-PRODUCT_COPY_FILES += \
-    vendor/aosp/prebuilt/common/lib64/libjni_latinimegoogle.so:system/lib64/libjni_latinime.so
-endif
 
 # init.d support
 PRODUCT_COPY_FILES += \
-    vendor/aosp/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner
+    vendor/dot/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner
 
-# JDC-specific init file
+# dotOS-specific init file
 PRODUCT_COPY_FILES += \
-    vendor/aosp/prebuilt/common/etc/init.local.rc:root/init.jdc.rc
+    vendor/dot/prebuilt/common/etc/init.local.rc:root/init.dot.rc
 
 # Copy over added mimetype supported in libcore.net.MimeUtils
 PRODUCT_COPY_FILES += \
-    vendor/aosp/prebuilt/common/lib/content-types.properties:system/lib/content-types.properties
+    vendor/dot/prebuilt/common/lib/content-types.properties:system/lib/content-types.properties
 
 # Enable SIP+VoIP on all targets
 PRODUCT_COPY_FILES += \
@@ -125,11 +110,8 @@ PRODUCT_PACKAGES += \
     libffmpeg_omx \
     media_codecs_ffmpeg.xml
 
-# Changelog
-PRODUCT_COPY_FILES += \
-    vendor/aosp/Changelog.md:system/etc/Changelog.md
 
-# Needed by some RILs and for some gApps packages
+# Needed by some RILs and for some Gapps packages
 PRODUCT_PACKAGES += \
     librsjni \
     libprotobuf-cpp-full
@@ -140,11 +122,3 @@ PRODUCT_PACKAGES += \
 
 # Recommend using the non debug dexpreopter
 USE_DEX2OAT_DEBUG ?= false
-
-# Magisk
-ifeq ($(WITH_ROOT),true)
- PRODUCT_COPY_FILES += \
-    vendor/aosp/prebuilt/common/magisk/Magisk.zip:install/magisk/Magisk.zip
-else
-$(warning Root method is undefined, please use 'WITH_ROOT := true' to define it)
-endif

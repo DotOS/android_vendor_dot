@@ -1,4 +1,4 @@
-# Copyright (C) 2016 The JDCTeam
+# Copyright (C) 2018 Project dotOS 
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,4 +12,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-PRODUCT_MAKEFILES := $(wildcard vendor/aosp/products/jdc_*.mk)
+# Inherit common dotOS stuff
+$(call inherit-product, vendor/dot/config/common.mk)
+
+$(call inherit-product, vendor/dot/config/dot_props.mk)
+
+$(call inherit-product, vendor/dot/config/telephony.mk)
+
+$(call inherit-product, vendor/dot/config/version.mk)
