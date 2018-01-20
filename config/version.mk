@@ -13,23 +13,22 @@
 # limitations under the License.
 
 #dotOS Versioning :
-DOT_VERSION = v2.0
+DOT_MOD_VERSION = v2.1
+
 
 ifndef DOT_BUILD_TYPE
     DOT_BUILD_TYPE := UNOFFICIAL
-    PLATFORM_VERSION_CODENAME := UNOFFICIAL
 endif
 
+DOT_VERSION := DotOS-$(DOT_MOD_VERSION)-$(shell date -u +%Y%m%d)-$(DOT_BUILD_TYPE)
 
-DOT_MOD_VERSION := DotOS-$(DOT_VERSION)-$(shell date -u +%Y%m%d-%H%M)-$(DOT_BUILD_TYPE)
 
 PRODUCT_PROPERTY_OVERRIDES += \
   ro.dot.version=$(DOT_VERSION) \
   ro.dot.releasetype=$(DOT_BUILD_TYPE) \
   ro.modversion=$(DOT_MOD_VERSION)
 
-# For Unofficial builds  
-DOT_DISPLAY_VERSION := DotOS-$(DOT_VERSION)-$(DOT_BUILD_TYPE)
+DOT_DISPLAY_VERSION := DotOS-$(DOT_MOD_VERSION)-$(DOT_BUILD_TYPE)
 
 PRODUCT_PROPERTY_OVERRIDES += \
   ro.dot.display.version=$(DOT_DISPLAY_VERSION)  

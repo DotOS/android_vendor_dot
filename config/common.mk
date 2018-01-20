@@ -16,8 +16,9 @@
 # include vendor/dot/sdclang/sdclang.mk
 
 
-PRODUCT_BRAND ?= DOT
+PRODUCT_BRAND ?= DotOS
 
+include vendor/dot/config/version.mk
 
 # Backup Tool
 PRODUCT_COPY_FILES += \
