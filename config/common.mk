@@ -42,14 +42,14 @@ PRODUCT_COPY_FILES += \
 # Custom dotOS packages
 PRODUCT_PACKAGES += \
     BluetoothExt \
-    Jelly \
     LatinIME \
     Launcher3 \
     LiveWallpapers \
     LiveWallpapersPicker \
     Stk \
     Substratum \
-    ThemeInterfacer
+    ThemeInterfacer \
+    Recorder 
 
 # Themes
 PRODUCT_PACKAGES += \

@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://github.com/DotOS/manifest/blob/dot-n/dot%20devs.png" width="290px" height="320px" > 
+<img src="https://raw.githubusercontent.com/samgrande/XDA_Template/master/vendorart.png" > 
 
 Getting Started with making tree for dotOS from LOS
 ---------------------------------------------------
