@@ -49,7 +49,8 @@ PRODUCT_PACKAGES += \
     Stk \
     Substratum \
     ThemeInterfacer \
-    Recorder 
+    Recorder \
+    Music 
 
 # Themes
 PRODUCT_PACKAGES += \
