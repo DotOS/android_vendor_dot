@@ -64,7 +64,8 @@ PRODUCT_PACKAGES += \
     Substratum \
     ThemeInterfacer \
     Recorder \
-    Music 
+    Music \
+    Browser
 
 # Themes
 PRODUCT_PACKAGES += \
