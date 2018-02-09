@@ -70,7 +70,13 @@ PRODUCT_PACKAGES += \
 # Themes
 PRODUCT_PACKAGES += \
     PixelTheme \
-    Stock
+    Stock \
+    GreenTheme \
+    PinkTheme \
+    PurpleTheme \
+    RedTheme \
+    SkyTheme \
+    YellowTheme \
 
 # Extra tools
 PRODUCT_PACKAGES += \
