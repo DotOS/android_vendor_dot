@@ -160,3 +160,6 @@ PRODUCT_PACKAGES += \
 
 # Recommend using the non debug dexpreopter
 USE_DEX2OAT_DEBUG ?= false
+
+#Telephony
+$(call inherit-product, vendor/dot/config/telephony.mk)
