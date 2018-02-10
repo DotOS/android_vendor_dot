@@ -65,7 +65,8 @@ PRODUCT_PACKAGES += \
     ThemeInterfacer \
     Recorder \
     Music \
-    Browser
+    Browser \
+    DotPapers 
 
 # Themes
 PRODUCT_PACKAGES += \
@@ -76,7 +77,7 @@ PRODUCT_PACKAGES += \
     PurpleTheme \
     RedTheme \
     SkyTheme \
-    YellowTheme \
+    YellowTheme 
 
 # Extra tools
 PRODUCT_PACKAGES += \
