@@ -27,6 +27,7 @@ aosp_soong:
 	echo '    "QCOMDisplayPath": "$(call project-path-for,qcom-display)",';  \
 	echo '    "QCOMGPSPath": "$(call project-path-for,qcom-gps)",';  \
 	echo '    "QCOMMediaPath": "$(call project-path-for,qcom-media)",';  \
-	echo '    "QCOMSensorsPath": "$(call project-path-for,qcom-sensors)"';  \
+	echo '    "QCOMSensorsPath": "$(call project-path-for,qcom-sensors)",';  \
+	echo '    "Target_shim_libs": "$(TARGET_LD_SHIM_LIBS)"'; \
 	echo '},'; \
 	echo '') > $(SOONG_VARIABLES_TMP)
