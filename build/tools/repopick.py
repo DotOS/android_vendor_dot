@@ -240,7 +240,7 @@ if __name__ == '__main__':
     #{project: {path, revision}}
 
     for project in projects:
-        name = project.get('name')
+        name = ("DotOS/")+project.get('name')
         path = project.get('path')
         revision = project.get('revision')
         if revision is None:
@@ -389,9 +389,9 @@ if __name__ == '__main__':
                 print('Trying to fetch the change from GitHub')
 
             if args.pull:
-                cmd = ['git pull --no-edit github', item['fetch'][method]['ref']]
+                cmd = ['git pull --no-edit dot', item['fetch'][method]['ref']]
             else:
-                cmd = ['git fetch github', item['fetch'][method]['ref']]
+                cmd = ['git fetch dot', item['fetch'][method]['ref']]
             if args.quiet:
                 cmd.append('--quiet')
             else:
