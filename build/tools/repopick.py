@@ -240,7 +240,7 @@ if __name__ == '__main__':
     #{project: {path, revision}}
 
     for project in projects:
-        name = project.get('name')
+        name = ("DotOS/")+project.get('name')
         path = project.get('path')
         revision = project.get('revision')
         if revision is None:
