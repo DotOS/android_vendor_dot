@@ -66,7 +66,8 @@ PRODUCT_PACKAGES += \
     Recorder \
     Music \
     Browser \
-    DotPapers 
+    DotPapers \
+    DotUICenter
 
 # Themes
 PRODUCT_PACKAGES += \
