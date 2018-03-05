@@ -78,7 +78,11 @@ PRODUCT_PACKAGES += \
     PurpleTheme \
     RedTheme \
     SkyTheme \
-    YellowTheme 
+    YellowTheme \
+    SettingsDarkThemeOverlay \
+    SettingsBlackThemeOverlay \
+    SystemDarkThemeOverlay \
+    SystemBlackThemeOverlay
 
 # Extra tools
 PRODUCT_PACKAGES += \
