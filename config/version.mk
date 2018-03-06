@@ -24,7 +24,7 @@ ifeq ($(DOT_BETA),true)
     DOT_BUILD_TYPE := BETA
 endif
 
-ifdef DOT_BUILD_TYPE
+ifdef DOT_OFFICIAL
    CURRENT_DEVICE=$(shell echo "$(TARGET_PRODUCT)" | cut -d'_' -f 2,3)
    LIST = $(shell curl -s https://raw.githubusercontent.com/DotOS/android_vendor_dot/dot-o/dot.devices)
    FOUND_DEVICE =  $(filter $(CURRENT_DEVICE), $(LIST))
