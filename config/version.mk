@@ -35,7 +35,7 @@ ifdef DOT_BUILD_TYPE
       #PRODUCT_PACKAGES += \
       #DotOTA
     endif
-    ifneq ($(IS_OFFICIAL), true)
+    ifeq ($(IS_OFFICIAL), true)
        DOT_BUILD_TYPE := UNOFFICIAL
        $(error Device is not official "$(FOUND)")
     endif
