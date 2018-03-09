@@ -1,9 +1,9 @@
 # Insert new variables inside the Aosp structure
-aosp_soong:
+dot_soong:
 	$(hide) mkdir -p $(dir $@)
 	$(hide) (\
 	echo '{'; \
-	echo '"Aosp": {'; \
+	echo '"Dot": {'; \
 	echo '    "Uses_generic_camera_parameter_library": $(if $(TARGET_SPECIFIC_CAMERA_PARAMETER_LIBRARY),false,true),'; \
 	echo '    "Specific_camera_parameter_library": "$(TARGET_SPECIFIC_CAMERA_PARAMETER_LIBRARY)",'; \
 	echo '    "Needs_text_relocations": $(if $(filter true,$(TARGET_NEEDS_PLATFORM_TEXT_RELOCATIONS)),true,false),'; \
@@ -12,7 +12,8 @@ aosp_soong:
 	echo '    "Uses_media_extensions": $(if $(filter true,$(TARGET_USES_MEDIA_EXTENSIONS)),true,false),'; \
 	echo '    "BTVendorPath": "$(call project-path-for,bt-vendor)",'; \
 	echo '    "RILPath": "$(call project-path-for,ril)",'; \
-	echo '    "WLANPath": "$(call project-path-for,wlan)"'; \
+	echo '    "WLANPath": "$(call project-path-for,wlan)",'; \
+	echo '    "Target_shim_libs": "$(TARGET_LD_SHIM_LIBS)"'; \
 	echo '},'; \
 	echo '"Qualcomm": {'; \
 	echo '    "BoardUsesQTIHardware": $(if $(filter true,$(BOARD_USES_QTI_HARDWARE)),true,false),'; \
@@ -27,7 +28,6 @@ aosp_soong:
 	echo '    "QCOMDisplayPath": "$(call project-path-for,qcom-display)",';  \
 	echo '    "QCOMGPSPath": "$(call project-path-for,qcom-gps)",';  \
 	echo '    "QCOMMediaPath": "$(call project-path-for,qcom-media)",';  \
-	echo '    "QCOMSensorsPath": "$(call project-path-for,qcom-sensors)",';  \
-	echo '    "Target_shim_libs": "$(TARGET_LD_SHIM_LIBS)"'; \
+	echo '    "QCOMSensorsPath": "$(call project-path-for,qcom-sensors)"';  \
 	echo '},'; \
 	echo '') > $(SOONG_VARIABLES_TMP)
