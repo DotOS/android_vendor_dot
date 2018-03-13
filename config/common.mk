@@ -67,7 +67,8 @@ PRODUCT_PACKAGES += \
     Music \
     Browser \
     DotPapers \
-    InterfaceCenter
+    InterfaceCenter \
+    SystemUpdates
 
 # Themes
 PRODUCT_PACKAGES += \
