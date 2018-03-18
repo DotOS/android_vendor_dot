@@ -35,7 +35,7 @@ ifneq ($(IS_OFFICIAL), true)
        $(error Device is not official "$(FOUND)")
 endif
 
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_GENERIC_PROPERTIES += \
     persist.ota.romname=$(TARGET_PRODUCT) \
     persist.ota.version=$(shell date +%Y%m%d) \
 
@@ -44,12 +44,12 @@ endif
 
 DOT_VERSION := dotOS-O-$(DOT_MOD_VERSION)-$(CURRENT_DEVICE)-$(DOT_BUILD_TYPE)-$(shell date -u +%Y%m%d)
 
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_GENERIC_PROPERTIES += \
   ro.dot.version=$(DOT_VERSION) \
   ro.dot.releasetype=$(DOT_BUILD_TYPE) \
   ro.modversion=$(DOT_MOD_VERSION)
 
 DOT_DISPLAY_VERSION := DotOS-$(DOT_MOD_VERSION)-$(DOT_BUILD_TYPE)
 
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_GENERIC_PROPERTIES += \
   ro.dot.display.version=$(DOT_DISPLAY_VERSION)
