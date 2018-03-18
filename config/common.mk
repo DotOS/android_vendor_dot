@@ -154,7 +154,7 @@ PRODUCT_PACKAGES += \
     media_codecs_ffmpeg.xml
 
 # Media
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_GENERIC_PROPERTIES += \
     media.recorder.show_manufacturer_and_model=true
 
 # DU Utils Library
