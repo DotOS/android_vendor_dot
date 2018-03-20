@@ -32,9 +32,6 @@ ifdef DOT_OFFICIAL
       IS_OFFICIAL=true
       DOT_BUILD_TYPE := OFFICIAL
 
-PRODUCT_PACKAGES += \
-    SystemUpdates
-
 endif
 
 ifneq ($(IS_OFFICIAL), true)
