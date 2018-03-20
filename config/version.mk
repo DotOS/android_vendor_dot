@@ -32,18 +32,15 @@ ifdef DOT_OFFICIAL
       IS_OFFICIAL=true
       DOT_BUILD_TYPE := OFFICIAL
 
-endif
-
-ifneq ($(IS_OFFICIAL), true)
+    endif
+    ifneq ($(IS_OFFICIAL), true)
        DOT_BUILD_TYPE := UNOFFICIAL
        $(error Device is not official "$(FOUND)")
-endif
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.ota.romname=$(TARGET_PRODUCT) \
-    persist.ota.version=$(shell date +%Y%m%d) \
-
-persist.ota.manifest=https://raw.githubusercontent.com/DotOS/services_apps_ota/dot-o/$(shell echo "$(TARGET_PRODUCT)" | cut -d'_' -f 2,3).xml
+    endif
+    PRODUCT_PROPERTY_OVERRIDES += \
+        persist.ota.romname=$(TARGET_PRODUCT) \
+        persist.ota.version=$(shell date +%Y%m%d) \
+    	persist.ota.manifest=https://raw.githubusercontent.com/DotOS/services_apps_ota/dot-o/$(shell echo "$(TARGET_PRODUCT)" | cut -d'_' -f 2,3).xml
 endif
 
 DOT_VERSION := DotOS-$(DOT_MOD_VERSION)-$(shell date -u +%Y%m%d)-$(DOT_BUILD_TYPE)
