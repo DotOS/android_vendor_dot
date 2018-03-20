@@ -31,7 +31,7 @@ ifdef DOT_OFFICIAL
     ifeq ($(FOUND_DEVICE),$(CURRENT_DEVICE))
       IS_OFFICIAL=true
       DOT_BUILD_TYPE := OFFICIAL
-
+    endif
 endif
 
 ifneq ($(IS_OFFICIAL), true)
