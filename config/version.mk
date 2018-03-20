@@ -20,8 +20,9 @@ ifndef DOT_BUILD_TYPE
     DOT_BUILD_TYPE := UNOFFICIAL
 endif
 
+CURRENT_DEVICE=$(shell echo "$(TARGET_PRODUCT)" | cut -d'_' -f 2,3)
+
 ifeq ($(DOT_OFFICIAL), true)
-   CURRENT_DEVICE=$(shell echo "$(TARGET_PRODUCT)" | cut -d'_' -f 2,3)
    LIST = $(shell curl -s https://raw.githubusercontent.com/DotOS/android_vendor_dot/dot-o/dot.devices)
    FOUND_DEVICE =  $(filter $(CURRENT_DEVICE), $(LIST))
     ifeq ($(FOUND_DEVICE),$(CURRENT_DEVICE))
@@ -41,8 +42,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 persist.ota.manifest=https://raw.githubusercontent.com/DotOS/services_apps_ota/dot-o/$(shell echo "$(TARGET_PRODUCT)" | cut -d'_' -f 2,3).xml
 endif
 
-DOT_VERSION := DotOS-$(DOT_MOD_VERSION)-$(shell date -u +%Y%m%d)-$(DOT_BUILD_TYPE)
-
+DOT_VERSION := dotOS-O-$(DOT_MOD_VERSION)-$(TARGET_DEVICE)-$(DOT_BUILD_TYPE)-$(shell date -u +%Y%m%d)
 
 PRODUCT_PROPERTY_OVERRIDES += \
   ro.dot.version=$(DOT_VERSION) \
