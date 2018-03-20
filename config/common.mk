@@ -175,3 +175,6 @@ USE_DEX2OAT_DEBUG ?= false
 
 #Telephony
 $(call inherit-product, vendor/dot/config/telephony.mk)
+
+#Include dot_props
+$(call inherit-product, vendor/dot/config/dot_props.mk)
