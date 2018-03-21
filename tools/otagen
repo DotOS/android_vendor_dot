@@ -14,6 +14,8 @@ cp vendor/dot/ota.xml $start_dir/$device.xml
 
 touch $start_dir/$device.xml
 
+source build/envsetup.sh
+
 DOT_VERSION=$(get_build_var DOT_VERSION)
 
 DOT_OTA_MD5=$(cat "$OUT/$DOT_VERSION.zip.md5sum" | cut -d ' ' -f 1)
