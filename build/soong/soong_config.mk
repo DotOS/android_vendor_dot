@@ -13,7 +13,8 @@ dot_soong:
 	echo '    "BTVendorPath": "$(call project-path-for,bt-vendor)",'; \
 	echo '    "RILPath": "$(call project-path-for,ril)",'; \
 	echo '    "WLANPath": "$(call project-path-for,wlan)",'; \
-	echo '    "Target_shim_libs": "$(subst $(space),:,$(TARGET_LD_SHIM_LIBS))"'; \
+	echo '    "Target_shim_libs": "$(subst $(space),:,$(TARGET_LD_SHIM_LIBS))",'; \
+	echo '    "Uses_qti_camera_device": $(if $(filter true,$(TARGET_USES_QTI_CAMERA_DEVICE)),true,false)'; \
 	echo '},'; \
 	echo '"Qualcomm": {'; \
 	echo '    "BoardUsesQTIHardware": $(if $(filter true,$(BOARD_USES_QTI_HARDWARE)),true,false),'; \
