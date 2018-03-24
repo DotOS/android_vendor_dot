@@ -129,8 +129,8 @@ PRODUCT_COPY_FILES += \
 
 # Bring in camera effects
 PRODUCT_COPY_FILES +=  \
-    vendor/dot/prebuilt/common/media/LMspeed_508.emd:system/vendor/media/LMspeed_508.emd \
-    vendor/dot/prebuilt/common/media/PFFprec_600.emd:system/vendor/media/PFFprec_600.emd
+    vendor/dot/prebuilt/common/media/LMspeed_508.emd:system/media/LMspeed_508.emd \
+    vendor/dot/prebuilt/common/media/PFFprec_600.emd:system/media/PFFprec_600.emd
 
 # Copy over added mimetype supported in libcore.net.MimeUtils
 PRODUCT_COPY_FILES += \
