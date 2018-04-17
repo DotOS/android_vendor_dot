@@ -68,7 +68,8 @@ PRODUCT_PACKAGES += \
     Browser \
     DotPapers \
     InterfaceCenter \
-    SystemUpdates
+    SystemUpdates \
+    OmniJaws
 
 # Themes
 PRODUCT_PACKAGES += \
