@@ -1,3 +1,4 @@
+
 <p align="center">
 <img src="https://raw.githubusercontent.com/samgrande/XDA_Template/master/vendorart.png" > 
 
@@ -7,7 +8,7 @@ To get started with the building process, you'll need to get familiar with [Git 
 
 To initialize your local repository, use a command like this:
 
-    repo init -u git://github.com/DotOS/manifest.git -b dot-n
+    repo init -u git://github.com/DotOS/manifest.git -b dot-o
 
 Then to sync up:
 
