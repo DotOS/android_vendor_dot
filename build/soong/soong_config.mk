@@ -21,6 +21,7 @@ $(call add_json_bool, Uses_qti_camera_device, $(filter true,$(TARGET_USES_QTI_CA
 $(call add_json_bool, Apply_msm8974_1440p_egl_workaround, $(filter true,$(TARGET_MSM8974_1440P_EGL_WORKAROUND)))
 $(call add_json_val_default, Bootloader_message_offset, $(BOOTLOADER_MESSAGE_OFFSET), 0)
 $(call add_json_bool, Uses_metadata_as_fde_key, $(filter true,$(TARGET_USES_METADATA_AS_FDE_KEY)))
+$(call add_json_bool, Uses_nvidia_enhancements, $(filter TRUE,$(NV_ANDROID_FRAMEWORK_ENHANCEMENTS)))
 
 # This causes the build system to strip out the last comma in our nested struct, to keep the JSON valid.
 _contents := $(_contents)__SV_END
