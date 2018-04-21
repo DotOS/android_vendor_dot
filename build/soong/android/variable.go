@@ -59,6 +59,9 @@ type Product_variables struct {
 	Uses_metadata_as_fde_key struct {
 		Cflags []string
 	}
+	Uses_nvidia_enhancements struct {
+		Cppflags []string
+	}
 }
 
 type ProductVariables struct {
@@ -78,4 +81,5 @@ type ProductVariables struct {
 	Apply_msm8974_1440p_egl_workaround  *bool `json:",omitempty"`
 	Bootloader_message_offset  *int `json:",omitempty"`
 	Uses_metadata_as_fde_key  *bool `json:",omitempty"`
+	Uses_nvidia_enhancements  *bool `json:",omitempty"`
 }
