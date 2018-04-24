@@ -2,42 +2,50 @@
 <img src="https://raw.githubusercontent.com/samgrande/XDA_Template/master/vendorart.png" > 
 
 Getting Started with making tree for dotOS from LOS
----------------------------------------------------
+==================================================
 To get started with the building process, you'll need to get familiar with [Git and Repo](http://source.android.com/source/using-repo.html).
 
 To initialize your local repository, use a command like this:
 
+```bash
     repo init -u git://github.com/DotOS/manifest.git -b dot-o
+```
 
 Then to sync up:
 
+```bash
     repo sync  -f --force-sync --no-clone-bundle
+```
 
 Additionally, you can define the number of parallel download repo should do:
 
-    repo sync -f -jX --force-sync --no-clone-bundle    ( X is the number of parallel download repo should do choose depending on your cpu )
+```bash
+	repo sync -f -jX --force-sync --no-clone-bundle    ( X is the number of parallel download repo should do choose depending on your cpu )
+```
 
 To create tree:
 
-    get a los based tree and open vendorsetup.sh ,lineage.mk and AndroidProducts.mk (if there) and rename all "liniage" or "cm" with "dot"
-
+```bash
+    get a los based tree and open vendorsetup.sh ,lineage.mk and AndroidProducts.mk (if there) and rename all "lineage" or "cm" with "dot"
+```
 
 To compile the rom :
 
+```bash
 	. build/envsetup.sh (choose your preference there )
-   
-    lunch dot_$codename
-   
-  	brunch $codename
 	
+	lunch dot_devicecodename
 	
+	brunch devicecodename
+```
+-----------------------------------------	
 Getting Official Maintainership for dotOS
------------------------------------------
-To get Official Maintainership for dotOS you should have a stable device sources
+==========================================
+To get Official Maintainership for dotOS you should have a stable device source with all the main components working.
 
-First make a unofficial build of dotOS and post in [**XDA**](xda-developers.com) 
+First make an unofficial build of dotOS and post in [**XDA**](xda-developers.com) 
 
-Fill this form up :- [**Maintainership Form**](https://goo.gl/forms/HBamYej6Ia9sdnhF2) 
+Fill this form up :- [**Maintainership Form**](https://docs.google.com/forms/d/e/1FAIpQLSdbeHxHxOedRxUM9tHBAv4kXiDFoJ99lUp0MxniFAo7eOrYbA/viewform) 
 
 Note : You get addded or selected for a single device. To maintain another device you will need to fill up the Maintainership FORM again
 
@@ -49,11 +57,11 @@ Join our [**Telegram Channel**](https://t.me/dotOSchannel) and our  [**Telegram 
 
 To publish builds use our Template : [**DotOS XDA Template**](https://github.com/DotOS/XDA_Template-changelogs)
 
+----------------------------
 
-
-## Submitting Patches ##
-------------------
-DotOS poject is an open source, any patches/contributions are always welcome !
+Submitting Patches
+==================
+DotOS is an open source project thus any patches/contributions are always welcome !
 
 To begin with, you need to login to our code review system at [dotOS Code Review](https://gerrit.droidontime.com)
 
@@ -70,25 +78,31 @@ Add the generated SSH key (the contents of id_rsa.pub file) to your gerrit accou
 
 You can upload the patches/contributions for review process using following procedure:
 
-```
+```bash
 git clone PROJECT
 ```
+
 For Example -  git clone http://gerrit.droidontime.com/DotOS/android_packages_apps_Settings
-```
+
+```bash
 cd CLONED_DIRECTORY
 ```
 
 Make the changes you wish to add for review and execute following commands,
-```
+
+```bash
 git add -A
 git commit -m "commit message"
 ```
+
 Commit message should be clear, well written and easy to understand.
 
 If you have satisfied with the changes you made then you can upload the patchset to gerrit.
-```
+
+```bash
 git push ssh://USERNAME@gerrit.droidontime.com:29418/PROJECT_NAME HEAD:refs/for/dot-o
 ```
+
 Here the PROJECT_NAME is the path to repository on gerrit. You can find the PROJECT_NAME by navingating to the `Projects` section on gerrit.
 
 For example - DotOS/android_packages_apps_Settings
@@ -96,11 +110,14 @@ For example - DotOS/android_packages_apps_Settings
 It is recommended that you commit your several relevent patches in to one single commit.
 
 Squash multiple commits using this command:
-```
+
+```bash
 git rebase -i HEAD~<# of commits>
 ```
+
 If you are going to make extra changes to an existing patch, Don't start a new patch, instead
-```
+
+```bash
 git add .
 
 git commit --amend
@@ -118,3 +135,4 @@ If you encounter any issues, feel free to contact us on our [Telegram channel](h
 <img src="https://github.com/DotOS/manifest/blob/dot-n/dotlogo.png" > 
 
 </p>
+
