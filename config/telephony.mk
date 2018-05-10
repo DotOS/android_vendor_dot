@@ -14,4 +14,6 @@ PRODUCT_PACKAGES += \
 
 # Default ringtone
 PRODUCT_GENERIC_PROPERTIES += \
-    ro.config.ringtone=Orion.ogg
+    ro.config.ringtone=Zen_too.ogg\
+    ro.config.notification_sound=Mallet.ogg \
+    ro.config.alarm_alert=Bright_morning.ogg
