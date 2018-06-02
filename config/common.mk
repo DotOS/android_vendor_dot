@@ -80,6 +80,11 @@ PRODUCT_PACKAGES += \
     RedTheme \
     SkyTheme \
     YellowTheme \
+    GreyTheme \
+    LemonTheme \
+    OrangeTheme \
+    OxygenTheme \
+    VioletTheme \
     SettingsDarkThemeOverlay \
     SettingsBlackThemeOverlay \
     SystemDarkThemeOverlay \
