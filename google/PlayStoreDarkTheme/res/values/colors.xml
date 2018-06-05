@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Accents-->
+    <color name="account_email_primary_color">#ff0f9d58</color>   <!--OG:#ff009688-->
+    <color name="content_filter_v3_primary_color">#ff0f9d58</color>   <!--OG:#ff009688-->
+    <color name="detail_primary_text">#ff0f9d58</color>   <!--OG:#ff009688-->
+    <color name="fingerprint_success_color">#ff0f9d58</color>   <!--OG:#ff009688-->
+    <color name="highlighted_text_material_light">#660f9d58</color>   <!--OG:#66009688-->
+    <color name="material_deep_teal_500">#ff0f9d58</color>   <!--OG:#ff009688-->
+    <color name="play_uninstall_wizard_button_text_color">#ff0f9d58</color>   <!--OG:#ff009688-->
+    <!--The Rest-->
+    <color name="background_floating_material_light">#ff000000</color>   <!--OG:@android:color/white-->
+    <color name="background_material_light">#ff000000</color>   <!--OG:@color/material_grey_50-->
+    <color name="bright_foreground_disabled_material_light">#80ffffff</color>   <!--OG:#80000000-->
+    <color name="bright_foreground_material_light">#ffffffff</color>   <!--OG:@android:color/black-->
+    <color name="button_material_dark">#ff0f9d58</color>   <!--OG:#ff5a595b-->
+    <color name="content_filter_email_text">#ffffffff</color>   <!--OG:#de000000-->
+    <color name="dark_text">#ffffffff</color>   <!--OG:@android:color/black-->
+    <color name="flat_card_cluster_header_title_text_color">#ffffffff</color>   <!--OG:#ff616161-->
+    <color name="flat_card_cluster_light_background">#ff000000</color>   <!--OG:#ffffffff-->
+    <color name="flat_overflow_menu_fill_color">#33ffffff</color>   <!--OG:#33000000-->
+    <color name="flat_overflow_menu_fill_color_dark">#8affffff</color>   <!--OG:#8a000000-->
+    <color name="flat_overflow_menu_fill_color_dark_theme">#66000000</color>   <!--OG:#66ffffff-->
+    <color name="foreground_material_light">#ffffffff</color>   <!--OG:@android:color/black-->
+    <color name="light_text">#61ffffff</color>   <!--OG:61000000-->
+    <color name="material_grey_600">#ffb2b2b2</color>   <!--OG:#ff757575-->
+    <color name="material_grey_900">#ff999999</color>   <!--OG:#ff212121-->
+    <color name="play_banner_light_fg">#ff000000</color>   <!--OG:#ffffffff-->
+    <color name="play_card_light_background">#ff000000</color>   <!--OG:#fffafafa-->
+    <color name="play_drawer_separator">#00000000</color>   <!--OG:#ffe5e5e5-->
+    <color name="play_fg_primary">#ffffffff</color>   <!--OG:#ff212121-->
+    <color name="play_fg_secondary">#ffdddddd</color>   <!--OG:#ff616161-->
+    <color name="play_fg_secondary_half_transparent">#70999999</color>   <!--OG:#70616161-->
+    <color name="play_main_background">#ff000000</color>   <!--OG:#ffeeeeee-->
+    <color name="play_search_plate_navigation_button_color">#ffffffff</color>   <!--OG:#ff616161-->
+    <color name="play_white">#ff000000</color>   <!--OG:#ffffffff-->
+    <color name="primary_material_light">#ff000000</color>   <!--OG:@color/material_grey_100-->
+    <color name="primary_text_default_material_light">#ffffffff</color>   <!--OG:#de000000-->
+    <color name="primary_text_disabled_material_light">#4dffffff</color>   <!--OG:#39000000-->
+    <color name="review_question_bg">#00000000</color>   <!--OG:#fff2f2f2-->
+    <color name="review_question_option_text">#ff999999</color>   <!--OG:#ff6d6d6d-->
+    <color name="secondary_text_default_material_light">#b3ffffff</color>   <!--OG:#8a000000-->
+    <color name="secondary_text_disabled_material_light">#36ffffff</color>   <!--OG:#24000000-->
+    <color name="setup_wizard_navbar_text_light">#deffffff</color>   <!--OG:#de000000-->
+    <color name="whatsnew_apps">#00000000</color>   <!--OG:#ffe2f3eb-->
+    <color name="white">#ff000000</color>   <!--LUL-->
+    <!--Settings Page-->
+    <color name="family_library_setup_primary">#ff000000</color>   <!--OG:#ff455a64-->
+    <color name="play_multi_primary">#ff0f9d58</color>   <!--OG:#ff455a64-->
+    <color name="play_multi_primary_disabled">#800f9d58</color>   <!--OG:#80455a64-->
+    <color name="play_multi_secondary">#ff000000</color>   <!--OG:#ff455a64-->
+</resources>

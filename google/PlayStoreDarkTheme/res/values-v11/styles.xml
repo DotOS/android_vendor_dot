@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!--Under-the-hood Text Changes-->
+    <style name="Platform.V11.AppCompat.Light" parent="@*android:style/Theme.Holo" />
+    <style name="FinskyBaseDialogTheme" parent="@*android:style/Theme.Material.Dialog">
+        <item name="android:textColorPrimary">#ffffffff</item>
+        <item name="android:textColorSecondary">#ffdddddd</item>
+    </style>
+    <style name="TrampolineTheme" parent="@*android:style/Theme.Material.Panel">
+        <item name="android:textColorPrimary">#ffffffff</item>
+        <item name="android:textColorSecondary">#ffdddddd</item>
+    </style>
+</resources>

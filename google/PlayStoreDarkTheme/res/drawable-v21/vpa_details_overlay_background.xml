@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<inset android:insetLeft="@*com.android.vending:dimen/setup_wizard_app_details_overlay_margin" android:insetRight="@*com.android.vending:dimen/setup_wizard_app_details_overlay_margin" android:insetTop="@*com.android.vending:dimen/setup_wizard_app_details_overlay_margin" android:insetBottom="@*com.android.vending:dimen/setup_wizard_app_details_overlay_margin"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <shape android:shape="rectangle">
+        <corners android:radius="2.0dip" />
+        <solid android:color="@*android:color/background_floating_material_dark" />
+    </shape>
+</inset>
