@@ -88,7 +88,9 @@ PRODUCT_PACKAGES += \
     SettingsDarkThemeOverlay \
     SettingsBlackThemeOverlay \
     SystemDarkThemeOverlay \
-    SystemBlackThemeOverlay
+    SystemBlackThemeOverlay \
+    PlayStoreDarkTheme \
+    GBoardDark  
 
 # Extra tools
 PRODUCT_PACKAGES += \

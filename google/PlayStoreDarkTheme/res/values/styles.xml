@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="PlayMediumPlainText" parent="@*com.android.vending:style/PlayPlainText" />
+    <style name="PlayDrawerProfileNameText" parent="@*com.android.vending:style/PlayMediumPlainText">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+    <style name="PlaySearchPlate">
+        <item name="android:background">@*android:color/black</item>
+        <item name="android:paddingLeft">@*com.android.vending:dimen/play_search_plate_padding_side</item>
+        <item name="android:paddingRight">@*com.android.vending:dimen/play_search_plate_padding_side</item>
+    </style>
+    <style name="PlayPlainText" />
+    <style name="PlayDrawerBaseText" parent="@*com.android.vending:style/PlayMediumPlainText">
+        <item name="android:textSize">@*com.android.vending:dimen/play_drawer_primary_size</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">@*com.android.vending:dimen/play_drawer_item_left_padding</item>
+        <item name="android:paddingRight">@*com.android.vending:dimen/play_drawer_item_right_padding</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">@*com.android.vending:dimen/play_drawer_item_primary_min_height</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:drawablePadding">32.0dip</item>
+    </style>
+    <style name="PlayDrawerProfileEmailText" parent="@*com.android.vending:style/PlayPlainText">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textColor">#ffdddddd</item>
+    </style>
+    <style name="PlayDrawerSelectedText" parent="@*com.android.vending:style/PlayDrawerBaseText">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">#ff555555</item>
+        <item name="android:paddingLeft">16.0dip</item>
+        <item name="android:paddingRight">16.0dip</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">48.0dip</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:drawablePadding">32.0dip</item>
+    </style>
+    <style name="Platform.AppCompat.Light" parent="@*android:style/Theme.Material">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+    </style>
+    <style name="SettingsTheme" parent="@*android:style/Theme.Material" />
+    <style name="Theme.Base.InstrumentManager.Light" parent="@*android:style/Theme.Holo.NoActionBar" />
+
+
+    <style name="PlayClusterSubtitle" parent="@*com.android.vending:style/PlayPlainText">
+       <item name="android:textSize">@*com.android.vending:dimen/play_cluster_header_subtitle_size</item>
+       <item name="android:textColor">#ffffffff</item>
+       <item name="android:ellipsize">marquee</item>
+       <item name="android:maxLines">1</item>
+       <item name="android:singleLine">true</item>
+    </style>
+    <style name="PlayCardLabel" parent="@*com.android.vending:style/PlayPlainText">
+       <item name="android:textSize">@*com.android.vending:dimen/play_medium_size</item>
+       <item name="android:textColor">#ffffffff</item>
+       <item name="android:gravity">center</item>
+       <item name="android:background">@null</item>
+       <item name="android:layout_width">wrap_content</item>
+       <item name="android:layout_height">wrap_content</item>
+       <item name="android:minWidth">0.0dip</item>
+       <item name="android:minHeight">0.0dip</item>
+       <item name="android:maxLines">1</item>
+       <item name="android:singleLine">true</item>
+       <item name="android:drawablePadding">4.0dip</item>
+    </style>
+    <style name="PlayHighlightLabel" parent="@*com.android.vending:style/PlayMediumPlainText">
+       <item name="android:textSize">11.0sp</item>
+       <item name="android:textColor">#ffffffff</item>
+       <item name="android:background">@*android:color/black</item>
+       <item name="android:paddingLeft">2.0dip</item>
+       <item name="android:paddingTop">0.0dip</item>
+       <item name="android:paddingRight">2.0dip</item>
+       <item name="android:paddingBottom">1.0dip</item>
+       <item name="android:layout_width">wrap_content</item>
+       <item name="android:layout_height">wrap_content</item>
+       <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="Play_Purchase_Button" parent="@*com.android.vending:style/PlayPlainText">
+       <item name="android:textSize">@*com.android.vending:dimen/play_purchase_secondary_size</item>
+       <item name="android:textStyle">bold</item>
+       <item name="android:textColor">#ffffffff</item>
+       <item name="android:gravity">center</item>
+       <item name="android:paddingTop">1.0dip</item>
+       <item name="android:paddingBottom">1.0dip</item>
+       <item name="android:focusable">true</item>
+       <item name="android:layout_width">wrap_content</item>
+       <item name="android:layout_height">wrap_content</item>
+       <item name="android:minWidth">@*com.android.vending:dimen/standard_button_minwidth</item>
+       <item name="android:minHeight">@*com.android.vending:dimen/standard_button_minheight</item>
+    </style>
+    <style name="PlayCardDescription" parent="@*com.android.vending:style/PlayPlainText">
+        <item name="android:textSize">@*com.android.vending:dimen/play_medium_size</item>
+        <item name="android:textColor">#ffdddddd</item>
+        <item name="android:singleLine">false</item>
+        <item name="com.android.vending:lastLineOverdrawColor">@*android:color/black</item>
+    </style>
+
+    <style name="QuicklinksCircleTitle" parent="@*com.android.vending:style/PlayMediumPlainText">
+        <item name="android:textSize">12.0sp</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:gravity">center</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:lineSpacingExtra">0.0sp</item>
+    </style>
+    <style name="PlayCardAction" parent="@*com.android.vending:style/PlayMediumPlainText">
+        <item name="android:textSize">@*com.android.vending:dimen/play_card_action_size</item>
+    </style>
+    <style name="QuicklinksPillTitle" parent="@*com.android.vending:style/PlayCardAction">
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">16.0dip</item>
+        <item name="android:paddingTop">8.0dip</item>
+        <item name="android:paddingRight">16.0dip</item>
+        <item name="android:paddingBottom">8.0dip</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="QuicklinksPillView">
+        <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">6.0dip</item>
+        <item name="android:paddingTop">8.0dip</item>
+        <item name="android:paddingRight">6.0dip</item>
+        <item name="android:paddingBottom">8.0dip</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">48.0dip</item>
+        <item name="android:minWidth">64.0dip</item>
+    </style>
+    <style name="OnboardTab" parent="@*com.android.vending:style/PlayMediumBoldText">
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="PlayMediumBoldText" parent="@*com.android.vending:style/PlayGridBoldText" />
+    <style name="PlayGridBoldText">
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="HighlightBannerOverlaySubtitle" parent="@*com.android.vending:style/PlayPlainText">
+        <item name="android:textSize">@*com.android.vending:dimen/play_cluster_header_subtitle_size</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">#ffdddddd</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:paddingBottom">@*com.android.vending:dimen/highlight_banner_vpadding</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:shadowColor">#61000000</item>
+        <item name="android:shadowDy">1.0</item>
+        <item name="android:shadowRadius">3.0</item>
+    </style>
+    <style name="HighlightBannerOverlayTitle" parent="@*com.android.vending:style/PlayMediumPlainText">
+        <item name="android:textSize">@*com.android.vending:dimen/play_cluster_header_title_size</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:shadowColor">#61000000</item>
+        <item name="android:shadowDy">1.0</item>
+        <item name="android:shadowRadius">5.0</item>
+    </style>
+    <style name="RestoreDialog" parent="@*android:style/Theme.Material.Dialog.Alert">
+        <item name="android:windowBackground">@*android:color/black</item>
+    </style>
+	
+    <style name="AccountPaymentMethodsIcon">
+       <item name="android:layout_width">32.0dip</item>
+       <item name="android:layout_height">32.0dip</item>
+       <item name="android:layout_marginLeft">20.0dip</item>
+       <item name="android:layout_marginRight">20.0dip</item>
+       <item name="android:alpha">1.00</item>
+       <item name="android:tint">#ffdddddd</item>	
+    </style>
+
+    <style name="BundleInstallPreviewText" parent="@*com.android.vending:style/PlayPlainText">
+        <item name="android:textSize">13.0sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:paddingTop">8.0dip</item>
+        <item name="android:paddingBottom">8.0dip</item>
+        <item name="android:focusable">true</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">5.0dip</item>
+    </style>
+    <style name="DiscoveryRatingBar">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="*com.android.vending:star_height">@*com.android.vending:dimen/discovery_badge_rating_bar_height</item>
+        <item name="*com.android.vending:star_color">#ffffffff</item>
+        <item name="*com.android.vending:star_bg_color">@*android:color/black</item>
+        <item name="*com.android.vending:gap">@*com.android.vending:dimen/discovery_badge_rating_bar_star_gap</item>
+    </style>
+    <style name="FamilyEducationCardAction" parent="@*com.android.vending:style/PlayCardAction">
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">end</item>
+        <item name="android:paddingLeft">16.0dip</item>
+        <item name="android:paddingRight">16.0dip</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginRight">16.0dip</item>
+        <item name="android:minWidth">88.0dip</item>
+        <item name="android:minHeight">36.0dip</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="FamilySignupButton">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">56.0dip</item>
+    </style>
+    <style name="FlatCardLabel" parent="@*com.android.vending:style/PlayPlainText">
+        <item name="android:textSize">@*com.android.vending:dimen/play_medium_size</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@null</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minWidth">0.0dip</item>
+        <item name="android:minHeight">0.0dip</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:drawablePadding">4.0dip</item>
+    </style>
+    <style name="FlatClusterMore" parent="@*com.android.vending:style/FlatMediumText">
+        <item name="android:textSize">@*com.android.vending:dimen/flat_cluster_header_more_size</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:singleLine">true</item>
+        <item name="*com.android.vending:playCardBackgroundColor">@*android:color/black</item>
+        <item name="*com.android.vending:playCardCornerRadius">@*com.android.vending:dimen/play_action_button_corner</item>
+        <item name="*com.android.vending:playCardElevation">1.0dip</item>
+        <item name="*com.android.vending:playCardInset">0.0dip</item>
+        <item name="*com.android.vending:playCardClipToOutline">true</item>
+    </style>
+    <style name="GiftEmailTitleText">
+        <item name="android:textSize">@*com.android.vending:dimen/play_purchase_title_size</item>
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+    <style name="PECardText">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">start|center</item>
+        <item name="android:layout_marginLeft">16.0dip</item>
+        <item name="android:layout_marginRight">16.0dip</item>
+    </style>
+    <style name="PlayAdLabelBaseline" parent="@*com.android.vending:style/PlayMediumPlainText">
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:background">@*com.android.vending:drawable/play_ad_label</item>
+        <item name="android:paddingLeft">3.0dip</item>
+        <item name="android:paddingTop">0.0dip</item>
+        <item name="android:paddingRight">3.0dip</item>
+        <item name="android:paddingBottom">0.0dip</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="PlayCardMyApps2" parent="@*com.android.vending:style/PlayCardFlatList">
+        <item name="*com.android.vending:playCardBackgroundColor">@*android:color/black</item>
+    </style>
+    <style name="PlayClusterAdLabel" parent="@*com.android.vending:style/PlayMediumPlainText">
+        <item name="android:textSize">11.0sp</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@*com.android.vending:drawable/play_ad_label</item>
+        <item name="android:paddingTop">1.0dip</item>
+        <item name="android:paddingBottom">1.0dip</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+    <style name="PlayClusterMore" parent="@*com.android.vending:style/PlayMediumBoldText">
+        <item name="android:textSize">@*com.android.vending:dimen/play_cluster_header_more_size</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:paddingLeft">@*com.android.vending:dimen/play_cluster_header_more_xpadding</item>
+        <item name="android:paddingTop">@*com.android.vending:dimen/play_cluster_header_more_top_padding</item>
+        <item name="android:paddingRight">@*com.android.vending:dimen/play_cluster_header_more_xpadding</item>
+        <item name="android:paddingBottom">@*com.android.vending:dimen/play_cluster_header_more_bottom_padding</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:singleLine">true</item>
+        <item name="*com.android.vending:playCardBackgroundColor">@*android:color/black</item>
+        <item name="*com.android.vending:playCardCornerRadius">@*com.android.vending:dimen/play_action_button_corner</item>
+        <item name="*com.android.vending:playCardElevation">1.0dip</item>
+        <item name="*com.android.vending:playCardInset">0.0dip</item>
+        <item name="*com.android.vending:playCardClipToOutline">true</item>
+    </style>
+    <style name="PlayDrawerDockedAction" parent="@*com.android.vending:style/PlayDrawerBaseText">
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="PlayDrawerList">
+        <item name="android:background">@*android:color/black</item>
+        <item name="android:fadingEdgeLength">0.0dip</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">0.0dip</item>
+        <item name="android:cacheColorHint">@*android:color/black</item>
+        <item name="android:divider">@null</item>
+        <item name="android:choiceMode">none</item>
+        <item name="android:layout_weight">1.0</item>
+    </style>
+
+
+    <style name="Play_DetailsPage_ActionButton" parent="@*com.android.vending:style/PlayMediumPlainText">
+        <item name="android:textSize">@*com.android.vending:dimen/play_price_small_size</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minWidth">@*com.android.vending:dimen/standard_button_minwidth</item>
+        <item name="android:minHeight">@*com.android.vending:dimen/details_button_small_height</item>
+        <item name="android:layout_weight">1.0</item>
+        <item name="*com.android.vending:action_xpadding">16.0dip</item>
+        <item name="*com.android.vending:action_top_padding">7.0dip</item>
+        <item name="*com.android.vending:action_bottom_padding">8.0dip</item>
+    </style>
+    <style name="Play_MyApps_ActionButton" parent="@*com.android.vending:style/PlayMediumPlainText">
+        <item name="android:textSize">@*com.android.vending:dimen/play_price_small_size</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_margin">@*com.android.vending:dimen/play_card_myapps_inset_margin</item>
+        <item name="android:minWidth">@*com.android.vending:dimen/play_card_myapps_action_button_width_min</item>
+        <item name="android:minHeight">@*com.android.vending:dimen/play_card_myapps_action_button_height_min</item>
+        <item name="android:layout_weight">1.0</item>
+        <item name="*com.android.vending:action_xpadding">12.0dip</item>
+        <item name="*com.android.vending:action_top_padding">0.0dip</item>
+        <item name="*com.android.vending:action_bottom_padding">0.0dip</item>
+    </style>
+    <style name="TagLinksRectangleTitle" parent="@*com.android.vending:style/PlayPlainText">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">12.0dip</item>
+        <item name="android:paddingTop">12.0dip</item>
+        <item name="android:paddingRight">12.0dip</item>
+        <item name="android:paddingBottom">12.0dip</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:drawablePadding">8.0dip</item>
+    </style>
+    <style name="WarmWelcomeV2CardAction" parent="@*com.android.vending:style/PlayMediumBoldText">
+        <item name="android:textSize">@*com.android.vending:dimen/play_card_action_size</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">16.0dip</item>
+        <item name="android:paddingRight">16.0dip</item>
+        <item name="android:minWidth">88.0dip</item>
+        <item name="android:minHeight">36.0dip</item>
+        <item name="*com.android.vending:playAccessibilityClassOverride">android.widget.Button</item>
+    </style>
+    <style name="WarmWelcomeV2CardDescription" parent="@*com.android.vending:style/PlayEduCardDescription">
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:paddingLeft">@*com.android.vending:dimen/warm_welcome_v2_card_text_padding</item>
+        <item name="android:paddingRight">@*com.android.vending:dimen/warm_welcome_v2_card_text_padding</item>
+    </style>
+    <style name="WarmWelcomeV2CardTitle" parent="@*com.android.vending:style/PlayEduCardTitle">
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:paddingLeft">@*com.android.vending:dimen/warm_welcome_v2_card_text_padding</item>
+        <item name="android:paddingRight">@*com.android.vending:dimen/warm_welcome_v2_card_text_padding</item>
+    </style>
+    <style name="StreamIntroCard">
+        <item name="*com.android.vending:playCardBackgroundColor">@*android:color/background_floating_material_dark</item>
+        <item name="*com.android.vending:playCardCornerRadius">@*com.android.vending:dimen/stream_intro_card_radius</item>
+        <item name="*com.android.vending:playCardElevation">@*com.android.vending:dimen/play_card_default_elevation</item>
+        <item name="*com.android.vending:playCardInset">@*com.android.vending:dimen/play_card_default_inset</item>
+        <item name="*com.android.vending:playCardClipToOutline">true</item>
+    </style>
+
+</resources>

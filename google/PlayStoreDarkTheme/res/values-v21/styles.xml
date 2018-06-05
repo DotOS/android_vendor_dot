@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="PlayDrawerProfileNameText" parent="@*com.android.vending:style/PlayMediumPlainText">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+    <style name="PlayDrawerSelectedText" parent="@*com.android.vending:style/PlayDrawerBaseText">
+        <item name="android:textSize">@*com.android.vending:dimen/play_drawer_primary_size</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">#ff555555</item>
+        <item name="android:paddingLeft">@*com.android.vending:dimen/play_drawer_item_left_padding</item>
+        <item name="android:paddingRight">@*com.android.vending:dimen/play_drawer_item_right_padding</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">@*com.android.vending:dimen/play_drawer_item_primary_min_height</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:drawablePadding">32.0dip</item>
+    </style>
+    <style name="Base.TextAppearance.AppCompat.Inverse" parent="@*android:style/TextAppearance.Material" />
+    <style name="Base.TextAppearance.AppCompat.Large.Inverse" parent="@*android:style/TextAppearance.Material.Large" />
+    <style name="Base.TextAppearance.AppCompat.Medium.Inverse" parent="@*android:style/TextAppearance.Material.Medium" />
+    <style name="Base.TextAppearance.AppCompat.Small.Inverse" parent="@*android:style/TextAppearance.Material.Small" />
+    <style name="Platform.AppCompat.Light" parent="@*android:style/Theme.Material">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+    </style>
+    <style name="Theme.Base.InstrumentManager.Light" parent="@*android:style/Theme.Material.NoActionBar" />
+    <style name="Theme.Base.InstrumentManager.Light.Dialog" parent="@*android:style/Theme.Material.Dialog">
+        <item name="android:textColorPrimary">#ffffffff</item>
+        <item name="android:textColorSecondary">#ffdddddd</item>
+    </style>
+    <style name="RedeemCodeEditText" parent="@*android:style/Widget.EditText">
+        <item name="android:textSize">18.0sp</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">48.0dip</item>
+    </style>
+    <style name="Base.Widget.AppCompat.EditText" parent="@*android:style/Widget.EditText">
+        <item name="android:textAppearance">?android:textAppearanceMedium</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:backgroundTint">#ffffffff</item>
+    </style>
+    <style name="Base.TextAppearance.AppCompat.Widget.ActionBar.Subtitle.Inverse" parent="@*android:style/TextAppearance.Material.Widget.ActionBar.Subtitle" />
+    <style name="Base.TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse" parent="@*android:style/TextAppearance.Material.Widget.ActionBar.Title" />
+    <style name="Base.Widget.AppCompat.Light.ActionBar.TabText" parent="@*android:style/Widget.Material.ActionBar.TabText" />
+    <style name="Base.Widget.AppCompat.Light.ActionBar.TabText.Inverse" parent="@*android:style/Widget.Material.ActionBar.TabText" />
+    <style name="Base.Widget.AppCompat.Light.ActionBar.TabView" parent="@*android:style/Widget.Material.ActionBar.TabView" />
+    <style name="Base.Widget.AppCompat.Light.PopupMenu" parent="@*android:style/Widget.Material.PopupMenu" />
+    <style name="SetupWizardTheme.Light" parent="@*android:style/Theme.Material.NoActionBar">
+        <item name="android:textColorSecondary">#ffdddddd</item>
+        <item name="android:colorAccent">#ff1976d2</item>
+        <item name="android:statusBarColor">@*android:color/transparent</item>
+        <item name="android:navigationBarColor">@*android:color/transparent</item>
+        <item name="*com.android.vending:uicDelegateToSupportLibAlertDialog">false</item>
+        <item name="*com.android.vending:setup_wizard_background_color">@*android:color/background_dark</item>
+        <item name="*com.android.vending:setup_wizard_primary_text_color">#ffffffff</item>
+        <item name="*com.android.vending:setup_wizard_row_divider">#00000000</item>
+        <item name="*com.android.vending:setup_wizard_secondary_text_color">#ffdddddd</item>
+        <item name="*com.android.vending:setup_wizard_section_title_text_color">#ffffffff</item>
+        <item name="*com.android.vending:setup_wizard_title_text_color">#ffffffff</item>
+    </style>
+
+
+    <style name="Platform.V21.AppCompat.Light" parent="@*android:style/Theme.Material.NoActionBar">
+        <item name="android:textColorHintInverse">#ffbbbbbb</item>
+        <item name="android:textColorHint">#ffbbbbbb</item>
+        <item name="android:textColorLink">@*android:color/accent_material_dark</item>
+        <item name="android:textColorLinkInverse">@*android:color/accent_material_dark</item>
+    </style>
+    <style name="VpaDetailsOverlayTheme" parent="@*android:style/Theme.Material.Dialog">
+        <item name="android:textColorSecondary">#ffbbbbbb</item>
+        <item name="android:windowBackground">@*com.android.vending:drawable/vpa_details_overlay_background</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:colorAccent">@*android:color/accent_material_dark</item>
+        <item name="*com.android.vending:uicDelegateToSupportLibAlertDialog">true</item>
+    </style>
+    <style name="Play_MyApps_ActionButton" parent="@*com.android.vending:style/PlayMediumPlainText">
+        <item name="android:textSize">@*com.android.vending:dimen/play_price_small_size</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_margin">@*com.android.vending:dimen/play_card_myapps_inset_margin</item>
+        <item name="android:minWidth">@*com.android.vending:dimen/play_card_myapps_action_button_width_min</item>
+        <item name="android:minHeight">@*com.android.vending:dimen/play_card_myapps_action_button_height_min</item>
+        <item name="android:layout_weight">1.0</item>
+        <item name="android:elevation">0.0dip</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="*com.android.vending:action_xpadding">12.0dip</item>
+        <item name="*com.android.vending:action_top_padding">0.0dip</item>
+        <item name="*com.android.vending:action_bottom_padding">0.0dip</item>
+    </style>
+    <style name="Theme.InstrumentManager.Light" parent="@*com.android.vending:style/Theme.Common.InstrumentManager.Light">
+        <item name="*com.android.vending:imProgressBarTopMargin">-5.0dip</item>
+        <item name="*com.android.vending:uicCardLogoGridToggleButtonStartMargin">-8.0dip</item>
+        <item name="*com.android.vending:uicCardLogoGridToggleButtonStyle">@*android:style/Widget.Material.Button.Borderless.Colored</item>
+        <item name="*com.android.vending:uicCardLogoGridToggleButtonTopMargin">0.0dip</item>
+        <item name="*com.android.vending:uicDialogBodyStartEndMargin">24.0dip</item>
+        <item name="*com.android.vending:uicDialogBodyTopBottomMargin">24.0dip</item>
+        <item name="*com.android.vending:uicFormSpinnerStyle">@*android:style/Widget.Material.Spinner.Underlined</item>
+        <item name="*com.android.vending:colorControlNormal">?android:colorControlNormal</item>
+    </style>
+</resources>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!--Under-the-hood Stuff-->
+    <style name="GiftEmailTitleText">
+        <item name="android:textSize">@*com.android.vending:dimen/play_purchase_title_size</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+    <style name="PECardText">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">start|center</item>
+        <item name="android:layout_marginLeft">16.0dip</item>
+        <item name="android:layout_marginRight">16.0dip</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+</resources>

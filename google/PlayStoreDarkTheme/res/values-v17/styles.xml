@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!--Under-the-hood Stuff-->
+    <style name="PECardText">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">start|center</item>
+        <item name="android:layout_marginLeft">16.0dip</item>
+        <item name="android:layout_marginRight">16.0dip</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:layout_marginStart">16.0dip</item>
+        <item name="android:layout_marginEnd">16.0dip</item>
+    </style>
+    <style name="FamilyEducationCardAction" parent="@*com.android.vending:style/PlayCardAction">
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">end</item>
+        <item name="android:paddingLeft">16.0dip</item>
+        <item name="android:paddingRight">16.0dip</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">0.0dip</item>
+        <item name="android:layout_marginRight">16.0dip</item>
+        <item name="android:minWidth">88.0dip</item>
+        <item name="android:minHeight">36.0dip</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:paddingStart">16.0dip</item>
+        <item name="android:paddingEnd">16.0dip</item>
+        <item name="android:layout_marginStart">0.0dip</item>
+        <item name="android:layout_marginEnd">16.0dip</item>
+    </style>
+    <style name="QuicklinksPillTitle" parent="@*com.android.vending:style/PlayCardAction">
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">16.0dip</item>
+        <item name="android:paddingTop">8.0dip</item>
+        <item name="android:paddingRight">16.0dip</item>
+        <item name="android:paddingBottom">8.0dip</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:paddingStart">16.0dip</item>
+        <item name="android:paddingEnd">16.0dip</item>
+    </style>
+    <style name="TagLinksRectangleTitle" parent="@*com.android.vending:style/PlayPlainText">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">12.0dip</item>
+        <item name="android:paddingTop">12.0dip</item>
+        <item name="android:paddingRight">12.0dip</item>
+        <item name="android:paddingBottom">12.0dip</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:drawablePadding">8.0dip</item>
+        <item name="android:paddingStart">12.0dip</item>
+        <item name="android:paddingEnd">12.0dip</item>
+    </style>
+    <style name="WarmWelcomeV2CardAction" parent="@*com.android.vending:style/PlayMediumBoldText">
+        <item name="android:textSize">@*com.android.vending:dimen/play_card_action_size</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">16.0dip</item>
+        <item name="android:paddingRight">16.0dip</item>
+        <item name="android:minWidth">88.0dip</item>
+        <item name="android:minHeight">36.0dip</item>
+        <item name="android:paddingStart">16.0dip</item>
+        <item name="android:paddingEnd">16.0dip</item>
+    </style>
+    <style name="WarmWelcomeV2CardDescription" parent="@*com.android.vending:style/PlayEduCardDescription">
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:paddingLeft">@*com.android.vending:dimen/warm_welcome_v2_card_text_padding</item>
+        <item name="android:paddingRight">@*com.android.vending:dimen/warm_welcome_v2_card_text_padding</item>
+        <item name="android:paddingStart">@*com.android.vending:dimen/warm_welcome_v2_card_text_padding</item>
+        <item name="android:paddingEnd">@*com.android.vending:dimen/warm_welcome_v2_card_text_padding</item>
+    </style>
+    <style name="WarmWelcomeV2CardTitle" parent="@*com.android.vending:style/PlayEduCardTitle">
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:paddingLeft">@*com.android.vending:dimen/warm_welcome_v2_card_text_padding</item>
+        <item name="android:paddingRight">@*com.android.vending:dimen/warm_welcome_v2_card_text_padding</item>
+        <item name="android:paddingStart">@*com.android.vending:dimen/warm_welcome_v2_card_text_padding</item>
+        <item name="android:paddingEnd">@*com.android.vending:dimen/warm_welcome_v2_card_text_padding</item>
+    </style>
+    <style name="Play_MyApps_ActionButton" parent="@*com.android.vending:style/PlayMediumPlainText">
+        <item name="android:textSize">@*com.android.vending:dimen/play_price_small_size</item>
+        <item name="android:textColor">@*android:color/white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginLeft">0.0dip</item>
+        <item name="android:layout_marginTop">@*com.android.vending:dimen/play_card_myapps_inset_margin</item>
+        <item name="android:layout_marginRight">@*com.android.vending:dimen/play_card_myapps_inset_margin</item>
+        <item name="android:layout_marginBottom">@*com.android.vending:dimen/play_card_myapps_inset_margin</item>
+        <item name="android:minWidth">@*com.android.vending:dimen/play_card_myapps_action_button_width_min</item>
+        <item name="android:minHeight">@*com.android.vending:dimen/play_card_myapps_action_button_height_min</item>
+        <item name="android:layout_weight">1.0</item>
+        <item name="android:layout_marginStart">0.0dip</item>
+        <item name="android:layout_marginEnd">@*com.android.vending:dimen/play_card_myapps_inset_margin</item>
+        <item name="*com.android.vending:action_xpadding">12.0dip</item>
+        <item name="*com.android.vending:action_top_padding">0.0dip</item>
+        <item name="*com.android.vending:action_bottom_padding">0.0dip</item>
+    </style>
+</resources>
