@@ -25,15 +25,15 @@ CURRENT_DEVICE=$(shell echo "$(TARGET_PRODUCT)" | cut -d'_' -f 2,3)
 ifeq ($(DOT_OFFICIAL), true)
    LIST = $(shell curl -s https://raw.githubusercontent.com/DotOS/android_vendor_dot/dot-o/dot.devices)
    FOUND_DEVICE =  $(filter $(CURRENT_DEVICE), $(LIST))
-    ifeq ($(FOUND_DEVICE),$(CURRENT_DEVICE))
-      IS_OFFICIAL=true
-      DOT_BUILD_TYPE := OFFICIAL
-    endif
+    	ifeq ($(FOUND_DEVICE),$(CURRENT_DEVICE))
+      	  IS_OFFICIAL=true
+      	  DOT_BUILD_TYPE := OFFICIAL
+    	endif
 
-ifneq ($(IS_OFFICIAL), true)
-       DOT_BUILD_TYPE := UNOFFICIAL
-       $(error Device is not official "$(FOUND)")
-endif
+	ifneq ($(IS_OFFICIAL), true)
+       	  DOT_BUILD_TYPE := UNOFFICIAL
+       	  $(error Device is not official "$(FOUND)")
+	endif
 
 PRODUCT_GENERIC_PROPERTIES += \
     persist.ota.romname=$(TARGET_PRODUCT) \
