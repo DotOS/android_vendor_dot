@@ -28,12 +28,12 @@ ifeq ($(DOT_OFFICIAL), true)
     ifeq ($(FOUND_DEVICE),$(CURRENT_DEVICE))
       IS_OFFICIAL=true
       DOT_BUILD_TYPE := OFFICIAL
+      
     endif
-
-ifneq ($(IS_OFFICIAL), true)
+    ifneq ($(IS_OFFICIAL), true)
        DOT_BUILD_TYPE := UNOFFICIAL
        $(error Device is not official "$(FOUND)")
-endif
+    endif
 
 PRODUCT_GENERIC_PROPERTIES += \
     persist.ota.romname=$(TARGET_PRODUCT) \
