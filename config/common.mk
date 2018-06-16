@@ -55,6 +55,7 @@ PRODUCT_COPY_FILES += \
 # Custom dotOS packages
 PRODUCT_PACKAGES += \
     BluetoothExt \
+    Calendar \
     LatinIME \
     Launcher3 \
     LiveWallpapers \
