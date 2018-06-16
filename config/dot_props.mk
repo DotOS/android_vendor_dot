@@ -34,6 +34,10 @@ PRODUCT_GENERIC_PROPERTIES += \
     persist.sys.recovery_update=false \
     ro.com.google.ime.theme_id=5
 
+# Disable HDCP check
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.wfd.nohdcp=1
+
 # Set cache location
 ifeq ($(BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE),)
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
