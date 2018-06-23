@@ -100,6 +100,9 @@ include vendor/dot/config/bootanimation.mk
 # Packages
 include vendor/dot/config/packages.mk
 
+# Fonts
+include vendor/dot/config/fonts.mk
+
 ifeq ($(TARGET_BUILD_VARIANT),eng)
 # Disable ADB authentication
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.adb.secure=0
