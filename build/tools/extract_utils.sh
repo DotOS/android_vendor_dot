@@ -919,7 +919,7 @@ function extract() {
 
     for (( i=1; i<COUNT+1; i++ )); do
 
-        local FROM=$(target_file "${FILELIST[$i-1]}")
+        local SPEC_DST_FILE=$(target_file "${FILELIST[$i-1]}")
         local ARGS=$(target_args "${FILELIST[$i-1]}")
         local FILE=$(src_file "${FILELIST[$i-1]}")
         local OUTPUT_DIR="$OUTPUT_ROOT"
@@ -927,11 +927,11 @@ function extract() {
         local TARGET=
 
         if [ "$ARGS" = "rootfs" ]; then
-            TARGET="$FROM"
+            TARGET="${SPEC_DST_FILE}"
             OUTPUT_DIR="$OUTPUT_DIR/rootfs"
             TMP_DIR="$TMP_DIR/rootfs"
         else
-            TARGET="system/$FROM"
+            TARGET="system/${SPEC_DST_FILE}"
             FILE="system/$FILE"
         fi
 
@@ -941,14 +941,40 @@ function extract() {
             printf '  - %s \n' "/$TARGET"
         fi
 
-        local DIR=$(dirname "$FROM")
+        local DIR=$(dirname "${SPEC_DST_FILE}")
         if [ ! -d "$OUTPUT_DIR/$DIR" ]; then
             mkdir -p "$OUTPUT_DIR/$DIR"
         fi
-        local DEST="$OUTPUT_DIR/$FROM"
+        local DEST="$OUTPUT_DIR/${SPEC_DST_FILE}"
 
-        if [ "$SRC" = "adb" ]; then
-            # Try DOT target first
+        # Check pinned files
+        local HASH="${HASHLIST[$i-1]}"
+        local KEEP=""
+        if [ "$DISABLE_PINNING" != "1" ] && [ ! -z "$HASH" ] && [ "$HASH" != "x" ]; then
+            if [ -f "$DEST" ]; then
+                local PINNED="$DEST"
+            else
+                local PINNED="$TMP_DIR/${SPEC_DST_FILE}"
+            fi
+            if [ -f "$PINNED" ]; then
+                if [ "$(uname)" == "Darwin" ]; then
+                    local TMP_HASH=$(shasum "$PINNED" | awk '{print $1}' )
+                else
+                    local TMP_HASH=$(sha1sum "$PINNED" | awk '{print $1}' )
+                fi
+                if [ "$TMP_HASH" = "$HASH" ]; then
+                    KEEP="1"
+                    if [ ! -f "$DEST" ]; then
+                        cp -p "$PINNED" "$DEST"
+                    fi
+                fi
+            fi
+        fi
+
+        if [ "$KEEP" = "1" ]; then
+            printf '    + (keeping pinned file with hash %s)\n' "$HASH"
+        elif [ "$SRC" = "adb" ]; then
+            # Try Lineage target first
             adb pull "/$TARGET" "$DEST"
             # if file does not exist try OEM target
             if [ "$?" != "0" ]; then
