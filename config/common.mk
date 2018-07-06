@@ -56,7 +56,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     BluetoothExt \
     Calendar \
-    dotstats \
     LatinIME \
     Launcher3 \
     LiveWallpapers \
