@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<resources>
+        <color name="icon_color_wireless">#00000000</color>
+	<color name="icon_color_battery">#00000000</color>
+	<color name="icon_color_other">#00000000</color>
+	<color name="icon_color_about">#00000000</color>
+	<color name="icon_color_accessibility">#00000000</color>
+	<color name="icon_color_accounts">#00000000</color>
+	<color name="icon_color_display">#00000000</color>
+	<color name="icon_color_security">#00000000</color>
+	<color name="icon_color_sound">#00000000</color>
+	<color name="icon_color_storage">#00000000</color>
+	<color name="icon_color_apps">#00000000</color>
+	<color name="icon_color_system">#00000000</color>
+	<color name="icon_base_color">@*android:color/accent_device_default_light</color>
+        <color name="icon_color_dotextras">#00000000</color>
+        <color name="icon_color_substratum">#00000000</color>
+        <color name="icon_color_magisk">#00000000</color>
+        <color name="icon_color_supersu">#00000000</color>
+        <color name="icon_color_google">#00000000</color>	
+        <color name="icon_color_dotui">#00000000</color>	
+        <color name="icon_color_memory">#00000000</color>
+</resources>

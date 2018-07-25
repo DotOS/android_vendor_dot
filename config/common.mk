@@ -74,7 +74,7 @@ PRODUCT_PACKAGES += \
     SystemUpdates \
     OmniJaws
 
-# Themes
+# Accents
 PRODUCT_PACKAGES += \
     PixelTheme \
     Stock \
@@ -88,11 +88,21 @@ PRODUCT_PACKAGES += \
     LemonTheme \
     OrangeTheme \
     OxygenTheme \
-    VioletTheme \
+    VioletTheme 
+
+#Primary
+PRODUCT_PACKAGES += \
     SettingsDarkThemeOverlay \
     SettingsBlackThemeOverlay \
     SystemDarkThemeOverlay \
-    SystemBlackThemeOverlay
+    SystemBlackThemeOverlay \
+    PlayStoreDarkTheme \
+    GBoardDark  \
+    DuiDarkTheme \
+    DuiBlackTheme \
+    SettingsNeoThemeOverlay \
+    SystemNeoThemeOverlay \
+    SystemUINeoThemeOverlay 
 
 # Extra tools
 PRODUCT_PACKAGES += \
