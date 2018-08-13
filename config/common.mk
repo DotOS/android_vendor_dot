@@ -68,7 +68,8 @@ PRODUCT_PACKAGES += \
     Browser \
     DotPapers \
     InterfaceCenter \
-    SystemUpdates
+    SystemUpdates \
+	MarkupGoogle
 
 # Extra tools
 PRODUCT_PACKAGES += \
@@ -103,6 +104,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     vendor/dot/config/permissions/backup.xml:system/etc/sysconfig/backup.xml
 
+# Markup libs
+PRODUCT_COPY_FILES += \
+    vendor/dot/prebuilt/common/lib/libsketchology_native.so:system/lib/libsketchology_native.so \
+    vendor/dot/prebuilt/common/lib64/libsketchology_native.so:system/lib64/libsketchology_native.so
 
 # init.d support
 PRODUCT_COPY_FILES += \

@@ -37,4 +37,9 @@
          does not work well, particularly with noisy touchscreens. Note that disabling it may
          increase the rate of unintentional unlocks. -->
     <bool name="config_lockscreenAntiFalsingClassifierEnabled">false</bool>
+
+    <!-- Screenshot editing default activity.  Must handle ACTION_EDIT image/png intents.
+         Blank sends the user to the Chooser first.
+         This name is in the ComponentName flattened format (package/class)  -->
+    <string name="config_screenshotEditor" translatable="false">com.google.android.markup/com.google.android.markup.AnnotateActivity</string>
 </resources>
