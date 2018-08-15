@@ -8,6 +8,11 @@ type Product_variables struct {
 		Cflags []string
 	}
 
+	Needs_legacy_camera_hal1_dyn_native_handle struct {
+                Cflags []string
+		Cppflags []string
+	}
+
 	Has_legacy_camera_hal1 struct {
 		Cflags []string
 	}
@@ -62,6 +67,7 @@ type ProductVariables struct {
 	Uses_non_treble_camera  *bool `json:",omitempty"`
 	Uses_generic_camera_parameter_library  *bool `json:",omitempty"`
 	Specific_camera_parameter_library  *string `json:",omitempty"`
+	Needs_legacy_camera_hal1_dyn_native_handle  *bool `json:",omitempty"`
 	Has_legacy_camera_hal1  *bool `json:",omitempty"`
 	Uses_media_extensions   *bool `json:",omitempty"`
 	BoardUsesQTIHardware  *bool `json:",omitempty"`
