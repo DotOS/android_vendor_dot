@@ -69,7 +69,8 @@ PRODUCT_PACKAGES += \
     DotPapers \
     InterfaceCenter \
     SystemUpdates \
-	MarkupGoogle
+	MarkupGoogle \
+	WellbeingPrebuilt
 
 # Extra tools
 PRODUCT_PACKAGES += \
