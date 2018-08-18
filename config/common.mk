@@ -109,6 +109,10 @@ PRODUCT_COPY_FILES += \
     vendor/dot/prebuilt/common/lib/libsketchology_native.so:system/lib/libsketchology_native.so \
     vendor/dot/prebuilt/common/lib64/libsketchology_native.so:system/lib64/libsketchology_native.so
 
+# Pixel sysconfig
+PRODUCT_COPY_FILES += \
+    vendor/dot/prebuilt/common/etc/sysconfig/pixel.xml:system/etc/sysconfig/pixel.xml	
+	
 # init.d support
 PRODUCT_COPY_FILES += \
     vendor/dot/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner
