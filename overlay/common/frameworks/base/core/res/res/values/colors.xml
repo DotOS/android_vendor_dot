@@ -26,5 +26,6 @@
     <color name="user_icon_6">#ff8bc34a</color>
     <color name="user_icon_7">#ffff9800</color>
     <color name="user_icon_8">#ffff7043</color>
+    <color name="system_error">#ffea4335</color>
 
 </resources>
