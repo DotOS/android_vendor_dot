@@ -63,7 +63,7 @@ Submitting Patches
 ==================
 DotOS is an open source project thus any patches/contributions are always welcome !
 
-To begin with, you need to login to our code review system at [dotOS Code Review](https://gerrit.droidontime.com)
+To begin with, you need to login to our code review system at [dotOS Code Review](http://gerrit.droidontime.com)
 
 We support login using Google Oauth or Github Oauth provider, which means if you have either of account you can login to gerrit by that account.
 It is important that you set the USERNAME in your account on gerrit. If you have logged in using Github account then your Github USERNAME will be used as gerrit USERNAME automatically. Else you can set unique username in `Profile` section of gerrit account Settings.
@@ -126,7 +126,7 @@ and simply push the changes to gerrit
 
 Gerrit will recognize it as a new patchset in an exisiting commit.
 
-To view the status of your and/or others patches, visit [dotOS Code Review](https://gerrit.droidontime.com)
+To view the status of your and/or others patches, visit [dotOS Code Review](http://gerrit.droidontime.com)
 
 If you encounter any issues, feel free to contact us on our [Telegram channel](https://t.me/dotos). We will be happy to assist you !
 
