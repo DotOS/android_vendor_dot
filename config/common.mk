@@ -91,6 +91,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/dot/config/permissions/backup.xml:system/etc/sysconfig/backup.xml
 
+# Turbo
+PRODUCT_PACKAGES += \
+    Turbo \
+    turbo.xml	
+	
+	
 # Markup libs
 PRODUCT_COPY_FILES += \
     vendor/dot/prebuilt/common/lib/libsketchology_native.so:system/lib/libsketchology_native.so \
