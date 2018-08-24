@@ -42,7 +42,11 @@ PRODUCT_GENERIC_PROPERTIES += \
 persist.ota.manifest=https://raw.githubusercontent.com/DotOS/ota/dot-p/$(shell echo "$(TARGET_PRODUCT)" | cut -d'_' -f 2,3).xml
 endif
 
+TARGET_PRODUCT_SHORT := $(subst dot_,,$(CUSTOM_BUILD))
+
 DOT_VERSION := dotOS-P-$(DOT_MOD_VERSION)-$(CURRENT_DEVICE)-$(DOT_BUILD_TYPE)-$(shell date -u +%Y%m%d)
+
+DOT_FINGERPRINT := dotOS/$(DOT_MOD_VERSION)/$(PLATFORM_VERSION)/$(TARGET_PRODUCT_SHORT)/$(shell date -u +%Y%m%d)
 
 PRODUCT_GENERIC_PROPERTIES += \
   ro.dot.version=$(DOT_VERSION) \
@@ -52,4 +56,5 @@ PRODUCT_GENERIC_PROPERTIES += \
 DOT_DISPLAY_VERSION := DotOS-$(DOT_MOD_VERSION)-$(DOT_BUILD_TYPE)
 
 PRODUCT_GENERIC_PROPERTIES += \
-  ro.dot.display.version=$(DOT_DISPLAY_VERSION)
+  ro.dot.display.version=$(DOT_DISPLAY_VERSION)\
+  ro.dot.fingerprint=$(DOT_FINGERPRINT)
