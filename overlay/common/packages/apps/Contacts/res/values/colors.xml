@@ -17,4 +17,7 @@
 
     <color name="navigation_bar_color">@android:color/white</color>
 
+    <!-- Color of the background of the contact detail and editor pages -->
+    <color name="background_primary">@android:color/white</color>
+
 </resources>

@@ -18,4 +18,7 @@
 
   <color name="navigation_bar_color">@android:color/white</color>
 
+  <!-- Background color of new dialer activity -->
+  <color name="background_dialer_light">@android:color/white</color>
+
 </resources>
