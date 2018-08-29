@@ -22,6 +22,10 @@ type Product_variables struct {
 		Cflags []string
 	}
 
+	Target_process_sdk_version_override struct {
+		Cppflags []string
+	}
+
 	Supports_legacy_hw_fde struct {
 		Cflags []string
 	}
@@ -57,6 +61,7 @@ type ProductVariables struct {
 	Needs_text_relocations  *bool `json:",omitempty"`
 	Should_skip_waiting_for_qsee  *bool `json:",omitempty"`
 	Specific_camera_parameter_library  *string `json:",omitempty"`
+	Target_process_sdk_version_override *string `json:",omitempty"`
 	Supports_hw_fde  *bool `json:",omitempty"`
 	Supports_hw_fde_perf  *bool `json:",omitempty"`
 	Supports_legacy_hw_fde  *bool `json:",omitempty"`
