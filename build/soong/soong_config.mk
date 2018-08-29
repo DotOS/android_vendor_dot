@@ -1,3 +1,5 @@
+add_json_str_omitempty = $(if $(strip $(2)),$(call add_json_str, $(1), $(2)))
+
 # Insert new variables inside the Dot structure
 _contents := $(_contents)    "Dot":{$(newline)
 
