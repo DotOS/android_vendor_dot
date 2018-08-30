@@ -94,7 +94,8 @@ PRODUCT_COPY_FILES += \
 # Turbo
 PRODUCT_PACKAGES += \
     Turbo \
-    turbo.xml	
+    turbo.xml \
+    privapp-permissions-turbo.xml	
 	
 	
 # Markup libs
