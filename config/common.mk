@@ -58,41 +58,17 @@ PRODUCT_COPY_FILES += \
 
 # Custom dotOS packages
 PRODUCT_PACKAGES += \
-    BluetoothExt \
     LatinIME \
     Launcher3 \
     LiveWallpapers \
     LiveWallpapersPicker \
     Stk \
-    Substratum \
-    ThemeInterfacer \
     Recorder \
     Music \
     Browser \
     DotPapers \
     InterfaceCenter \
-    SystemUpdates \
-    OmniJaws
-
-# Themes
-PRODUCT_PACKAGES += \
-    PixelTheme \
-    Stock \
-    GreenTheme \
-    PinkTheme \
-    PurpleTheme \
-    RedTheme \
-    SkyTheme \
-    YellowTheme \
-    GreyTheme \
-    LemonTheme \
-    OrangeTheme \
-    OxygenTheme \
-    VioletTheme \
-    SettingsDarkThemeOverlay \
-    SettingsBlackThemeOverlay \
-    SystemDarkThemeOverlay \
-    SystemBlackThemeOverlay
+    SystemUpdates
 
 # Extra tools
 PRODUCT_PACKAGES += \
@@ -161,13 +137,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_GENERIC_PROPERTIES += \
     media.recorder.show_manufacturer_and_model=true
 
-# DU Utils Library
-PRODUCT_PACKAGES += \
-    org.dirtyunicorns.utils
-
-PRODUCT_BOOT_JARS += \
-    org.dirtyunicorns.utils
-
 # Needed by some RILs and for some Gapps packages
 PRODUCT_PACKAGES += \
     librsjni \
@@ -176,20 +145,6 @@ PRODUCT_PACKAGES += \
 # Charger images
 PRODUCT_PACKAGES += \
     charger_res_images
-
-# Charging sounds
-PRODUCT_COPY_FILES += \
-    vendor/dot/prebuilt/common/media/audio/BatteryPlugged.ogg:system/media/audio/ui/BatteryPlugged.ogg \
-    vendor/dot/prebuilt/common/media/audio/BatteryPlugged_48k.ogg:system/media/audio/ui/BatteryPlugged_48k.ogg
-
-# Fonts
-PRODUCT_COPY_FILES += \
-    vendor/dot/fonts/GoogleSans-Regular.ttf:system/fonts/GoogleSans-Regular.ttf \
-    vendor/dot/fonts/GoogleSans-Medium.ttf:system/fonts/GoogleSans-Medium.ttf \
-    vendor/dot/fonts/GoogleSans-MediumItalic.ttf:system/fonts/GoogleSans-MediumItalic.ttf \
-    vendor/dot/fonts/GoogleSans-Italic.ttf:system/fonts/GoogleSans-Italic.ttf \
-    vendor/dot/fonts/GoogleSans-Bold.ttf:system/fonts/GoogleSans-Bold.ttf \
-    vendor/dot/fonts/GoogleSans-BoldItalic.ttf:system/fonts/GoogleSans-BoldItalic.ttf
 
 
 # Recommend using the non debug dexpreopter
@@ -208,8 +163,8 @@ endif
 
 	
 # Include SDCLANG definitions if it is requested and available
-ifeq ($(HOST_OS),linux)
-    ifneq ($(wildcard vendor/qcom/sdclang-4.0/),)
-        include vendor/dot/sdclang/sdclang.mk
-    endif
-endif
+#ifeq ($(HOST_OS),linux)
+#    ifneq ($(wildcard vendor/qcom/sdclang-4.0/),)
+#        include vendor/dot/sdclang/sdclang.mk
+#    endif
+#endif

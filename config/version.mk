@@ -13,7 +13,7 @@
 # limitations under the License.
 
 #dotOS Versioning :
-DOT_MOD_VERSION = v2.4
+DOT_MOD_VERSION = v3.0
 
 
 ifndef DOT_BUILD_TYPE
@@ -23,7 +23,7 @@ endif
 CURRENT_DEVICE=$(shell echo "$(TARGET_PRODUCT)" | cut -d'_' -f 2,3)
 
 ifeq ($(DOT_OFFICIAL), true)
-   LIST = $(shell curl -s https://raw.githubusercontent.com/DotOS/android_vendor_dot/dot-o/dot.devices)
+   LIST = $(shell curl -s https://raw.githubusercontent.com/DotOS/android_vendor_dot/dot-p/dot.devices)
    FOUND_DEVICE =  $(filter $(CURRENT_DEVICE), $(LIST))
     ifeq ($(FOUND_DEVICE),$(CURRENT_DEVICE))
       IS_OFFICIAL=true
@@ -39,10 +39,10 @@ PRODUCT_GENERIC_PROPERTIES += \
     persist.ota.romname=$(TARGET_PRODUCT) \
     persist.ota.version=$(shell date +%Y%m%d) \
 
-persist.ota.manifest=https://raw.githubusercontent.com/DotOS/services_apps_ota/dot-o/$(shell echo "$(TARGET_PRODUCT)" | cut -d'_' -f 2,3).xml
+persist.ota.manifest=https://raw.githubusercontent.com/DotOS/ota/dot-p/$(shell echo "$(TARGET_PRODUCT)" | cut -d'_' -f 2,3).xml
 endif
 
-DOT_VERSION := dotOS-O-$(DOT_MOD_VERSION)-$(CURRENT_DEVICE)-$(DOT_BUILD_TYPE)-$(shell date -u +%Y%m%d)
+DOT_VERSION := dotOS-P-$(DOT_MOD_VERSION)-$(CURRENT_DEVICE)-$(DOT_BUILD_TYPE)-$(shell date -u +%Y%m%d)
 
 PRODUCT_GENERIC_PROPERTIES += \
   ro.dot.version=$(DOT_VERSION) \
