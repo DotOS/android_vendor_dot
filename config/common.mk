@@ -16,6 +16,7 @@
 PRODUCT_BRAND ?= DotOS
 
 include vendor/dot/config/version.mk
+include vendor/dot/config/fonts.mk
 
 # Backup Tool
 PRODUCT_COPY_FILES += \
