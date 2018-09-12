@@ -95,7 +95,10 @@ PRODUCT_PACKAGES += \
     tinymix \
     unrar \
     unzip \
-    zip
+    zip \
+	vim \
+    rsync \
+	bash
 
 # Exchange support
 PRODUCT_PACKAGES += \
