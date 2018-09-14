@@ -100,8 +100,11 @@ include vendor/dot/config/bootanimation.mk
 # Packages
 include vendor/dot/config/packages.mk
 
+ifeq ($(TARGET_BUILD_VARIANT),eng)
+# Disable ADB authentication
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.adb.secure=0
+else
 # Enable ADB authentication
-ifneq ($(TARGET_BUILD_VARIANT),eng)
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.adb.secure=1
 endif
 
