@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="dialpad_key_button_touch_tint" format="color" />
+
+</resources>

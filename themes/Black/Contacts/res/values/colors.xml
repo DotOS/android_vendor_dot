@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+ <color name="navigation_drawer_background_color">@*android:color/black</color>
+ <color name="navigation_bar_color">@*android:color/black</color>
+	<color name="primary_color">@*android:color/black</color>
+	<color name="primary_color_dark">@*android:color/black</color>
+	<color name="dialer_theme_color">@*android:color/black</color>
+    <color name="dialer_theme_color_dark">@*android:color/black</color>
+    <color name="accent">@*android:color/accent_device_default_light</color>
+	
+	<color name="background_primary">@*android:color/black</color>
+	
+    <color name="action_bar_background">@*android:color/black</color>
+	<color name="action_bar_background_highlight">@*android:color/accent_device_default_light</color>
+      <color name="background_social_updates">@*android:color/black</color>
+      <color name="expanding_entry_card_background_color">@*android:color/black</color>
+	<color name="actionbar_icon_color">#ffffffff</color>
+	 
+    <color name="primary_text_color">#ffe6e6e6</color>
+    <color name="secondary_text_color">#ffffffff</color>
+		    <color name="primary_text_default_material_light">@*android:color/accent_device_default_light</color>
+<color name="secondary_text_default_material_light">@*android:color/accent_device_default_light</color>
+    <color name="primary_text_default_material_dark">@*android:color/accent_device_default_light</color>
+    <color name="secondary_text_default_material_dark">@*android:color/accent_device_default_light</color>
+    <color name="primary_text_disabled_material_light">#4dffffff</color>
+    <color name="secondary_text_disabled_material_light">#36ffffff</color>
+    <color name="primary_text_disabled_material_dark">#4dffffff</color>
+<color name="secondary_text_disabled_material_dark">#36ffffff</color>
+	<color name="editor_icon_color">@*android:color/accent_device_default_light</color>
+	<color name="editor_disabled_text_color">#ffffffff</color>
+  
+	<color name="frequent_contact_text_color">#ffe6e6e6</color>
+	<color name="frequently_contacted_title_color">@*android:color/accent_device_default_light</color>
+
+	<color name="editor_account_header_bg">@*android:color/black</color>
+	 <color name="disabled_button_text">#40ffffff</color>
+	<color name="card_margin_color">#ff0f0f0f</color>
+	<color name="cardview_light_background">@*android:color/black</color>
+	<color name="cardview_dark_background">@*android:color/black</color>
+ 	    <color name="abc_search_url_text_normal">#ffffffff</color>
+    <color name="abc_search_url_text_selected">#ffffffff</color>
+<color name="abc_search_url_text_pressed">#ffffffff</color>
+	<color name="list_item_name_text_color">#ffe6e6e6</color>
+	    <color name="highlighted_text_material_dark">#66787878</color>
+<color name="highlighted_text_material_light">#66787878</color>
+	<color name="section_header_text_color">@*android:color/accent_device_default_light</color>
+	 <color name="action_bar_button_text_color">#ffffffff</color>
+	<color name="actionbar_text_color">@android:color/white</color>
+    <color name="actionbar_unselected_text_color">#99ffffff</color>
+	<color name="actionbar_text_color_black">#dfffffff</color>
+<color name="actionbar_color_grey_solid">#ffffffff</color>
+	<color name="add_contact_background">@*android:color/black</color>
+	<color name="group_list_background_color">@*android:color/black</color>
+    <color name="contact_favorites_list_background_color">@*android:color/black</color>
+    <color name="contact_all_list_background_color">@*android:color/black</color>
+	<color name="contact_tile_text_color">#ffe6e6e6</color>
+	<color name="contacts_accent_color">#ffffffff</color>
+	 <color name="account_filter_text_color">#ffffffff</color>
+	<color name="expanding_entry_card_button_text_color">@*android:color/accent_device_default_light</color>
+	    <color name="contextual_selection_bar_color">@*android:color/black</color>
+<color name="contextual_selection_bar_status_bar_color">@*android:color/black</color>
+	<color name="quickcontact_entry_sub_header_text_color">#fffafafa</color>
+	<color name="quickcontact_entry_header_text_color">#fff1f1f1</color>
+	    <color name="snackbar_action_text">@*android:color/accent_device_default_light</color>
+<color name="snackbar_background">@*android:color/black</color>
+	<color name="searchbox_text_color">@*android:color/accent_device_default_light</color>
+    <color name="searchbox_background_color">@*android:color/black</color>
+	    <color name="searchbox_hint_text_color">#ffbbbbbb</color>
+<color name="searchbox_icon_tint">@*android:color/accent_device_default_light</color>
+ <color name="search_shortcut_icon_color">@*android:color/accent_device_default_light</color>
+	<color name="divider_line_color_light">#00000000</color>
+	    <color name="quantum_black_hint_text">#61ffffff</color>
+    <color name="quantum_black_secondary_text">#89ffffff</color>
+<color name="quantum_black_text">#ddffffff</color>
+    <color name="holo_list_background_color">@*android:color/black</color>
+	
+	<color name="exposed_bg_dark">@*android:color/black</color>
+    <color name="exposed_contact_list_name_text_color">#ffffffff</color>
+    <color name="exposed_ContactsActionBarTheme_hint">#ffdddddd</color>
+    <color name="exposed_ContactsActionBarTheme_text">#ffffffff</color>
+    <color name="exposed_SectionDivider">#ffaaaaaa</color>
+    <color name="exposed_EditKindTextAppearanceStyle">#ffffffff</color>
+	<color name="exposed_primary_text_light">#ffffffff</color>
+    <color name="exposed_primary_text_dark">#ffffffff</color>
+	    <color name="letter_tile_red_color">#ffd32f2f</color>
+    <color name="letter_tile_pink_color">#ffc2185b</color>
+    <color name="letter_tile_purple_color">#ff7b1fa2</color>
+    <color name="letter_tile_deep_purple_color">#ff512da8</color>
+    <color name="letter_tile_indigo_color">#ff303f9f</color>
+    <color name="letter_tile_blue_color">#ff1976d2</color>
+    <color name="letter_tile_light_blue_color">#ff0288d1</color>
+    <color name="letter_tile_cyan_color">#ff0097a7</color>
+    <color name="letter_tile_teal_color">#ff00976b</color>
+    <color name="letter_tile_green_color">#ff388e3c</color>
+    <color name="letter_tile_light_green_color">#ff689f38</color>
+    <color name="letter_tile_orange_color">#ff5f7c00</color>
+    <color name="letter_tile_deep_orange_color">#ffe64a19</color>
+    <color name="letter_tile_grey_color">#ff616161</color>
+    <color name="letter_tile_red_color_dark">#ffb71c1c</color>
+    <color name="letter_tile_pink_color_dark">#ff880e4f</color>
+    <color name="letter_tile_purple_color_dark">#ff4a148c</color>
+    <color name="letter_tile_deep_purple_color_dark">#ff311b92</color>
+    <color name="letter_tile_indigo_color_dark">#ff1a237e</color>
+    <color name="letter_tile_blue_color_dark">#ff0d47a1</color>
+    <color name="letter_tile_light_blue_color_dark">#ff01579b</color>
+    <color name="letter_tile_cyan_color_dark">#ff006064</color>
+    <color name="letter_tile_teal_color_dark">#ff004d40</color>
+    <color name="letter_tile_green_color_dark">#ff1b5e20</color>
+    <color name="letter_tile_light_green_color_dark">#ff33691e</color>
+    <color name="letter_tile_orange_color_dark">#ffe65100</color>
+    <color name="letter_tile_deep_orange_color_dark">#ffbf360c</color>
+    <color name="letter_tile_grey_color_dark">#ff212121</color>
+	<color name="contact_list_name_text_color">#ffffffff</color>
+	
+	<color name="call_log_primary_color">#ffffffff</color>
+    <color name="call_log_detail_color">#ffffffff</color>
+    <color name="account_type_name_text_color">#ffffffff</color>
+	
+	<color name="quickcontact_header_background">@*android:color/black</color>
+	<color name="promo_card_background">@*android:color/black</color>
+    <color name="promo_card_primary_text">#ffffffff</color>
+	<color name="promo_card_secondary_text">#ffdddddd</color>
+	<color name="quantum_grey300">@*android:color/black</color>
+	<color name="ic_add_contact_shortcut_background">@*android:color/black</color>
+	
+</resources>

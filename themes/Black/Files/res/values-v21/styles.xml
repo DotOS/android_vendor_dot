@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Platform.AppCompat.Light" parent="@*android:style/Theme.Material">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:textColorLink">@*android:color/accent_device_default_light</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:textColorLinkInverse">@*android:color/accent_device_default_light</item>
+        <item name="android:colorPrimary">@*android:color/black</item>
+        <item name="android:colorPrimaryDark">@*android:color/black</item>
+        <item name="android:colorAccent">@*android:color/accent_device_default_light</item>
+        <item name="android:statusBarColor">@*android:color/black</item>
+        <item name="android:navigationBarColor">@*android:color/black</item>
+    </style>
+
+    <style name="Platform.V21.AppCompat.Light" parent="@*android:style/Theme.Material.NoActionBar">
+        <item name="android:textColorHintInverse">#ffbbbbbb</item>
+        <item name="android:textColorHint">#ffbbbbbb</item>
+        <item name="android:textColorLink">@*android:color/accent_device_default_light</item>
+        <item name="android:textColorLinkInverse">@*android:color/accent_device_default_light</item>
+</style>
+
+</resources>

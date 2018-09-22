@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <dimen name="expanding_entry_card_elevation">0.0dip</dimen>
+    
+    <dimen name="contact_list_card_elevation">0.0dip</dimen>
+    <dimen name="cardview_default_elevation">0.0dip</dimen>
+
+    <dimen name="tile_divider_width">0.0dip</dimen>
+    <dimen name="divider_line_height">0.0dip</dimen>
+	
+	<dimen name="quick_contact_toolbar_elevation">1.0dip</dimen>
+	
+</resources>
