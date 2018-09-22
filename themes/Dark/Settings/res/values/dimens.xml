@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Cardview Preference -->
+    <dimen name="card_elevation">3dp</dimen>
+</resources>
