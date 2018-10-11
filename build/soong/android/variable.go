@@ -53,6 +53,9 @@ type Product_variables struct {
 	Apply_msm8974_1440p_egl_workaround struct {
 		Cflags []string
 	}
+	Bootloader_message_offset struct {
+		Cflags []string
+	}
 }
 
 type ProductVariables struct {
@@ -70,4 +73,5 @@ type ProductVariables struct {
 	Uses_qcom_bsp_legacy  *bool `json:",omitempty"`
 	Uses_qti_camera_device  *bool `json:",omitempty"`
 	Apply_msm8974_1440p_egl_workaround  *bool `json:",omitempty"`
+	Bootloader_message_offset  *int `json:",omitempty"`
 }
