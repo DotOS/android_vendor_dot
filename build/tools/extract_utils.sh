@@ -921,6 +921,7 @@ function extract() {
                 cp "$SRC/$TARGET" "$DEST"
             else
                 printf '    !! file not found in source\n'
+                continue
             fi
         fi
 
