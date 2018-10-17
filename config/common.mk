@@ -83,6 +83,13 @@ PRODUCT_PACKAGES += \
     DialerThemeDark \
     FilesThemeDark
 
+# QS tile styles
+PRODUCT_PACKAGES += \
+    QStilesDefault \
+    QStilesCircleTrim \
+    QStilesSquircleTrim \
+    QStilesTwoToneCircle
+
 # EXT4/F2FS format script
 PRODUCT_COPY_FILES += \
     vendor/dot/prebuilt/common/bin/format.sh:install/bin/format.sh
