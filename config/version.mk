@@ -34,6 +34,9 @@ ifeq ($(DOT_OFFICIAL), true)
        DOT_BUILD_TYPE := UNOFFICIAL
        $(error Device is not official "$(FOUND)")
     endif
+	
+PRODUCT_GENERIC_PROPERTIES += \
+    dot.updater.uri=https://raw.githubusercontent.com/mohancm/ota-1/dot-p/$(shell echo "$(TARGET_PRODUCT)" | cut -d'_' -f 2,3).json
 
 endif
 
