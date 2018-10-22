@@ -35,11 +35,6 @@ ifeq ($(DOT_OFFICIAL), true)
        $(error Device is not official "$(FOUND)")
     endif
 
-PRODUCT_GENERIC_PROPERTIES += \
-    persist.ota.romname=$(TARGET_PRODUCT) \
-    persist.ota.version=$(shell date +%Y%m%d) \
-
-persist.ota.manifest=https://raw.githubusercontent.com/DotOS/ota/dot-p/$(shell echo "$(TARGET_PRODUCT)" | cut -d'_' -f 2,3).xml
 endif
 
 TARGET_PRODUCT_SHORT := $(subst dot_,,$(CUSTOM_BUILD))
