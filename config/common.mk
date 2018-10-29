@@ -96,7 +96,13 @@ PRODUCT_PACKAGES += \
     Turbo \
     turbo.xml \
     privapp-permissions-turbo.xml	
-	
+
+# Weather
+PRODUCT_PACKAGES += \
+    WeatherClient
+
+PRODUCT_COPY_FILES += \
+    vendor/dot/prebuilt/common/etc/permissions/org.pixelexperience.weather.client.xml:system/etc/permissions/org.pixelexperience.weather.client.xml	
 	
 # Markup libs
 PRODUCT_COPY_FILES += \
