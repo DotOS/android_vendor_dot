@@ -14,4 +14,10 @@
     <!-- Color for the background of the shortcut icons.-->
     <color name="shortcut_background">@*android:color/primary_device_default_dark</color>
 
+    <!-- QS tile styles -->
+    <color name="qs_tile_background_active">@*android:color/accent_device_default_light</color>
+    <color name="qs_tile_background_inactive">#4f4f4f</color>
+    <color name="qs_tile_icon_active">#2d2d2d</color>
+    <color name="qs_tile_icon_inactive">#cbcbcb</color>
+
 </resources>
