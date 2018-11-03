@@ -30,23 +30,6 @@ PRODUCT_COPY_FILES += \
     vendor/dot/prebuilt/common/bin/backuptool_postinstall.sh:system/bin/backuptool_postinstall.sh
 endif
 
-# Bootanimation
-TARGET_BOOTANIMATION_480P := $(shell \
-  if [ $(TARGET_SCREEN_WIDTH) -le 720 ]; then \
-    echo 'true'; \
-  else \
-    echo ''; \
-  fi )
-
-# Bootanimation
-ifeq ($(TARGET_BOOTANIMATION_480P),true)
-PRODUCT_COPY_FILES += \
-    vendor/dot/prebuilt/common/bootanimation/bootanimation-480p.zip:system/media/bootanimation.zip
-else
-PRODUCT_COPY_FILES += \
-    vendor/dot/prebuilt/common/bootanimation/bootanimation.zip:system/media/bootanimation.zip
-endif
-
 # Device Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     vendor/dot/overlay/common \
@@ -55,54 +38,6 @@ DEVICE_PACKAGE_OVERLAYS += \
 # EXT4/F2FS format script
 PRODUCT_COPY_FILES += \
     vendor/dot/prebuilt/common/bin/format.sh:install/bin/format.sh
-
-# Custom dotOS packages
-PRODUCT_PACKAGES += \
-    LatinIME \
-    Launcher3 \
-    LiveWallpapers \
-    LiveWallpapersPicker \
-    Stk \
-    Recorder \
-    Music \
-    Browser \
-    DotPapers \
-    InterfaceCenter \
-    SystemUpdates \
-	MarkupGoogle \
-	WellbeingPrebuilt
-
-# Extra tools
-PRODUCT_PACKAGES += \
-    e2fsck \
-    mke2fs \
-    tune2fs \
-    mount.exfat \
-    fsck.exfat \
-    mkfs.exfat \
-    mkfs.f2fs \
-    fsck.f2fs \
-    fibmap.f2fs \
-    mkfs.ntfs \
-    fsck.ntfs \
-    mount.ntfs \
-    7z \
-    bzip2 \
-    curl \
-    lib7z \
-    powertop \
-    pigz \
-    tinymix \
-    unrar \
-    unzip \
-    zip \
-	vim \
-    rsync \
-	bash
-
-# Exchange support
-PRODUCT_PACKAGES += \
-    Exchange2
 
 # Backup Services whitelist
 PRODUCT_COPY_FILES += \
@@ -150,16 +85,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_GENERIC_PROPERTIES += \
     media.recorder.show_manufacturer_and_model=true
 
-# Needed by some RILs and for some Gapps packages
-PRODUCT_PACKAGES += \
-    librsjni \
-    libprotobuf-cpp-full
-
-# Charger images
-PRODUCT_PACKAGES += \
-    charger_res_images
-
-
 # Recommend using the non debug dexpreopter
 USE_DEX2OAT_DEBUG ?= false
 
@@ -168,6 +93,12 @@ $(call inherit-product, vendor/dot/config/telephony.mk)
 
 # dot_props
 $(call inherit-product, vendor/dot/config/dot_props.mk)
+
+# Bootanimation
+include vendor/dot/config/bootanimation.mk
+
+# Packages
+include vendor/dot/config/packages.mk
 
 # Enable ADB authentication
 ifneq ($(TARGET_BUILD_VARIANT),eng)
