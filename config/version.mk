@@ -21,6 +21,7 @@ ifndef DOT_BUILD_TYPE
 endif
 
 CURRENT_DEVICE=$(shell echo "$(TARGET_PRODUCT)" | cut -d'_' -f 2,3)
+CUSTOM_BUILD_DATE := $(shell date -u +%Y%m%d-%H%M)
 
 ifeq ($(DOT_OFFICIAL), true)
    LIST = $(shell curl -s https://raw.githubusercontent.com/DotOS/android_vendor_dot/dot-p/dot.devices)
@@ -39,9 +40,9 @@ endif
 
 TARGET_PRODUCT_SHORT := $(subst dot_,,$(CUSTOM_BUILD))
 
-DOT_VERSION := dotOS-P-$(DOT_MOD_VERSION)-$(CURRENT_DEVICE)-$(DOT_BUILD_TYPE)-$(shell date -u +%Y%m%d)
+DOT_VERSION := dotOS-P-$(DOT_MOD_VERSION)-$(CURRENT_DEVICE)-$(DOT_BUILD_TYPE)-$(CUSTOM_BUILD_DATE)
 
-DOT_FINGERPRINT := dotOS/$(DOT_MOD_VERSION)/$(PLATFORM_VERSION)/$(TARGET_PRODUCT_SHORT)/$(shell date -u +%Y%m%d)
+DOT_FINGERPRINT := dotOS/$(DOT_MOD_VERSION)/$(PLATFORM_VERSION)/$(TARGET_PRODUCT_SHORT)/$(CUSTOM_BUILD_DATE)
 
 PRODUCT_GENERIC_PROPERTIES += \
   ro.dot.version=$(DOT_VERSION) \
