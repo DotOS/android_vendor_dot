@@ -31,7 +31,7 @@
     <integer name="recents_task_bar_dismiss_delay_seconds">0</integer>
 
     <!-- Whether to show activity indicators in the status bar -->
-    <bool name="config_showActivity">true</bool>
+    <bool name="config_showActivity">false</bool>
 
     <!-- If true, enable the advance anti-falsing classifier on the lockscreen. On some devices it
          does not work well, particularly with noisy touchscreens. Note that disabling it may
