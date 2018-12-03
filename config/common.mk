@@ -85,10 +85,10 @@ PRODUCT_PACKAGES += \
 
 # QS tile styles
 PRODUCT_PACKAGES += \
-    QStilesDefault \
-    QStilesCircleTrim \
-    QStilesSquircleTrim \
-    QStilesTwoToneCircle
+    QStilesSquare \
+    QStilesRoundedSquare \
+    QStilesSquircle \
+    QStilesTearDrop
 
 # EXT4/F2FS format script
 PRODUCT_COPY_FILES += \
