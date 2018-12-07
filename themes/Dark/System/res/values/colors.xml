@@ -55,6 +55,9 @@
     <color name="notification_progress_background_color">@*android:color/theme_text2</color>
     <color name="notification_snooze_text">@*android:color/theme_text1</color>
     <color name="notification_text_color1">@*android:color/theme_text1</color>
+    <color name="notification_default_color_light">@*android:color/theme_text1</color>
+    <color name="notification_default_color_dark">@*android:color/theme_text1</color>
+
 
     <!-- Toast text and bg colors -->
     <color name="toast_bg_color">@*android:color/background_material_dark</color>
