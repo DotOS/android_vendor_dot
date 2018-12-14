@@ -88,7 +88,10 @@ PRODUCT_PACKAGES += \
     QStilesSquare \
     QStilesRoundedSquare \
     QStilesSquircle \
-    QStilesTearDrop
+    QStilesTearDrop \
+    QSTilesJustIcons \
+    QStilesCircleOutline \
+    QSTilesCircleGradient
 
 # EXT4/F2FS format script
 PRODUCT_COPY_FILES += \
