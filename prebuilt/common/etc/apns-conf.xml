@@ -1267,6 +1267,7 @@
   <apn carrier="Fido Default" mcc="302" mnc="370" apn="fido-core-appl1.apn" proxy="" port="" user="" password="" mmsc="http://mms.fido.ca" mmsproxy="205.151.11.13" mmsport="80" type="default,supl,mms" />
   <apn carrier="Fido Internet" mcc="302" mnc="370" apn="internet.fido.ca" proxy="" port="" user="" password="" mmsc="" type="default,supl" />
   <apn carrier="Fido Tethering" mcc="302" mnc="370" apn="isp.fido.apn" proxy="" port="" user="" password="" mmsc="" type="default,supl" />
+  <apn carrier="Fido Internet" mcc="302" mnc="370" apn="IMS" type="ims" mvno_match_data="DD" mvno_type="gid" protocol="IPV4V6" roaming_protocol="IPV4V6" />
   <apn carrier="Internet" mcc="302" mnc="490" apn="internet.windmobile.ca" user="" password="" type="default,supl" />
   <apn carrier="MMS" mcc="302" mnc="490" apn="mms.windmobile.ca" proxy="" port="" mmsproxy="74.115.197.70" mmsport="8080" mmsc="http://mms.windmobile.ca" user="" password="" type="mms" />
   <apn carrier="Wind CA" mcc="302" mnc="490" apn="internet.windmobile.ca" proxy="" port="" user="" password="" mmsc="" type="default,supl" />
