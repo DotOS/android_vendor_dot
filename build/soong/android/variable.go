@@ -46,6 +46,9 @@ type Product_variables struct {
 		Cppflags []string
 		Shared_libs []string
 	}
+	Apply_msm8974_1440p_egl_workaround struct {
+		Cflags []string
+	}
 }
 
 type ProductVariables struct {
@@ -61,4 +64,5 @@ type ProductVariables struct {
 	Uses_generic_camera_parameter_library  *bool `json:",omitempty"`
 	Uses_qcom_bsp_legacy  *bool `json:",omitempty"`
 	Uses_qti_camera_device  *bool `json:",omitempty"`
+	Apply_msm8974_1440p_egl_workaround  *bool `json:",omitempty"`
 }

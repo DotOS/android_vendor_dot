@@ -16,6 +16,7 @@ $(call add_json_str, Target_shim_libs, $(TARGET_LD_SHIM_LIBS))
 $(call add_json_bool, Uses_generic_camera_parameter_library, $(if $(TARGET_SPECIFIC_CAMERA_PARAMETER_LIBRARY),,true))
 $(call add_json_bool, Uses_qcom_bsp_legacy, $(filter true,$(TARGET_USES_QCOM_BSP_LEGACY)))
 $(call add_json_bool, Uses_qti_camera_device, $(filter true,$(TARGET_USES_QTI_CAMERA_DEVICE)))
+$(call add_json_bool, Apply_msm8974_1440p_egl_workaround, $(filter true,$(TARGET_MSM8974_1440P_EGL_WORKAROUND)))
 
 # This causes the build system to strip out the last comma in our nested struct, to keep the JSON valid.
 _contents := $(_contents)__SV_END
