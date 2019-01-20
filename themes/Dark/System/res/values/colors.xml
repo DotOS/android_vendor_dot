@@ -40,16 +40,16 @@
     <color name="theme_text2">#b3e5e5e5</color>  <!-- text secondary -->
 
     <!-- Notifications -->
-    <color name="notification_legacy_background_color">#212121</color>
-    <color name="notification_material_background_dimmed_color">#212121</color>
-    <color name="notification_material_background_low_priority_color">#212121</color>
-    <color name="notification_divider_color">#212121</color>
-    <color name="notification_shade_background_color">#212121</color>
-    <color name="notification_guts_bg_color">#212121</color>
-    <color name="notification_material_background_color">#212121</color>
+    <color name="notification_legacy_background_color">@*android:color/black</color>
+    <color name="notification_material_background_dimmed_color">@*android:color/black</color>
+    <color name="notification_material_background_low_priority_color">@*android:color/black</color>
+    <color name="notification_divider_color">@*android:color/black</color>
+    <color name="notification_shade_background_color">@*android:color/black</color>
+    <color name="notification_guts_bg_color">@*android:color/black</color>
+    <color name="notification_material_background_color">@*android:color/black</color>
     <color name="notification_default_color">@*android:color/theme_text1</color> <!-- Gray 600 -->
-    <color name="notification_action_list">#212121</color>
-    <color name="notification_action_list_dark">#212121</color>
+    <color name="notification_action_list">@*android:color/black</color>
+    <color name="notification_action_list_dark">@*android:color/black</color>
     <color name="notification_primary_text_color_light">@*android:color/theme_text1</color>
     <color name="notification_secondary_text_color_light">@*android:color/theme_text2</color>
     <color name="notification_progress_background_color">@*android:color/theme_text2</color>
