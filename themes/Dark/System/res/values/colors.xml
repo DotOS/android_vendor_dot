@@ -40,6 +40,7 @@
     <color name="theme_text2">#b3e5e5e5</color>  <!-- text secondary -->
 
     <!-- Notifications -->
+    <color name="notification_info_button_text">@*android:color/notification_default_color</color>
     <color name="notification_legacy_background_color">@*android:color/black</color>
     <color name="notification_material_background_dimmed_color">@*android:color/black</color>
     <color name="notification_material_background_low_priority_color">@*android:color/black</color>
@@ -55,8 +56,11 @@
     <color name="notification_progress_background_color">@*android:color/theme_text2</color>
     <color name="notification_snooze_text">@*android:color/theme_text1</color>
     <color name="notification_text_color1">@*android:color/theme_text1</color>
-    <color name="notification_default_color_light">@*android:color/theme_text1</color>
-    <color name="notification_default_color_dark">@*android:color/theme_text1</color>
+    <color name="notification_default_color_dark">#a0e5e5e5</color>
+    <color name="notification_ripple_untinted_color">#ffe0e0e0</color>
+    <color name="notification_ripple_color_low_priority">#fff9f9f9</color>
+    <color name="notification_ripple_tinted_color">#fffefefe</color>
+    <color name="notification_gear_color">#ffffffff</color>
 
 
     <!-- Toast text and bg colors -->
