@@ -73,6 +73,9 @@ PRODUCT_PACKAGES += \
     SystemBlackTheme \
     SettingsBlackTheme \
     SystemUIBlackTheme \
+    SystemNeoThemeOverlay \
+    SystemUINeoThemeOverlay \
+    SettingsNeoThemeOverlay \
     ContactsThemeBlack \
     DialerThemeBlack \
     FilesThemeBlack \
