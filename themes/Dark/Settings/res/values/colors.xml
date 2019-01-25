@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="condition_card_background">@*android:color/background_material_dark</color>
+    <color name="suggestion_condition_background">@*android:color/primary_device_default_dark</color>
+    <!-- <color name="suggestion_tile_background">@*android:color/background_material_dark</color>
+    <color name="suggestion_title_text_color">@*android:color/white</color>
+    <color name="suggestion_summary_text_color">@*android:color/white</color> -->
+    <color name="material_grey_300">@*android:color/primary_device_default_dark</color>
+    <color name="search_bar_background_color">@*android:color/primary_device_default_dark</color>
+
+    <!-- Wifi network details -->
+    <color name="wifi_details_icon_color">#8AFFFFFF</color>
+
+    <!-- Color for the background of the shortcut icons.-->
+    <color name="shortcut_background">@*android:color/primary_device_default_dark</color>
+
+</resources>

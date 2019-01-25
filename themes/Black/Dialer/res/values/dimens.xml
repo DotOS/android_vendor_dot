@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	
+    <dimen name="cardview_default_radius">3.0dip</dimen>
+  
+    <dimen name="search_box_search_icon_padding">0.0dip</dimen>
+   
+    <dimen name="search_box_elevation">0.0dip</dimen>
+   
+    <dimen name="action_bar_elevation">0.0dip</dimen>
+
+    <dimen name="design_appbar_elevation">0.0dip</dimen>
+    <dimen name="design_snackbar_elevation">0.0dip</dimen>
+   
+	<dimen name="translucent_shadow_height">0.0dip</dimen>
+	<dimen name="shadow_length">0.0dip</dimen>
+	<dimen name="contact_list_card_elevation">0.0dip</dimen>
+	
+    <dimen name="tab_elevation">0.0dip</dimen>	
+	<dimen name="cardview_default_elevation">0.0dip</dimen>	
+    <dimen name="cardview_compat_inset_shadow">0.0dip</dimen>	
+	<dimen name="dialpad_elevation">0.0dip</dimen>
+	
+</resources>

@@ -35,6 +35,54 @@ DEVICE_PACKAGE_OVERLAYS += \
     vendor/dot/overlay/common \
     vendor/dot/overlay/dictionaries
 
+
+# Themes
+# Accents
+PRODUCT_PACKAGES += \
+    PixelTheme \
+    AmberAccent \
+    BlueAccent \
+    BlueGreyAccent \
+    BrownAccent \
+    CyanAccent \
+    CandyRedAccent \
+    DeepOrangeAccent \
+    DeepPurpleAccent \
+    ExtendedGreenAccent \
+    GreenAccent \
+    GreyAccent \
+    IndigoAccent \
+    JadeGreenAccent \
+    LightBlueAccent \
+    LightGreenAccent \
+    LimeAccent \
+    OrangeAccent \
+    PaleBlueAccent \
+    PaleRedAccent \
+    PinkAccent \
+    PurpleAccent \
+    RedAccent \
+    TealAccent \
+    YellowAccent
+
+# UI Variants
+PRODUCT_PACKAGES += \
+    SystemDarkTheme \
+    SettingsDarkTheme \
+    SystemUIDarkTheme \
+    SystemBlackTheme \
+    SettingsBlackTheme \
+    SystemUIBlackTheme \
+    SystemNeoThemeOverlay \
+    SystemUINeoThemeOverlay \
+    SettingsNeoThemeOverlay \
+    ContactsThemeBlack \
+    DialerThemeBlack \
+    FilesThemeBlack \
+    ContactsThemeDark \
+    DialerThemeDark \
+    FilesThemeDark
+
 # EXT4/F2FS format script
 PRODUCT_COPY_FILES += \
     vendor/dot/prebuilt/common/bin/format.sh:install/bin/format.sh
