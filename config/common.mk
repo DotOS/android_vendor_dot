@@ -70,9 +70,11 @@ PRODUCT_PACKAGES += \
     SystemDarkTheme \
     SettingsDarkTheme \
     SystemUIDarkTheme \
+	WellbeingDarkTheme \
     SystemBlackTheme \
     SettingsBlackTheme \
     SystemUIBlackTheme \
+	WellbeingBlackTheme \
     SystemNeoThemeOverlay \
     SystemUINeoThemeOverlay \
     SettingsNeoThemeOverlay \
