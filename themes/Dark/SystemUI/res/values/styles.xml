@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="global_actions_base" parent="android:Theme.DeviceDefault">
-        <item name="android:colorPrimary">@*android:color/primary_device_default_settings</item>
+        <item name="android:colorPrimary">#1c1c1e</item>
         <item name="android:colorPrimaryDark">@*android:color/primary_dark_device_default_settings</item>
         <item name="android:colorSecondary">@*android:color/secondary_device_default_settings</item>
         <item name="android:colorAccent">@*android:color/accent_device_default_dark</item>
         <item name="android:colorControlNormal">?android:attr/textColorPrimary</item>
         <item name="android:colorBackgroundFloating">@*android:color/material_grey_900</item>
-        <item name="android:panelColorBackground">@*android:color/material_grey_800</item>
+        <item name="android:panelColorBackground">#1c1c1e</item>
     </style>
     <style name="qs_base" parent="android:Theme.DeviceDefault">
-        <item name="android:colorPrimary">@*android:color/black</item>
-        <item name="android:colorPrimaryDark">@*android:color/black</item>
-        <item name="android:colorSecondary">@*android:color/black</item>
+        <item name="android:colorPrimary">#1c1d1f</item>
+        <item name="android:colorPrimaryDark">#17181a</item>
+        <item name="android:colorSecondary">#151618</item>
         <item name="android:colorAccent">@*android:color/accent_device_default_dark</item>
         <item name="android:colorControlNormal">?android:attr/textColorPrimary</item>
-        <item name="android:colorBackgroundFloating">@*android:color/black</item>
-        <item name="android:panelColorBackground">@*android:color/black</item>
+        <item name="android:colorBackgroundFloating">#151618</item>
+        <item name="android:panelColorBackground">#151618</item>
     </style>
 </resources>
