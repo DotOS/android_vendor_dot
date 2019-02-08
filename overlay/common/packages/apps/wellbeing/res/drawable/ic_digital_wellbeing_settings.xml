@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/settings_background_icon_color" />
+            <size android:height="@dimen/settings_icon_image_size" android:width="@dimen/settings_icon_image_size" />
+        </shape>
+    </item>
+    <item android:drawable="@drawable/ic_digital_wellbeing_settings_icon" />
+</layer-list>
