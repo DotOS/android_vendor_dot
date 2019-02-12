@@ -84,7 +84,8 @@ PRODUCT_PACKAGES += \
     ContactsThemeDark \
     DialerThemeDark \
     FilesThemeDark \
-	WellbeingNeo 
+	WellbeingNeo \
+	XiaomiDozeNeo
 
 # QS tile styles
 PRODUCT_PACKAGES += \
