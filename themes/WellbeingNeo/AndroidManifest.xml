@@ -1,0 +1,8 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.google.android.apps.wellbeing.theme.neo"
+    android:versionCode="1"
+    android:versionName="1.0">
+    <overlay android:targetPackage="com.google.android.apps.wellbeing" android:priority="1"/>
+
+    <application android:label="@string/wellbeing_overlay_neo" android:hasCode="false"/>
+</manifest>
