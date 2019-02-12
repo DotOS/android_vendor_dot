@@ -83,7 +83,8 @@ PRODUCT_PACKAGES += \
     FilesThemeBlack \
     ContactsThemeDark \
     DialerThemeDark \
-    FilesThemeDark
+    FilesThemeDark \
+	WellbeingNeo 
 
 # QS tile styles
 PRODUCT_PACKAGES += \
