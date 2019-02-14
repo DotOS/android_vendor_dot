@@ -13,18 +13,23 @@
 # limitations under the License.
 
 # Bootanimation
-TARGET_BOOTANIMATION_480P := $(shell \
-  if [ $(TARGET_SCREEN_WIDTH) -le 720 ]; then \
-    echo 'true'; \
-  else \
-    echo ''; \
-  fi )
 
-# Bootanimation
-ifeq ($(TARGET_BOOTANIMATION_480P),true)
-PRODUCT_COPY_FILES += \
-    vendor/dot/prebuilt/common/bootanimation/bootanimation-480p.zip:system/media/bootanimation.zip
+TARGET_BOOT_ANIMATION_RES ?= undefined
+
+ifeq ($(TARGET_BOOT_ANIMATION_RES),480)
+     PRODUCT_COPY_FILES += vendor/dot/prebuilt/bootanimation/480p.zip:system/media/bootanimation.zip 
+else ifeq ($(TARGET_BOOT_ANIMATION_RES),720)
+     PRODUCT_COPY_FILES += vendor/dot/prebuilt/bootanimation/720p.zip:system/media/bootanimation.zip
+else ifeq ($(TARGET_BOOT_ANIMATION_RES),1080)
+     PRODUCT_COPY_FILES += vendor/dot/prebuilt/bootanimation/1080p.zip:system/media/bootanimation.zip
+else ifeq ($(TARGET_BOOT_ANIMATION_RES),1440)
+     PRODUCT_COPY_FILES += vendor/dot/prebuilt/bootanimation/1440p.zip:system/media/bootanimation.zip
+else ifeq ($(TARGET_BOOT_ANIMATION_RES),2160)
+     PRODUCT_COPY_FILES += vendor/dot/prebuilt/bootanimation/2160p.zip:system/media/bootanimation.zip	 
+else ifeq ($(TARGET_BOOT_ANIMATION_RES),undefined)
+     $(warning Target bootanimation res is undefined, using generic bootanimation )
+     PRODUCT_COPY_FILES += vendor/dot/prebuilt/bootanimation/bootanimation.zip:system/media/bootanimation.zip
 else
-PRODUCT_COPY_FILES += \
-    vendor/dot/prebuilt/common/bootanimation/bootanimation.zip:system/media/bootanimation.zip
+     $(warning Defined bootanimation res is wrong, using generic bootanimation )
+     PRODUCT_COPY_FILES += vendor/dot/prebuilt/bootanimation/bootanimation.zip:system/media/bootanimation.zip
 endif
