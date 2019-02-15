@@ -1,14 +1,14 @@
 <p align="center">
 <img src="https://raw.githubusercontent.com/samgrande/XDA_Template/master/vendorart.png" > 
 
-Getting Started with making tree for dotOS from LOS
+Getting Started
 ==================================================
 To get started with the building process, you'll need to get familiar with [Git and Repo](http://source.android.com/source/using-repo.html).
 
 To initialize your local repository, use a command like this:
 
 ```bash
-    repo init -u git://github.com/DotOS/manifest.git -b dot-o
+    repo init -u git://github.com/DotOS/manifest.git -b dot-p
 ```
 
 Then to sync up:
@@ -20,23 +20,19 @@ Then to sync up:
 Additionally, you can define the number of parallel download repo should do:
 
 ```bash
-	repo sync -f -jX --force-sync --no-clone-bundle    ( X is the number of parallel download repo should do choose depending on your cpu )
+	repo sync --current-branch --no-tags --no-clone-bundle --optimized-fetch --force-broken --force-sync -jX    ( X is the number of parallel download repo should do choose depending on your cpu )
 ```
 
-To create tree:
+Compilation of Dot OS:
+====================
+
+From root directory of Project, perform following commands in terminal
+
 
 ```bash
-    get a los based tree and open vendorsetup.sh ,lineage.mk and AndroidProducts.mk (if there) and rename all "lineage" or "cm" with "dot"
-```
-
-To compile the rom :
-
-```bash
-	. build/envsetup.sh (choose your preference there )
-	
-	lunch dot_devicecodename
-	
-	brunch devicecodename
+source build/envsetup.sh
+lunch dot_<devicecodename>-userdebug
+make bacon
 ```
 -----------------------------------------	
 Getting Official Maintainership for dotOS
@@ -45,7 +41,7 @@ To get Official Maintainership for dotOS you should have a stable device source 
 
 First make an unofficial build of dotOS and post in [**XDA**](xda-developers.com) 
 
-Fill this form up :- [**Maintainership Form**](https://docs.google.com/forms/d/e/1FAIpQLSdbeHxHxOedRxUM9tHBAv4kXiDFoJ99lUp0MxniFAo7eOrYbA/viewform) 
+Fill this form up :- [**Maintainership Form**](https://blog.droidontime.com/changes/maintainership-form-pie.html) 
 
 Note : You get addded or selected for a single device. To maintain another device you will need to fill up the Maintainership FORM again
 
