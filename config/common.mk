@@ -135,6 +135,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/dot/prebuilt/common/etc/init.local.rc:root/init.dot.rc
 
+# systemupdates init file
+PRODUCT_COPY_FILES += \
+    vendor/dot/prebuilt/common/etc/init.systemupdates.rc:system/etc/init/init.systemupdates.rc
+
 # Bring in camera effects
 PRODUCT_COPY_FILES +=  \
     vendor/dot/prebuilt/common/media/LMspeed_508.emd:system/media/LMspeed_508.emd \
