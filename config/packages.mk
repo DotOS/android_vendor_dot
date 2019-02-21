@@ -19,7 +19,6 @@ PRODUCT_PACKAGES += \
     LiveWallpapers \
     LiveWallpapersPicker \
     Stk \
-    Recorder \
     Music \
     Browser \
     DotPapers \
