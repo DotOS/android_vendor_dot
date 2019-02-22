@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><animated-vector xmlns:android="http://schemas.android.com/apk/res/android" android:drawable="@*android:drawable/btn_checkbox_checked_mtrl">
+  <target android:name="maskGroup" android:animation="@*android:anim/btn_checkbox_to_checked_icon_null_animation"/>
+  <target android:name="mask" android:animation="@*android:anim/btn_checkbox_to_checked_box_outer_merged_animation"/>
+  <target android:name="morphingShape" android:animation="@*android:anim/btn_checkbox_to_unchecked_box_inner_merged_animation"/>
+</animated-vector>
