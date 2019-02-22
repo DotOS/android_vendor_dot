@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/* //device/apps/common/assets/res/any/colors.xml
+**
+** Copyright 2006, The Android Open Source Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License");
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+-->
+<resources>
+
+    <!-- Custom colours for dot -->
+    <color name="dot_blue">#3C85ED</color>
+    <color name="dot_green">#2CA851</color>
+	<color name="dot_yellow">#F5B700</color>
+	<color name="dot_red">#E34136</color>
+	<color name="dot_purple">#8a65ef</color>
+	<color name="dot_grey">#727272</color>
+	<color name="dot_sky">#05a1bc</color>
+	<color name="dot_teal">#0F856D</color>
+	<color name="dot_violet">#6872ea</color>
+	<color name="dot_pink">#ed4fc4</color>
+	<color name="dot_primary_color">#000000</color>
+	<color name="dot_secondary_color">#000000</color>
+	<color name="dot_background_color">#000000</color>
+	<color name="dot_inverse_primary_color">#ffffff</color>
+	<color name="dot_inverse_secondary_color">#f4f4f4</color>
+	<color name="dot_qs_active">#3d3d3d</color>
+	<color name="dot_qs_inactive">#bebebe</color>
+	<color name="dot_qs_unavailable">#565656</color>
+	<color name="dot_qs_circle_active">?android:attr/colorAccent</color>
+	<color name="dot_qs_circle_inactive">#80303030</color>
+</resources>
