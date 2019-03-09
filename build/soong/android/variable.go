@@ -56,6 +56,9 @@ type Product_variables struct {
 	Bootloader_message_offset struct {
 		Cflags []string
 	}
+	Uses_metadata_as_fde_key struct {
+		Cflags []string
+	}
 }
 
 type ProductVariables struct {
@@ -74,4 +77,5 @@ type ProductVariables struct {
 	Uses_qti_camera_device  *bool `json:",omitempty"`
 	Apply_msm8974_1440p_egl_workaround  *bool `json:",omitempty"`
 	Bootloader_message_offset  *int `json:",omitempty"`
+	Uses_metadata_as_fde_key  *bool `json:",omitempty"`
 }
