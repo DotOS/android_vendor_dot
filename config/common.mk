@@ -177,6 +177,10 @@ $(call inherit-product, vendor/dot/config/dot_props.mk)
 # Bootanimation
 include vendor/dot/config/bootanimation.mk
 
+# Cutout control overlay
+PRODUCT_PACKAGES += \
+    NoCutoutOverlay
+
 # Packages
 include vendor/dot/config/packages.mk
 
