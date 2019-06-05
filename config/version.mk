@@ -41,6 +41,24 @@ PRODUCT_GENERIC_PROPERTIES += \
 
 endif
 
+ifeq ($(DOT_NIGHTLY), true)
+   LIST = $(shell curl -s https://raw.githubusercontent.com/DotOS/android_vendor_dot/dot-p/dot.devices)
+   FOUND_DEVICE =  $(filter $(CURRENT_DEVICE), $(LIST))
+    ifeq ($(FOUND_DEVICE),$(CURRENT_DEVICE))
+      IS_OFFICIAL=true
+      DOT_BUILD_TYPE := Nightly
+
+      PRODUCT_GENERIC_PROPERTIES += \
+    dot.updater.uri=https://raw.githubusercontent.com/DotOS/ota_config/dot-p/$(shell echo "$(TARGET_PRODUCT)" | cut -d'_' -f 2,3)_nightly.json
+      
+    endif
+    ifneq ($(IS_OFFICIAL), true)
+       DOT_BUILD_TYPE := UNOFFICIAL
+       $(error Device is not official "$(FOUND)")
+    endif
+
+endif
+
 TARGET_PRODUCT_SHORT := $(subst dot_,,$(CUSTOM_BUILD))
 
 DOT_VERSION := dotOS-P-$(DOT_MOD_VERSION)-$(CURRENT_DEVICE)-$(DOT_BUILD_TYPE)-$(CUSTOM_BUILD_DATE)
