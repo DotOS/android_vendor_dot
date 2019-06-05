@@ -13,7 +13,7 @@
 # limitations under the License.
 
 #dotOS Versioning :
-DOT_MOD_VERSION = v3.0
+DOT_MOD_VERSION = v3.1
 
 
 ifndef DOT_BUILD_TYPE
@@ -37,7 +37,8 @@ ifeq ($(DOT_OFFICIAL), true)
     endif
 	
 PRODUCT_GENERIC_PROPERTIES += \
-    dot.updater.uri=https://raw.githubusercontent.com/DotOS/ota_config/dot-p/$(shell echo "$(TARGET_PRODUCT)" | cut -d'_' -f 2,3).json
+    dot.updater.uri=https://raw.githubusercontent.com/DotOS/ota_config/dot-p/$(shell echo "$(TARGET_PRODUCT)" | cut -d'_' -f 2,3).json \
+    dot.updater.uri.nightly=https://raw.githubusercontent.com/DotOS/ota_config/dot-p/$(shell echo "$(TARGET_PRODUCT)" | cut -d'_' -f 2,3)_nightly.json
 
 endif
 
@@ -46,10 +47,11 @@ ifeq ($(DOT_NIGHTLY), true)
    FOUND_DEVICE =  $(filter $(CURRENT_DEVICE), $(LIST))
     ifeq ($(FOUND_DEVICE),$(CURRENT_DEVICE))
       IS_OFFICIAL=true
-      DOT_BUILD_TYPE := Nightly
+      DOT_BUILD_TYPE := NIGHTLY
 
       PRODUCT_GENERIC_PROPERTIES += \
-    dot.updater.uri=https://raw.githubusercontent.com/DotOS/ota_config/dot-p/$(shell echo "$(TARGET_PRODUCT)" | cut -d'_' -f 2,3)_nightly.json
+      dot.updater.uri=https://raw.githubusercontent.com/DotOS/ota_config/dot-p/$(shell echo "$(TARGET_PRODUCT)" | cut -d'_' -f 2,3).json \
+      dot.updater.uri.nightly=https://raw.githubusercontent.com/DotOS/ota_config/dot-p/$(shell echo "$(TARGET_PRODUCT)" | cut -d'_' -f 2,3)_nightly.json
       
     endif
     ifneq ($(IS_OFFICIAL), true)
