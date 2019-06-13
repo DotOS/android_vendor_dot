@@ -21,7 +21,6 @@ PRODUCT_PACKAGES += \
     Stk \
     Music \
     Browser \
-    DotPapers \
     InterfaceCenter \
     SystemUpdates \
     MarkupGoogle \
