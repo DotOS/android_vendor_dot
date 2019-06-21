@@ -13,7 +13,7 @@
 # limitations under the License.
 
 #dotOS Versioning :
-DOT_MOD_VERSION = v3.0
+DOT_MOD_VERSION = v3.1
 
 
 ifndef DOT_BUILD_TYPE
