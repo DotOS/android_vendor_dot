@@ -1,5 +1,5 @@
 #
-#  Copyright 2020 The dotOS Project
+#  Copyright 2018, The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,22 +14,16 @@
 # limitations under the License.
 #
 
-# Navbar
-PRODUCT_PACKAGES += \
-    GesturalNavigationOverlayHidden \
-    GesturalNavigationOverlayLong \
-    GesturalNavigationOverlayMedium
+LOCAL_PATH:= $(call my-dir)
+include $(CLEAR_VARS)
 
-# Fonts
-PRODUCT_PACKAGES += \
-    FontArbutusSourceOverlay \
-    FontArvoLatoOverlay \
-    FontRubikRubikOverlay \
-    FontGoogleSansOverlay \
-    FontOnePlusSlateOverlay \
-    FontBarlowOverlay \
-    FontInterOverlay
+LOCAL_PRODUCT_MODULE := true
 
-# Stub
-PRODUCT_PACKAGES += \
-    DotThemesStub
+LOCAL_RESOURCE_DIR := $(LOCAL_PATH)/res
+
+LOCAL_MANIFEST_FILE := AndroidManifest.xml
+
+LOCAL_PACKAGE_NAME := DotThemesStub
+LOCAL_SDK_VERSION := current
+
+include $(BUILD_PACKAGE)
