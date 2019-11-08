@@ -1,5 +1,5 @@
 #
-#  Copyright 2020 The dotOS Project
+#  Copyright 2019, The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,11 +14,19 @@
 # limitations under the License.
 #
 
-# Navbar
-PRODUCT_PACKAGES += \
-    GesturalNavigationOverlayLong \
-    GesturalNavigationOverlayMedium
+LOCAL_PATH:= $(call my-dir)
+include $(CLEAR_VARS)
 
-# Fonts
-PRODUCT_PACKAGES += \
-    FontGoogleSansOverlay
+LOCAL_RRO_THEME := FontGoogleSans
+
+LOCAL_PRODUCT_MODULE := true
+
+LOCAL_SRC_FILES := $(call all-subdir-java-files)
+
+LOCAL_RESOURCE_DIR := $(LOCAL_PATH)/res
+
+LOCAL_PACKAGE_NAME := FontGoogleSansOverlay
+LOCAL_SDK_VERSION := current
+
+include $(BUILD_RRO_PACKAGE)
+
