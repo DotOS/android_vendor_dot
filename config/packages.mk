@@ -68,6 +68,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES_DEBUG += \
     procmem
 
+# Charger mode images
+ifeq ($(TARGET_INCLUDE_PIXEL_CHARGER),true)
+PRODUCT_PACKAGES += \
+    charger_res_images \
+    product_charger_res_images
+endif
+
 # Dex preopt
 PRODUCT_DEXPREOPT_SPEED_APPS += \
     SystemUI \
