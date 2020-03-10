@@ -88,6 +88,7 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
 PRODUCT_PACKAGES += \
     Customizations \
     BatteryManager \
+    Seedvault \
     StitchImage \
     Music \
     MaterialFiles
