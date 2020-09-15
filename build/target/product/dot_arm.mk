@@ -18,6 +18,7 @@ $(call inherit-product, build/target/product/gsi_release.mk)
 # Inherit some common DotOS stuff.
 $(call inherit-product, vendor/dot/config/common.mk)
 
+TARGET_NO_KERNEL_OVERRIDE := true
 TARGET_USES_64_BIT_BINDER := true
 
 PRODUCT_NAME := dot_arm
