@@ -8,7 +8,7 @@ INSTALLED_DTIMAGE_TARGET := $(PRODUCT_OUT)/dt.img
 ifeq ($(strip $(BOARD_KERNEL_PREBUILT_DT)),)
 
 ifeq ($(strip $(TARGET_CUSTOM_DTBTOOL)),)
-DTBTOOL_NAME := dtbToolLineage
+DTBTOOL_NAME := dtbToolDot
 else
 DTBTOOL_NAME := $(TARGET_CUSTOM_DTBTOOL)
 endif
@@ -16,7 +16,7 @@ endif
 DTBTOOL := $(HOST_OUT_EXECUTABLES)/$(DTBTOOL_NAME)$(HOST_EXECUTABLE_SUFFIX)
 
 ifeq ($(strip $(TARGET_CUSTOM_DTBTOOL)),)
-# dtbToolLineage will search subdirectories
+# dtbTooldot will search subdirectories
 possible_dtb_dirs = $(KERNEL_OUT)/arch/$(KERNEL_ARCH)/boot/
 else
 # Most specific paths must come first in possible_dtb_dirs
@@ -42,7 +42,7 @@ endif
 $(INSTALLED_DTIMAGE_TARGET): $(DTBTOOL) $(INSTALLED_KERNEL_TARGET)
 	$(build-dtimage-target)
 ifeq ($(strip $(BOARD_KERNEL_LZ4C_DT)),true)
-	prebuilts/tools-lineage/${HOST_OS}-x86/bin/lz4 -9 < $@ > $(LZ4_DT_IMAGE)
+	prebuilts/tools-dot/${HOST_OS}-x86/bin/lz4 -9 < $@ > $(LZ4_DT_IMAGE)
 	$(hide) $(ACP) $(LZ4_DT_IMAGE) $@
 endif
 	@echo "Made DT image: $@"

@@ -16,7 +16,6 @@
      limitations under the License.
 -->
 <resources>
-    <string name="themes_stub_package" translatable="false">org.lineageos.customization</string>
 
     <!-- List of packages whose icons are used to preview the icon shape for a theme. These are
         typically GMS apps so they should be available in GMS devices. -->
