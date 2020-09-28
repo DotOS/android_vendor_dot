@@ -1,4 +1,3 @@
-
 include vendor/dot/config/BoardConfigKernel.mk
 
 ifeq ($(BOARD_USES_QCOM_HARDWARE),true)
