@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-CUSTOM_PROPERTIES += \
+PRODUCT_GENERIC_PROPERTIES += \
     dalvik.vm.debug.alloc=0 \
     keyguard.no_require_sim=true \
     media.recorder.show_manufacturer_and_model=true \
@@ -20,14 +20,11 @@ CUSTOM_PROPERTIES += \
     persist.sys.disable_rescue=true \
     ro.atrace.core.services=com.google.android.gms,com.google.android.gms.ui,com.google.android.gms.persistent \
     ro.carrier=unknown \
-    ro.com.android.dataroaming=false \
     ro.com.android.dateformat=MM-dd-yyyy \
-    ro.config.bt_sco_vol_steps=30 \
-    ro.config.media_vol_steps=30 \
     ro.error.receiver.system.apps=com.google.android.gms \
     ro.opa.eligible_device=true \
     ro.setupwizard.enterprise_mode=1 \
     ro.storage_manager.enabled=true \
     ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html \
     ro.url.legal.android_privacy=http://www.google.com/intl/%s/mobile/android/basic/privacy.html \
-    ro.boot.vendor.overlay.theme=com.android.internal.systemui.navbar.gestural
+    ro.control_privapp_permissions=log
