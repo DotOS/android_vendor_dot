@@ -12,6 +12,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# Required packages
+PRODUCT_PACKAGES += \
+    BluetoothExt \
+    ExactCalculator \
+    ThemePicker
+
 # Extra tools in Lineage
 PRODUCT_PACKAGES += \
     7z \
