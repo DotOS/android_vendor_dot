@@ -44,6 +44,7 @@ endif
 # Soong bool variables
 
 # Set default values
+TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS ?= 0
 TARGET_SURFACEFLINGER_FOD_LIB ?= surfaceflinger_fod_lib
 TARGET_SPECIFIC_CAMERA_PARAMETER_LIBRARY ?= libcamera_parameters
 
