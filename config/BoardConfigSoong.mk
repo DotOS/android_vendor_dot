@@ -29,7 +29,8 @@ $(foreach v,$(EXPORT_TO_SOONG),$(eval $(call addVar,$(v))))
 
 SOONG_CONFIG_NAMESPACES += dotGlobalVars
 SOONG_CONFIG_dotGlobalVars += \
-  target_surfaceflinger_fod_lib
+  target_surfaceflinger_fod_lib \
+  disable_postrender_cleanup
 
 # Only create soong_namespace var if dealing with UM platforms to avoid breaking build for all other platforms
 ifneq ($(filter $(UM_PLATFORMS),$(TARGET_BOARD_PLATFORM)),)
@@ -44,6 +45,7 @@ TARGET_SURFACEFLINGER_FOD_LIB ?= surfaceflinger_fod_lib
 
 
 # Soong value variables
+SOONG_CONFIG_dotGlobalVars_disable_postrender_cleanup := $(TARGET_DISABLE_POSTRENDER_CLEANUP)
 SOONG_CONFIG_dotGlobalVars_target_surfaceflinger_fod_lib := $(TARGET_SURFACEFLINGER_FOD_LIB)
 
 # et Qcom Soong Namespace for UM platforms Only

@@ -69,6 +69,23 @@ librmnetctl_pre_uplink {
 }
 
 soong_config_module_type {
+    name: "disable_postrender_cleanup",
+    module_type: "cc_defaults",
+    config_namespace: "dotGlobalVars",
+    bool_variables: ["disable_postrender_cleanup"],
+    properties: ["cppflags"],
+}
+
+disable_postrender_cleanup {
+    name: "disable_postrender_cleanup_defaults",
+    soong_config_variables: {
+        disable_postrender_cleanup: {
+            cppflags: ["-DDISABLE_POSTRENDER_CLEANUP"],
+        },
+    },
+}
+
+soong_config_module_type {
     name: "surfaceflinger_qcom_extensions",
     module_type: "cc_defaults",
     config_namespace: "dotQcomVars",
