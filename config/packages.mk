@@ -16,7 +16,8 @@
 PRODUCT_PACKAGES += \
     BluetoothExt \
     ExactCalculator \
-    ThemePicker
+    ThemePicker \
+    QuickAccessWallet
 
 # Extra tools in Lineage
 PRODUCT_PACKAGES += \
