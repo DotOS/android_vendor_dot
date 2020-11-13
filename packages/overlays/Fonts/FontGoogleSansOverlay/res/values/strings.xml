@@ -16,6 +16,6 @@
  */
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- Headline / Google Sans overlay -->
+    <!-- Google Sans overlay -->
     <string name="font_google_sans_overlay" translatable="false">Google Sans</string>
 </resources>

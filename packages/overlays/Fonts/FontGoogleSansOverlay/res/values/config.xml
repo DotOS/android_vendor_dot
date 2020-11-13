@@ -16,10 +16,6 @@
  */
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-       <!-- Name of a font family to use for body text. -->
-       <string name="config_bodyFontFamily" translatable="false">google-sans</string>
-       <string name="config_bodyFontFamilyMedium" translatable="false">google-sans-medium</string>
-
        <!-- Name of a font family to use for headlines. If empty, falls back to platform default -->
        <string name="config_headlineFontFamily">google-sans</string>
        <string name="config_headlineFontFamilyMedium">google-sans-medium</string>
