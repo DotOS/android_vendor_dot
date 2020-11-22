@@ -71,3 +71,5 @@ PRODUCT_PACKAGES_DEBUG += \
 PRODUCT_DEXPREOPT_SPEED_APPS += \
     SystemUI \
     Launcher3QuickStep
+
+include vendor/dot/config/overlay.mk
