@@ -29,3 +29,8 @@ PRODUCT_GENERIC_PROPERTIES += \
     ro.url.legal.android_privacy=http://www.google.com/intl/%s/mobile/android/basic/privacy.html \
     ro.control_privapp_permissions=log \
     persist.sys.theme.accentcolor=-1
+
+# Disable touch video heatmap to reduce latency, motion jitter, and CPU usage
+# on supported devices with Deep Press input classifier HALs and models
+PRODUCT_PRODUCT_PROPERTIES += \
+	ro.input.video_enabled=false
