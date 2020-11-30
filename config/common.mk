@@ -114,5 +114,10 @@ include vendor/dot/config/bootanimation.mk
 # Fonts
 include vendor/dot/config/fonts.mk
 
+ifeq ($(EXTRA_FOD_ANIMATIONS),true)
+PRODUCT_PACKAGES += \
+    FodAnimationResources
+endif
+
 # Dot_props
 $(call inherit-product, vendor/dot/config/dot_props.mk)
