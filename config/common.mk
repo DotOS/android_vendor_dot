@@ -111,5 +111,8 @@ include vendor/dot/config/version.mk
 # Bootanimation
 include vendor/dot/config/bootanimation.mk
 
+# Fonts
+include vendor/dot/config/fonts.mk
+
 # Dot_props
 $(call inherit-product, vendor/dot/config/dot_props.mk)

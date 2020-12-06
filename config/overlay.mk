@@ -21,4 +21,10 @@ PRODUCT_PACKAGES += \
 
 # Fonts
 PRODUCT_PACKAGES += \
-    FontGoogleSansOverlay
+    FontArbutusSourceOverlay \
+    FontArvoLatoOverlay \
+    FontRubikRubikOverlay \
+    FontGoogleSansOverlay \
+    FontOnePlusSlateOverlay \
+    FontBarlowOverlay \
+    FontInterOverlay

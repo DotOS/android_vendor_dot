@@ -15,7 +15,17 @@
  * limitations under the License.
  */
 -->
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- Google Sans overlay -->
-    <string name="font_google_sans_overlay" translatable="false">Google Sans</string>
-</resources>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.android.theme.font.inter"
+    android:versionCode="1"
+    android:versionName="1.0">
+    <overlay android:targetPackage="android"
+        android:category="android.theme.customization.font"
+        android:priority="1"/>
+
+    <application android:label="@string/font_inter_overlay" android:hasCode="false">
+        <meta-data
+            android:name="android.theme.customization.REQUIRED_SYSTEM_FONTS"
+            android:value="inter,inter-bold,inter-medium" />
+    </application>
+</manifest>

@@ -1,0 +1,72 @@
+<fonts-modification version="1">
+    <family customizationType="new-named-family" name="google-sans">
+        <font weight="400" style="normal">GoogleSans-Regular.ttf</font>
+        <font weight="400" style="italic">GoogleSans-Italic.ttf</font>
+        <font weight="500" style="normal">GoogleSans-Medium.ttf</font>
+        <font weight="500" style="italic">GoogleSans-MediumItalic.ttf</font>
+        <font weight="700" style="normal">GoogleSans-Bold.ttf</font>
+        <font weight="700" style="italic">GoogleSans-BoldItalic.ttf</font>
+    </family>
+    <alias name="google-sans-medium" to="google-sans" weight="500" />
+
+    <family customizationType="new-named-family" name="arbutus-slab">
+      <font weight="400" style="normal">ArbutusSlab-Regular.ttf</font>
+    </family>
+
+    <family customizationType="new-named-family" name="lato">
+      <font weight="400" style="normal">Lato-Regular.ttf</font>
+      <font weight="400" style="italic">Lato-Italic.ttf</font>
+      <font weight="700" style="normal">Lato-Bold.ttf</font>
+      <font weight="700" style="italic">Lato-BoldItalic.ttf</font>
+    </family>
+    <alias name="lato-bold" to="lato" weight="700" />
+
+    <family customizationType="new-named-family" name="rubik">
+      <font weight="400" style="normal">Rubik-Regular.ttf</font>
+      <font weight="400" style="italic">Rubik-Italic.ttf</font>
+      <font weight="500" style="normal">Rubik-Medium.ttf</font>
+      <font weight="500" style="italic">Rubik-MediumItalic.ttf</font>
+      <font weight="700" style="normal">Rubik-Bold.ttf</font>
+      <font weight="700" style="italic">Rubik-BoldItalic.ttf</font>
+    </family>
+    <alias name="rubik-medium" to="rubik" weight="500" />
+
+    <family customizationType="new-named-family" name="zilla-slab-medium">
+      <font weight="500" style="normal">ZillaSlab-Medium.ttf</font>
+      <font weight="500" style="italic">ZillaSlab-MediumItalic.ttf</font>
+      <font weight="600" style="normal">ZillaSlab-SemiBold.ttf</font>
+      <font weight="600" style="italic">ZillaSlab-SemiBoldItalic.ttf</font>
+    </family>
+    <alias name="zilla-slab-semi-bold" to="zilla-slab-medium" weight="600" />
+
+    <family customizationType="new-named-family" name="Slate">
+        <font weight="300" style="normal">OnePlusSlate-Book.ttf</font>
+        <font weight="300" style="italic">Roboto-LightItalic.ttf</font>
+        <font weight="400" style="normal">OnePlusSlate-Regular.ttf</font>
+        <font weight="400" style="italic">Roboto-Italic.ttf</font>
+        <font weight="500" style="normal">OnePlusSlate-Medium.ttf</font>
+        <font weight="500" style="italic">Roboto-MediumItalic.ttf</font>
+    </family>
+    <alias name="slate" to="Slate" weight="400"/>
+    <alias name="slate-book" to="Slate" weight="300" />
+    <alias name="slate-medium" to="Slate" weight="500" />
+
+    <family customizationType="new-named-family" name="barlow">
+      <font weight="400" style="normal">Barlow-Regular.ttf</font>
+      <font weight="400" style="italic">Barlow-Italic.ttf</font>
+      <font weight="500" style="normal">Barlow-Medium.ttf</font>
+      <font weight="500" style="italic">Barlow-MediumItalic.ttf</font>
+      <font weight="700" style="normal">Barlow-Bold.ttf</font>
+      <font weight="700" style="italic">Barlow-BoldItalic.ttf</font>
+    </family>
+    <alias name="barlow-medium" to="barlow" weight="500" />
+
+    <family customizationType="new-named-family" name="inter">
+      <font weight="400" style="normal">Inter-Regular.ttf</font>
+      <font weight="400" style="italic">Inter-Italic.ttf</font>
+      <font weight="500" style="normal">Inter-Medium.ttf</font>
+      <font weight="700" style="normal">Inter-Bold.ttf</font>
+      <font weight="700" style="italic">Inter-BoldItalic.ttf</font>
+    </family>
+    <alias name="inter-medium" to="inter" weight="500" />
+</fonts-modification>
