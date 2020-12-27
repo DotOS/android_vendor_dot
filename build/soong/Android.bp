@@ -67,3 +67,62 @@ librmnetctl_pre_uplink {
         },
     },
 }
+
+soong_config_module_type {
+    name: "surfaceflinger_qcom_extensions",
+    module_type: "cc_defaults",
+    config_namespace: "dotQcomVars",
+    value_variables: ["qcom_soong_namespace"],
+    properties: [
+        "cppflags",
+        "header_libs",
+    ],
+}
+
+surfaceflinger_qcom_extensions {
+    name: "surfaceflinger_qcom_ext_defaults",
+    soong_config_variables: {
+        qcom_soong_namespace: {
+            cppflags: ["-DQCOM_UM_FAMILY"],
+            header_libs: ["//%s/display:display_intf_headers"],
+        },
+    },
+}
+
+soong_config_module_type {
+    name: "surfaceflinger_fod_lib",
+    module_type: "cc_defaults",
+    config_namespace: "dotGlobalVars",
+    value_variables: ["target_surfaceflinger_fod_lib"],
+    properties: [
+        "cppflags",
+        "whole_static_libs",
+    ],
+}
+
+surfaceflinger_fod_lib {
+    name: "surfaceflinger_fod_lib_defaults",
+    soong_config_variables: {
+        target_surfaceflinger_fod_lib: {
+            cppflags: ["-DTARGET_PROVIDES_FOD_LIB"],
+            whole_static_libs: ["%s"],
+        },
+    },
+}
+
+soong_config_module_type {
+    name: "stagefright_qcom_legacy",
+    module_type: "cc_defaults",
+    config_namespace: "dotQcomVars",
+    bool_variables: ["uses_qcom_bsp_legacy"],
+    properties: ["cppflags"],
+}
+
+stagefright_qcom_legacy {
+    name: "stagefright_qcom_legacy_defaults",
+    soong_config_variables: {
+        uses_qcom_bsp_legacy: {
+            cppflags: ["-DQCOM_BSP_LEGACY"],
+        },
+    },
+}
