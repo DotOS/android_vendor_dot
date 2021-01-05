@@ -35,10 +35,10 @@ SOONG_CONFIG_dotGlobalVars += \
   disable_postrender_cleanup \
   uses_camera_parameter_lib
 
-# Only create soong_namespace var if dealing with UM platforms to avoid breaking build for all other platforms
+# Only create display_headers_namespace var if dealing with UM platforms to avoid breaking build for all other platforms
 ifneq ($(filter $(UM_PLATFORMS),$(TARGET_BOARD_PLATFORM)),)
 SOONG_CONFIG_dotQcomVars += \
-    qcom_soong_namespace
+    qcom_display_headers_namespace
 endif
 
 # Soong bool variables
@@ -58,8 +58,10 @@ SOONG_CONFIG_dotGlobalVars_uses_camera_parameter_lib := $(TARGET_SPECIFIC_CAMERA
 
 
 # et Qcom Soong Namespace for UM platforms Only
-ifneq ($(filter $(UM_PLATFORMS),$(TARGET_BOARD_PLATFORM)),)
-SOONG_CONFIG_dotQcomVars_qcom_soong_namespace := $(QCOM_SOONG_NAMESPACE)
+ifneq ($(filter $(QSSI_SUPPORTED_PLATFORMS),$(TARGET_BOARD_PLATFORM)),)
+SOONG_CONFIG_dotQcomVars_qcom_display_headers_namespace := vendor/qcom/opensource/commonsys-intf/display
+else
+SOONG_CONFIG_dotQcomVars_qcom_display_headers_namespace := $(QCOM_SOONG_NAMESPACE)/display
 endif
 
 ifneq ($(TARGET_USE_QTI_BT_STACK),true)
