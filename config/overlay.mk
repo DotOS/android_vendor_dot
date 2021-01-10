@@ -33,3 +33,7 @@ PRODUCT_PACKAGES += \
 # Stub
 PRODUCT_PACKAGES += \
     DotThemesStub
+
+# Dot Packages
+PRODUCT_PACKAGES += \
+    DotWallpapers
