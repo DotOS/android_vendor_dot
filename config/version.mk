@@ -15,7 +15,6 @@
 #dotOS Versioning :
 DOT_MOD_VERSION = v5.0.0
 
-
 ifndef DOT_BUILD_TYPE
     DOT_BUILD_TYPE := UNOFFICIAL
 endif
@@ -35,10 +34,15 @@ ifeq ($(DOT_OFFICIAL), true)
     ifeq ($(FOUND_DEVICE),$(CURRENT_DEVICE))
       IS_OFFICIAL=true
       DOT_BUILD_TYPE := OFFICIAL
-      
+      ifeq ($(WITH_GAPPS), true)
+	DOT_BUILD_TYPE := GAPPS
+      endif
     endif
     ifneq ($(IS_OFFICIAL), true)
        DOT_BUILD_TYPE := UNOFFICIAL
+       ifeq ($(WITH_GAPPS), true)
+	 DOT_BUILD_TYPE := UNOFFICIAL_GAPPS
+       endif
        $(error Device is not official "$(FOUND)")
     endif
 
