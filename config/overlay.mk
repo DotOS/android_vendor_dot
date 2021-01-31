@@ -36,4 +36,5 @@ PRODUCT_PACKAGES += \
 
 # Dot Packages
 PRODUCT_PACKAGES += \
-    DotWallpapers
+    DotWallpapers \
+    NotificationOpaque
