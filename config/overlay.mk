@@ -36,5 +36,9 @@ PRODUCT_PACKAGES += \
 
 # Dot Packages
 PRODUCT_PACKAGES += \
-    DotWallpapers \
-    NotificationOpaque
+    DotWallpapers
+
+# Dot Themes
+PRODUCT_PACKAGES += \
+    NotificationOpaque \
+    AccentColorPinkishOverlay
