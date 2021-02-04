@@ -15,6 +15,7 @@
 # Required packages
 PRODUCT_PACKAGES += \
     BluetoothExt \
+    Browser \
     ExactCalculator \
     ThemePicker \
     QuickAccessWallet
