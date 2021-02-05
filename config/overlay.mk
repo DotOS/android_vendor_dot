@@ -41,4 +41,5 @@ PRODUCT_PACKAGES += \
 # Dot Themes
 PRODUCT_PACKAGES += \
     NotificationOpaque \
-    AccentColorPinkishOverlay
+    AccentColorPinkishOverlay \
+    StyleNoCards
