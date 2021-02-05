@@ -75,6 +75,7 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
 
 # Dot Packages
 PRODUCT_PACKAGES += \
-    Customizations
+    Customizations \
+    SystemUpdates
 
 include vendor/dot/config/overlay.mk
