@@ -125,5 +125,12 @@ ifeq ($(WITH_GAPPS), true)
     $(call inherit-product, vendor/gms/products/gms.mk)
 endif
 
+# Blur
+ifeq ($(TARGET_SUPPORTS_BLUR), true)
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.sf.blurs_are_expensive=1 \
+    ro.surface_flinger.supports_background_blur=1
+endif
+
 # Dot_props
 $(call inherit-product, vendor/dot/config/dot_props.mk)
