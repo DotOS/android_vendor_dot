@@ -119,6 +119,7 @@ def get_remote(manifest=None, remote_name=None):
         if remote_name == remote.get('name'):
             return remote
 
+
 def get_from_manifest(device_name):
     if os.path.exists(custom_local_manifest):
         man = load_manifest(custom_local_manifest)
@@ -144,22 +145,23 @@ def add_to_manifest(repos, fallback_branch=None):
     for repo in repos:
         repo_name = repo['repository']
         repo_path = repo['target_path']
-	if 'branch' in repo:
-	    repo_branch=repo['branch']
-	else:
-	    repo_branch=custom_default_revision
-	if 'remote' in repo:
-	    repo_remote=repo['remote']
-	elif "/" not in repo_name:
-	    repo_remote=org_manifest
-	elif "/" in repo_name:
-	    repo_remote="github"
+        if 'branch' in repo:
+            repo_branch = repo['branch']
+        else:
+            repo_branch = custom_default_revision
+        if 'remote' in repo:
+            repo_remote = repo['remote']
+        elif "/" not in repo_name:
+            repo_remote = org_manifest
+        elif "/" in repo_name:
+            repo_remote = "github"
 
         if is_in_manifest(repo_path):
             print('already exists: %s' % repo_path)
             continue
 
-        print('Adding dependency:\nRepository: %s\nBranch: %s\nRemote: %s\nPath: %s\n' % (repo_name, repo_branch,repo_remote, repo_path))
+        print('Adding dependency:\nRepository: %s\nBranch: %s\nRemote: %s\nPath: %s\n' % (
+            repo_name, repo_branch, repo_remote, repo_path))
 
         project = ElementTree.Element(
             "project",
@@ -176,9 +178,10 @@ def add_to_manifest(repos, fallback_branch=None):
             project.set('revision', fallback_branch)
         else:
             print("Using default branch for %s" % repo_name)
-	if 'clone-depth' in repo:
-	    print("Setting clone-depth to %s for %s" % (repo['clone-depth'], repo_name))
-	    project.set('clone-depth', repo['clone-depth'])
+        if 'clone-depth' in repo:
+            print("Setting clone-depth to %s for %s" %
+                  (repo['clone-depth'], repo_name))
+            project.set('clone-depth', repo['clone-depth'])
         lm.append(project)
 
     indent(lm)
@@ -188,6 +191,7 @@ def add_to_manifest(repos, fallback_branch=None):
     f = open(custom_local_manifest, 'w')
     f.write(raw_xml)
     f.close()
+
 
 _fetch_dep_cache = []
 
@@ -219,7 +223,8 @@ def fetch_dependencies(repo_path, fallback_branch=None):
             fetch_list.append(dependency)
             syncable_repos.append(dependency['target_path'])
         else:
-            print("Dependency already present in manifest: %s => %s" % (dependency['repository'], dependency['target_path']))
+            print("Dependency already present in manifest: %s => %s" %
+                  (dependency['repository'], dependency['target_path']))
 
     if fetch_list:
         print('Adding dependencies to manifest\n')
@@ -227,7 +232,8 @@ def fetch_dependencies(repo_path, fallback_branch=None):
 
     if syncable_repos:
         print('Syncing dependencies')
-        os.system('repo sync --force-sync --no-tags --current-branch --no-clone-bundle %s' % ' '.join(syncable_repos))
+        os.system('repo sync --force-sync --no-tags --current-branch --no-clone-bundle %s' %
+                  ' '.join(syncable_repos))
 
     for deprepo in syncable_repos:
         fetch_dependencies(deprepo)
@@ -316,7 +322,8 @@ def main():
         add_to_manifest(adding, fallback_branch)
 
         print("Syncing repository to retrieve project.")
-        os.system('repo sync --force-sync --no-tags --current-branch --no-clone-bundle %s' % repo_path)
+        os.system(
+            'repo sync --force-sync --no-tags --current-branch --no-clone-bundle %s' % repo_path)
         print("Repository synced!")
 
         fetch_dependencies(repo_path, fallback_branch)
@@ -327,6 +334,7 @@ def main():
           % (device, org_display))
     print("If this is in error, you may need to manually add it to your "
           "%s" % custom_local_manifest)
+
 
 if __name__ == "__main__":
     main()
