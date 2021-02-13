@@ -133,8 +133,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 endif
 
 # Sounds
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.config.ringtone=Atria.ogg \
+PRODUCT_PRODUCT_PROPERTIES += \
     ro.config.notification_sound=Ariel.ogg \
     ro.config.alarm_alert=Argon.ogg
 
