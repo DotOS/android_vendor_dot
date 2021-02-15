@@ -132,5 +132,11 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.surface_flinger.supports_background_blur=1
 endif
 
+# Sounds
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.config.ringtone=Atria.ogg \
+    ro.config.notification_sound=Ariel.ogg \
+    ro.config.alarm_alert=Argon.ogg
+
 # Dot_props
 $(call inherit-product, vendor/dot/config/dot_props.mk)
