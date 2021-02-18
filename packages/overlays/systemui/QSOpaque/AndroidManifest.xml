@@ -16,12 +16,12 @@
  */
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-        package="com.dot.overlay.styles.nocards"
+        package="com.dot.overlay.systemui.qs.opaque"
         android:versionCode="1"
         android:versionName="1.0">
-    <overlay android:targetPackage="com.android.settings"
-        android:category="android.theme.customization.styles_settings"
+    <overlay android:targetPackage="com.android.systemui"
+        android:category="android.theme.customization.styles_sysui"
         android:priority="1"/>
 
-    <application android:label="@string/style_name" android:hasCode="false"/>
+    <application android:label="@string/qs_opaque" android:hasCode="false"/>
 </manifest>

@@ -1,6 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!--
-/**
- * Copyright (c) 2018, The Android Open Source Project
+ * Copyright (c) 2021, The dotOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,15 +13,8 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
- */
+*/
 -->
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-        package="com.dot.overlay.styles.nocards"
-        android:versionCode="1"
-        android:versionName="1.0">
-    <overlay android:targetPackage="com.android.settings"
-        android:category="android.theme.customization.styles_settings"
-        android:priority="1"/>
-
-    <application android:label="@string/style_name" android:hasCode="false"/>
-</manifest>
+<resources>
+    <color name="default_qs_transparency">#FFFFFFFF</color>
+</resources>

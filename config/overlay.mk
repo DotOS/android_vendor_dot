@@ -42,4 +42,5 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     NotificationOpaque \
     AccentColorPinkishOverlay \
-    StyleNoCards
+    StyleNoCards \
+    QSOpaque
