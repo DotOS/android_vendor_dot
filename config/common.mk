@@ -119,6 +119,10 @@ PRODUCT_PACKAGES += \
     FodAnimationResources
 endif
 
+# IORap app launch prefetching using Perfetto traces and madvise
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.iorapd.enable=true
+
 # Gapps
 ifeq ($(WITH_GAPPS), true)
     WITH_GMS := true
