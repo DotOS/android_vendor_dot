@@ -141,5 +141,9 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.config.notification_sound=Ariel.ogg \
     ro.config.alarm_alert=Argon.ogg
 
+# Use gestures by default
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.boot.vendor.overlay.theme=com.android.internal.systemui.navbar.gestural
+
 # Dot_props
 $(call inherit-product, vendor/dot/config/dot_props.mk)
