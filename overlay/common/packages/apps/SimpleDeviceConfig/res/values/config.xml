@@ -25,6 +25,14 @@
         <item>privacy/permissions_hub_enabled=true</item>
 
         <!--
+            Disable the TF input classifier entirely to save CPU and fix log
+            spam when we have the touch heatmap video interface disabled. This
+            is set in DeviceConfig despite being classified as native_boot
+            because it's checked from Java code which then calls into JNI.
+        -->
+        <item>input_native_boot/deep_press_enabled=false</item>
+
+        <!--
             Device Personalization Services (AiAi)
         -->
 
