@@ -48,6 +48,8 @@ SOONG_CONFIG_dotNvidiaVars += \
 SOONG_CONFIG_NAMESPACES += dotQcomVars
 SOONG_CONFIG_dotQcomVars += \
     should_wait_for_qsee \
+    supports_audio_accessory \
+    supports_debug_accessory \
     supports_extended_compress_format \
     supports_hw_fde \
     supports_hw_fde_perf \
@@ -69,6 +71,8 @@ SOONG_CONFIG_dotGlobalVars_disable_postrender_cleanup := $(TARGET_DISABLE_POSTRE
 SOONG_CONFIG_dotNvidiaVars_uses_nv_enhancements := $(NV_ANDROID_FRAMEWORK_ENHANCEMENTS)
 SOONG_CONFIG_dotQcomVars_should_wait_for_qsee := $(TARGET_KEYMASTER_WAIT_FOR_QSEE)
 SOONG_CONFIG_dotQcomVars_supports_extended_compress_format := $(AUDIO_FEATURE_ENABLED_EXTENDED_COMPRESS_FORMAT)
+SOONG_CONFIG_dotQcomVars_supports_audio_accessory := $(TARGET_QTI_USB_SUPPORTS_AUDIO_ACCESSORY)
+SOONG_CONFIG_dotQcomVars_supports_debug_accessory := $(TARGET_QTI_USB_SUPPORTS_DEBUG_ACCESSORY)
 SOONG_CONFIG_dotQcomVars_supports_hw_fde := $(TARGET_HW_DISK_ENCRYPTION)
 SOONG_CONFIG_dotQcomVars_supports_hw_fde_perf := $(TARGET_HW_DISK_ENCRYPTION_PERF)
 SOONG_CONFIG_dotQcomVars_uses_pre_uplink_features_netmgrd := $(TARGET_USES_PRE_UPLINK_FEATURES_NETMGRD)
