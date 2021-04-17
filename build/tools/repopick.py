@@ -33,25 +33,16 @@ from functools import cmp_to_key
 from xml.etree import ElementTree
 
 try:
-    import requests
+    # For python3
+    import urllib.error
+    import urllib.request
 except ImportError:
-    try:
-        # For python3
-        import urllib.error
-        import urllib.request
-    except ImportError:
-        # For python2
-        import imp
-        import urllib2
-        urllib = imp.new_module('urllib')
-        urllib.error = urllib2
-        urllib.request = urllib2
-
-
-# cmp() is not available in Python 3, define it manually
-# See https://docs.python.org/3.0/whatsnew/3.0.html#ordering-comparisons
-def cmp(a, b):
-    return (a > b) - (a < b)
+    # For python2
+    import imp
+    import urllib2
+    urllib = imp.new_module('urllib')
+    urllib.error = urllib2
+    urllib.request = urllib2
 
 
 # Verifies whether pathA is a subdirectory (or the same) as pathB
@@ -75,6 +66,7 @@ def fetch_query_via_ssh(remote_url, query):
     else:
         raise Exception('Malformed URI: Expecting ssh://[user@]host[:port]')
 
+
     out = subprocess.check_output(['ssh', '-x', '-p{0}'.format(port), userhost, 'gerrit', 'query', '--format=JSON --patch-sets --current-patch-set', query])
     if not hasattr(out, 'encode'):
         out = out.decode()
@@ -87,6 +79,7 @@ def fetch_query_via_ssh(remote_url, query):
                 'branch': data['branch'],
                 'change_id': data['id'],
                 'current_revision': data['currentPatchSet']['revision'],
+                'current_patch_set': data['currentPatchSet']['number'],
                 'number': int(data['number']),
                 'revisions': {patch_set['revision']: {
                     '_number': int(patch_set['number']),
@@ -97,7 +90,7 @@ def fetch_query_via_ssh(remote_url, query):
                         }
                     },
                     'commit': {
-                        'parents': [{'commit': parent} for parent in patch_set['parents']]
+                        'parents': [{ 'commit': parent } for parent in patch_set['parents']]
                     },
                 } for patch_set in data['patchSets']},
                 'subject': data['subject'],
@@ -112,29 +105,11 @@ def fetch_query_via_ssh(remote_url, query):
 
 
 def fetch_query_via_http(remote_url, query):
-    if "requests" in sys.modules:
-        auth = None
-        if os.path.isfile(os.getenv("HOME") + "/.gerritrc"):
-            f = open(os.getenv("HOME") + "/.gerritrc", "r")
-            for line in f:
-                parts = line.rstrip().split("|")
-                if parts[0] in remote_url:
-                    auth = requests.auth.HTTPBasicAuth(username=parts[1], password=parts[2])
-        status_code = '-1'
-        if auth:
-            url = '{0}/a/changes/?q={1}&o=CURRENT_REVISION&o=ALL_REVISIONS&o=ALL_COMMITS'.format(remote_url, query)
-            data = requests.get(url, auth=auth)
-            status_code = str(data.status_code)
-        if status_code != '200':
-            #They didn't get good authorization or data, Let's try the old way
-            url = '{0}/changes/?q={1}&o=CURRENT_REVISION&o=ALL_REVISIONS&o=ALL_COMMITS'.format(remote_url, query)
-            data = requests.get(url)
-        reviews = json.loads(data.text[5:])
-    else:
-        """Given a query, fetch the change numbers via http"""
-        url = '{0}/changes/?q={1}&o=CURRENT_REVISION&o=ALL_REVISIONS&o=ALL_COMMITS'.format(remote_url, query)
-        data = urllib.request.urlopen(url).read().decode('utf-8')
-        reviews = json.loads(data[5:])
+
+    """Given a query, fetch the change numbers via http"""
+    url = '{0}/changes/?q={1}&o=CURRENT_REVISION&o=ALL_REVISIONS&o=ALL_COMMITS'.format(remote_url, query)
+    data = urllib.request.urlopen(url).read().decode('utf-8')
+    reviews = json.loads(data[5:])
 
     for review in reviews:
         review['number'] = review.pop('_number')
@@ -151,14 +126,13 @@ def fetch_query(remote_url, query):
     else:
         raise Exception('Gerrit URL should be in the form http[s]://hostname/ or ssh://[user@]host[:port]')
 
-
 if __name__ == '__main__':
     # Default to dotOS Gerrit
     default_gerrit = 'https://review.droidontime.com'
 
     parser = argparse.ArgumentParser(formatter_class=argparse.RawDescriptionHelpFormatter, description=textwrap.dedent('''\
         repopick.py is a utility to simplify the process of cherry picking
-        patches from LineageOS's Gerrit instance (or any gerrit instance of your choosing)
+        patches from dotOS Gerrit instance (or any gerrit instance of your choosing)
 
         Given a list of change numbers, repopick will cd into the project path
         and cherry pick the latest patch available.
@@ -171,31 +145,22 @@ if __name__ == '__main__':
         The --abandon-first argument, when used in conjunction with the
         --start-branch option, will cause repopick to abandon the specified
         branch in all repos first before performing any cherry picks.'''))
-    parser.add_argument('change_number', nargs='*',
-                        help='change number to cherry pick. Use {change number}/{patchset number} to get a specific revision.')
-    parser.add_argument('-i', '--ignore-missing', action='store_true',
-                        help='do not error out if a patch applies to a missing directory')
-    parser.add_argument('-s', '--start-branch', nargs=1,
-                        metavar='', help='start the specified branch before cherry picking')
-    parser.add_argument('-r', '--reset', action='store_true',
-                        help='reset to initial state (abort cherry-pick) if there is a conflict')
-    parser.add_argument('-a', '--abandon-first', action='store_true',
-                        help='before cherry picking, abandon the branch specified in --start-branch')
-    parser.add_argument('-b', '--auto-branch', action='store_true',
-                        help='shortcut to "--start-branch auto --abandon-first --ignore-missing"')
+    parser.add_argument('change_number', nargs='*', help='change number to cherry pick.  Use {change number}/{patchset number} to get a specific revision.')
+    parser.add_argument('-i', '--ignore-missing', action='store_true', help='do not error out if a patch applies to a missing directory')
+    parser.add_argument('-s', '--start-branch', nargs=1, help='start the specified branch before cherry picking')
+    parser.add_argument('-r', '--reset', action='store_true', help='reset to initial state (abort cherry-pick) if there is a conflict')
+    parser.add_argument('-a', '--abandon-first', action='store_true', help='before cherry picking, abandon the branch specified in --start-branch')
+    parser.add_argument('-b', '--auto-branch', action='store_true', help='shortcut to "--start-branch auto --abandon-first --ignore-missing"')
     parser.add_argument('-q', '--quiet', action='store_true', help='print as little as possible')
     parser.add_argument('-v', '--verbose', action='store_true', help='print extra information to aid in debug')
     parser.add_argument('-f', '--force', action='store_true', help='force cherry pick even if change is closed')
     parser.add_argument('-p', '--pull', action='store_true', help='execute pull instead of cherry-pick')
-    parser.add_argument('-P', '--path', metavar='', help='use the specified path for the change')
-    parser.add_argument('-t', '--topic', metavar='', help='pick all commits from a specified topic')
-    parser.add_argument('-Q', '--query', metavar='', help='pick all commits using the specified query')
-    parser.add_argument('-g', '--gerrit', default=default_gerrit,
-                        metavar='', help='Gerrit Instance to use. Form proto://[user@]host[:port]')
-    parser.add_argument('-e', '--exclude', nargs=1,
-                        metavar='', help='exclude a list of commit numbers separated by a ,')
-    parser.add_argument('-c', '--check-picked', type=int, default=10,
-                        metavar='', help='pass the amount of commits to check for already picked changes')
+    parser.add_argument('-P', '--path', help='use the specified path for the change')
+    parser.add_argument('-t', '--topic', nargs='*', help='pick all commits from the specified topics')
+    parser.add_argument('-Q', '--query', help='pick all commits using the specified query')
+    parser.add_argument('-g', '--gerrit', default=default_gerrit, help='Gerrit Instance to use. Form proto://[user@]host[:port]')
+    parser.add_argument('-e', '--exclude', nargs=1, help='exclude a list of commit numbers separated by a ,')
+    parser.add_argument('-c', '--check-picked', type=int, default=10, help='pass the amount of commits to check for already picked changes')
     args = parser.parse_args()
     if not args.start_branch and args.abandon_first:
         parser.error('if --abandon-first is set, you must also give the branch name with --start-branch')
@@ -255,22 +220,24 @@ if __name__ == '__main__':
     remotes = xml_root.findall('remote')
     default_revision = xml_root.findall('default')[0].get('revision')
 
-    # dump project data into the a list of dicts with the following data:
-    # {project: {path, revision}}
+    #dump project data into the a list of dicts with the following data:
+    #{project: {path, revision}}
 
     for project in projects:
-        name = project.get('name').replace("DotOS/", "")
+        name = project.get('name')
         # when name and path are equal, "repo manifest" doesn't return a path at all, so fall back to name
-        path = project.get('path', name).replace("DotOS/", "")
-        revision = project.get('upstream')
+        path = project.get('path', name)
+        if path is None:
+            path=name
+        revision = project.get('revision')
         if revision is None:
             for remote in remotes:
                 if remote.get('name') == project.get('remote'):
                     revision = remote.get('revision')
             if revision is None:
-                revision = project.get('revision', default_revision)
+                revision = default_revision
 
-        if name not in project_name_to_data:
+        if not name in project_name_to_data:
             project_name_to_data[name] = {}
         revision = revision.split('refs/heads/')[-1]
         project_name_to_data[name][revision] = path
@@ -280,20 +247,28 @@ if __name__ == '__main__':
     change_numbers = []
 
     def cmp_reviews(review_a, review_b):
-        current_a = review_a['current_revision']
-        parents_a = [r['commit'] for r in review_a['revisions'][current_a]['commit']['parents']]
-        current_b = review_b['current_revision']
-        parents_b = [r['commit'] for r in review_b['revisions'][current_b]['commit']['parents']]
-        if current_a in parents_b:
+        if args.gerrit[0:3] == 'ssh':
             return -1
-        elif current_b in parents_a:
-            return 1
         else:
-            return cmp(review_a['number'], review_b['number'])
+            current_a = review_a['current_revision']
+            parents_a = [r['commit'] for r in review_a['revisions'][current_a]['commit']['parents']]
+            current_b = review_b['current_revision']
+            parents_b = [r['commit'] for r in review_b['revisions'][current_b]['commit']['parents']]
+            if current_a in parents_b:
+                return -1
+            elif current_b in parents_a:
+                return 1
+            else:
+                return cmp(review_a['number'], review_b['number'])
 
     if args.topic:
-        reviews = fetch_query(args.gerrit, 'topic:{0}'.format(args.topic))
-        change_numbers = [str(r['number']) for r in sorted(reviews, key=cmp_to_key(cmp_reviews))]
+        for t in args.topic:
+            # Store current topic to process for change_numbers
+            topic = fetch_query(args.gerrit, 'status:open+topic:{0}'.format(t))
+            # Append topic to reviews, for later reference
+            reviews += topic
+            # Cycle through the current topic to get the change numbers
+            change_numbers += sorted([str(r['number']) for r in topic], key=int)
     if args.query:
         reviews = fetch_query(args.gerrit, args.query)
         change_numbers = [str(r['number']) for r in sorted(reviews, key=cmp_to_key(cmp_reviews))]
@@ -337,22 +312,30 @@ if __name__ == '__main__':
             print('Change %d not found, skipping' % change)
             continue
 
+        try:
+            current_patchset = review['revisions'][review['current_revision']]['_number']
+        except KeyError:
+            current_patchset = review['current_patch_set']
+
         mergables.append({
             'subject': review['subject'],
-            'project': review['project'].replace("DotOS/", ""),
+            'project': review['project'].split('/')[1],
             'branch': review['branch'],
             'change_id': review['change_id'],
             'change_number': review['number'],
             'status': review['status'],
             'fetch': None,
-            'patchset': review['revisions'][review['current_revision']]['_number'],
+            'patchset': current_patchset,
         })
 
         mergables[-1]['fetch'] = review['revisions'][review['current_revision']]['fetch']
         mergables[-1]['id'] = change
         if patchset:
             try:
-                mergables[-1]['fetch'] = [review['revisions'][x]['fetch'] for x in review['revisions'] if review['revisions'][x]['_number'] == patchset][0]
+                try:
+                    mergables[-1]['fetch'] = [review['revisions'][x]['fetch'] for x in review['revisions'] if review['revisions'][x]['_number'] == patchset][0]
+                except KeyError:
+                    mergables[-1]['fetch'] = [review['revisions'][current_patchset]['fetch']][0]
                 mergables[-1]['id'] = '{0}/{1}'.format(change, patchset)
                 mergables[-1]['patchset'] = patchset
             except (IndexError, ValueError):
@@ -371,19 +354,16 @@ if __name__ == '__main__':
         # Convert the project name to a project path
         #   - check that the project path exists
         project_path = None
-        item['project'].replace("DotOS/", "")
 
         if item['project'] in project_name_to_data and item['branch'] in project_name_to_data[item['project']]:
             project_path = project_name_to_data[item['project']][item['branch']]
         elif args.path:
             project_path = args.path
-        elif item['project'] in project_name_to_data and len(project_name_to_data[item['project']]) == 1:
-            local_branch = list(project_name_to_data[item['project']])[0]
-            project_path = project_name_to_data[item['project']][local_branch]
-            print('WARNING: Project {0} has a different branch ("{1}" != "{2}")'.format(project_path, local_branch, item['branch']))
         elif args.ignore_missing:
             print('WARNING: Skipping {0} since there is no project directory for: {1}\n'.format(item['id'], item['project']))
             continue
+        elif item['project'] == 'manifest':
+            project_path = '.repo/manifests'
         else:
             sys.stderr.write('ERROR: For {0}, could not determine the project path for project {1}\n'.format(item['id'], item['project']))
             sys.exit(1)
@@ -403,14 +383,10 @@ if __name__ == '__main__':
         for i in range(0, check_picked_count):
             if subprocess.call(['git', 'cat-file', '-e', 'HEAD~{0}'.format(i)], cwd=project_path, stderr=open(os.devnull, 'wb')):
                 continue
-            output = subprocess.check_output(['git', 'show', '-q', 'HEAD~{0}'.format(i)], cwd=project_path)
-            # make sure we have a string on Python 3
-            if isinstance(output, bytes):
-                output = output.decode('utf-8')
-            output = output.split()
+            output = subprocess.check_output(['git', 'show', '-q', 'HEAD~{0}'.format(i)], cwd=project_path).split()
             if 'Change-Id:' in output:
                 head_change_id = ''
-                for j, t in enumerate(reversed(output)):
+                for j,t in enumerate(reversed(output)):
                     if t == 'Change-Id:':
                         head_change_id = output[len(output) - j]
                         break
@@ -423,7 +399,7 @@ if __name__ == '__main__':
 
         # Print out some useful info
         if not args.quiet:
-            print(u'--> Subject:       "{0}"'.format(item['subject']))
+            print('--> Subject:       "{0}"'.format(item['subject'].encode('utf-8')))
             print('--> Project path:  {0}'.format(project_path))
             print('--> Change number: {0} (Patch Set {1})'.format(item['id'], item['patchset']))
 
@@ -432,45 +408,22 @@ if __name__ == '__main__':
         else:
             method = 'ssh'
 
-        # Try fetching from GitHub first if using default gerrit
-        if args.gerrit == default_gerrit:
-            if args.verbose:
-                print('Trying to fetch the change from GitHub')
+        if args.verbose:
+            print('Fetching from {0}'.format(args.gerrit))
 
-            if args.pull:
-                cmd = ['git pull --no-edit dot', item['fetch'][method]['ref']]
-            else:
-                cmd = ['git fetch dot', item['fetch'][method]['ref']]
-            if args.quiet:
-                cmd.append('--quiet')
-            else:
-                print(cmd)
-            result = subprocess.call([' '.join(cmd)], cwd=project_path, shell=True)
-            FETCH_HEAD = '{0}/.git/FETCH_HEAD'.format(project_path)
-            if result != 0 and os.stat(FETCH_HEAD).st_size != 0:
-                print('ERROR: git command failed')
-                sys.exit(result)
-        # Check if it worked
-        if args.gerrit != default_gerrit or os.stat(FETCH_HEAD).st_size == 0:
-            # If not using the default gerrit or github failed, fetch from gerrit.
-            if args.verbose:
-                if args.gerrit == default_gerrit:
-                    print('Fetching from GitHub didn\'t work, trying to fetch the change from Gerrit')
-                else:
-                    print('Fetching from {0}'.format(args.gerrit))
+        if args.pull:
+            cmd = ['git pull --no-edit', item['fetch'][method]['url'], item['fetch'][method]['ref']]
+        else:
+            cmd = ['git fetch', item['fetch'][method]['url'], item['fetch'][method]['ref']]
+        if args.quiet:
+            cmd.append('--quiet')
+        else:
+            print(cmd)
+        result = subprocess.call([' '.join(cmd)], cwd=project_path, shell=True)
+        if result != 0:
+            print('ERROR: git command failed')
+            sys.exit(result)
 
-            if args.pull:
-                cmd = ['git pull --no-edit', item['fetch'][method]['url'], item['fetch'][method]['ref']]
-            else:
-                cmd = ['git fetch', item['fetch'][method]['url'], item['fetch'][method]['ref']]
-            if args.quiet:
-                cmd.append('--quiet')
-            else:
-                print(cmd)
-            result = subprocess.call([' '.join(cmd)], cwd=project_path, shell=True)
-            if result != 0:
-                print('ERROR: git command failed')
-                sys.exit(result)
         # Perform the cherry-pick
         if not args.pull:
             cmd = ['git cherry-pick --ff FETCH_HEAD']
@@ -480,19 +433,12 @@ if __name__ == '__main__':
                 cmd_out = None
             result = subprocess.call(cmd, cwd=project_path, shell=True, stdout=cmd_out, stderr=cmd_out)
             if result != 0:
-                cmd = ['git diff-index --quiet HEAD --']
-                result = subprocess.call(cmd, cwd=project_path, shell=True, stdout=cmd_out, stderr=cmd_out)
-                if result == 0:
-                    print('WARNING: git command resulted with an empty commit, aborting cherry-pick')
-                    cmd = ['git cherry-pick --abort']
-                    subprocess.call(cmd, cwd=project_path, shell=True, stdout=cmd_out, stderr=cmd_out)
-                elif args.reset:
+                if args.reset:
                     print('ERROR: git command failed, aborting cherry-pick')
                     cmd = ['git cherry-pick --abort']
                     subprocess.call(cmd, cwd=project_path, shell=True, stdout=cmd_out, stderr=cmd_out)
-                    sys.exit(result)
                 else:
                     print('ERROR: git command failed')
-                    sys.exit(result)
+                sys.exit(result)
         if not args.quiet:
             print('')
