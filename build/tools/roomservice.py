@@ -1,7 +1,7 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # Copyright (C) 2012-2013, The CyanogenMod Project
 # Copyright (C) 2012-2015, SlimRoms Project
-# Copyright (C) 2016-2017, AOSiP
+# Copyright (C) 2016-2018, AOSiP
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -15,8 +15,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from __future__ import print_function
-
 import base64
 import json
 import netrc
@@ -25,20 +23,9 @@ import sys
 
 from xml.etree import ElementTree
 
-try:
-    # For python3
-    import urllib.error
-    import urllib.parse
-    import urllib.request
-except ImportError:
-    # For python2
-    import imp
-    import urllib2
-    import urlparse
-    urllib = imp.new_module('urllib')
-    urllib.error = urllib2
-    urllib.parse = urlparse
-    urllib.request = urllib2
+import urllib.error
+import urllib.parse
+import urllib.request
 
 DEBUG = False
 default_manifest = ".repo/manifest.xml"
@@ -119,6 +106,10 @@ def get_remote(manifest=None, remote_name=None):
         if remote_name == remote.get('name'):
             return remote
 
+
+def get_revision(manifest=None, p="build"):
+    return custom_default_revision
+
 def get_from_manifest(device_name):
     if os.path.exists(custom_local_manifest):
         man = load_manifest(custom_local_manifest)
@@ -130,11 +121,9 @@ def get_from_manifest(device_name):
 
 
 def is_in_manifest(project_path):
-    for man in (custom_local_manifest, default_manifest):
-        man = load_manifest(man)
-        for local_path in man.findall("project"):
-            if local_path.get("path") == project_path:
-                return True
+    for local_path in load_manifest(custom_local_manifest).findall("project"):
+        if local_path.get("path") == project_path:
+            return True
     return False
 
 
@@ -142,12 +131,24 @@ def add_to_manifest(repos, fallback_branch=None):
     lm = load_manifest(custom_local_manifest)
 
     for repo in repos:
+
+        if 'repository' not in repo: # Remove repo if the name isn't set
+            print('Error adding %s', repo)
+            del repos[repo]
+            continue
         repo_name = repo['repository']
-        repo_path = repo['target_path']
+        if 'target_path' in repo:
+            repo_path = repo['target_path']
+        else: # If path isn't set, its the same as name
+            repo_path = repo_name.split('/')[-1]
+
         if 'branch' in repo:
-            repo_branch=repo['branch']
+            repo_branch = repo['branch']
+        elif fallback_branch:
+            repo_branch = fallback_branch
         else:
-            repo_branch=custom_default_revision
+            repo_branch = custom_default_revision
+
         if 'remote' in repo:
             repo_remote=repo['remote']
         elif "/" not in repo_name:
@@ -156,7 +157,7 @@ def add_to_manifest(repos, fallback_branch=None):
             repo_remote="github"
 
         if is_in_manifest(repo_path):
-            print('already exists: %s' % repo_path)
+            print('%s already exists in the manifest' % repo_path)
             continue
 
         print('Adding dependency:\nRepository: %s\nBranch: %s\nRemote: %s\nPath: %s\n' % (repo_name, repo_branch,repo_remote, repo_path))
@@ -165,7 +166,7 @@ def add_to_manifest(repos, fallback_branch=None):
             "project",
             attrib={"path": repo_path,
                     "remote": repo_remote,
-                    "name": "%s" % repo_name}
+                    "name":  repo_name}
         )
 
         if repo_branch is not None:
@@ -176,9 +177,10 @@ def add_to_manifest(repos, fallback_branch=None):
             project.set('revision', fallback_branch)
         else:
             print("Using default branch for %s" % repo_name)
-    if 'clone-depth' in repo:
-        print("Setting clone-depth to %s for %s" % (repo['clone-depth'], repo_name))
-        project.set('clone-depth', repo['clone-depth'])
+        if 'clone-depth' in repo:
+            print("Setting clone-depth to %s for %s" % (repo['clone-depth'], repo_name))
+            project.set('clone-depth', repo['clone-depth'])
+
         lm.append(project)
 
     indent(lm)
@@ -206,7 +208,7 @@ def fetch_dependencies(repo_path, fallback_branch=None):
             dependencies = json.load(dep_f)
     else:
         dependencies = {}
-        print('%s has no additional dependencies.' % repo_path)
+        debug('Dependencies file not found, bailing out.')
 
     fetch_list = []
     syncable_repos = []
@@ -214,7 +216,9 @@ def fetch_dependencies(repo_path, fallback_branch=None):
     for dependency in dependencies:
         if not is_in_manifest(dependency['target_path']):
             if not dependency.get('branch'):
-                dependency['branch'] = custom_default_revision
+                dependency['branch'] = (
+                    fallback_branch or get_revision() or custom_default_revision
+                )
 
             fetch_list.append(dependency)
             syncable_repos.append(dependency['target_path'])
@@ -248,12 +252,28 @@ def detect_revision(repo):
     add_auth(githubreq)
     result = json.loads(urllib.request.urlopen(githubreq).read().decode())
 
-    print("Calculated revision: %s" % custom_default_revision)
+    calc_revision = get_revision()
+    print("Calculated revision: %s" % calc_revision)
+
+    if has_branch(result, calc_revision):
+        return calc_revision
+
+    fallbacks = os.getenv('ROOMSERVICE_BRANCHES', '').split()
+    for fallback in fallbacks:
+        if has_branch(result, fallback):
+            print("Using fallback branch: %s" % fallback)
+            return fallback
 
     if has_branch(result, custom_default_revision):
+        print("Falling back to custom revision: %s"
+              % custom_default_revision)
         return custom_default_revision
 
-    print("Branch %s not found" % custom_default_revision)
+    print("Branches found:")
+    for branch in result:
+        print(branch['name'])
+    print("Use the ROOMSERVICE_BRANCHES environment variable to "
+          "specify a list of fallback branches.")
     sys.exit()
 
 
@@ -275,7 +295,7 @@ def main():
         if repo_path:
             fetch_dependencies(repo_path)
         else:
-            print("Trying dependencies-only mode on a"
+            print("Trying dependencies-only mode on a "
                   "non-existing device tree?")
         sys.exit()
 
@@ -303,7 +323,7 @@ def main():
     for repository in repositories:
         repo_name = repository['name']
 
-        if not (repo_name.startswith("android_device_") and
+        if not (repo_name.startswith("device_") and
                 repo_name.endswith("_" + device)):
             continue
         print("Found repository: %s" % repository['name'])
