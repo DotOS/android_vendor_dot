@@ -88,6 +88,7 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
 PRODUCT_PACKAGES += \
     Customizations \
     SystemUpdates \
-    StitchImage
+    StitchImage \
+    Music
 
 include vendor/dot/config/overlay.mk

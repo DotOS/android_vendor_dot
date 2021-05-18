@@ -1,0 +1,24 @@
+android_app_import {
+    name: "Music",
+
+    privileged: true,
+    system_ext_specific: true,
+    certificate: "platform",
+    dex_preopt: {
+        enabled: false,
+    },
+
+    compile_multilib: "both",
+    apk: "Music.apk",
+
+    required: ["privapp_whitelist_code.name.monkey.retromusic.xml"],
+}
+
+prebuilt_etc {
+    name: "privapp_whitelist_code.name.monkey.retromusic.xml",
+
+    src: "privapp_whitelist_code.name.monkey.retromusic.xml",
+    system_ext_specific: true,
+    sub_dir: "permissions",
+
+}
