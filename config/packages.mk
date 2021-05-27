@@ -89,7 +89,8 @@ PRODUCT_PACKAGES += \
     Customizations \
     BatteryManager \
     StitchImage \
-    Music
+    Music \
+    MaterialFiles
 
 ifeq ($(DOT_OFFICIAL), true)
 PRODUCT_PACKAGES += \

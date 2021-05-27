@@ -1,0 +1,23 @@
+android_app_import {
+    name: "MaterialFiles",
+
+    privileged: true,
+    system_ext_specific: true,
+    certificate: "platform",
+    dex_preopt: {
+        enabled: false,
+    },
+
+    compile_multilib: "both",
+    apk: "MaterialFiles.apk",
+
+    required: ["privapp_whitelist_me.zhanghai.android.files.xml"],
+}
+
+prebuilt_etc {
+    name: "privapp_whitelist_me.zhanghai.android.files",
+    src: "privapp_whitelist_me.zhanghai.android.files.xml",
+    system_ext_specific: true,
+    sub_dir: "permissions",
+
+}
