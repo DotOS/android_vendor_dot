@@ -170,6 +170,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.boot.vendor.overlay.theme=com.android.internal.systemui.navbar.gestural
 
+# TouchGestures
+PRODUCT_PACKAGES += \
+    TouchGestures
+
 # IORap app launch prefetching using Perfetto traces and madvise
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.iorapd.enable=true
