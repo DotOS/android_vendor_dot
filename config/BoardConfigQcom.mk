@@ -1,11 +1,11 @@
 # Platform names
-KONA := kona #SM8250
-LITO := lito #SM7250
-BENGAL := bengal #SM6115
-MSMNILE := msmnile #SM8150
-MSMSTEPPE := sm6150
-TRINKET := trinket #SM6125
-ATOLL := atoll #SM6250
+KONA ?= kona #SM8250
+LITO ?= lito #SM7250
+BENGAL ?= bengal #SM6115
+MSMNILE ?= msmnile #SM8150
+MSMSTEPPE ?= sm6150
+TRINKET ?= trinket #SM6125
+ATOLL ?= atoll #SM6250
 
 B_FAMILY := msm8226 msm8610 msm8974
 B64_FAMILY := msm8992 msm8994
