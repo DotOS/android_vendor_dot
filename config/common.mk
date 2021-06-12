@@ -184,6 +184,9 @@ ifeq ($(WITH_GAPPS), true)
     $(call inherit-product, vendor/gms/products/gms.mk)
 endif
 
+PRODUCT_EXTRA_RECOVERY_KEYS += \
+  vendor/dot/build/security/releasekey
+
 # Face Unlock
 TARGET_FACE_UNLOCK_SUPPORTED ?= true
 ifeq ($(TARGET_FACE_UNLOCK_SUPPORTED),true)
