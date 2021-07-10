@@ -33,4 +33,7 @@
         <item>com.android.dialer</item>
         <item>com.android.email</item>
     </array>
+
+    <string name="themes_stub_package" translatable="false">com.dot.stub</string>
+
 </resources>
