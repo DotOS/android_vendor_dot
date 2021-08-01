@@ -170,6 +170,8 @@ PRODUCT_PACKAGES += \
 	libtextclassifier_actions_suggestions_universal_model \
 	libtextclassifier_lang_id_model
 
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += vendor/lineage/config/device_framework_matrix.xml
+
 # Use gestures by default
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.boot.vendor.overlay.theme=com.android.internal.systemui.navbar.gestural
