@@ -23,24 +23,23 @@ CURRENT_DEVICE=$(shell echo "$(TARGET_PRODUCT)" | cut -d'_' -f 2,3)
 
 DOT_BUILD_DATE_UTC := $(shell date -u '+%Y%m%d-%H%M')
 
-ifeq ($(DOT_OFFICIAL), true)
-   LIST = $(shell cat vendor/dot/dot.devices)
-   FOUND_DEVICE =  $(filter $(CURRENT_DEVICE), $(LIST))
-    ifeq ($(FOUND_DEVICE),$(CURRENT_DEVICE))
-      IS_OFFICIAL=true
-      DOT_BUILD_TYPE := OFFICIAL
-      ifeq ($(WITH_GAPPS), true)
-	DOT_BUILD_TYPE := GAPPS
-      endif
+ifeq ($(DOT_OFFICIAL),true)
+  LIST = $(shell cat vendor/dot/dot.devices)
+  FOUND_DEVICE = $(filter $(CURRENT_DEVICE),$(LIST))
+  ifeq ($(FOUND_DEVICE),$(CURRENT_DEVICE))
+    IS_OFFICIAL=true
+    DOT_BUILD_TYPE := OFFICIAL
+    ifeq ($(WITH_GAPPS), true)
+      DOT_BUILD_TYPE := GAPPS
     endif
     ifneq ($(IS_OFFICIAL), true)
-       DOT_BUILD_TYPE := UNOFFICIAL
-       ifeq ($(WITH_GAPPS), true)
-	 DOT_BUILD_TYPE := UNOFFICIAL_GAPPS
-       endif
-       $(error Device is not official "$(FOUND)")
+      DOT_BUILD_TYPE := UNOFFICIAL
+      ifeq ($(WITH_GAPPS), true)
+        DOT_BUILD_TYPE := UNOFFICIAL_GAPPS
+      endif
+      $(error Device is not official "$(FOUND)")
     endif
-
+  endif
 endif
 
 TARGET_PRODUCT_SHORT := $(subst dot_,,$(DOT_BUILD))
