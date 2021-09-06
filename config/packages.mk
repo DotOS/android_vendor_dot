@@ -87,6 +87,7 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
 # Dot Packages
 PRODUCT_PACKAGES += \
     Customizations \
+    BatteryManager \
     StitchImage \
     Music
 

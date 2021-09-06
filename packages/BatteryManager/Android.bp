@@ -1,0 +1,24 @@
+android_app_import {
+    name: "BatteryManager",
+
+    privileged: true,
+    system_ext_specific: true,
+    certificate: "platform",
+    dex_preopt: {
+        enabled: false,
+    },
+
+    compile_multilib: "both",
+    apk: "BatteryManager.apk",
+
+    required: ["privapp_whitelist_com.dot.lifesaver.xml"],
+}
+
+prebuilt_etc {
+    name: "privapp_whitelist_com.dot.lifesaver.xml",
+
+    src: "privapp_whitelist_com.dot.lifesaver.xml",
+    system_ext_specific: true,
+    sub_dir: "permissions",
+
+}
