@@ -90,8 +90,7 @@ PRODUCT_PACKAGES += \
     BatteryManager \
     Seedvault \
     StitchImage \
-    Music \
-    MaterialFiles
+    Music
 
 ifeq ($(DOT_OFFICIAL), true)
 PRODUCT_PACKAGES += \
