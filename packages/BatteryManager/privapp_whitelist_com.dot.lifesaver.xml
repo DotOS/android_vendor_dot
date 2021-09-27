@@ -19,5 +19,6 @@
         <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
         <permission name="android.permission.POWER_SAVER"/>
         <permission name="android.permission.DEVICE_POWER"/>
+        <permission name="android.permission.RESET_BATTERY_STATS"/>
     </privapp-permissions>
 </permissions>
