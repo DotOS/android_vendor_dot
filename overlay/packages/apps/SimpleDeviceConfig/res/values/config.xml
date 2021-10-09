@@ -23,9 +23,6 @@
         <!-- ART heap compaction for cached apps -->
         <item>activity_manager/use_compaction=true</item>
 
-        <!-- Cached app freezer on supported devices -->
-        <item>activity_manager_native_boot/use_freezer=true</item>
-
         <!-- Don't pin camera app to save memory -->
         <item>runtime_native_boot/pin_camera=false</item>
 
