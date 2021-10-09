@@ -18,6 +18,7 @@
 -->
 <resources>
     <bool name="def_wifi_on">true</bool>
+    <bool name="def_one_handed_mode_enabled">true</bool>
 
     <string name="def_backup_transport">com.google.android.gms/.backup.BackupTransportService</string>
 </resources>
