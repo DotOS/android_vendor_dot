@@ -20,9 +20,6 @@
             System
         -->
 
-        <!-- Allow more cached apps in the background -->
-        <item>activity_manager/max_cached_processes=64</item>
-
         <!-- ART heap compaction for cached apps -->
         <item>activity_manager/use_compaction=true</item>
 
