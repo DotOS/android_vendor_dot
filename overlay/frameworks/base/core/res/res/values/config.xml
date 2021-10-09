@@ -56,6 +56,14 @@
     <!-- Recents text and image selection for Pixel Launcher (not supported by Launcher3) -->
     <string name="config_defaultContentSuggestionsService" translatable="false">com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiContentSuggestionsService</string>
 
+    <!-- Corner radius of system dialogs -->
+    <dimen name="config_dialogCornerRadius">28dp</dimen>
+    
+    <!-- System-provided radius for the background view of app widgets. The resolved value of this resource may change at runtime. -->
+    <dimen name="system_app_widget_background_radius">28dp</dimen>
+    <!-- System-provided radius for inner views on app widgets. The resolved value of this resource may change at runtime. -->
+    <dimen name="system_app_widget_inner_radius">20dp</dimen>
+
     <!-- If this is true, long press on power button will be available from a
          non-interactive state. -->
     <bool name="config_supportLongPressPowerWhenNonInteractive">true</bool>
