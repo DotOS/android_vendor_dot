@@ -20,10 +20,6 @@
             System
         -->
 
-        <!-- Enable privacy indicators -->
-        <item>privacy/permissions_hub_2_enabled=true</item>
-        <item>privacy/permissions_hub_enabled=true</item>
-
         <!-- Allow more cached apps in the background -->
         <item>activity_manager/max_cached_processes=64</item>
 
