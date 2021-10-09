@@ -159,4 +159,12 @@
             2 - Global actions menu
     -->
     <integer name="config_keyChordPowerVolumeUp">1</integer>
+
+    <!-- Exempt AiAi from privacy indicators -->
+    <string name="config_systemAmbientAudioIntelligence">com.google.android.as</string>
+    <string name="config_systemAudioIntelligence">com.google.android.as</string>
+    <string name="config_systemNotificationIntelligence">com.google.android.as</string>
+    <string name="config_systemTextIntelligence">com.google.android.as</string>
+    <string name="config_systemUiIntelligence">com.google.android.as</string>
+    <string name="config_systemVisualIntelligence">com.google.android.as</string>
 </resources>
