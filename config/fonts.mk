@@ -1,12 +1,40 @@
-# Fonts
+# arbutus-slab family
+PRODUCT_PACKAGES += \
+    ArbutusSlab-Regular.ttf
 
-# Get google fonts from external
-$(call inherit-product-if-exists, external/google-fonts/arbutus-slab/fonts.mk)
-$(call inherit-product-if-exists, external/google-fonts/arvo/fonts.mk)
-$(call inherit-product-if-exists, external/google-fonts/barlow/fonts.mk)
-$(call inherit-product-if-exists, external/google-fonts/lato/fonts.mk)
-$(call inherit-product-if-exists, external/google-fonts/rubik/fonts.mk)
-$(call inherit-product-if-exists, external/google-fonts/zilla-slab/fonts.mk)
+# google-sans family
+PRODUCT_PACKAGES += \
+    GoogleSans-Italic.ttf \
+    GoogleSans-Regular.ttf
+
+# Lustria family
+PRODUCT_PACKAGES += \
+    Lustria-Regular.ttf
+
+# lato family
+PRODUCT_PACKAGES += \
+    Lato-BoldItalic.ttf \
+    Lato-Bold.ttf \
+    Lato-Italic.ttf \
+    Lato-MediumItalic.ttf \
+    Lato-Medium.ttf \
+    Lato-Regular.ttf
+
+# rubik family
+PRODUCT_PACKAGES += \
+    Rubik-BoldItalic.ttf \
+    Rubik-Bold.ttf \
+    Rubik-Italic.ttf \
+    Rubik-MediumItalic.ttf \
+    Rubik-Medium.ttf \
+    Rubik-Regular.ttf
+
+# zilla-slab family
+PRODUCT_PACKAGES += \
+    ZillaSlab-MediumItalic.ttf \
+    ZillaSlab-Medium.ttf \
+    ZillaSlab-SemiBoldItalic.ttf \
+    ZillaSlab-SemiBold.ttf
 
 # Karla family
 PRODUCT_PACKAGES += \
@@ -14,6 +42,7 @@ PRODUCT_PACKAGES += \
 
 # Fraunces family
 PRODUCT_PACKAGES += \
+    Fraunces-Regular.ttf \
     Fraunces-SemiBold.ttf
 
 # BigShouldersText family
@@ -21,12 +50,10 @@ PRODUCT_PACKAGES += \
     BigShouldersText-Bold.ttf \
     BigShouldersText-ExtraBold.ttf
 
-LOCAL_PATH := vendor/dot/fonts
-PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,$(LOCAL_PATH)/ttf,$(TARGET_COPY_OUT_PRODUCT)/fonts)
+# Barlow family
+PRODUCT_PACKAGES += \
+    Barlow-Bold.ttf \
+    Barlow-Medium.ttf
+
 PRODUCT_COPY_FILES += \
     vendor/dot/fonts/fonts_customization.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/fonts_customization.xml
-
-# Customization overlays
-PRODUCT_PACKAGES += \
-    FontKaiOverlay \
-    FontVictorOverlay
