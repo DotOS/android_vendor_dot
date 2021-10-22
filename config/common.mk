@@ -15,6 +15,9 @@
 # Allow vendor/extra to override any property by setting it first
 $(call inherit-product-if-exists, vendor/extra/product.mk)
 
+# branding
+include vendor/dot/config/branding.mk
+
 PRODUCT_BRAND ?= dotOS
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
@@ -82,7 +85,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.control_privapp_permissions=enforce
 
 # Don't compile SystemUITests
-EXCLUDE_SYSTEMUI_TESTS := true
+# EXCLUDE_SYSTEMUI_TESTS := true
 
 # Do not include art debug targets
 PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
@@ -108,9 +111,6 @@ $(call inherit-product, vendor/dot/config/telephony.mk)
 
 # Packages
 include vendor/dot/config/packages.mk
-
-#versioning
-include vendor/dot/config/version.mk
 
 # Bootanimation
 include vendor/dot/config/bootanimation.mk

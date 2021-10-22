@@ -1,0 +1,1 @@
+include $(TOPDIR)vendor/dot/build/core/version_props.mk
