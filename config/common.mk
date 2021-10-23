@@ -116,12 +116,12 @@ include vendor/dot/config/packages.mk
 include vendor/dot/config/bootanimation.mk
 
 # Fonts
-include vendor/dot/config/fonts.mk
+# include vendor/dot/config/fonts.mk
 
-ifeq ($(EXTRA_FOD_ANIMATIONS),true)
-PRODUCT_PACKAGES += \
-    FodAnimationResources
-endif
+# ifeq ($(EXTRA_FOD_ANIMATIONS),true)
+# PRODUCT_PACKAGES += \
+#     FodAnimationResources
+# endif
 
 # SystemUI plugins
 PRODUCT_PACKAGES += \
@@ -183,24 +183,24 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.iorapd.enable=true
 
 # Gapps
-ifeq ($(WITH_GAPPS), true)
-    WITH_GMS := true
-    $(call inherit-product, vendor/gms/products/gms.mk)
-endif
+# ifeq ($(WITH_GAPPS), true)
+#     WITH_GMS := true
+#     $(call inherit-product, vendor/gms/products/gms.mk)
+# endif
 
 PRODUCT_EXTRA_RECOVERY_KEYS += \
   vendor/dot/build/security/releasekey
 
-# Face Unlock
-TARGET_FACE_UNLOCK_SUPPORTED ?= true
-ifeq ($(TARGET_FACE_UNLOCK_SUPPORTED),true)
-PRODUCT_PACKAGES += \
-    FaceUnlockService
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.face_unlock_service.enabled=$(TARGET_FACE_UNLOCK_SUPPORTED)
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.biometrics.face.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.biometrics.face.xml
-endif
+# # Face Unlock
+# TARGET_FACE_UNLOCK_SUPPORTED ?= true
+# ifeq ($(TARGET_FACE_UNLOCK_SUPPORTED),true)
+# PRODUCT_PACKAGES += \
+#     FaceUnlockService
+# PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+#     ro.face_unlock_service.enabled=$(TARGET_FACE_UNLOCK_SUPPORTED)
+# PRODUCT_COPY_FILES += \
+#     frameworks/native/data/etc/android.hardware.biometrics.face.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.biometrics.face.xml
+# endif
 
 # Blur
 ifeq ($(TARGET_SUPPORTS_BLUR), true)
