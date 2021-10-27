@@ -89,4 +89,4 @@ PRODUCT_PACKAGES += \
     SystemUpdates
 endif
 
-# include vendor/dot/config/overlay.mk
+$(call inherit-product, vendor/dot/config/overlay.mk)
