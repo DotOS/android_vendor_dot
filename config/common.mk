@@ -183,10 +183,10 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.iorapd.enable=true
 
 # Gapps
-# ifeq ($(WITH_GAPPS), true)
-#     WITH_GMS := true
-#     $(call inherit-product, vendor/gms/products/gms.mk)
-# endif
+ifeq ($(WITH_GAPPS), true)
+    WITH_GMS := true
+    $(call inherit-product, vendor/gms/products/gms.mk)
+endif
 
 PRODUCT_EXTRA_RECOVERY_KEYS += \
   vendor/dot/build/security/releasekey
