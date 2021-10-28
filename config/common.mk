@@ -103,8 +103,8 @@ PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
 PRODUCT_RESTRICT_VENDOR_FILES := false
 
 # Device Overlays
-PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/dot/overlay
-DEVICE_PACKAGE_OVERLAYS += vendor/dot/overlay/common
+PRODUCT_PACKAGE_OVERLAYS += vendor/dot/overlay
+PRODUCT_ENFORCE_RRO_TARGETS += framework-res
 
 #Telephony
 $(call inherit-product, vendor/dot/config/telephony.mk)
