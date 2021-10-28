@@ -15,27 +15,15 @@
      limitations under the License.
 -->
 <resources>
-    <!-- When true enable gesture setting. -->
-    <bool name="config_gesture_settings_enabled">true</bool>
+    <!-- Whether memory from app_info_settings is available or not. -->
+    <bool name="config_show_app_info_settings_memory">true</bool>
 
-    <!-- If the Storage Manager settings are enabled. -->
-    <bool name="config_storage_manager_settings_enabled">true</bool>
-
-    <!-- Whether to show a preference item for mobile plan -->
-    <bool name="config_show_mobile_plan">false</bool>
-
-    <!-- Whether wallpaper attribution should be shown or not. -->
-    <bool name="config_show_wallpaper_attribution">false</bool>
+    <!-- Whether or not device header widget tile should display in device info page -->
+    <bool name="config_show_device_header_in_device_info">false</bool>
 
     <!-- Package name and fully-qualified class name for the wallpaper picker activity. -->
     <string name="config_wallpaper_picker_package" translatable="false">com.android.wallpaper</string>
-    <string name="config_wallpaper_picker_class" translatable="false">com.android.customization.picker.CustomizationPickerActivity</string>
+    <string name="config_wallpaper_picker_class" translatable="false">com.android.wallpaper.picker.CategoryPickerActivity</string>
     <!-- Fully-qualified class name for the styles & wallpaper picker activity. -->
     <string name="config_styles_and_wallpaper_picker_class" translatable="false">com.android.customization.picker.CustomizationPickerActivity</string>
-
-    <!-- Manufacturer backup settings to launch -->
-    <string name="config_backup_settings_intent" translatable="false">settings://com.android.settings.backup.transport</string>
-
-    <!-- Manufacturer backup settings label -->
-    <string name="config_backup_settings_label" translatable="true">@string/backup_transport_setting_label</string>
 </resources>

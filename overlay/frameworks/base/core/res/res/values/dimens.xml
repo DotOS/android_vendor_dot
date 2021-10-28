@@ -16,7 +16,6 @@
 */
 -->
 <resources>
-    <dimen name="config_dialogCornerRadius">12.0dip</dimen>
     <dimen name="config_buttonCornerRadius">4.0dip</dimen>
     <dimen name="config_progressBarCornerRadius">1000.0dip</dimen>
 </resources>
