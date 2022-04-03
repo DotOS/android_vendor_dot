@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+**
+** Copyright 2021, The AospExtended Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License");
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+   <string-array name="udfps_icons">
+        <item>udfps_icon_default</item>
+        <item>udfps_icon_evo</item>
+        <item>udfps_icon_miui</item>
+        <item>udfps_icon_op</item>
+        <item>udfps_icon_op_2077</item>
+        <item>udfps_icon_op_rainbow</item>
+        <item>udfps_icon_default_0</item>
+        <item>udfps_icon_default_1</item>
+        <item>udfps_icon_default_2</item>
+        <item>udfps_icon_default_3</item>
+        <item>udfps_icon_default_4</item>
+        <item>udfps_icon_default_5</item>
+        <item>udfps_icon_huawei</item>
+        <item>udfps_icon_madness_v2</item>
+        <item>udfps_icon_unfunnyguy</item>
+        <item>udfps_icon_yield</item>
+        <item>udfps_icon_arc_reactor</item>
+        <item>udfps_icon_batman</item>
+        <item>udfps_icon_batman_flat</item>
+        <item>udfps_icon_cpt_america_flat_gray</item>
+        <item>udfps_icon_dragon_black_flat</item>
+        <item>udfps_icon_fire_ice_ouroboros</item>
+        <item>udfps_icon_neon_arc</item>
+        <item>udfps_icon_neon_arc_gray</item>
+        <item>udfps_icon_neon_triangle</item>
+        <item>udfps_icon_pacman</item>
+        <item>udfps_icon_pokeball</item>   
+        <item>udfps_icon_pokeball_1</item>
+        <item>udfps_icon_pokeball_2</item>
+        <item>udfps_icon_rainbow_horn</item>
+        <item>udfps_icon_scratch_pink_blue</item>
+        <item>udfps_icon_scratch_red_blue</item>
+        <item>udfps_icon_shooky</item>
+        <item>udfps_icon_spiderman</item>
+        <item>udfps_icon_spiral_blue</item>
+        <item>udfps_icon_sun_metro</item>
+        <item>udfps_icon_transparent</item>
+   </string-array>
+
+    <string-array translatable="false" name="udfps_animation_styles">
+        <item>aurora</item>
+        <item>bloom</item>
+        <item>cyber</item>
+        <item>electronic</item>
+        <item>fireworks</item>
+        <item>magic</item>
+        <item>pacman</item>
+        <item>scan</item>
+        <item>simple</item>
+        <item>smoke</item>
+        <item>warp</item>
+        <item>worm_hole</item>
+        <item>udfps_miui_normal_recognizing_anim</item>
+        <item>udfps_miui_aod_recognizing_anim</item>
+        <item>udfps_miui_aurora_recognizing_anim</item>
+        <item>udfps_miui_aurora_cas_recognizing_anim</item>
+        <item>udfps_miui_light_recognizing_anim</item>
+        <item>udfps_miui_pop_recognizing_anim</item>
+        <item>udfps_miui_pulse_recognizing_anim</item>
+        <item>udfps_miui_pulse_recognizing_white_anim</item>
+        <item>udfps_miui_rhythm_recognizing_anim</item>
+        <item>udfps_miui_star_cas_recognizing_anim</item>
+        <item>udfps_op_cosmos_recognizing_anim</item>
+        <item>udfps_op_energy_recognizing_anim</item>
+        <item>udfps_op_mclaren_recognizing_anim</item>
+        <item>udfps_op_ripple_recognizing_anim</item>
+        <item>udfps_op_scanning_recognizing_anim</item>
+        <item>udfps_op_stripe_recognizing_anim</item>
+        <item>udfps_op_wave_recognizing_anim</item>
+        <item>udfps_pureview_dna_recognizing_anim</item>
+        <item>udfps_pureview_future_recognizing_anim</item>
+        <item>udfps_pureview_halo_ring_recognizing_anim</item>
+        <item>udfps_pureview_molecular_recognizing_anim</item>
+        <item>udfps_rog_fusion_recognizing_anim</item>
+        <item>udfps_rog_pulsar_recognizing_anim</item>
+        <item>udfps_rog_supernova_recognizing_anim</item>
+    </string-array>
+
+    <string-array translatable="false" name="udfps_animation_previews">
+        <item>aurora_anim_21</item>
+        <item>bloom_anim_14</item>
+        <item>cyber_anim_9</item>
+        <item>electronic_anim_7</item>
+        <item>fireworks_anim_18</item>
+        <item>magic_anim_10</item>
+        <item>pacman_anim_18</item>
+        <item>scan_anim_12</item>
+        <item>simple_anim_7</item>
+        <item>smoke_anim_6</item>
+        <item>warp_anim_18</item>
+        <item>worm_hole_anim_18</item>
+        <item>gxzw_normal_recognizing_anim_20</item>
+        <item>gxzw_aod_recognizing_anim_20</item>
+        <item>gxzw_aurora_recognizing_anim_30</item>
+        <item>gxzw_aurora_cas_recognizing_anim_30</item>
+        <item>gxzw_light_recognizing_anim_20</item>
+        <item>gxzw_pop_recognizing_anim_10</item>
+        <item>gxzw_pulse_recognizing_anim_15</item>
+        <item>gxzw_pulse_recognizing_anim_white_18</item>
+        <item>gxzw_rhythm_recognizing_anim_15</item>
+        <item>gxzw_star_cas_recognizing_anim_30</item>
+        <item>udfps_op_cosmos_anim_60</item>
+        <item>udfps_op_energy_anim_35</item>
+        <item>udfps_op_mclaren_anim_45</item>
+        <item>udfps_op_ripple_anim_30</item>
+        <item>udfps_op_scanning_anim_18</item>
+        <item>udfps_op_stripe_anim_18</item>
+        <item>udfps_op_wave_anim_25</item>
+        <item>udfps_pureview_dna_anim_25</item>
+        <item>udfps_pureview_future_anim_35</item>
+        <item>udfps_pureview_halo_ring_anim_35</item>
+        <item>udfps_pureview_molecular_anim_30</item>
+        <item>asus_udfps_anim_1_10</item>
+        <item>asus_udfps_anim_2_35</item>
+        <item>asus_udfps_anim_3_25</item>
+    </string-array>
+
+    <string-array translatable="false" name="udfps_animation_titles">
+        <item>Aurora</item>
+        <item>Bloom</item>
+        <item>Cyber</item>
+        <item>Electronic</item>
+        <item>Fireworks</item>
+        <item>Magic</item>
+        <item>Pacman</item>
+        <item>Scan</item>
+        <item>Simple</item>
+        <item>Smoke</item>
+        <item>Warp</item>
+        <item>Worm hole</item>
+        <item>MIUI default</item>
+        <item>MIUI AOD</item>
+        <item>Aurora (K30 Pro)</item>
+        <item>Aurora (Mi 10 Ultra)</item>
+        <item>Light</item>
+        <item>Pop</item>
+        <item>Pulse</item>
+        <item>Pulse (White)</item>
+        <item>Rhythm</item>
+        <item>Starlight</item>
+        <item>Cosmos</item>
+        <item>Energy</item>
+        <item>McLaren</item>
+        <item>Ripple</item>
+        <item>Scanning (Cyberpunk 2077)</item>
+        <item>Stripe</item>
+        <item>Wave</item>
+        <item>DNA</item>
+        <item>Future</item>
+        <item>Halo ring</item>
+        <item>Molecular</item>
+        <item>Fusion</item>
+        <item>Pulsar</item>
+        <item>Supernova</item>
+    </string-array>
+
+</resources>

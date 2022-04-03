@@ -17,7 +17,6 @@ PRODUCT_PACKAGES += \
     BluetoothExt \
     Browser \
     ExactCalculator \
-    ThemePicker \
     QuickAccessWallet
 
 # Config
@@ -84,9 +83,11 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
 PRODUCT_PACKAGES += \
     Music
 
+# Dot Customizations
+PRODUCT_PACKAGES += \
+    Customizations
+
 ifeq ($(DOT_OFFICIAL), true)
 PRODUCT_PACKAGES += \
     SystemUpdates
 endif
-
-$(call inherit-product, vendor/dot/config/overlay.mk)

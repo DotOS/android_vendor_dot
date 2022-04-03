@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="branded_monitoring_description_app_personal">Google is securing this connection by sending data through its servers</string>
+    <string name="branded_vpn_footer">Connection secured by Google</string>
+    <!--string name="config_dockComponent">com.google.android.systemui.dreamliner.WirelessChargerImpl</string-->
+    <string name="config_screenshotEditor">com.google.android.markup/com.google.android.markup.AnnotateActivity</string>
+    <string name="calendar_component_name">com.google.android.calendar/com.android.calendar.AllInOneActivity</string>
+    <string name="clock_component_name">com.google.android.deskclock/com.android.deskclock.DeskClock</string>
+    <string name="config_preferredEmergencySosPackage">com.google.android.apps.safetyhub</string>
+    <string name="launcher_overlayable_package">com.google.android.apps.nexuslauncher</string>
+    <string name="quick_settings_tiles_default">internet,bt,flashlight,dnd,alarm,airplane,controls,wallet,rotation,battery,cast,screenrecord,custom(com.google.android.gms/.nearby.sharing.SharingTileService),mictoggle,cameratoggle</string>
+</resources>

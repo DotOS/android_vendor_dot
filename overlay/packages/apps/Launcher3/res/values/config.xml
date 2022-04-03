@@ -15,5 +15,5 @@
     limitations under the License.
 -->
 <resources>
-    <string name="wallpaper_picker_package" translatable="false">com.android.wallpaper</string>
+    <string name="wallpaper_picker_package" translatable="false">com.dot.customizations</string>
 </resources>

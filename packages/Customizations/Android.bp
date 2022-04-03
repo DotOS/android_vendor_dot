@@ -11,13 +11,13 @@ android_app_import {
     compile_multilib: "both",
     apk: "Customizations.apk",
 
-    required: ["privapp_whitelist_com.android.settings.dotextras.xml"],
+    required: ["privapp_whitelist_com.dot.customizations.xml"],
 }
 
 prebuilt_etc {
-    name: "privapp_whitelist_com.android.settings.dotextras.xml",
+    name: "privapp_whitelist_com.dot.customizations.xml",
 
-    src: "privapp_whitelist_com.android.settings.dotextras.xml",
+    src: "privapp_whitelist_com.dot.customizations.xml",
     system_ext_specific: true,
     sub_dir: "permissions",
 

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="config_deviceProvisioningPackage">com.google.android.apps.work.oobconfig</string>
+    <string name="config_wallpaperCropperPackage">com.google.android.apps.wallpaper</string>
+</resources>

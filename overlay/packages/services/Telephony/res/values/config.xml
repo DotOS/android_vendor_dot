@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+** Copyright 2020, Raphielscape LLC. and Haruka LLC.
+**
+** Licensed under the Apache License, Version 2.0 (the "License");
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+-->
+<resources>
+    <!-- Flag indicating if hac is enabled -->
+    <bool name="hac_enabled">true</bool>
+
+    <!-- Class name for the default main Dialer activity -->
+    <string name="dialer_default_class" translatable="false">com.google.android.dialer.extensions.GoogleDialtactsActivity</string>
+
+    <!-- Whether the device supports dialing emergency RTT calls when there's no SIM card installed
+    -->
+    <bool name="config_support_simless_emergency_rtt">true</bool>
+
+    <!-- Flag to enable VVM3 visual voicemail. VVM3 is used by Verizon Wireless. -->
+    <bool name="vvm3_enabled">true</bool>
+
+    <!-- The package name for the platform carrier config app, bundled with system image. -->
+    <string name="platform_carrier_config_package" translatable="false">com.google.android.carrier</string>
+
+    <!-- The package name for the platform number verification supplier app. -->
+    <string name="platform_number_verification_package" translatable="false">com.google.android.gms</string>
+
+    <!-- The country list that shortcut view can be enabled. -->
+    <string-array name="config_countries_to_enable_shortcut_view">
+        <item>ca</item>
+        <item>us</item>
+        <item>de</item>
+        <item>fr</item>
+        <item>es</item>
+        <item>gb</item>
+        <item>au</item>
+        <item>in</item>
+        <item>jp</item>
+        <item>sg</item>
+        <item>tw</item>
+        <item>it</item>
+        <item>ie</item>
+        <item>ar</item>
+        <item>be</item>
+        <item>bg</item>
+        <item>br</item>
+        <item>cn</item>
+        <item>co</item>
+        <item>cz</item>
+        <item>dk</item>
+        <item>do</item>
+        <item>ge</item>
+        <item>gr</item>
+        <item>hr</item>
+        <item>hu</item>
+        <item>id</item>
+        <item>jo</item>
+        <item>mx</item>
+        <item>my</item>
+        <item>nl</item>
+        <item>no</item>
+        <item>ph</item>
+        <item>pl</item>
+        <item>pr</item>
+        <item>pt</item>
+        <item>ro</item>
+        <item>ru</item>
+        <item>se</item>
+        <item>th</item>
+        <item>uy</item>
+        <item>vn</item>
+        <item>za</item>
+    </string-array>
+
+    <!-- The package names which can request thermal mitigation. -->
+    <string-array name="thermal_mitigation_allowlisted_packages" translatable="false">
+        <item>com.google.android.connectivitythermalpowermanager</item>
+    </string-array>
+</resources>

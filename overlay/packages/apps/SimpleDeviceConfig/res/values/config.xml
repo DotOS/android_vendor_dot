@@ -20,55 +20,16 @@
             System
         -->
 
-        <!-- ART heap compaction for cached apps -->
-        <item>activity_manager/use_compaction=true</item>
-
-        <!-- Don't pin camera app to save memory -->
-        <item>runtime_native_boot/pin_camera=false</item>
-
-        <!-- Keep up to 7 days of permission usage history -->
-        <item>privacy/discrete_history_cutoff_millis=604800000</item>
-
-        <!--
-            Keep track of more app ops for privacy dashboard display.
-
-            From AppOpsManager.RUNTIME_AND_APPOP_PERMISSIONS_OPS:
-            Location: COARSE_LOCATION, FINE_LOCATION
-            Camera: CAMERA
-            Microphone: RECORD_AUDIO
-            Calendar: READ_CALENDAR, WRITE_CALENDAR
-            Call logs: READ_CALL_LOG, WRITE_CALL_LOG
-            Contacts: READ_CONTACTS, WRITE_CONTACTS, GET_ACCOUNTS
-            Files and media: READ_EXTERNAL_STORAGE, WRITE_EXTERNAL_STORAGE, ACCESS_MEDIA_LOCATION
-            Nearby devices: BLUETOOTH_SCAN, BLUETOOTH_CONNECT, BLUETOOTH_ADVERTISE, UWB_RANGING
-            Phone: READ_PHONE_STATE, READ_PHONE_NUMBERS, CALL_PHONE, READ_CALL_LOG, WRITE_CALL_LOG, ADD_VOICEMAIL, USE_SIP, PROCESS_OUTGOING_CALLS, ANSWER_PHONE_CALLS, ACCEPT_HANDOVER
-            Body sensors: ACTIVITY_RECOGNITION
-            SMS: SEND_SMS, RECEIVE_SMS, READ_SMS, RECEIVE_WAP_PUSH, RECEIVE_MMS, READ_CELL_BROADCASTS
-
-            From PrivacyItemController:
-            Camera: PHONE_CALL_CAMERA
-            Microphone: PHONE_CALL_MICROPHONE
-        -->
-        <item>privacy/discrete_history_ops_cslist=0,109,1,108,26,101,27,102,106,100,8,9,6,7,4,5,62,59,60,90,77,111,114,112,51,65,13,6,7,52,53,54,69,74,79,113,20,16,14,19,18,57</item>
-
-        <!-- Contribute app shortcuts to centralized AppSearch index -->
-        <item>systemui/shortcut_appsearch_integration=true</item>
+        <!-- Use new privacy indicators for location -->
+        <item>privacy/location_indicators_enabled=true</item>
 
         <!-- Machine learning back gesture (requires TensorFlow model) -->
         <item>systemui/use_back_gesture_ml_model=true</item>
         <item>systemui/back_gesture_ml_model_name=backgesture</item>
         <item>systemui/back_gesture_ml_model_threshold=0.8</item>
 
-        <!-- Use new privacy indicators for location -->
-        <item>privacy/location_indicators_enabled=true</item>
-
-        <!--
-            Disable the TF input classifier entirely to save CPU and fix log
-            spam when we have the touch heatmap video interface disabled. This
-            is set in DeviceConfig despite being classified as native_boot
-            because it's checked from Java code which then calls into JNI.
-        -->
-        <item>input_native_boot/deep_press_enabled=false</item>
+        <!-- Contribute app shortcuts to centralized AppSearch index -->
+        <item>systemui/shortcut_appsearch_integration=true</item>
 
         <!--
             Device Personalization Services (AiAi)
@@ -84,11 +45,11 @@
         <item>device_personalization_services/Captions__visibility_stopped_duration_millis=1500</item>
 
         <!-- Now Playing (Pixel 2017) -->
-        <item>device_personalization_services/NowPlaying__ambient_music_index_manifest_17_09_02=181:https://storage.googleapis.com/music-iq-db/updatable_ytm_db/20210704-030024/manifest.json</item>
+        <item>device_personalization_services/NowPlaying__ambient_music_index_manifest_17_09_02=191:https://storage.googleapis.com/music-iq-db/updatable_ytm_db/20211031-040022/manifest.json</item>
 
         <!-- Adaptive Sound (Pixel 2020) -->
-        <item>device_personalization_services/AdaptiveAudio__enable_adaptive_audio=false</item>
-        <item>device_personalization_services/AdaptiveAudio__show_promo_notification=false</item>
+        <item>device_personalization_services/AdaptiveAudio__enable_adaptive_audio=true</item>
+        <item>device_personalization_services/AdaptiveAudio__show_promo_notification=true</item>
 
         <!-- Screen attention (Pixel 2019) -->
         <item>device_personalization_services/Attention__accel_sensor_enabled=false</item>
@@ -106,7 +67,22 @@
         <item>device_personalization_services/NotificationAssistant__enable_service=false</item>
         <item>device_personalization_services/VisualCortex__enable=false</item>
 
-        <!-- Select text on recents -->
+        <!-- Recents text selection (for Pixel Launcher users) -->
+        <item>device_personalization_services/Overview__enable_image_selection=true</item>
+        <item>device_personalization_services/Overview__enable_japanese_ocr=true</item>
+        <item>device_personalization_services/Overview__enable_lens_r_overview_long_press=true</item>
+        <item>device_personalization_services/Overview__enable_lens_r_overview_select_mode=true</item>
+        <item>device_personalization_services/Overview__enable_lens_r_overview_translate_action=false</item>
         <item>device_personalization_services/Overview__enable_overview=true</item>
+        <item>device_personalization_services/Overview__enable_pir_clearcut_logging=true</item>
+        <item>device_personalization_services/Overview__enable_pir_westworld_logging=true</item>
+        <item>device_personalization_services/Overview__enable_proactive_hints=false</item>
+        <item>device_personalization_services/Overview__enable_superpacks_pir_protocol=true</item>
+        <item>device_personalization_services/Overview__min_lens_agsa_app_version=301084649</item>
+
+        <!-- Disable federated learning -->
+        <item>device_personalization_services/OverviewFederatedAnalytics__enable_fa=false</item>
+        <item>device_personalization_services/OverviewFederatedAnalytics__enable_min_training_interval=false</item>
+        <item>device_personalization_services/OverviewFederatedAnalytics__enable_non_synthetic_logs=false</item>
     </string-array>
 </resources>

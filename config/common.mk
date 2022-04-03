@@ -60,13 +60,13 @@ PRODUCT_COPY_FILES += \
     vendor/dot/config/permissions/backup.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/backup.xml \
     vendor/dot/config/permissions/privapp-permissions-lineagehw.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-lineagehw.xml
 
-# PixelPropsUtils
-PRODUCT_COPY_FILES += \
-    vendor/dot/prebuilt/common/etc/pixel_2016_exclusive.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/pixel_2016_exclusive.xml
-
 # Copy all Dot-specific init rc files
 $(foreach f,$(wildcard vendor/dot/prebuilt/common/etc/init/*.rc),\
 	$(eval PRODUCT_COPY_FILES += $(f):$(TARGET_COPY_OUT_SYSTEM)/etc/init/$(notdir $f)))
+
+# Copy extra permissions on all targets
+PRODUCT_COPY_FILES += \
+    vendor/dot/config/permissions/privapp-permissions-extra.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-extra.xml
 
 # Enable Android Beam on all targets
 PRODUCT_COPY_FILES += \
@@ -80,9 +80,13 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     frameworks/base/data/keyboards/Vendor_045e_Product_028e.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/Vendor_045e_Product_0719.kl
 
-# Enforce privapp-permissions whitelist
-#PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-#    ro.control_privapp_permissions=enforce
+# Enable transitional log for Privileged permissions
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.control_privapp_permissions=log
+
+# Clean up packages cache to avoid wrong strings and resources
+PRODUCT_COPY_FILES += \
+    vendor/dot/prebuilt/common/bin/clean_cache.sh:system/bin/clean_cache.sh
 
 # Don't compile SystemUITests
 # EXCLUDE_SYSTEMUI_TESTS := true
@@ -103,25 +107,39 @@ PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
 PRODUCT_RESTRICT_VENDOR_FILES := false
 
 # Device Overlays
-PRODUCT_PACKAGE_OVERLAYS += vendor/dot/overlay
-PRODUCT_ENFORCE_RRO_TARGETS += framework-res
+PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/dot/overlay
+PRODUCT_PACKAGE_OVERLAYS += vendor/dot/overlay/common
+
+# Gapps
+ifeq ($(WITH_GAPPS), true)
+    $(call inherit-product, vendor/gapps/config.mk)
+endif
 
 #Telephony
 $(call inherit-product, vendor/dot/config/telephony.mk)
 
 # Packages
-include vendor/dot/config/packages.mk
+$(call inherit-product, vendor/dot/config/packages.mk)
 
 # Bootanimation
-include vendor/dot/config/bootanimation.mk
+$(call inherit-product, vendor/dot/config/bootanimation.mk)
 
 # Fonts
-include vendor/dot/config/fonts.mk
+$(call inherit-product, vendor/dot/config/fonts.mk)
 
-# ifeq ($(EXTRA_FOD_ANIMATIONS),true)
-# PRODUCT_PACKAGES += \
-#     FodAnimationResources
-# endif
+# GFonts
+$(call inherit-product, vendor/dot/config/gfonts.mk)
+
+# Themes
+$(call inherit-product, vendor/dot/config/themes.mk)
+
+# RRO Overlays
+$(call inherit-product, vendor/dot/config/rro_overlays.mk)
+
+ifeq ($(EXTRA_FOD_ANIMATIONS),true)
+PRODUCT_PACKAGES += \
+     UdfpsResources
+ endif
 
 # SystemUI plugins
 PRODUCT_PACKAGES += \
@@ -135,14 +153,16 @@ PRODUCT_PRODUCT_PROPERTIES += \
 
 # SetupWizard configuration
 PRODUCT_PRODUCT_PROPERTIES += \
+    ro.setupwizard.enterprise_mode=1 \
+    ro.setupwizard.esim_cid_ignore=00000001 \
     setupwizard.feature.baseline_setupwizard_enabled=true \
-    setupwizard.enable_assist_gesture_training=true \
-    setupwizard.theme=glif_v3_light \
-    setupwizard.feature.skip_button_use_mobile_data.carrier1839=true \
+    setupwizard.feature.day_night_mode_enabled=true \
+    setupwizard.feature.portal_notification=true \
     setupwizard.feature.show_pai_screen_in_main_flow.carrier1839=false \
-    setupwizard.feature.show_pixel_tos=false \
+    setupwizard.feature.show_pixel_tos=true \
     setupwizard.feature.show_support_link_in_deferred_setup=false \
-    setupwizard.feature.device_default_dark_mode=true
+    setupwizard.feature.skip_button_use_mobile_data.carrier1839=true \
+    setupwizard.theme=glif_v3_light
 
 # StorageManager configuration
 PRODUCT_PRODUCT_PROPERTIES += \
@@ -170,6 +190,11 @@ PRODUCT_PACKAGES += \
 	libtextclassifier_actions_suggestions_universal_model \
 	libtextclassifier_lang_id_model
 
+# DRM Service
+PRODUCT_PROPERTY_OVERRIDES += \
+    drm.service.enabled=true \
+    media.mediadrmservice.enable=true
+
 # Use gestures by default
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.boot.vendor.overlay.theme=com.android.internal.systemui.navbar.gestural
@@ -182,25 +207,22 @@ PRODUCT_PACKAGES += \
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.iorapd.enable=true
 
-# Gapps
-ifeq ($(WITH_GAPPS), true)
-    WITH_GMS := true
-    $(call inherit-product, vendor/gms/products/gms.mk)
-endif
-
 PRODUCT_EXTRA_RECOVERY_KEYS += \
   vendor/dot/build/security/releasekey
 
-# # Face Unlock
-# TARGET_FACE_UNLOCK_SUPPORTED ?= true
-# ifeq ($(TARGET_FACE_UNLOCK_SUPPORTED),true)
-# PRODUCT_PACKAGES += \
-#     FaceUnlockService
-# PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-#     ro.face_unlock_service.enabled=$(TARGET_FACE_UNLOCK_SUPPORTED)
-# PRODUCT_COPY_FILES += \
-#     frameworks/native/data/etc/android.hardware.biometrics.face.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.biometrics.face.xml
-# endif
+# Face Unlock
+TARGET_FACE_UNLOCK_SUPPORTED ?= true
+ifeq ($(TARGET_FACE_UNLOCK_SUPPORTED),true)
+PRODUCT_PACKAGES += \
+    FaceUnlockService
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.face_unlock_service.enabled=$(TARGET_FACE_UNLOCK_SUPPORTED)
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.biometrics.face.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.biometrics.face.xml
+endif
+
+# Enable updating of APEXes
+$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
 # Blur
 ifeq ($(TARGET_SUPPORTS_BLUR), true)
@@ -210,9 +232,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 endif
 
 # Sounds
-PRODUCT_PRODUCT_PROPERTIES += \
-    ro.config.notification_sound=Ariel.ogg \
-    ro.config.alarm_alert=Argon.ogg
+$(call inherit-product, vendor/dot/config/audio.mk)
 
 # Use gestures by default
 PRODUCT_PRODUCT_PROPERTIES += \

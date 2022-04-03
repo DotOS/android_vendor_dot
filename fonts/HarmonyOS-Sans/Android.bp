@@ -1,0 +1,87 @@
+/**
+ * Copyright (C) 2021 Raphielscape LLC.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+prebuilt_font {
+    name: "HarmonyOS-Sans-BlackItalic.ttf",
+    src: "HarmonyOS-Sans-BlackItalic.ttf",
+    product_specific: true,
+}
+
+prebuilt_font {
+    name: "HarmonyOS-Sans-Black.ttf",
+    src: "HarmonyOS-Sans-Black.ttf",
+    product_specific: true,
+}
+
+prebuilt_font {
+    name: "HarmonyOS-Sans-BoldItalic.ttf",
+    src: "HarmonyOS-Sans-BoldItalic.ttf",
+    product_specific: true,
+}
+
+prebuilt_font {
+    name: "HarmonyOS-Sans-Bold.ttf",
+    src: "HarmonyOS-Sans-Bold.ttf",
+    product_specific: true,
+}
+
+prebuilt_font {
+    name: "HarmonyOS-Sans-Italic.ttf",
+    src: "HarmonyOS-Sans-Italic.ttf",
+    product_specific: true,
+}
+
+prebuilt_font {
+    name: "HarmonyOS-Sans-LightItalic.ttf",
+    src: "HarmonyOS-Sans-LightItalic.ttf",
+    product_specific: true,
+}
+
+prebuilt_font {
+    name: "HarmonyOS-Sans-Light.ttf",
+    src: "HarmonyOS-Sans-Light.ttf",
+    product_specific: true,
+}
+
+prebuilt_font {
+    name: "HarmonyOS-Sans-MediumItalic.ttf",
+    src: "HarmonyOS-Sans-MediumItalic.ttf",
+    product_specific: true,
+}
+
+prebuilt_font {
+    name: "HarmonyOS-Sans-Medium.ttf",
+    src: "HarmonyOS-Sans-Medium.ttf",
+    product_specific: true,
+}
+
+prebuilt_font {
+    name: "HarmonyOS-Sans-Regular.ttf",
+    src: "HarmonyOS-Sans-Regular.ttf",
+    product_specific: true,
+}
+
+prebuilt_font {
+    name: "HarmonyOS-Sans-ThinItalic.ttf",
+    src: "HarmonyOS-Sans-ThinItalic.ttf",
+    product_specific: true,
+}
+
+prebuilt_font {
+    name: "HarmonyOS-Sans-Thin.ttf",
+    src: "HarmonyOS-Sans-Thin.ttf",
+    product_specific: true,
+}
