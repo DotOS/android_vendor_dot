@@ -85,7 +85,8 @@ PRODUCT_PACKAGES += \
 
 # Dot Customizations
 PRODUCT_PACKAGES += \
-    Customizations
+    Customizations \
+    PrebuiltColorBundles
 
 ifeq ($(DOT_OFFICIAL), true)
 PRODUCT_PACKAGES += \
