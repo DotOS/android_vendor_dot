@@ -2,6 +2,9 @@
 DOT_MOD_VERSION = v6.0
 
 DOT_BUILD_TYPE ?= UNOFFICIAL
+ifeq ($(WITH_GAPPS), true)
+	DOT_BUILD_TYPE := UNOFFICIAL_GAPPS
+endif
 
 CURRENT_DEVICE=$(shell echo "$(TARGET_PRODUCT)" | cut -d'_' -f 2,3)
 
