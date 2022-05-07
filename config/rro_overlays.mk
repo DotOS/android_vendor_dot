@@ -17,6 +17,7 @@
 ifeq ($(WITH_GAPPS), true)
     # RRO Overlays
     PRODUCT_PACKAGES += \
+        CustomPixelLauncherOverlay \
         PixelDocumentsUIGoogleOverlay \
         BuiltInPrintServiceOverlay \
         GooglePermissionControllerOverlay \
