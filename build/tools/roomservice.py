@@ -31,7 +31,7 @@ DEBUG = False
 default_manifest = ".repo/manifest.xml"
 
 custom_local_manifest = ".repo/local_manifests/dot_manifest.xml"
-custom_default_revision = "dot11"
+custom_default_revision = "dot12.1"
 custom_dependencies = "dot.dependencies"
 org_manifest = "dotOS-Devices"  # leave empty if org is provided in manifest
 org_display = "DotOS-Devices"  # needed for displaying
