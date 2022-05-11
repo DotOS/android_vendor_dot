@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<vector xmlns:android="http://schemas.android.com/apk/res/android" android:height="@dimen/theme_icon_size" android:width="@dimen/theme_icon_size" android:viewportWidth="36" android:viewportHeight="36">
+<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt" android:height="@dimen/theme_icon_size" android:width="@dimen/theme_icon_size" android:viewportWidth="36" android:viewportHeight="36">
     <path android:fillColor="@android:color/white" android:pathData="M11.3327 9.66699C10.416 9.66699 9.66602 10.417 9.66602 11.3337V18.0003C9.66602 18.917 10.416 19.667 11.3327 19.667C12.2493 19.667 12.9993 18.917 12.9993 18.0003V11.3337C12.9993 10.417 12.2493 9.66699 11.3327 9.66699Z"/>
     <path android:fillColor="@android:color/white" android:pathData="M18.0007 11.333C17.084 11.333 16.334 12.083 16.334 12.9997V22.9997C16.334 23.9163 17.084 24.6663 18.0007 24.6663C18.9173 24.6663 19.6673 23.9163 19.6673 22.9997V12.9997C19.6673 12.083 18.9173 11.333 18.0007 11.333Z"/>
     <path android:fillColor="@android:color/white" android:pathData="M24.6667 16.333C23.75 16.333 23 17.083 23 17.9997V24.6663C23 25.583 23.75 26.333 24.6667 26.333C25.5833 26.333 26.3333 25.583 26.3333 24.6663V17.9997C26.3333 17.083 25.5833 16.333 24.6667 16.333Z"/>
