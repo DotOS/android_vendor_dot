@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<vector xmlns:android="http://schemas.android.com/apk/res/android" android:height="36dp" android:width="36dp" android:viewportWidth="36" android:viewportHeight="36">
+<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt" android:height="36dp" android:width="36dp" android:viewportWidth="36" android:viewportHeight="36">
     <path android:fillColor="#ff000000" android:pathData="M0.734375,20.5781 C0.734375,18.8281,0.734375,17.1641,0.734375,15.4141 C2.22656,16.2734,3.66797,17.1094,5.19922,17.9922 C3.68359,18.8711,2.24219,19.7031,0.734375,20.5781 Z M0.734375,20.5781" android:strokeWidth="1"/>
     <path android:fillColor="#ff000000" android:pathData="M5.20313,11.2578 C3.67578,12.1406,2.23828,12.9727,0.742188,13.8359 C0.742188,12.1016,0.742188,10.4453,0.742188,8.69141 C2.23828,9.55078,3.67578,10.3789,5.20313,11.2578 Z M5.20313,11.2578" android:strokeWidth="1"/>
     <path android:fillColor="#ff000000" android:pathData="M35.2656,18.7852 C35.2656,20.5313,35.2656,22.1992,35.2656,23.9375 C33.7813,23.082,32.3398,22.25,30.8047,21.3633 C32.3203,20.4883,33.7578,19.6563,35.2656,18.7852 Z M35.2656,18.7852" android:strokeWidth="1"/>
