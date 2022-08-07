@@ -90,7 +90,8 @@ PRODUCT_PACKAGES += \
 # Dot Customizations
 PRODUCT_PACKAGES += \
     Customizations \
-    PrebuiltColorBundles
+    PrebuiltColorBundles \
+    DotWallpapers
 
 ifeq ($(DOT_OFFICIAL), true)
 PRODUCT_PACKAGES += \
